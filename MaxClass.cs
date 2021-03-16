@@ -9,5 +9,6 @@ namespace CallCenterProgram
     class MaxClass
     {
         //comment
+        //fucken A
     }
 }
