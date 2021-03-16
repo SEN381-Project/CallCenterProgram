@@ -8,5 +8,6 @@ namespace CallCenterProgram
 {
     class MaxClass
     {
+        //comment
     }
 }
