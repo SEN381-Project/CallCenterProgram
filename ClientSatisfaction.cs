@@ -8,6 +8,8 @@ namespace CallCenterProgram
 {
     class ClientSatisfaction
     {
+        //methods
+
         public void GetReport()
         {
 
