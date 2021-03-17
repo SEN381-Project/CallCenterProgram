@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CallCenterProgram.BusinessClient">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAEAAAAEQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.CallCenter">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAggBYAAQAAAAACEyIAAAABAAAAgAIAEAAAAAAQAIAA=</HashCode>
+      <FileName>CallCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Caller">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Caller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Client">
+    <Position X="8.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAIAAAAEhAAEAAQABAAGAIAABAAAAgAAAAA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.ClientMaintenance">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAhAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>ClientMaintenance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.ClientSatisfaction">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAABACAAAAAgAAAAAAAAAAAAAAAAQAAAAAAIAAAA=</HashCode>
+      <FileName>ClientSatisfaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Employee">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAGAAQABgIEAIACAAAAAAAAAAA=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Form1">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Incident">
+    <Position X="14.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAQAQAAEAAQAAAAAAAAAAAAAACAEAAAgAAA=</HashCode>
+      <FileName>Incident.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.IndividualClient">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAEAAAAAQAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IndividualClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Job">
+    <Position X="16" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAIACEAAAABEAAAAAAoA=</HashCode>
+      <FileName>Job.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Manager">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAEAAAAAQABACAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Program" Collapsed="true">
+    <Position X="20.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.ServiceDepartment">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAACAAAAAAAIgAAIAAAAA=</HashCode>
+      <FileName>ServiceDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Technicians">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAQAAEAAAABAAAAAAgAAAAIA=</HashCode>
+      <FileName>Technicians.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Properties.Resources">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CallCenterProgram.Properties.Settings" Collapsed="true">
+    <Position X="18.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
