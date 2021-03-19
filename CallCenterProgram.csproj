@@ -46,13 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Call.cs" />
     <Compile Include="Caller.cs" />
+    <Compile Include="CallStats.cs" />
+    <Compile Include="ClientInfo.cs" />
     <Compile Include="ClientSatisfaction.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="BusinessClient.cs" />
-    <Compile Include="CallCenter.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="ClientMaintenance.cs" />
+    <Compile Include="FaultInfo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
