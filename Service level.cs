@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CallCenterProgram
 {
-    class Service_level
+    class Service_level : package
     {
         int priority_Level;
 

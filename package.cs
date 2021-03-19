@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CallCenterProgram
 {
-    class package
+    class package : contract
     {
         public void GetServices()
         {

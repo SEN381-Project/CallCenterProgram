@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CallCenterProgram
 {
-    class service
+    class service : package
     {
         string serviceName;
 
