@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CallCenterProgram
 {
-    class FollowUp
+    class FollowUp : Call
     {
 
         private string status;
@@ -15,45 +15,20 @@ namespace CallCenterProgram
         private bool helpedOnTime;
         private string comment;
 
-        public string Status
+        public string Status { get => status; set => status = value; }
+        public DateTime FollowUpDate { get => followUpDate; set => followUpDate = value; }
+        public string Problem { get => problem; set => problem = value; }
+        public bool HelpedOnTime { get => helpedOnTime; set => helpedOnTime = value; }
+        public string Comment { get => comment; set => comment = value; }
+
+
+        public FollowUp(string status, DateTime followUpDate, string problem, bool helpedOnTime, string comment)
         {
-            get { return status; }
-            set { status = value}
-        }
-
-
-        public bool FollowUpDate
-        {
-            get { return followUpDate; }
-            set { status = followUpDate}
-        }
-
-        public string Problem
-        {
-            get { return problem; }
-            set { problem = value}
-        }
-
-
-        public bool HelpedOnTime
-        {
-            get { return helpedOnTime; }
-            set { status = helpedOnTime}
-        }
-
-        public string Comment
-        {
-            get { return coment; }
-            set { comment = value}
-        }
-
-        public vois  FollowUp(string status, DateTime followUpDate, string problem, bool helpedOnTime, string comment)
-        {
-            this.status = status;
-            this.followUpDate = followUpDate;
-            this.problem = problem;
-            this.helpedOnTime = helpedOnTime;
-            this.comment = comment;
+            this.Status = status;
+            this.FollowUpDate = followUpDate;
+            this.Problem = problem;
+            this.HelpedOnTime = helpedOnTime;
+            this.Comment = comment;
         }
 
         public void SetReminder()
