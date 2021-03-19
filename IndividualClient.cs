@@ -6,11 +6,23 @@ using System.Threading.Tasks;
 
 namespace CallCenterProgram
 {
-    class IndividualClient : Client
+    class IndividualClient : IClient
     {
+        private int clientID;
+        private String name;
+        private String surname;
+        private String clientAddress;
+        private String clientStatus;
+
+
         private bool isCurrentClient;
 
         public bool IsCurrentClient { get => isCurrentClient; set => isCurrentClient = value; }
+        public int ClientID { get => clientID; set => clientID = value; }
+        public string Name { get => name; set => name = value; }
+        public string Surname { get => surname; set => surname = value; }
+        public string ClientAddress { get => clientAddress; set => clientAddress = value; }
+        public string ClientStatus { get => clientStatus; set => clientStatus = value; }
 
         public override string ToString()
         {
@@ -20,6 +32,16 @@ namespace CallCenterProgram
         public void Display()
         {
             //method for displaying
+        }
+
+        public void getDetails()
+        {
+            
+        }
+
+        public void getServiceAgreement()
+        {
+           
         }
     }
 }
