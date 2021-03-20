@@ -6,24 +6,17 @@ using System.Threading.Tasks;
 
 namespace CallCenterProgram
 {
-    class ClientMaintenance
+    class ClientInfo : CallStats
     {
-        public void GetSingleClientDetails()
+        public void FindClientDBInfo()
         {
 
         }
-
-        public void GetBusinessClientDetails()
+        public void ViewClientCallHistory()
         {
 
         }
-
-        public void GetServiceAgreement()
-        {
-
-        }
-
-        public void GetManagementInfo()
+        public void ViewClientAgreements()
         {
 
         }

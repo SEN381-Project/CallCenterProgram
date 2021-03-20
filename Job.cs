@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace CallCenterProgram
 {
-    class Job
+    class Job : ServiceRequest
     {
-        private int jobRef;
+        private int workerID;
         private bool jobStatus;
-        private string[] abilityReq;
+        private int incidentID;
 
 
         public int JobRef
         {
-            get { return jobRef; }
-            set { jobRef = value; }
+            get { return workerID; }
+            set { workerID = value; }
         }
 
         public bool JobStatus
@@ -25,20 +25,20 @@ namespace CallCenterProgram
             set { jobStatus = value; }
         }
 
-        public string[] AbilityReq
+        public string[] IncedentID
         {
-            get { return abilityReq; }
+            get { return incidentID; }
         }
 
         public void Job()
         {
         }
 
-        public void Job(int jobRef, bool jobStatus, string[] abilityReq)
+        public void Job(int workerID, bool jobStatus, int incidentID)
         {
-            jobRef = this.jobRef;
-            jobStatus = this.jobRef;
-            abilityReq = this.abilityReq;
+            this.workerID = workerID;
+            this.jobStatus = jobStatus;
+            this.incidentID = incidentID;
         }
 
         public void CheckRequirements()
