@@ -47,15 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessClient.cs" />
-    <Compile Include="Call.cs" />
-    <Compile Include="callDataAccess.cs" />
+    <Compile Include="Bussiness_Logic\Call.cs" />
+    <Compile Include="Data_Access\callDataAccess.cs" />
     <Compile Include="Caller.cs" />
-    <Compile Include="CallStats.cs" />
+    <Compile Include="Bussiness_Logic\CallStats.cs" />
     <Compile Include="ClientFactory.cs" />
-    <Compile Include="ClientInfo.cs" />
+    <Compile Include="Bussiness_Logic\ClientInfo.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="FaultInfo.cs" />
+    <Compile Include="Bussiness_Logic\FaultInfo.cs" />
     <Compile Include="FollowUp.cs" />
     <Compile Include="IClient.cs" />
     <Compile Include="Form1.cs">
@@ -107,6 +107,9 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

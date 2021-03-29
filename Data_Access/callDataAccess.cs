@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CallCenterProgram
 {
-    class callDataAccess
+    class call_DataAccess
     {
 
         string connect = "Data Source=.; Initial Catalog= CallCenterDatabase; Integrated Security= SSPI";
