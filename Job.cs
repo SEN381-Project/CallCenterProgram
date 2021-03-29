@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CallCenterProgram
 {
-    class Job
+    class Job : ServiceRequest
     {
         private int workerID;
         private bool jobStatus;
