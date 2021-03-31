@@ -59,6 +59,9 @@
     <Compile Include="Data_Access\IncidentDataAccess.cs" />
     <Compile Include="Data_Access\JobDataAccess.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="Employee_DataAccess.cs" />
+    <Compile Include="FollowUp.cs" />
+    <Compile Include="FollowUp_DataAccess.cs" />
     <Compile Include="Bussiness_Logic\FaultInfo.cs" />
     <Compile Include="FollowUp.cs" />
     <Compile Include="Bussiness_Logic\IClient.cs" />
