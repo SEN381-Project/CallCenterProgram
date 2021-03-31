@@ -150,10 +150,10 @@ namespace CallCenterProgram
         #endregion
 
         #region Update Functions: Update data
-        // Only the manager can use this method (or anyone with clearance to create services)
-        public void UpdateService(string name, string equipmentType, string workExpenses, int state)
+        // Only the manager can use this method (or anyone with clearance to update services data)
+        public void UpdateService(int serviceID, string name, string equipmentType, string workExpenses)
         {
-            string query = $"INSERT INTO Service VALUES({name}, {equipmentType}, {workExpenses},{state})";
+            string query = $"UPDATE Service SET Name = {name}, EquipmentType = {equipmentType}, WorkExpenses = {workExpenses} WHERE ServiceID = {serviceID}";
             conn = new SqlConnection(connect);
 
             conn.Open();
@@ -163,20 +163,18 @@ namespace CallCenterProgram
             try
             {
                 command.ExecuteNonQuery();
-                // MessageBox.Show() overload number 7
-                MessageBox.Show("New service inserted succesfully", "Service Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Service updated succesfully", "Service update Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                // MessageBox.Show() overload number 7
-                MessageBox.Show("Failed to insert new Service: " + ex.Message, "Insert Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to update Service: " + ex.Message, "Update Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
             finally
             {
                 conn.Close();
             }
         }
-        // Only the manager can use this method (or anyone with clearance to create service levels)
+        // Only the manager can use this method (or anyone with clearance to update service levels data)
         public void UpdateServiceLevel(string levelName, string optOutDetails, double penaltiesForLateWork, double penaltiesForNonPerformance, int state, int securityLevelID)
         {
             string query = $"INSERT INTO ServiceLevel VALUES({levelName}, {optOutDetails}, {penaltiesForLateWork},{penaltiesForNonPerformance},{state},{securityLevelID})";
