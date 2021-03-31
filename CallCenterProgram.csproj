@@ -55,6 +55,9 @@
     <Compile Include="Bussiness_Logic\ClientInfo.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="Employee_DataAccess.cs" />
+    <Compile Include="FollowUp.cs" />
+    <Compile Include="FollowUp_DataAccess.cs" />
     <Compile Include="Bussiness_Logic\FaultInfo.cs" />
     <Compile Include="FollowUp.cs" />
     <Compile Include="IClient.cs" />
