@@ -8,13 +8,15 @@ namespace CallCenterProgram
 {
     class FaultInfo : CallStats
     {
-        public void ReportFault()
+        public string ReportFault()
         {
+            string faultReport = "";
 
+            return faultReport;
         }
         public void LogProblemInfoIntoDB()
         {
-
+            //not necessary. Doing this in the call class
         }
     }
 }

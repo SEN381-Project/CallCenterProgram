@@ -17,13 +17,13 @@ namespace CallCenterProgram
         SqlDataReader reader;
 
 
-        public void InsertCall(float callTime, DateTime initialTimestamp, DateTime finalTimestamp, string faultReport, string callReport, string problemInfo, string workRequest, int callDuration)
+        public void InsertCall(DateTime initialTimestamp, DateTime finalTimestamp, string faultReport, string callReport, string problemInfo, string workRequest, int callDuration)
         {
             string query = @"
                             INSERT INTO 
                                 Call 
                             VALUES 
-                                ( '" + callTime + "', '" + initialTimestamp + "', '" + finalTimestamp + "', '" + faultReport + "', '" + callReport + "', '" + problemInfo + "', '" + workRequest + "', '" + callDuration + "' )";
+                                ( '" + initialTimestamp + "', '" + finalTimestamp + "', '" + faultReport + "', '" + callReport + "', '" + problemInfo + "', '" + workRequest + "', '" + callDuration + "' )";
 
             conn = new SqlConnection(connect);
 
