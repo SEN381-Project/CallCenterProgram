@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessClient.cs" />
-    <Compile Include="ClientDataAccess.cs" />
+    <Compile Include="Data_Access\ClientDataAccess.cs" />
     <Compile Include="Bussiness_Logic\Call.cs" />
     <Compile Include="Data_Access\callDataAccess.cs" />
     <Compile Include="Caller.cs" />
@@ -55,6 +55,9 @@
     <Compile Include="ClientFactory.cs" />
     <Compile Include="Bussiness_Logic\ClientInfo.cs" />
     <Compile Include="Contract.cs" />
+    <Compile Include="Data_Access\ContractMaintenanceAccess.cs" />
+    <Compile Include="Data_Access\IncidentDataAccess.cs" />
+    <Compile Include="Data_Access\JobDataAccess.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Bussiness_Logic\FaultInfo.cs" />
     <Compile Include="FollowUp.cs" />
