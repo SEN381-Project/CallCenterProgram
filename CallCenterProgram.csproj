@@ -47,6 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bussiness_Logic\BusinessClient.cs" />
+    <Compile Include="Bussiness_Logic\Contract.cs" />
+    <Compile Include="Bussiness_Logic\Incident.cs" />
+    <Compile Include="Bussiness_Logic\Job.cs" />
+    <Compile Include="Bussiness_Logic\Package.cs" />
+    <Compile Include="Bussiness_Logic\Service.cs" />
+    <Compile Include="Bussiness_Logic\ServiceLevel.cs" />
+    <Compile Include="Bussiness_Logic\ServiceRequest.cs" />
     <Compile Include="Data_Access\ClientDataAccess.cs" />
     <Compile Include="Bussiness_Logic\Call.cs" />
     <Compile Include="Data_Access\callDataAccess.cs" />
