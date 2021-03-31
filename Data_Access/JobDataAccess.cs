@@ -11,7 +11,7 @@ namespace CallCenterProgram
     class JobDataAccess
     {
         //Constuctor
-        public DataHandler()
+        public JobDataAccess()
         {
         }
 
@@ -87,11 +87,11 @@ namespace CallCenterProgram
             try
             {
                 command.BeginExecuteNonQuery();
-                MessageBox.Show("Job Made!");
+                MessageBox.Show("Job Closed!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Job wasn't made: " + ex.Message);
+                MessageBox.Show("Job wasn't closed: " + ex.Message);
             }
             finally
             {

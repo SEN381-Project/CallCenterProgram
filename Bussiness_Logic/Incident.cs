@@ -58,7 +58,7 @@ namespace CallCenterProgram
             set { callWorkerID = value; }
         }
 
-        public void Incedent()
+        public void Incident()
         {
         }
 
