@@ -8,6 +8,7 @@ namespace CallCenterProgram
 {
     class ServiceLevel
     {
+        ContractMaintenanceAccess dataAccess = new ContractMaintenanceAccess();
         // Security Level Table
         private int securityLevelId;
         private string levelDescription;
