@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessClient.cs" />
+    <Compile Include="ClientDataAccess.cs" />
     <Compile Include="ClientFactory.cs" />
     <Compile Include="IClient.cs" />
     <Compile Include="ContractMaintenance.cs" />
