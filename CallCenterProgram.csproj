@@ -46,31 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessClient.cs" />
-    <Compile Include="Bussiness_Logic\Contract.cs" />
-    <Compile Include="Bussiness_Logic\Employee.cs" />
-    <Compile Include="Bussiness_Logic\FollowUp.cs" />
-    <Compile Include="Bussiness_Logic\Manager.cs" />
-    <Compile Include="Bussiness_Logic\Package.cs" />
-    <Compile Include="Bussiness_Logic\Service.cs" />
-    <Compile Include="Bussiness_Logic\ServiceLevel.cs" />
-    <Compile Include="Bussiness_Logic\ServiceRequest.cs" />
-    <Compile Include="Bussiness_Logic\Technicians.cs" />
+    <Compile Include="Bussiness_Logic\BusinessClient.cs" />
     <Compile Include="Data_Access\ClientDataAccess.cs" />
     <Compile Include="Bussiness_Logic\Call.cs" />
     <Compile Include="Data_Access\callDataAccess.cs" />
     <Compile Include="Caller.cs" />
     <Compile Include="Bussiness_Logic\CallStats.cs" />
-    <Compile Include="ClientFactory.cs" />
+    <Compile Include="Bussiness_Logic\ClientFactory.cs" />
     <Compile Include="Bussiness_Logic\ClientInfo.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="Data_Access\ContractMaintenanceAccess.cs" />
     <Compile Include="Data_Access\IncidentDataAccess.cs" />
     <Compile Include="Data_Access\JobDataAccess.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="Employee_DataAccess.cs" />
+    <Compile Include="FollowUp.cs" />
+    <Compile Include="FollowUp_DataAccess.cs" />
     <Compile Include="Bussiness_Logic\FaultInfo.cs" />
     <Compile Include="FollowUp.cs" />
-    <Compile Include="IClient.cs" />
+    <Compile Include="Bussiness_Logic\IClient.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,10 +72,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Incident.cs" />
-    <Compile Include="IndividualClient.cs" />
+    <Compile Include="Bussiness_Logic\IndividualClient.cs" />
     <Compile Include="Job.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Package.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,9 +98,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include=".vs\slnx.sqlite" />
-    <None Include=".vs\VSWorkspaceState.json" />
-    <None Include="ClassDiagramUpdated.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,9 +116,6 @@
     <Content Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include=".vs\CallCenterProgram\v16\" />
-    <Folder Include="bin\Debug\" />
-    <Folder Include="bin\Release\" />
     <Folder Include="Presentation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
