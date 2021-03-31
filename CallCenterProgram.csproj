@@ -50,7 +50,7 @@
     <Compile Include="Data_Access\ClientDataAccess.cs" />
     <Compile Include="Bussiness_Logic\Call.cs" />
     <Compile Include="Data_Access\callDataAccess.cs" />
-    <Compile Include="Caller.cs" />
+    <Compile Include="Bussiness_Logic\Caller.cs" />
     <Compile Include="Bussiness_Logic\CallStats.cs" />
     <Compile Include="Bussiness_Logic\ClientFactory.cs" />
     <Compile Include="Bussiness_Logic\ClientInfo.cs" />
