@@ -8,6 +8,7 @@ namespace CallCenterProgram
 {
     class Contract
     {
+        ContractMaintenanceAccess dataAccess = new ContractMaintenanceAccess();
         private bool onGoing;
         private int packageID;
         private int clientID;
@@ -18,12 +19,18 @@ namespace CallCenterProgram
 
         public void CreateContract(Package package, int clientID)
         {
-
+            // gotta use package name as the identifier of a contract so we can be able to collect the different services and stuff
+            // 
         }
 
-        public void TerminateContract()
+        public void TerminateContract(int contractID, int newOnGoing)
         {
-            // switch onGoing from true to false to indicate termination.
+            //dataAccess.UpdateContract();
+            // add onGoing to database (aka the state so it can be changed)
+            if (true)
+            {
+
+            }
         }
     }
 }
