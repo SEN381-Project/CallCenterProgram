@@ -47,14 +47,6 @@ namespace CallCenterProgram
             followUpId = followupId;
             this.status = status;
             this.followUpDate = followUpDate;
-
-        public FollowUp(string status, DateTime followUpDate, string problem, bool helpedOnTime, string comment)
-        {
-            this.Status = status;
-            this.FollowUpDate = followUpDate;
-            this.Problem = problem;
-            this.HelpedOnTime = helpedOnTime;
-            this.Comment = comment;
         }
 
         public void SetReminder()
@@ -62,5 +54,5 @@ namespace CallCenterProgram
 
 
             }
-        }
+     }
 }
