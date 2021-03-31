@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessClient.cs" />
+    <Compile Include="ClientDataAccess.cs" />
     <Compile Include="Bussiness_Logic\Call.cs" />
     <Compile Include="Data_Access\callDataAccess.cs" />
     <Compile Include="Caller.cs" />
