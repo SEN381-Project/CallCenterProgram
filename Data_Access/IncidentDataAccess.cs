@@ -11,7 +11,7 @@ namespace CallCenterProgram
     class IncidentDataAccess
     {
         //Constuctor
-        public DataHandler()
+        public IncidentDataAccess()
         {
         }
 

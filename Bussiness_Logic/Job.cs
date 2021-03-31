@@ -12,6 +12,7 @@ namespace CallCenterProgram
         private bool jobStatus;
         private int incidentID;
 
+        JobDataAccess jobData = new JobDataAccess();
 
         public int JobRef
         {
@@ -41,8 +42,21 @@ namespace CallCenterProgram
             this.incidentID = incidentID;
         }
 
-        public void CheckRequirements()
+        public List<Job> ViewJob()
         {
+            List<Job> jobs = jobData.DisplayJob();
+            return jobs;
+        }
+
+        public List<Job> ViewJob(int jobID)
+        {
+            List<Job> jobs = jobData.DisplayJob(jobID);
+            return jobs;
+        }
+
+        public void CloseJob(int jobID)
+        {
+            jobData.CloseJob(jobID);
         }
     }
 }

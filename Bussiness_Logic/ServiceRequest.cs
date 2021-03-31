@@ -12,6 +12,14 @@ namespace CallCenterProgram
         {
         }
 
+        public void ReassignJob(int jobID, int incidentID)
+        {
+        }
+
+        public void EscalateJob(int jobID, int incidentID)
+        {
+        }
+
         private string[] getAvailableWorkers(string[] abilityReq)
         {
         }
