@@ -12,7 +12,7 @@ namespace CallCenterProgram
         private int clientID;
         private String name;
         private String surname;
-        private String clientAddress;
+        private String clientAddress; //may have to expand this into its separate parts
         private String clientStatus;
         private string clientRole;
 
