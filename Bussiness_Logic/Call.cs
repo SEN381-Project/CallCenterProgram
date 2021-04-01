@@ -55,7 +55,7 @@ namespace CallCenterProgram
             string workRequest = "";
             int callDuration = 0;
 
-            CallDB.InsertCall(callTime, initialTimeStamp, finalTimeStamp, faultReport,callReport,problemInfo,workRequest,callDuration);
+            CallDB.InsertCall(initialTimeStamp, finalTimeStamp, faultReport,callReport,problemInfo,workRequest,callDuration);
         }
     }
 }
