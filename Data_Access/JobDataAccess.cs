@@ -51,7 +51,7 @@ namespace CallCenterProgram
 
         public UpdateJob(int jobRef, int jobStatus, int assignedWorkerID)
         {
-            string query = @"UPDATE Incident SET JobStatus = '" + jobStatus + "', AssignedWorkerID = '" + assignedWorkerID + "' WHERE IncidentRef = '" + jobRef + "'";
+            string query = @"UPDATE Job SET JobStatus = '" + jobStatus + "', AssignedWorkerID = '" + assignedWorkerID + "' WHERE IncidentRef = '" + jobRef + "'";
 
             conn = new SqlConnection(connect);
 
@@ -76,7 +76,7 @@ namespace CallCenterProgram
 
         public CloseJob(int jobID)
         {
-            string query = @"DELETE FROM Job WHERE JobRef = '" + jobID + "'";
+            string query = @"UPDATE Job SET JobStatus = '" + 1 + "' WHERE IncidentRef = '" + jobID + "'";
 
             conn = new SqlConnection(connect);
 

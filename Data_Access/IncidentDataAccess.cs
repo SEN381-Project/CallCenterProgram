@@ -98,6 +98,31 @@ namespace CallCenterProgram
             }
         }
 
+        public RemoveServiceRequest(int incidentID)
+        {
+            string query = @"DELETE FROM Incidnet WHERE JobRef = '" + incidentID + "'";
+
+            conn = new SqlConnection(connect);
+
+            conn.Open();
+
+            command = new SqlCommand(query, conn);
+
+            try
+            {
+                command.BeginExecuteNonQuery();
+                MessageBox.Show("Request Closed!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Request wasn't closed: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public List<Incident> DisplayIncident(int incidentID)
         {
             string query = @"SELECT * FROM Jobs WHERE incidentRef = ( '" + incidentID + "' )";
