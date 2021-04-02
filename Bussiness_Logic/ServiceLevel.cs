@@ -8,6 +8,7 @@ namespace CallCenterProgram
 {
     class ServiceLevel
     {
+        ContractMaintenanceAccess dataAccess = new ContractMaintenanceAccess();
         // Security Level Table
         private int securityLevelId;
         private string levelDescription;
@@ -20,7 +21,6 @@ namespace CallCenterProgram
         private string optOutDetails;
         private double penaltiesForLateWork;
         private double penaltiesForNonPerformance;
-        private bool state;
 
         public int SecurityLevelId { get => securityLevelId; set => securityLevelId = value; }
         public string LevelDescription { get => levelDescription; set => levelDescription = value; }
@@ -32,21 +32,28 @@ namespace CallCenterProgram
         public string OptOutDetails { get => optOutDetails; set => optOutDetails = value; }
         public double PenaltiesForLateWork { get => penaltiesForLateWork; set => penaltiesForLateWork = value; }
         public double PenaltiesForNonPerformance { get => penaltiesForNonPerformance; set => penaltiesForNonPerformance = value; }
-        public bool State { get => state; set => state = value; }
 
-        public void AddServiceLevel()
+        public ServiceLevel AddServiceLevel(string levelName, string optOutDetails, double penaltiesForLateWork, double penaltiesForNonPerformance, int state, int securityLevelID)
         {
+            dataAccess.InsertServiceLevel(levelName, optOutDetails, penaltiesForLateWork, penaltiesForNonPerformance, state, securityLevelID);
 
+            ServiceLevel serviceLevel = new ServiceLevel();
+            return serviceLevel;
         }
 
-        public void ChangeState()
+        public void ChangeAvailability(int serviceLevelID, int newAvailability)
         {
+            dataAccess.UpdateServiceLevel(serviceLevelID, newAvailability);
 
-        }
-
-        public void ChangeAvailability()
-        {
-
+            // local update
+            if (newAvailability == 0)
+            {
+                this.availability = false;
+            }
+            else
+            {
+                this.availability = true;
+            }
         }
     }
 }
