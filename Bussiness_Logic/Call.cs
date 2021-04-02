@@ -35,26 +35,39 @@ namespace CallCenterProgram
         }
         public void RecordCallStats()
         {
-
+            //use a thread to track the calls duration
         }
         public DateTime CreateTimestamp()
         {
             DateTime timeStamp = DateTime.Now;
             return timeStamp;
         }
-        public void GenerateCallReport()
+        public List<string> GenerateCallReport()
         {
+            List<string> reports = new List<string>();
 
+            //call report
+            reports.Add(Console.ReadLine());
+            //problem info
+            reports.Add(Console.ReadLine());
+            //work request
+            reports.Add(Console.ReadLine());
+
+            return reports;
         }
         public void InsertCallIntoDB()
         {
+            //lists
+            List<string> reports = GenerateCallReport();
+            //vars
             float callTime = 0f;
             string faultReport = faultInfo.ReportFault();
-            string callReport = "";
-            string problemInfo = "";
-            string workRequest = "";
-            int callDuration = 0;
+            string callReport = reports[0];
+            string problemInfo = reports[1];
+            string workRequest = reports[2];
+            int callDuration = 0; //use RecordCallStats()
 
+            //method
             CallDB.InsertCall(initialTimeStamp, finalTimeStamp, faultReport,callReport,problemInfo,workRequest,callDuration);
         }
     }
