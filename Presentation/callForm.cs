@@ -22,10 +22,21 @@ namespace CallCenterProgram.Presentation
         //methods
         private void colorButtons()
         {
+            //btn Insert Into DB
             btnInsertIntoDB.ForeColor = RGB.accentColorLighterColor;
+            btnInsertIntoDB.FlatAppearance.MouseDownBackColor = RGB.accentDarkerColor;
+            //btn generate reports
             btnGenerateReports.ForeColor = RGB.accentColorLighterColor;
+            btnGenerateReports.FlatAppearance.MouseDownBackColor = RGB.accentDarkerColor;
+            //btn home
             btnHome.ForeColor = RGB.accentColor;
             btnHome.FlatAppearance.BorderColor = RGB.accentColorLighterColor;
+            btnHome.FlatAppearance.MouseDownBackColor = RGB.accentDarkerColor;
+            //btn make call
+            btnMakeCall.FlatAppearance.MouseDownBackColor = RGB.green;
+            btnTakeCall.FlatAppearance.MouseDownBackColor = RGB.green;
+            btnEndCall.FlatAppearance.MouseDownBackColor = RGB.red;
+
         }
 
         private void colorPanels()
@@ -38,9 +49,33 @@ namespace CallCenterProgram.Presentation
 
         private void colorLabels()
         {
+            //header labels
             lblTitle.ForeColor = RGB.accentColor;
             lblReports.ForeColor = RGB.accentColor;
-            lblClientCallHistory.ForeColor = RGB.accentColor;
+            lblClientInfo.ForeColor = RGB.accentColor;
+
+            //labels
+            lblFaultReport.ForeColor = RGB.grey;
+            lblCallReport.ForeColor = RGB.grey;
+            lblProblemInfo.ForeColor = RGB.grey;
+            lblWorkRequest.ForeColor = RGB.grey;
+            lblClientCallHistory.ForeColor = RGB.grey;
+            lblAgreements.ForeColor = RGB.grey;
+
+        }
+
+        private void colorReportRichTextBoxs()
+        {
+            colorRichTextBox(rtbCallReport);
+            colorRichTextBox(rtbFaultReport);
+            colorRichTextBox(rtbProblemInfo);
+            colorRichTextBox(rtbWorkRequest);
+        }
+
+        private void colorRichTextBox(RichTextBox rtb)
+        {
+            rtb.BackColor = RGB.bgColor;
+            rtb.ForeColor = RGB.grey;
         }
 
         //form components
@@ -50,6 +85,7 @@ namespace CallCenterProgram.Presentation
             colorButtons();
             colorPanels();
             colorLabels();
+            colorReportRichTextBoxs();
         }
     }
 }

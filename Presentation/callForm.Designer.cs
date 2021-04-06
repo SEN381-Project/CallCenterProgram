@@ -34,32 +34,32 @@ namespace CallCenterProgram.Presentation
             this.btnMakeCall = new System.Windows.Forms.Button();
             this.btnGenerateReports = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbFaultReport = new System.Windows.Forms.RichTextBox();
             this.lblFaultReport = new System.Windows.Forms.Label();
             this.lblCallReport = new System.Windows.Forms.Label();
             this.lblProblemInfo = new System.Windows.Forms.Label();
             this.lblWorkRequest = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.rtbCallReport = new System.Windows.Forms.RichTextBox();
+            this.rtbProblemInfo = new System.Windows.Forms.RichTextBox();
+            this.rtbWorkRequest = new System.Windows.Forms.RichTextBox();
             this.pnlRightSide = new System.Windows.Forms.Panel();
             this.btnInsertIntoDB = new System.Windows.Forms.Button();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.pnlReports = new System.Windows.Forms.Panel();
+            this.lblReports = new System.Windows.Forms.Label();
             this.pnlClientInfo = new System.Windows.Forms.Panel();
-            this.lblClientInfo = new System.Windows.Forms.Label();
+            this.lblAgreements = new System.Windows.Forms.Label();
+            this.dgvCallHistory = new System.Windows.Forms.DataGridView();
             this.lblClientCallHistory = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dgvCallHistory = new System.Windows.Forms.DataGridView();
-            this.lblAgreements = new System.Windows.Forms.Label();
-            this.lblReports = new System.Windows.Forms.Label();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.lblClientInfo = new System.Windows.Forms.Label();
             this.pnlRightSide.SuspendLayout();
             this.pnlTitleBar.SuspendLayout();
             this.pnlReports.SuspendLayout();
             this.pnlClientInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTakeCall
@@ -131,13 +131,13 @@ namespace CallCenterProgram.Presentation
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Call Form";
             // 
-            // richTextBox1
+            // rtbFaultReport
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(19, 134);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(192, 155);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.rtbFaultReport.Location = new System.Drawing.Point(19, 134);
+            this.rtbFaultReport.Name = "rtbFaultReport";
+            this.rtbFaultReport.Size = new System.Drawing.Size(192, 155);
+            this.rtbFaultReport.TabIndex = 6;
+            this.rtbFaultReport.Text = "";
             // 
             // lblFaultReport
             // 
@@ -179,29 +179,29 @@ namespace CallCenterProgram.Presentation
             this.lblWorkRequest.TabIndex = 10;
             this.lblWorkRequest.Text = "Work Request";
             // 
-            // richTextBox2
+            // rtbCallReport
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(251, 134);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(192, 155);
-            this.richTextBox2.TabIndex = 11;
-            this.richTextBox2.Text = "";
+            this.rtbCallReport.Location = new System.Drawing.Point(251, 134);
+            this.rtbCallReport.Name = "rtbCallReport";
+            this.rtbCallReport.Size = new System.Drawing.Size(192, 155);
+            this.rtbCallReport.TabIndex = 11;
+            this.rtbCallReport.Text = "";
             // 
-            // richTextBox3
+            // rtbProblemInfo
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(480, 134);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(192, 155);
-            this.richTextBox3.TabIndex = 12;
-            this.richTextBox3.Text = "";
+            this.rtbProblemInfo.Location = new System.Drawing.Point(480, 134);
+            this.rtbProblemInfo.Name = "rtbProblemInfo";
+            this.rtbProblemInfo.Size = new System.Drawing.Size(192, 155);
+            this.rtbProblemInfo.TabIndex = 12;
+            this.rtbProblemInfo.Text = "";
             // 
-            // richTextBox4
+            // rtbWorkRequest
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(703, 134);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(192, 155);
-            this.richTextBox4.TabIndex = 13;
-            this.richTextBox4.Text = "";
+            this.rtbWorkRequest.Location = new System.Drawing.Point(703, 134);
+            this.rtbWorkRequest.Name = "rtbWorkRequest";
+            this.rtbWorkRequest.Size = new System.Drawing.Size(192, 155);
+            this.rtbWorkRequest.TabIndex = 13;
+            this.rtbWorkRequest.Text = "";
             // 
             // pnlRightSide
             // 
@@ -242,22 +242,46 @@ namespace CallCenterProgram.Presentation
             this.pnlTitleBar.Size = new System.Drawing.Size(1133, 72);
             this.pnlTitleBar.TabIndex = 15;
             // 
+            // btnHome
+            // 
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.ForeColor = System.Drawing.Color.BlueViolet;
+            this.btnHome.Location = new System.Drawing.Point(1026, 13);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(75, 42);
+            this.btnHome.TabIndex = 5;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            // 
             // pnlReports
             // 
             this.pnlReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlReports.Controls.Add(this.lblReports);
-            this.pnlReports.Controls.Add(this.richTextBox4);
-            this.pnlReports.Controls.Add(this.richTextBox1);
+            this.pnlReports.Controls.Add(this.rtbWorkRequest);
+            this.pnlReports.Controls.Add(this.rtbFaultReport);
             this.pnlReports.Controls.Add(this.lblFaultReport);
             this.pnlReports.Controls.Add(this.lblCallReport);
-            this.pnlReports.Controls.Add(this.richTextBox3);
+            this.pnlReports.Controls.Add(this.rtbProblemInfo);
             this.pnlReports.Controls.Add(this.lblProblemInfo);
-            this.pnlReports.Controls.Add(this.richTextBox2);
+            this.pnlReports.Controls.Add(this.rtbCallReport);
             this.pnlReports.Controls.Add(this.lblWorkRequest);
             this.pnlReports.Location = new System.Drawing.Point(150, 90);
             this.pnlReports.Name = "pnlReports";
             this.pnlReports.Size = new System.Drawing.Size(925, 318);
             this.pnlReports.TabIndex = 16;
+            // 
+            // lblReports
+            // 
+            this.lblReports.AutoSize = true;
+            this.lblReports.Font = new System.Drawing.Font("Roboto Light", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReports.ForeColor = System.Drawing.Color.Indigo;
+            this.lblReports.Location = new System.Drawing.Point(13, 23);
+            this.lblReports.Name = "lblReports";
+            this.lblReports.Size = new System.Drawing.Size(151, 46);
+            this.lblReports.TabIndex = 20;
+            this.lblReports.Text = "Reports";
             // 
             // pnlClientInfo
             // 
@@ -272,16 +296,23 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.Size = new System.Drawing.Size(925, 363);
             this.pnlClientInfo.TabIndex = 17;
             // 
-            // lblClientInfo
+            // lblAgreements
             // 
-            this.lblClientInfo.AutoSize = true;
-            this.lblClientInfo.Font = new System.Drawing.Font("Roboto Light", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientInfo.ForeColor = System.Drawing.Color.Indigo;
-            this.lblClientInfo.Location = new System.Drawing.Point(12, 18);
-            this.lblClientInfo.Name = "lblClientInfo";
-            this.lblClientInfo.Size = new System.Drawing.Size(189, 46);
-            this.lblClientInfo.TabIndex = 14;
-            this.lblClientInfo.Text = "Client info";
+            this.lblAgreements.AutoSize = true;
+            this.lblAgreements.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgreements.Location = new System.Drawing.Point(532, 107);
+            this.lblAgreements.Name = "lblAgreements";
+            this.lblAgreements.Size = new System.Drawing.Size(189, 38);
+            this.lblAgreements.TabIndex = 19;
+            this.lblAgreements.Text = "Agreements";
+            // 
+            // dgvCallHistory
+            // 
+            this.dgvCallHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCallHistory.Location = new System.Drawing.Point(29, 148);
+            this.dgvCallHistory.Name = "dgvCallHistory";
+            this.dgvCallHistory.Size = new System.Drawing.Size(299, 187);
+            this.dgvCallHistory.TabIndex = 18;
             // 
             // lblClientCallHistory
             // 
@@ -301,47 +332,16 @@ namespace CallCenterProgram.Presentation
             this.dataGridView1.Size = new System.Drawing.Size(545, 187);
             this.dataGridView1.TabIndex = 16;
             // 
-            // dgvCallHistory
+            // lblClientInfo
             // 
-            this.dgvCallHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCallHistory.Location = new System.Drawing.Point(29, 148);
-            this.dgvCallHistory.Name = "dgvCallHistory";
-            this.dgvCallHistory.Size = new System.Drawing.Size(299, 187);
-            this.dgvCallHistory.TabIndex = 18;
-            // 
-            // lblAgreements
-            // 
-            this.lblAgreements.AutoSize = true;
-            this.lblAgreements.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgreements.Location = new System.Drawing.Point(532, 107);
-            this.lblAgreements.Name = "lblAgreements";
-            this.lblAgreements.Size = new System.Drawing.Size(189, 38);
-            this.lblAgreements.TabIndex = 19;
-            this.lblAgreements.Text = "Agreements";
-            // 
-            // lblReports
-            // 
-            this.lblReports.AutoSize = true;
-            this.lblReports.Font = new System.Drawing.Font("Roboto Light", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReports.ForeColor = System.Drawing.Color.Indigo;
-            this.lblReports.Location = new System.Drawing.Point(13, 23);
-            this.lblReports.Name = "lblReports";
-            this.lblReports.Size = new System.Drawing.Size(151, 46);
-            this.lblReports.TabIndex = 20;
-            this.lblReports.Text = "Reports";
-            // 
-            // btnHome
-            // 
-            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.ForeColor = System.Drawing.Color.BlueViolet;
-            this.btnHome.Location = new System.Drawing.Point(1026, 13);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 42);
-            this.btnHome.TabIndex = 5;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.lblClientInfo.AutoSize = true;
+            this.lblClientInfo.Font = new System.Drawing.Font("Roboto Light", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientInfo.ForeColor = System.Drawing.Color.Indigo;
+            this.lblClientInfo.Location = new System.Drawing.Point(12, 18);
+            this.lblClientInfo.Name = "lblClientInfo";
+            this.lblClientInfo.Size = new System.Drawing.Size(189, 46);
+            this.lblClientInfo.TabIndex = 14;
+            this.lblClientInfo.Text = "Client info";
             // 
             // callForm
             // 
@@ -363,8 +363,8 @@ namespace CallCenterProgram.Presentation
             this.pnlReports.PerformLayout();
             this.pnlClientInfo.ResumeLayout(false);
             this.pnlClientInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,14 +376,14 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Button btnMakeCall;
         private System.Windows.Forms.Button btnGenerateReports;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbFaultReport;
         private System.Windows.Forms.Label lblFaultReport;
         private System.Windows.Forms.Label lblCallReport;
         private System.Windows.Forms.Label lblProblemInfo;
         private System.Windows.Forms.Label lblWorkRequest;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox rtbCallReport;
+        private System.Windows.Forms.RichTextBox rtbProblemInfo;
+        private System.Windows.Forms.RichTextBox rtbWorkRequest;
         private System.Windows.Forms.Panel pnlRightSide;
         private System.Windows.Forms.Button btnInsertIntoDB;
         private System.Windows.Forms.Panel pnlTitleBar;
