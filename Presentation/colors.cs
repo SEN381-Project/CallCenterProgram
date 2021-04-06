@@ -19,7 +19,9 @@ namespace CallCenterProgram.Presentation
 
         public Color grey = Color.FromArgb(197, 197, 197);
         public Color green = Color.FromArgb(0, 200, 0);
+        public Color hoverGreen = Color.FromArgb(49, 75, 49);
         public Color red = Color.FromArgb(200, 0, 0);
+        public Color hoverRed = Color.FromArgb(85, 0, 0);
 
     }
 }

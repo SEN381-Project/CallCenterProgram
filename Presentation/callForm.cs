@@ -34,9 +34,13 @@ namespace CallCenterProgram.Presentation
             btnHome.FlatAppearance.MouseDownBackColor = RGB.accentDarkerColor;
             //btn make call
             btnMakeCall.FlatAppearance.MouseDownBackColor = RGB.green;
+            btnMakeCall.FlatAppearance.MouseOverBackColor = RGB.hoverGreen;
+            //btn take call
             btnTakeCall.FlatAppearance.MouseDownBackColor = RGB.green;
+            btnTakeCall.FlatAppearance.MouseOverBackColor = RGB.hoverGreen;
+            //btn end call
             btnEndCall.FlatAppearance.MouseDownBackColor = RGB.red;
-
+            btnEndCall.FlatAppearance.MouseOverBackColor = RGB.hoverRed;
         }
 
         private void colorPanels()
@@ -62,7 +66,6 @@ namespace CallCenterProgram.Presentation
             lblWorkRequest.ForeColor = RGB.grey;
             lblClientCallHistory.ForeColor = RGB.grey;
             lblAgreements.ForeColor = RGB.grey;
-
         }
 
         private void colorReportRichTextBoxs()
