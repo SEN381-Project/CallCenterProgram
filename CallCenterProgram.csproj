@@ -47,6 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bussiness_Logic\BusinessClient.cs" />
+    <Compile Include="Bussiness_Logic\Contract.cs" />
+    <Compile Include="Bussiness_Logic\Incident.cs" />
+    <Compile Include="Bussiness_Logic\Job.cs" />
+    <Compile Include="Bussiness_Logic\Package.cs" />
+    <Compile Include="Bussiness_Logic\Service.cs" />
+    <Compile Include="Bussiness_Logic\ServiceLevel.cs" />
+    <Compile Include="Bussiness_Logic\ServiceRequest.cs" />
     <Compile Include="Data_Access\ClientDataAccess.cs" />
     <Compile Include="Bussiness_Logic\Call.cs" />
     <Compile Include="Data_Access\callDataAccess.cs" />
@@ -74,6 +81,8 @@
     <Compile Include="Incident.cs" />
     <Compile Include="Bussiness_Logic\IndividualClient.cs" />
     <Compile Include="Job.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Package.cs" />
     <Compile Include="Presentation\callForm.cs">
       <SubType>Form</SubType>
@@ -108,6 +117,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
     <None Include="ClassDiagramUpdated.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -126,6 +137,10 @@
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include=".vs\CallCenterProgram\v16\" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
