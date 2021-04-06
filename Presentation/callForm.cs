@@ -43,8 +43,9 @@ namespace CallCenterProgram.Presentation
         {
             pnlReports.BackColor = RGB.bgLighterColor;
             pnlClientInfo.BackColor = RGB.bgLighterColor;
-            pnlTitleBar.BackColor = RGB.bgColor;
-            pnlRightSide.BackColor = RGB.bgColor;
+            pnlTitleBar.BackColor = RGB.bgDarkerColor;
+            pnlRightSide.BackColor = RGB.bgDarkerColor;
+            pnlRightBottom.BackColor = RGB.bgLighterColor;
         }
 
         private void colorLabels()

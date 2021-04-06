@@ -10,6 +10,7 @@ namespace CallCenterProgram.Presentation
     class colors
     {
         public Color bgColor = Color.FromArgb(26, 26, 26);
+        public Color bgDarkerColor = Color.FromArgb(20, 20, 20);
         public Color bgLighterColor = Color.FromArgb(30, 30, 30);
 
         public Color accentColor = Color.FromArgb(102, 112, 233);
@@ -19,5 +20,6 @@ namespace CallCenterProgram.Presentation
         public Color grey = Color.FromArgb(197, 197, 197);
         public Color green = Color.FromArgb(0, 200, 0);
         public Color red = Color.FromArgb(200, 0, 0);
+
     }
 }
