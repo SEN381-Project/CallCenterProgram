@@ -14,6 +14,7 @@ namespace CallCenterProgram.Presentation
         public Color bgLighterColor = Color.FromArgb(30, 30, 30);
 
         public Color accentColor = Color.FromArgb(102, 112, 233);
+        public Color hoverAccent = Color.FromArgb(21, 23, 58);
         public Color accentDarkerColor = Color.FromArgb(72, 82, 203);
         public Color accentColorLighterColor = Color.FromArgb(122, 132, 253);
 

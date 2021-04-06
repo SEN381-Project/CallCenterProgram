@@ -29,9 +29,6 @@ namespace CallCenterProgram.Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnTakeCall = new System.Windows.Forms.Button();
-            this.btnEndCall = new System.Windows.Forms.Button();
-            this.btnMakeCall = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.rtbFaultReport = new System.Windows.Forms.RichTextBox();
             this.lblFaultReport = new System.Windows.Forms.Label();
@@ -41,7 +38,6 @@ namespace CallCenterProgram.Presentation
             this.rtbCallReport = new System.Windows.Forms.RichTextBox();
             this.rtbProblemInfo = new System.Windows.Forms.RichTextBox();
             this.rtbWorkRequest = new System.Windows.Forms.RichTextBox();
-            this.pnlRightSide = new System.Windows.Forms.Panel();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlReports = new System.Windows.Forms.Panel();
@@ -52,59 +48,24 @@ namespace CallCenterProgram.Presentation
             this.lblClientCallHistory = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblClientInfo = new System.Windows.Forms.Label();
+            this.lblClientNumber = new System.Windows.Forms.Label();
+            this.btnFindClientInfo = new System.Windows.Forms.Button();
+            this.txtClientInfo = new System.Windows.Forms.TextBox();
+            this.pnlRightSide = new System.Windows.Forms.Panel();
+            this.btnEndCall = new System.Windows.Forms.Button();
             this.pnlRightBottom = new System.Windows.Forms.Panel();
             this.btnInsertIntoDB = new System.Windows.Forms.Button();
             this.btnGenerateReports = new System.Windows.Forms.Button();
-            this.pnlRightSide.SuspendLayout();
+            this.btnMakeCall = new System.Windows.Forms.Button();
+            this.btnTakeCall = new System.Windows.Forms.Button();
             this.pnlTitleBar.SuspendLayout();
             this.pnlReports.SuspendLayout();
             this.pnlClientInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnlRightSide.SuspendLayout();
             this.pnlRightBottom.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnTakeCall
-            // 
-            this.btnTakeCall.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTakeCall.FlatAppearance.BorderSize = 0;
-            this.btnTakeCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTakeCall.Font = new System.Drawing.Font("Roboto Thin", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakeCall.ForeColor = System.Drawing.Color.Chartreuse;
-            this.btnTakeCall.Location = new System.Drawing.Point(0, 180);
-            this.btnTakeCall.Name = "btnTakeCall";
-            this.btnTakeCall.Size = new System.Drawing.Size(229, 90);
-            this.btnTakeCall.TabIndex = 0;
-            this.btnTakeCall.Text = "Take Call";
-            this.btnTakeCall.UseVisualStyleBackColor = true;
-            // 
-            // btnEndCall
-            // 
-            this.btnEndCall.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEndCall.FlatAppearance.BorderSize = 0;
-            this.btnEndCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEndCall.Font = new System.Drawing.Font("Roboto Thin", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEndCall.ForeColor = System.Drawing.Color.Red;
-            this.btnEndCall.Location = new System.Drawing.Point(0, 90);
-            this.btnEndCall.Name = "btnEndCall";
-            this.btnEndCall.Size = new System.Drawing.Size(229, 90);
-            this.btnEndCall.TabIndex = 1;
-            this.btnEndCall.Text = "End Call";
-            this.btnEndCall.UseVisualStyleBackColor = true;
-            // 
-            // btnMakeCall
-            // 
-            this.btnMakeCall.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMakeCall.FlatAppearance.BorderSize = 0;
-            this.btnMakeCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMakeCall.Font = new System.Drawing.Font("Roboto Thin", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMakeCall.ForeColor = System.Drawing.Color.Chartreuse;
-            this.btnMakeCall.Location = new System.Drawing.Point(0, 0);
-            this.btnMakeCall.Name = "btnMakeCall";
-            this.btnMakeCall.Size = new System.Drawing.Size(229, 90);
-            this.btnMakeCall.TabIndex = 2;
-            this.btnMakeCall.Text = "Make Call";
-            this.btnMakeCall.UseVisualStyleBackColor = true;
             // 
             // lblTitle
             // 
@@ -195,19 +156,6 @@ namespace CallCenterProgram.Presentation
             this.rtbWorkRequest.TabIndex = 13;
             this.rtbWorkRequest.Text = "";
             // 
-            // pnlRightSide
-            // 
-            this.pnlRightSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlRightSide.Controls.Add(this.pnlRightBottom);
-            this.pnlRightSide.Controls.Add(this.btnTakeCall);
-            this.pnlRightSide.Controls.Add(this.btnEndCall);
-            this.pnlRightSide.Controls.Add(this.btnMakeCall);
-            this.pnlRightSide.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRightSide.Location = new System.Drawing.Point(1124, 0);
-            this.pnlRightSide.Name = "pnlRightSide";
-            this.pnlRightSide.Size = new System.Drawing.Size(229, 817);
-            this.pnlRightSide.TabIndex = 14;
-            // 
             // pnlTitleBar
             // 
             this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -216,7 +164,7 @@ namespace CallCenterProgram.Presentation
             this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTitleBar.Name = "pnlTitleBar";
-            this.pnlTitleBar.Size = new System.Drawing.Size(1124, 72);
+            this.pnlTitleBar.Size = new System.Drawing.Size(1353, 72);
             this.pnlTitleBar.TabIndex = 15;
             // 
             // btnHome
@@ -225,7 +173,7 @@ namespace CallCenterProgram.Presentation
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.ForeColor = System.Drawing.Color.BlueViolet;
-            this.btnHome.Location = new System.Drawing.Point(1017, 13);
+            this.btnHome.Location = new System.Drawing.Point(1246, 13);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(75, 42);
             this.btnHome.TabIndex = 5;
@@ -263,6 +211,9 @@ namespace CallCenterProgram.Presentation
             // pnlClientInfo
             // 
             this.pnlClientInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlClientInfo.Controls.Add(this.lblClientNumber);
+            this.pnlClientInfo.Controls.Add(this.btnFindClientInfo);
+            this.pnlClientInfo.Controls.Add(this.txtClientInfo);
             this.pnlClientInfo.Controls.Add(this.lblAgreements);
             this.pnlClientInfo.Controls.Add(this.dgvCallHistory);
             this.pnlClientInfo.Controls.Add(this.lblClientCallHistory);
@@ -320,26 +271,85 @@ namespace CallCenterProgram.Presentation
             this.lblClientInfo.TabIndex = 14;
             this.lblClientInfo.Text = "Client info";
             // 
+            // lblClientNumber
+            // 
+            this.lblClientNumber.AutoSize = true;
+            this.lblClientNumber.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientNumber.Location = new System.Drawing.Point(545, 23);
+            this.lblClientNumber.Name = "lblClientNumber";
+            this.lblClientNumber.Size = new System.Drawing.Size(135, 38);
+            this.lblClientNumber.TabIndex = 25;
+            this.lblClientNumber.Text = "Client ID";
+            // 
+            // btnFindClientInfo
+            // 
+            this.btnFindClientInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindClientInfo.Font = new System.Drawing.Font("Roboto Thin", 27.75F);
+            this.btnFindClientInfo.Location = new System.Drawing.Point(795, 14);
+            this.btnFindClientInfo.Name = "btnFindClientInfo";
+            this.btnFindClientInfo.Size = new System.Drawing.Size(116, 52);
+            this.btnFindClientInfo.TabIndex = 24;
+            this.btnFindClientInfo.Text = "Find Client Info";
+            this.btnFindClientInfo.UseVisualStyleBackColor = true;
+            // 
+            // txtClientInfo
+            // 
+            this.txtClientInfo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientInfo.Location = new System.Drawing.Point(686, 32);
+            this.txtClientInfo.Name = "txtClientInfo";
+            this.txtClientInfo.Size = new System.Drawing.Size(103, 26);
+            this.txtClientInfo.TabIndex = 23;
+            // 
+            // pnlRightSide
+            // 
+            this.pnlRightSide.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.pnlRightSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlRightSide.Controls.Add(this.btnEndCall);
+            this.pnlRightSide.Controls.Add(this.pnlRightBottom);
+            this.pnlRightSide.Controls.Add(this.btnMakeCall);
+            this.pnlRightSide.Controls.Add(this.btnTakeCall);
+            this.pnlRightSide.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlRightSide.Location = new System.Drawing.Point(1166, 72);
+            this.pnlRightSide.Name = "pnlRightSide";
+            this.pnlRightSide.Size = new System.Drawing.Size(187, 745);
+            this.pnlRightSide.TabIndex = 18;
+            // 
+            // btnEndCall
+            // 
+            this.btnEndCall.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEndCall.FlatAppearance.BorderSize = 0;
+            this.btnEndCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEndCall.Font = new System.Drawing.Font("Roboto Thin", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEndCall.ForeColor = System.Drawing.Color.Red;
+            this.btnEndCall.Location = new System.Drawing.Point(0, 180);
+            this.btnEndCall.Name = "btnEndCall";
+            this.btnEndCall.Size = new System.Drawing.Size(187, 90);
+            this.btnEndCall.TabIndex = 1;
+            this.btnEndCall.Text = "End Call";
+            this.btnEndCall.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEndCall.UseVisualStyleBackColor = true;
+            // 
             // pnlRightBottom
             // 
             this.pnlRightBottom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlRightBottom.BackColor = System.Drawing.Color.Gray;
             this.pnlRightBottom.Controls.Add(this.btnInsertIntoDB);
             this.pnlRightBottom.Controls.Add(this.btnGenerateReports);
-            this.pnlRightBottom.Location = new System.Drawing.Point(17, 582);
+            this.pnlRightBottom.Location = new System.Drawing.Point(17, 468);
             this.pnlRightBottom.Name = "pnlRightBottom";
-            this.pnlRightBottom.Size = new System.Drawing.Size(200, 223);
-            this.pnlRightBottom.TabIndex = 6;
+            this.pnlRightBottom.Size = new System.Drawing.Size(158, 265);
+            this.pnlRightBottom.TabIndex = 5;
             // 
             // btnInsertIntoDB
             // 
+            this.btnInsertIntoDB.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInsertIntoDB.FlatAppearance.BorderSize = 0;
             this.btnInsertIntoDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertIntoDB.Font = new System.Drawing.Font("Roboto Thin", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertIntoDB.ForeColor = System.Drawing.Color.BlueViolet;
-            this.btnInsertIntoDB.Location = new System.Drawing.Point(3, 12);
+            this.btnInsertIntoDB.Location = new System.Drawing.Point(0, 116);
             this.btnInsertIntoDB.Name = "btnInsertIntoDB";
-            this.btnInsertIntoDB.Size = new System.Drawing.Size(194, 90);
+            this.btnInsertIntoDB.Size = new System.Drawing.Size(158, 146);
             this.btnInsertIntoDB.TabIndex = 4;
             this.btnInsertIntoDB.Text = "Insert call into database";
             this.btnInsertIntoDB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -347,17 +357,48 @@ namespace CallCenterProgram.Presentation
             // 
             // btnGenerateReports
             // 
+            this.btnGenerateReports.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnGenerateReports.FlatAppearance.BorderSize = 0;
             this.btnGenerateReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateReports.Font = new System.Drawing.Font("Roboto Thin", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateReports.ForeColor = System.Drawing.Color.BlueViolet;
-            this.btnGenerateReports.Location = new System.Drawing.Point(0, 119);
+            this.btnGenerateReports.Location = new System.Drawing.Point(0, 0);
             this.btnGenerateReports.Name = "btnGenerateReports";
-            this.btnGenerateReports.Size = new System.Drawing.Size(220, 90);
+            this.btnGenerateReports.Size = new System.Drawing.Size(158, 116);
             this.btnGenerateReports.TabIndex = 3;
             this.btnGenerateReports.Text = "Generate Reports";
             this.btnGenerateReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerateReports.UseVisualStyleBackColor = true;
+            // 
+            // btnMakeCall
+            // 
+            this.btnMakeCall.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMakeCall.FlatAppearance.BorderSize = 0;
+            this.btnMakeCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMakeCall.Font = new System.Drawing.Font("Roboto Thin", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMakeCall.ForeColor = System.Drawing.Color.Chartreuse;
+            this.btnMakeCall.Location = new System.Drawing.Point(0, 90);
+            this.btnMakeCall.Name = "btnMakeCall";
+            this.btnMakeCall.Size = new System.Drawing.Size(187, 90);
+            this.btnMakeCall.TabIndex = 2;
+            this.btnMakeCall.Text = "Make Call";
+            this.btnMakeCall.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMakeCall.UseVisualStyleBackColor = true;
+            // 
+            // btnTakeCall
+            // 
+            this.btnTakeCall.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTakeCall.FlatAppearance.BorderSize = 0;
+            this.btnTakeCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTakeCall.Font = new System.Drawing.Font("Roboto Thin", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTakeCall.ForeColor = System.Drawing.Color.Chartreuse;
+            this.btnTakeCall.Location = new System.Drawing.Point(0, 0);
+            this.btnTakeCall.Name = "btnTakeCall";
+            this.btnTakeCall.Size = new System.Drawing.Size(187, 90);
+            this.btnTakeCall.TabIndex = 0;
+            this.btnTakeCall.Text = "Take Call";
+            this.btnTakeCall.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTakeCall.UseVisualStyleBackColor = true;
             // 
             // callForm
             // 
@@ -365,14 +406,13 @@ namespace CallCenterProgram.Presentation
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1353, 817);
+            this.Controls.Add(this.pnlRightSide);
             this.Controls.Add(this.pnlClientInfo);
             this.Controls.Add(this.pnlReports);
             this.Controls.Add(this.pnlTitleBar);
-            this.Controls.Add(this.pnlRightSide);
             this.Name = "callForm";
             this.Text = "call";
             this.Load += new System.EventHandler(this.call_Load);
-            this.pnlRightSide.ResumeLayout(false);
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
             this.pnlReports.ResumeLayout(false);
@@ -381,16 +421,13 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnlRightSide.ResumeLayout(false);
             this.pnlRightBottom.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnTakeCall;
-        private System.Windows.Forms.Button btnEndCall;
-        private System.Windows.Forms.Button btnMakeCall;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.RichTextBox rtbFaultReport;
         private System.Windows.Forms.Label lblFaultReport;
@@ -400,7 +437,6 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.RichTextBox rtbCallReport;
         private System.Windows.Forms.RichTextBox rtbProblemInfo;
         private System.Windows.Forms.RichTextBox rtbWorkRequest;
-        private System.Windows.Forms.Panel pnlRightSide;
         private System.Windows.Forms.Panel pnlTitleBar;
         private System.Windows.Forms.Panel pnlReports;
         private System.Windows.Forms.Panel pnlClientInfo;
@@ -411,8 +447,15 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Label lblAgreements;
         private System.Windows.Forms.Label lblReports;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Label lblClientNumber;
+        private System.Windows.Forms.Button btnFindClientInfo;
+        private System.Windows.Forms.TextBox txtClientInfo;
+        private System.Windows.Forms.Panel pnlRightSide;
+        private System.Windows.Forms.Button btnEndCall;
         private System.Windows.Forms.Panel pnlRightBottom;
         private System.Windows.Forms.Button btnInsertIntoDB;
         private System.Windows.Forms.Button btnGenerateReports;
+        private System.Windows.Forms.Button btnMakeCall;
+        private System.Windows.Forms.Button btnTakeCall;
     }
 }
