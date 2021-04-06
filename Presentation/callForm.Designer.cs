@@ -133,6 +133,7 @@ namespace CallCenterProgram.Presentation
             // 
             // rtbFaultReport
             // 
+            this.rtbFaultReport.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.rtbFaultReport.Location = new System.Drawing.Point(19, 134);
             this.rtbFaultReport.Name = "rtbFaultReport";
             this.rtbFaultReport.Size = new System.Drawing.Size(192, 155);
@@ -181,6 +182,7 @@ namespace CallCenterProgram.Presentation
             // 
             // rtbCallReport
             // 
+            this.rtbCallReport.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.rtbCallReport.Location = new System.Drawing.Point(251, 134);
             this.rtbCallReport.Name = "rtbCallReport";
             this.rtbCallReport.Size = new System.Drawing.Size(192, 155);
@@ -189,6 +191,7 @@ namespace CallCenterProgram.Presentation
             // 
             // rtbProblemInfo
             // 
+            this.rtbProblemInfo.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.rtbProblemInfo.Location = new System.Drawing.Point(480, 134);
             this.rtbProblemInfo.Name = "rtbProblemInfo";
             this.rtbProblemInfo.Size = new System.Drawing.Size(192, 155);
@@ -197,6 +200,7 @@ namespace CallCenterProgram.Presentation
             // 
             // rtbWorkRequest
             // 
+            this.rtbWorkRequest.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.rtbWorkRequest.Location = new System.Drawing.Point(703, 134);
             this.rtbWorkRequest.Name = "rtbWorkRequest";
             this.rtbWorkRequest.Size = new System.Drawing.Size(192, 155);
