@@ -4,43 +4,43 @@
     <Position X="7.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAEAAAAAIAAAAEBAAEEQQABQAGBAAABAAAAgAAAAA=</HashCode>
-      <FileName>BusinessClient.cs</FileName>
+      <FileName>Bussiness_Logic\BusinessClient.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="CallCenterProgram.Call" Collapsed="true">
     <Position X="2.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgABQAAAAAAAACAAIAAAAAAAAAgAAAEAAAAAAAAIAA=</HashCode>
-      <FileName>Call.cs</FileName>
+      <HashCode>AAgABQCAQEAAAACAAIAAAAAAAAAgAAAEAAAAAAAAoAA=</HashCode>
+      <FileName>Bussiness_Logic\Call.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CallCenterProgram.Caller" Collapsed="true">
     <Position X="5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAACAAA=</HashCode>
-      <FileName>Caller.cs</FileName>
+      <FileName>Bussiness_Logic\Caller.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CallCenterProgram.CallStats" Collapsed="true">
     <Position X="2.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
-      <FileName>CallStats.cs</FileName>
+      <FileName>Bussiness_Logic\CallStats.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CallCenterProgram.ClientFactory" Collapsed="true">
     <Position X="9.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ClientFactory.cs</FileName>
+      <FileName>Bussiness_Logic\ClientFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CallCenterProgram.ClientInfo" Collapsed="true">
     <Position X="0.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ClientInfo.cs</FileName>
+      <FileName>Bussiness_Logic\ClientInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CallCenterProgram.Contract" Collapsed="true">
@@ -53,22 +53,22 @@
   <Class Name="CallCenterProgram.Employee" Collapsed="true">
     <Position X="2.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEgAAGAAQABgIEAIACAAAAAAAAAAA=</HashCode>
-      <FileName>Employee.cs</FileName>
+      <HashCode>AAoAAAAAAABAiAAEgIAGAEQABgIEAIACAQAAAEACAAA=</HashCode>
+      <FileName>Bussiness_Logic\Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CallCenterProgram.FaultInfo" Collapsed="true">
     <Position X="5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FaultInfo.cs</FileName>
+      <FileName>Bussiness_Logic\FaultInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CallCenterProgram.FollowUp" Collapsed="true">
     <Position X="2.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IgQAAgMEAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FollowUp.cs</FileName>
+      <HashCode>IgQAAgMEAAIBBAgAAAAIAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Bussiness_Logic\FollowUp.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CallCenterProgram.Form1" Collapsed="true">
@@ -89,7 +89,7 @@
     <Position X="7.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAEIAAAAEBAAEAQQABUAGBAAABAAAAgAAAAA=</HashCode>
-      <FileName>IndividualClient.cs</FileName>
+      <FileName>Bussiness_Logic\IndividualClient.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
@@ -104,7 +104,7 @@
     <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAEAAAAAQABACAAgAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Manager.cs</FileName>
+      <FileName>Bussiness_Logic\Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CallCenterProgram.Package" Collapsed="true">
@@ -145,8 +145,8 @@
   <Class Name="CallCenterProgram.Technicians" Collapsed="true">
     <Position X="2.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAQAAEAAAABAAAAAAgAAAAIA=</HashCode>
-      <FileName>Technicians.cs</FileName>
+      <HashCode>AABAAQAAQAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Bussiness_Logic\Technicians.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CallCenterProgram.Properties.Resources" Collapsed="true">
@@ -165,7 +165,7 @@
     <Position X="7.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAABAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IClient.cs</FileName>
+      <FileName>Bussiness_Logic\IClient.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
