@@ -43,14 +43,14 @@ namespace CallCenterProgram.Presentation
             this.pnlReports = new System.Windows.Forms.Panel();
             this.lblReports = new System.Windows.Forms.Label();
             this.pnlClientInfo = new System.Windows.Forms.Panel();
+            this.lblClientNumber = new System.Windows.Forms.Label();
+            this.btnFindClientInfo = new System.Windows.Forms.Button();
+            this.txtClientInfo = new System.Windows.Forms.TextBox();
             this.lblAgreements = new System.Windows.Forms.Label();
             this.dgvCallHistory = new System.Windows.Forms.DataGridView();
             this.lblClientCallHistory = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblClientInfo = new System.Windows.Forms.Label();
-            this.lblClientNumber = new System.Windows.Forms.Label();
-            this.btnFindClientInfo = new System.Windows.Forms.Button();
-            this.txtClientInfo = new System.Windows.Forms.TextBox();
             this.pnlRightSide = new System.Windows.Forms.Panel();
             this.btnEndCall = new System.Windows.Forms.Button();
             this.pnlRightBottom = new System.Windows.Forms.Panel();
@@ -173,7 +173,7 @@ namespace CallCenterProgram.Presentation
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.ForeColor = System.Drawing.Color.BlueViolet;
-            this.btnHome.Location = new System.Drawing.Point(1246, 13);
+            this.btnHome.Location = new System.Drawing.Point(1231, 12);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(75, 42);
             this.btnHome.TabIndex = 5;
@@ -224,6 +224,35 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.Size = new System.Drawing.Size(925, 363);
             this.pnlClientInfo.TabIndex = 17;
             // 
+            // lblClientNumber
+            // 
+            this.lblClientNumber.AutoSize = true;
+            this.lblClientNumber.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientNumber.Location = new System.Drawing.Point(545, 23);
+            this.lblClientNumber.Name = "lblClientNumber";
+            this.lblClientNumber.Size = new System.Drawing.Size(135, 38);
+            this.lblClientNumber.TabIndex = 25;
+            this.lblClientNumber.Text = "Client ID";
+            // 
+            // btnFindClientInfo
+            // 
+            this.btnFindClientInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindClientInfo.Font = new System.Drawing.Font("Roboto Thin", 27.75F);
+            this.btnFindClientInfo.Location = new System.Drawing.Point(795, 14);
+            this.btnFindClientInfo.Name = "btnFindClientInfo";
+            this.btnFindClientInfo.Size = new System.Drawing.Size(116, 52);
+            this.btnFindClientInfo.TabIndex = 24;
+            this.btnFindClientInfo.Text = "Find Client Info";
+            this.btnFindClientInfo.UseVisualStyleBackColor = true;
+            // 
+            // txtClientInfo
+            // 
+            this.txtClientInfo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientInfo.Location = new System.Drawing.Point(686, 32);
+            this.txtClientInfo.Name = "txtClientInfo";
+            this.txtClientInfo.Size = new System.Drawing.Size(103, 26);
+            this.txtClientInfo.TabIndex = 23;
+            // 
             // lblAgreements
             // 
             this.lblAgreements.AutoSize = true;
@@ -270,35 +299,6 @@ namespace CallCenterProgram.Presentation
             this.lblClientInfo.Size = new System.Drawing.Size(189, 46);
             this.lblClientInfo.TabIndex = 14;
             this.lblClientInfo.Text = "Client info";
-            // 
-            // lblClientNumber
-            // 
-            this.lblClientNumber.AutoSize = true;
-            this.lblClientNumber.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientNumber.Location = new System.Drawing.Point(545, 23);
-            this.lblClientNumber.Name = "lblClientNumber";
-            this.lblClientNumber.Size = new System.Drawing.Size(135, 38);
-            this.lblClientNumber.TabIndex = 25;
-            this.lblClientNumber.Text = "Client ID";
-            // 
-            // btnFindClientInfo
-            // 
-            this.btnFindClientInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFindClientInfo.Font = new System.Drawing.Font("Roboto Thin", 27.75F);
-            this.btnFindClientInfo.Location = new System.Drawing.Point(795, 14);
-            this.btnFindClientInfo.Name = "btnFindClientInfo";
-            this.btnFindClientInfo.Size = new System.Drawing.Size(116, 52);
-            this.btnFindClientInfo.TabIndex = 24;
-            this.btnFindClientInfo.Text = "Find Client Info";
-            this.btnFindClientInfo.UseVisualStyleBackColor = true;
-            // 
-            // txtClientInfo
-            // 
-            this.txtClientInfo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientInfo.Location = new System.Drawing.Point(686, 32);
-            this.txtClientInfo.Name = "txtClientInfo";
-            this.txtClientInfo.Size = new System.Drawing.Size(103, 26);
-            this.txtClientInfo.TabIndex = 23;
             // 
             // pnlRightSide
             // 
