@@ -32,7 +32,6 @@ namespace CallCenterProgram.Presentation
             this.btnTakeCall = new System.Windows.Forms.Button();
             this.btnEndCall = new System.Windows.Forms.Button();
             this.btnMakeCall = new System.Windows.Forms.Button();
-            this.btnGenerateReports = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.rtbFaultReport = new System.Windows.Forms.RichTextBox();
             this.lblFaultReport = new System.Windows.Forms.Label();
@@ -43,7 +42,6 @@ namespace CallCenterProgram.Presentation
             this.rtbProblemInfo = new System.Windows.Forms.RichTextBox();
             this.rtbWorkRequest = new System.Windows.Forms.RichTextBox();
             this.pnlRightSide = new System.Windows.Forms.Panel();
-            this.btnInsertIntoDB = new System.Windows.Forms.Button();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlReports = new System.Windows.Forms.Panel();
@@ -54,12 +52,16 @@ namespace CallCenterProgram.Presentation
             this.lblClientCallHistory = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblClientInfo = new System.Windows.Forms.Label();
+            this.pnlRightBottom = new System.Windows.Forms.Panel();
+            this.btnInsertIntoDB = new System.Windows.Forms.Button();
+            this.btnGenerateReports = new System.Windows.Forms.Button();
             this.pnlRightSide.SuspendLayout();
             this.pnlTitleBar.SuspendLayout();
             this.pnlReports.SuspendLayout();
             this.pnlClientInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnlRightBottom.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnTakeCall
@@ -71,7 +73,7 @@ namespace CallCenterProgram.Presentation
             this.btnTakeCall.ForeColor = System.Drawing.Color.Chartreuse;
             this.btnTakeCall.Location = new System.Drawing.Point(0, 180);
             this.btnTakeCall.Name = "btnTakeCall";
-            this.btnTakeCall.Size = new System.Drawing.Size(220, 90);
+            this.btnTakeCall.Size = new System.Drawing.Size(229, 90);
             this.btnTakeCall.TabIndex = 0;
             this.btnTakeCall.Text = "Take Call";
             this.btnTakeCall.UseVisualStyleBackColor = true;
@@ -85,7 +87,7 @@ namespace CallCenterProgram.Presentation
             this.btnEndCall.ForeColor = System.Drawing.Color.Red;
             this.btnEndCall.Location = new System.Drawing.Point(0, 90);
             this.btnEndCall.Name = "btnEndCall";
-            this.btnEndCall.Size = new System.Drawing.Size(220, 90);
+            this.btnEndCall.Size = new System.Drawing.Size(229, 90);
             this.btnEndCall.TabIndex = 1;
             this.btnEndCall.Text = "End Call";
             this.btnEndCall.UseVisualStyleBackColor = true;
@@ -99,24 +101,10 @@ namespace CallCenterProgram.Presentation
             this.btnMakeCall.ForeColor = System.Drawing.Color.Chartreuse;
             this.btnMakeCall.Location = new System.Drawing.Point(0, 0);
             this.btnMakeCall.Name = "btnMakeCall";
-            this.btnMakeCall.Size = new System.Drawing.Size(220, 90);
+            this.btnMakeCall.Size = new System.Drawing.Size(229, 90);
             this.btnMakeCall.TabIndex = 2;
             this.btnMakeCall.Text = "Make Call";
             this.btnMakeCall.UseVisualStyleBackColor = true;
-            // 
-            // btnGenerateReports
-            // 
-            this.btnGenerateReports.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnGenerateReports.FlatAppearance.BorderSize = 0;
-            this.btnGenerateReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerateReports.Font = new System.Drawing.Font("Roboto Thin", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerateReports.ForeColor = System.Drawing.Color.BlueViolet;
-            this.btnGenerateReports.Location = new System.Drawing.Point(0, 727);
-            this.btnGenerateReports.Name = "btnGenerateReports";
-            this.btnGenerateReports.Size = new System.Drawing.Size(220, 90);
-            this.btnGenerateReports.TabIndex = 3;
-            this.btnGenerateReports.Text = "Generate Reports";
-            this.btnGenerateReports.UseVisualStyleBackColor = true;
             // 
             // lblTitle
             // 
@@ -210,30 +198,15 @@ namespace CallCenterProgram.Presentation
             // pnlRightSide
             // 
             this.pnlRightSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlRightSide.Controls.Add(this.btnInsertIntoDB);
-            this.pnlRightSide.Controls.Add(this.btnGenerateReports);
+            this.pnlRightSide.Controls.Add(this.pnlRightBottom);
             this.pnlRightSide.Controls.Add(this.btnTakeCall);
             this.pnlRightSide.Controls.Add(this.btnEndCall);
             this.pnlRightSide.Controls.Add(this.btnMakeCall);
             this.pnlRightSide.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRightSide.Location = new System.Drawing.Point(1133, 0);
+            this.pnlRightSide.Location = new System.Drawing.Point(1124, 0);
             this.pnlRightSide.Name = "pnlRightSide";
-            this.pnlRightSide.Size = new System.Drawing.Size(220, 817);
+            this.pnlRightSide.Size = new System.Drawing.Size(229, 817);
             this.pnlRightSide.TabIndex = 14;
-            // 
-            // btnInsertIntoDB
-            // 
-            this.btnInsertIntoDB.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnInsertIntoDB.FlatAppearance.BorderSize = 0;
-            this.btnInsertIntoDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsertIntoDB.Font = new System.Drawing.Font("Roboto Thin", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertIntoDB.ForeColor = System.Drawing.Color.BlueViolet;
-            this.btnInsertIntoDB.Location = new System.Drawing.Point(0, 637);
-            this.btnInsertIntoDB.Name = "btnInsertIntoDB";
-            this.btnInsertIntoDB.Size = new System.Drawing.Size(220, 90);
-            this.btnInsertIntoDB.TabIndex = 4;
-            this.btnInsertIntoDB.Text = "Insert call into database";
-            this.btnInsertIntoDB.UseVisualStyleBackColor = true;
             // 
             // pnlTitleBar
             // 
@@ -243,7 +216,7 @@ namespace CallCenterProgram.Presentation
             this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTitleBar.Name = "pnlTitleBar";
-            this.pnlTitleBar.Size = new System.Drawing.Size(1133, 72);
+            this.pnlTitleBar.Size = new System.Drawing.Size(1124, 72);
             this.pnlTitleBar.TabIndex = 15;
             // 
             // btnHome
@@ -252,7 +225,7 @@ namespace CallCenterProgram.Presentation
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.ForeColor = System.Drawing.Color.BlueViolet;
-            this.btnHome.Location = new System.Drawing.Point(1026, 13);
+            this.btnHome.Location = new System.Drawing.Point(1017, 13);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(75, 42);
             this.btnHome.TabIndex = 5;
@@ -347,6 +320,45 @@ namespace CallCenterProgram.Presentation
             this.lblClientInfo.TabIndex = 14;
             this.lblClientInfo.Text = "Client info";
             // 
+            // pnlRightBottom
+            // 
+            this.pnlRightBottom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlRightBottom.BackColor = System.Drawing.Color.Gray;
+            this.pnlRightBottom.Controls.Add(this.btnInsertIntoDB);
+            this.pnlRightBottom.Controls.Add(this.btnGenerateReports);
+            this.pnlRightBottom.Location = new System.Drawing.Point(17, 582);
+            this.pnlRightBottom.Name = "pnlRightBottom";
+            this.pnlRightBottom.Size = new System.Drawing.Size(200, 223);
+            this.pnlRightBottom.TabIndex = 6;
+            // 
+            // btnInsertIntoDB
+            // 
+            this.btnInsertIntoDB.FlatAppearance.BorderSize = 0;
+            this.btnInsertIntoDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertIntoDB.Font = new System.Drawing.Font("Roboto Thin", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertIntoDB.ForeColor = System.Drawing.Color.BlueViolet;
+            this.btnInsertIntoDB.Location = new System.Drawing.Point(3, 12);
+            this.btnInsertIntoDB.Name = "btnInsertIntoDB";
+            this.btnInsertIntoDB.Size = new System.Drawing.Size(194, 90);
+            this.btnInsertIntoDB.TabIndex = 4;
+            this.btnInsertIntoDB.Text = "Insert call into database";
+            this.btnInsertIntoDB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInsertIntoDB.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerateReports
+            // 
+            this.btnGenerateReports.FlatAppearance.BorderSize = 0;
+            this.btnGenerateReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerateReports.Font = new System.Drawing.Font("Roboto Thin", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateReports.ForeColor = System.Drawing.Color.BlueViolet;
+            this.btnGenerateReports.Location = new System.Drawing.Point(0, 119);
+            this.btnGenerateReports.Name = "btnGenerateReports";
+            this.btnGenerateReports.Size = new System.Drawing.Size(220, 90);
+            this.btnGenerateReports.TabIndex = 3;
+            this.btnGenerateReports.Text = "Generate Reports";
+            this.btnGenerateReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerateReports.UseVisualStyleBackColor = true;
+            // 
             // callForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +381,7 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnlRightBottom.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -378,7 +391,6 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Button btnTakeCall;
         private System.Windows.Forms.Button btnEndCall;
         private System.Windows.Forms.Button btnMakeCall;
-        private System.Windows.Forms.Button btnGenerateReports;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.RichTextBox rtbFaultReport;
         private System.Windows.Forms.Label lblFaultReport;
@@ -389,7 +401,6 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.RichTextBox rtbProblemInfo;
         private System.Windows.Forms.RichTextBox rtbWorkRequest;
         private System.Windows.Forms.Panel pnlRightSide;
-        private System.Windows.Forms.Button btnInsertIntoDB;
         private System.Windows.Forms.Panel pnlTitleBar;
         private System.Windows.Forms.Panel pnlReports;
         private System.Windows.Forms.Panel pnlClientInfo;
@@ -400,5 +411,8 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Label lblAgreements;
         private System.Windows.Forms.Label lblReports;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Panel pnlRightBottom;
+        private System.Windows.Forms.Button btnInsertIntoDB;
+        private System.Windows.Forms.Button btnGenerateReports;
     }
 }
