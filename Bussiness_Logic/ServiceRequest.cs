@@ -35,7 +35,8 @@ namespace CallCenterProgram
 
         public void AssignJob(int incidentID)
         {
-            jobData.InsertJob(0, incidentID, getAvailableWorkers());
+            string[] ability = new string[1];
+            jobData.InsertJob(0, incidentID, getAvailableWorkers(ability));
         }
 
         public void ReassignJob(int jobID, int incidentID)

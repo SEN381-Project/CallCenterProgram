@@ -26,16 +26,17 @@ namespace CallCenterProgram
             set { jobStatus = value; }
         }
 
-        public string[] IncedentID
+        public int IncedentID
         {
             get { return incidentID; }
+            set { incidentID = value; }
         }
 
-        public void Job()
+        public Job()
         {
         }
 
-        public void Job(int workerID, bool jobStatus, int incidentID)
+        public Job(int workerID, bool jobStatus, int incidentID)
         {
             this.workerID = workerID;
             this.jobStatus = jobStatus;
