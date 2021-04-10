@@ -54,10 +54,10 @@
     <Compile Include="Bussiness_Logic\Service.cs" />
     <Compile Include="Bussiness_Logic\ServiceLevel.cs" />
     <Compile Include="Bussiness_Logic\ServiceRequest.cs" />
-    <Compile Include="Job.cs">
+    <Compile Include="Presentation\Job.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Job.Designer.cs">
+    <Compile Include="Presentation\Job.Designer.cs">
       <DependentUpon>Job.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\callForm.cs">
@@ -67,16 +67,16 @@
       <DependentUpon>callForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\colors.cs" />
-    <Compile Include="ServiceRequest.cs">
+    <Compile Include="Presentation\ServiceRequest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ServiceRequest.Designer.cs">
+    <Compile Include="Presentation\ServiceRequest.Designer.cs">
       <DependentUpon>ServiceRequest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Incident.cs">
+    <Compile Include="Presentation\Incident.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Incident.Designer.cs">
+    <Compile Include="Presentation\Incident.Designer.cs">
       <DependentUpon>Incident.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -106,16 +106,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Bussiness_Logic\Manager.cs" />
     <Compile Include="Bussiness_Logic\Technicians.cs" />
-    <EmbeddedResource Include="Job.resx">
+    <EmbeddedResource Include="Presentation\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\callForm.resx">
       <DependentUpon>callForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ServiceRequest.resx">
+    <EmbeddedResource Include="Presentation\ServiceRequest.resx">
       <DependentUpon>ServiceRequest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Incident.resx">
+    <EmbeddedResource Include="Presentation\Incident.resx">
       <DependentUpon>Incident.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
