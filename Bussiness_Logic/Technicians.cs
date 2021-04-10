@@ -8,11 +8,14 @@ namespace CallCenterProgram
 {
     class Technicians : Employee
     {
-        private String abbilities;
-        private int qualificationLevel;
+        private string abilities;
+        private int qualification;
+      
 
-        public String Abbilities { get => abbilities; set => abbilities = value; }
-        public int QualificationLevel { get => qualificationLevel; set => qualificationLevel = value; }
+
+        public String Abilities { get => abilities; set => abilities = value; }
+        public int Qualification { get => qualification; set => qualification = value; }
+       
 
         public override string ToString()
         {
