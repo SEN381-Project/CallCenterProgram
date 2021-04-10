@@ -61,6 +61,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.ForeColor = System.Drawing.Color.Fuchsia;
             this.groupBox1.Location = new System.Drawing.Point(599, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 293);
@@ -91,32 +92,35 @@
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(8, 270);
+            this.Delete.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Delete.Location = new System.Drawing.Point(8, 253);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.Size = new System.Drawing.Size(100, 40);
             this.Delete.TabIndex = 5;
             this.Delete.Text = "Delete";
-            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.UseVisualStyleBackColor = false;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(8, 241);
+            this.Update.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Update.Location = new System.Drawing.Point(8, 222);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(75, 23);
+            this.Update.Size = new System.Drawing.Size(100, 31);
             this.Update.TabIndex = 4;
             this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
+            this.Update.UseVisualStyleBackColor = false;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Insert
             // 
-            this.Insert.Location = new System.Drawing.Point(8, 202);
+            this.Insert.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Insert.Location = new System.Drawing.Point(8, 187);
             this.Insert.Name = "Insert";
-            this.Insert.Size = new System.Drawing.Size(75, 23);
+            this.Insert.Size = new System.Drawing.Size(100, 38);
             this.Insert.TabIndex = 3;
             this.Insert.Text = "Insert";
-            this.Insert.UseVisualStyleBackColor = true;
+            this.Insert.UseVisualStyleBackColor = false;
             this.Insert.Click += new System.EventHandler(this.Insert_Click);
             // 
             // label3
@@ -148,6 +152,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.ForeColor = System.Drawing.Color.Fuchsia;
             this.groupBox2.Location = new System.Drawing.Point(2, 341);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(797, 63);
@@ -173,40 +178,44 @@
             // 
             // MainMenu
             // 
-            this.MainMenu.Location = new System.Drawing.Point(22, 415);
+            this.MainMenu.BackColor = System.Drawing.SystemColors.Desktop;
+            this.MainMenu.Location = new System.Drawing.Point(2, 404);
             this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(75, 23);
+            this.MainMenu.Size = new System.Drawing.Size(95, 46);
             this.MainMenu.TabIndex = 3;
             this.MainMenu.Text = "MainMenu";
-            this.MainMenu.UseVisualStyleBackColor = true;
+            this.MainMenu.UseVisualStyleBackColor = false;
             this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
             // 
             // Exits
             // 
-            this.Exits.Location = new System.Drawing.Point(700, 415);
+            this.Exits.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Exits.Location = new System.Drawing.Point(700, 404);
             this.Exits.Name = "Exits";
-            this.Exits.Size = new System.Drawing.Size(75, 23);
+            this.Exits.Size = new System.Drawing.Size(99, 46);
             this.Exits.TabIndex = 4;
             this.Exits.Text = "Exits";
-            this.Exits.UseVisualStyleBackColor = true;
+            this.Exits.UseVisualStyleBackColor = false;
             this.Exits.Click += new System.EventHandler(this.Exits_Click);
             // 
             // Feedback
             // 
-            this.Feedback.Location = new System.Drawing.Point(138, 415);
+            this.Feedback.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Feedback.Location = new System.Drawing.Point(119, 404);
             this.Feedback.Name = "Feedback";
-            this.Feedback.Size = new System.Drawing.Size(75, 23);
+            this.Feedback.Size = new System.Drawing.Size(94, 46);
             this.Feedback.TabIndex = 5;
             this.Feedback.Text = "Feedback";
-            this.Feedback.UseVisualStyleBackColor = true;
+            this.Feedback.UseVisualStyleBackColor = false;
             this.Feedback.Click += new System.EventHandler(this.Feedback_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(272, 22);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(290, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.Size = new System.Drawing.Size(140, 24);
             this.label6.TabIndex = 10;
             this.label6.Text = "FollowUp Form";
             // 
@@ -214,6 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Feedback);
@@ -222,6 +232,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.Color.Fuchsia;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form4";
             this.Text = "FollowUp";
             this.Load += new System.EventHandler(this.Form4_Load);

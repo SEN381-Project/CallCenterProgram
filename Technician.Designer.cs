@@ -52,9 +52,10 @@
             this.groupBox1.Controls.Add(this.InsertT);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtAbilities);
+            this.groupBox1.ForeColor = System.Drawing.Color.Magenta;
             this.groupBox1.Location = new System.Drawing.Point(41, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(522, 227);
+            this.groupBox1.Size = new System.Drawing.Size(681, 253);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Technician";
@@ -75,32 +76,35 @@
             // 
             // DeleteT
             // 
-            this.DeleteT.Location = new System.Drawing.Point(282, 190);
+            this.DeleteT.BackColor = System.Drawing.SystemColors.Desktop;
+            this.DeleteT.Location = new System.Drawing.Point(282, 175);
             this.DeleteT.Name = "DeleteT";
-            this.DeleteT.Size = new System.Drawing.Size(75, 23);
+            this.DeleteT.Size = new System.Drawing.Size(84, 38);
             this.DeleteT.TabIndex = 4;
             this.DeleteT.Text = "Delete";
-            this.DeleteT.UseVisualStyleBackColor = true;
+            this.DeleteT.UseVisualStyleBackColor = false;
             this.DeleteT.Click += new System.EventHandler(this.DeleteT_Click);
             // 
             // UpdateT
             // 
-            this.UpdateT.Location = new System.Drawing.Point(163, 191);
+            this.UpdateT.BackColor = System.Drawing.SystemColors.Desktop;
+            this.UpdateT.Location = new System.Drawing.Point(140, 175);
             this.UpdateT.Name = "UpdateT";
-            this.UpdateT.Size = new System.Drawing.Size(75, 23);
+            this.UpdateT.Size = new System.Drawing.Size(87, 39);
             this.UpdateT.TabIndex = 3;
             this.UpdateT.Text = "Update";
-            this.UpdateT.UseVisualStyleBackColor = true;
+            this.UpdateT.UseVisualStyleBackColor = false;
             this.UpdateT.Click += new System.EventHandler(this.UpdateT_Click);
             // 
             // InsertT
             // 
-            this.InsertT.Location = new System.Drawing.Point(19, 191);
+            this.InsertT.BackColor = System.Drawing.SystemColors.InfoText;
+            this.InsertT.Location = new System.Drawing.Point(6, 175);
             this.InsertT.Name = "InsertT";
-            this.InsertT.Size = new System.Drawing.Size(75, 23);
+            this.InsertT.Size = new System.Drawing.Size(87, 38);
             this.InsertT.TabIndex = 2;
             this.InsertT.Text = "Insert";
-            this.InsertT.UseVisualStyleBackColor = true;
+            this.InsertT.UseVisualStyleBackColor = false;
             this.InsertT.Click += new System.EventHandler(this.InsertT_Click);
             // 
             // label3
@@ -124,52 +128,59 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(254, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.Size = new System.Drawing.Size(172, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Technician Form";
             // 
             // MainMenu
             // 
-            this.MainMenu.Location = new System.Drawing.Point(41, 378);
+            this.MainMenu.BackColor = System.Drawing.SystemColors.Desktop;
+            this.MainMenu.Location = new System.Drawing.Point(31, 404);
             this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(75, 23);
+            this.MainMenu.Size = new System.Drawing.Size(94, 44);
             this.MainMenu.TabIndex = 2;
             this.MainMenu.Text = "MainMenu";
-            this.MainMenu.UseVisualStyleBackColor = true;
+            this.MainMenu.UseVisualStyleBackColor = false;
             this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
             // 
             // Employee
             // 
-            this.Employee.Location = new System.Drawing.Point(204, 377);
+            this.Employee.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Employee.Location = new System.Drawing.Point(172, 404);
             this.Employee.Name = "Employee";
-            this.Employee.Size = new System.Drawing.Size(75, 23);
+            this.Employee.Size = new System.Drawing.Size(96, 43);
             this.Employee.TabIndex = 3;
             this.Employee.Text = "Employee";
-            this.Employee.UseVisualStyleBackColor = true;
+            this.Employee.UseVisualStyleBackColor = false;
             this.Employee.Click += new System.EventHandler(this.Employee_Click);
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(657, 377);
+            this.Exit.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Exit.Location = new System.Drawing.Point(661, 404);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(75, 23);
+            this.Exit.Size = new System.Drawing.Size(111, 43);
             this.Exit.TabIndex = 4;
             this.Exit.Text = "Exits";
-            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.UseVisualStyleBackColor = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Employee);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.Color.Fuchsia;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
             this.Text = "Technicain Form";
             this.Load += new System.EventHandler(this.Form3_Load);

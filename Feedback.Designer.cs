@@ -56,15 +56,15 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(4, 66);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(555, 289);
+            this.panel1.Size = new System.Drawing.Size(555, 332);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(-4, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(556, 289);
+            this.dataGridView1.Size = new System.Drawing.Size(556, 326);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox1
@@ -79,9 +79,10 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.ForeColor = System.Drawing.Color.Fuchsia;
             this.groupBox1.Location = new System.Drawing.Point(557, 58);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(243, 297);
+            this.groupBox1.Size = new System.Drawing.Size(243, 340);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Feedback";
@@ -168,56 +169,62 @@
             // 
             // Menu
             // 
-            this.Menu.Location = new System.Drawing.Point(4, 415);
+            this.Menu.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Menu.Location = new System.Drawing.Point(4, 404);
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(119, 33);
+            this.Menu.Size = new System.Drawing.Size(119, 44);
             this.Menu.TabIndex = 2;
             this.Menu.Text = "MainMenu";
-            this.Menu.UseVisualStyleBackColor = true;
+            this.Menu.UseVisualStyleBackColor = false;
             this.Menu.Click += new System.EventHandler(this.Menu_Click);
             // 
             // FollowUp
             // 
-            this.FollowUp.Location = new System.Drawing.Point(151, 415);
+            this.FollowUp.BackColor = System.Drawing.SystemColors.Desktop;
+            this.FollowUp.Location = new System.Drawing.Point(151, 404);
             this.FollowUp.Name = "FollowUp";
-            this.FollowUp.Size = new System.Drawing.Size(123, 33);
+            this.FollowUp.Size = new System.Drawing.Size(123, 44);
             this.FollowUp.TabIndex = 7;
             this.FollowUp.Text = "FollowUp";
-            this.FollowUp.UseVisualStyleBackColor = true;
+            this.FollowUp.UseVisualStyleBackColor = false;
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(670, 415);
+            this.Exit.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Exit.Location = new System.Drawing.Point(670, 404);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(130, 33);
+            this.Exit.Size = new System.Drawing.Size(130, 44);
             this.Exit.TabIndex = 8;
             this.Exit.Text = "Exit";
-            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Fuchsia;
             this.label6.Location = new System.Drawing.Point(293, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.Size = new System.Drawing.Size(146, 24);
             this.label6.TabIndex = 9;
             this.label6.Text = "FeedBack Form";
-          
             // 
             // Insert
             // 
-            this.Insert.Location = new System.Drawing.Point(311, 415);
+            this.Insert.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Insert.Location = new System.Drawing.Point(311, 404);
             this.Insert.Name = "Insert";
-            this.Insert.Size = new System.Drawing.Size(123, 33);
+            this.Insert.Size = new System.Drawing.Size(123, 44);
             this.Insert.TabIndex = 10;
             this.Insert.Text = "Insert";
-            this.Insert.UseVisualStyleBackColor = true;
+            this.Insert.UseVisualStyleBackColor = false;
             this.Insert.Click += new System.EventHandler(this.Insert_Click);
             // 
             // Feedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(801, 450);
             this.Controls.Add(this.Insert);
             this.Controls.Add(this.label6);
@@ -226,6 +233,8 @@
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.Fuchsia;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Feedback";
             this.Text = "Feedback";
             this.Load += new System.EventHandler(this.Form5_Load);
