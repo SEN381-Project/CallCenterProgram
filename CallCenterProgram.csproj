@@ -87,6 +87,8 @@
       <DependentUpon>Contract.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Incident.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentation\Employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +132,8 @@
       <DependentUpon>Service.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ServiceRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentation\FollowUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +189,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\ServiceRequest.resx">
       <DependentUpon>ServiceRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
     </EmbeddedResource>
