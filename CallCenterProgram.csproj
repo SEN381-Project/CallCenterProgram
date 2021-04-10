@@ -53,6 +53,12 @@
       <DependentUpon>Business Client Info.cs</DependentUpon>
     </Compile>
     <Compile Include="BusinessClient.cs" />
+    <Compile Include="Client Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client Home.Designer.cs">
+      <DependentUpon>Client Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientDataAccess.cs" />
     <Compile Include="ClientFactory.cs" />
     <Compile Include="IClient.cs" />
@@ -76,6 +82,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Business Client Info.resx">
       <DependentUpon>Business Client Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client Home.resx">
+      <DependentUpon>Client Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Individual Client Info.resx">
       <DependentUpon>Individual Client Info.cs</DependentUpon>

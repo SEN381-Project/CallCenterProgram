@@ -57,6 +57,7 @@ namespace CallCenterProgram
             // 
             // btnHome
             // 
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Location = new System.Drawing.Point(515, 19);
             this.btnHome.Name = "btnHome";
@@ -67,6 +68,7 @@ namespace CallCenterProgram
             // 
             // btnRefresh
             // 
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(29, 254);
             this.btnRefresh.Name = "btnRefresh";
@@ -77,6 +79,7 @@ namespace CallCenterProgram
             // 
             // btnViewBusinessClients
             // 
+            this.btnViewBusinessClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewBusinessClients.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewBusinessClients.Location = new System.Drawing.Point(454, 253);
             this.btnViewBusinessClients.Name = "btnViewBusinessClients";
