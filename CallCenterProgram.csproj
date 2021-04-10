@@ -124,7 +124,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Bussiness_Logic\Manager.cs" />
-    <Compile Include="Service.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation\callForm.resx">
@@ -133,7 +132,6 @@
     <EmbeddedResource Include="Presentation\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation\Business Client Info.resx">
@@ -151,8 +149,6 @@
     <EmbeddedResource Include="Presentation\Incident.resx">
       <DependentUpon>Incident.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="ServiceRequest.cs" />
-    <Compile Include="Technicians.cs" />
     <EmbeddedResource Include="Presentation\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>
     </EmbeddedResource>
