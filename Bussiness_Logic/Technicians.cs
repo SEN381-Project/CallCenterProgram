@@ -9,12 +9,11 @@ namespace CallCenterProgram
     class Technicians : Employee
     {
         private string abilities;
-        private int qualification;
-      
+        private string qualification;
+  
 
-
-        public String Abilities { get => abilities; set => abilities = value; }
-        public int Qualification { get => qualification; set => qualification = value; }
+        public string Abilities { get => abilities; set => abilities = value; }
+        public string Qualification { get => qualification; set => qualification = value; }
        
 
         public override string ToString()

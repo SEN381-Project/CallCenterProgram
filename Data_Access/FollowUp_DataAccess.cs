@@ -19,6 +19,7 @@ namespace CallCenterProgram
         //object
         FollowUp followUp = new FollowUp();
 
+
         public void InsertFollowUp(int followUpId, string status, DateTime followUpDate)
         {
             string query = @"INSERT INTO FollowUp VALUES('"+ followUpId + "','" + status + "', '" + followUpDate + "')";
@@ -119,79 +120,6 @@ namespace CallCenterProgram
            
         }
 
-        public List<FollowUp> DisplayFollowUp(int followUpId, string status, DateTime followUpDate)
-        {
-            string query = @"SELECT INTO FollowUp VALUES('" + followUpId + "','" + status + "', '" + followUpDate + "')";
-            Conn = new SqlConnection(connect);
-            Conn.Open();
-            Command = new SqlCommand(query, Conn);
-
-            List<FollowUp> FP = new List<FollowUp>();
-
-            try
-            {
-                Reader = Command.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    followUp.FollowupId = int.Parse(Reader[0].ToString());
-                    followUp.Status = Reader[1].ToString();
-                    //adding date time
-                    //followUp.FollowUpDate = Reader[2].ToString();
-
-                    FP.Add(new FollowUp(followUp.FollowupId, followUp.Status, followUp.FollowUpDate));
-                }
-            }
-            catch (Exception e)
-            {
-
-                MessageBox.Show("There is an errpr in Follow up details : " + e.Message);
-            }
-
-            finally
-            {
-                Conn.Close();
-            }
-            return FP;
-        }
-
-        public List<FollowUp> DisplayFeedbacks(int feedbackId, string problem, string helpedOnTime, string comment, DateTime feedbackDate)
-        {
-            string query = @"SELECT INTO FollowUp VALUES('" + feedbackId + "','" + problem + "','" + helpedOnTime + "','" + comment + "', '" + feedbackDate + ")";
-            Conn = new SqlConnection(connect);
-            Conn.Open();
-            Command = new SqlCommand(query, Conn);
-
-            List<FollowUp> FP = new List<FollowUp>();
-
-            try
-            {
-                Reader = Command.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    followUp.FeedbackId = int.Parse(Reader[0].ToString());
-                    followUp.Problem = Reader[1].ToString();
-                    followUp.HelpedOnTime = Reader[2].ToString();
-                    followUp.Comment = Reader[3].ToString();
-                    //adding date time
-                    //followUp.FeedbackDate = Reader[4].ToString();
-
-                    FP.Add(new FollowUp(followUp.FeedbackId, followUp.Problem, followUp.HelpedOnTime, followUp.Comment));
-                }
-            }
-            catch (Exception e)
-            {
-
-                MessageBox.Show("There is an errpr in Feedback details details : " + e.Message);
-            }
-
-            finally
-            {
-                Conn.Close();
-            }
-
-            return FP;
-        }
+      
     }
 }

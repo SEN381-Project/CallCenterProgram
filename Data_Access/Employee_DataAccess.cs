@@ -18,9 +18,9 @@ namespace CallCenterProgram
         
 
         //Insering Employee details
-        public void InsertEmployee(string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+        public void InsertEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
         {
-            string query = @"INSERT INTO Employee VALUES('" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescriptiont + "')";
+            string query = @"INSERT INTO Employee VALUES('" + employeeID + "','" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescriptiont + "')";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -66,11 +66,35 @@ namespace CallCenterProgram
                     Conn.Close();
                 }
             }
+        //inserting technicial info
+        public void InsertTechnicians(string abilities, string qualification)
+        {
+            string query = @"INSERT INTO Employee VALUES('" + abilities + "','" + qualification+ "')";
+            Conn = new SqlConnection(connect);
+            Conn.Open();
+            Command = new SqlCommand(query, Conn);
+
+            try
+            {
+                Command.BeginExecuteNonQuery();
+                MessageBox.Show("Technician info inserted!");
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("There is an error,Technician info is not added!" + e.Message);
+            }
+
+            finally
+            {
+                Conn.Close();
+            }
+        }
 
         //Updating Employee details
-        public void UpdateEmployee(string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+        public void UpdateEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
         {
-            string query = @"UPDATE INTO Employee VALUES('" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescriptiont + "')";
+            string query = @"UPDATE INTO Employee VALUES('" + employeeID + "','" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescriptiont + "')";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -117,10 +141,35 @@ namespace CallCenterProgram
             }
         }
 
-        //Deleting Employee details
-        public void DeleteEmployee(string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+        //update technian info
+        public void UpdateTechnicians(string abilities, string qualification)
         {
-            string query = @"DELETE INTO Employee VALUES('" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescriptiont + "')";
+            string query = @"UPDATE INTO Employee VALUES('" + abilities + "','" + qualification + "')";
+            Conn = new SqlConnection(connect);
+            Conn.Open();
+            Command = new SqlCommand(query, Conn);
+
+            try
+            {
+                Command.BeginExecuteNonQuery();
+                MessageBox.Show("Technician info Updated!");
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("There is an error,Technician info is not updated!" + e.Message);
+            }
+
+            finally
+            {
+                Conn.Close();
+            }
+        }
+
+        //Deleting Employee details
+        public void DeleteEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+        {
+            string query = @"DELETE INTO Employee VALUES('" + employeeID+ "','" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescriptiont + "')";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -143,7 +192,7 @@ namespace CallCenterProgram
         }
 
         //Deleting Derpartment details
-        public void  DeleteDepartment(int departmentId, string derptmentName, int stationNumber)
+        public void DeleteDepartment(int departmentId, string derptmentName, int stationNumber)
         {
             string query = @"DELETE INTO Department VALUES('" + departmentId + "','" + derptmentName + "', '" + stationNumber + "')";
             Conn = new SqlConnection(connect);
@@ -165,7 +214,32 @@ namespace CallCenterProgram
             {
                 Conn.Close();
             }
-        }  
+        }
+            //delete technician info
+            public void DeleteTechnicians(string abilities, string qualification)
+            {
+                string query = @"DELETE INTO Employee VALUES('" + abilities + "','" + qualification + "')";
+                Conn = new SqlConnection(connect);
+                Conn.Open();
+                Command = new SqlCommand(query, Conn);
+
+                try
+                {
+                    Command.BeginExecuteNonQuery();
+                    MessageBox.Show("Technician info deleted!");
+                }
+                catch (Exception e)
+                {
+
+                    MessageBox.Show("There is an error,Technician info is not deleted!" + e.Message);
+                }
+
+                finally
+                {
+                    Conn.Close();
+                }
+             
+            }  
       }
     }
 
