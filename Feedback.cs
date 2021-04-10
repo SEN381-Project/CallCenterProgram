@@ -49,8 +49,8 @@ namespace CallCenterProgram
 
                 txtfeedbackid.Text = dataGridView1.Rows[e.RowIndex].Cells["FeedbackId"].FormattedValue.ToString();
                 txtproblem.Text = dataGridView1.Rows[e.RowIndex].Cells["Problem"].FormattedValue.ToString();
-                txthelpedontime.Text = dataGridView1.Rows[e.RowIndex].Cells["Helped on Time"].FormattedValue.ToString();
-                txtfeedbackD.Text = dataGridView1.Rows[e.RowIndex].Cells["FollowUpId"].FormattedValue.ToString();
+                txthelpedontime.Text = dataGridView1.Rows[e.RowIndex].Cells["HelpedOnTime"].FormattedValue.ToString();
+                txtfeedbackD.Text = dataGridView1.Rows[e.RowIndex].Cells["FollowUpDate"].FormattedValue.ToString();
             }
         }
 

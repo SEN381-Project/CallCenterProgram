@@ -25,19 +25,6 @@ namespace CallCenterProgram
            
         }
 
-        private void Update_Click(object sender, EventArgs e)
-        {
-            handler.UpdateEmployee(int.Parse(txtiD.Text), txtName.Text, txtSurname.Text, txtAddress.Text, txtContact.Text, txtjob.Text, txtjobdescription.Text);
-           
-        }
-
-        private void Delete_Click(object sender, EventArgs e)
-        {
-
-            handler.DeleteEmployee(int.Parse(txtiD.Text), txtName.Text, txtSurname.Text, txtAddress.Text, txtContact.Text, txtjob.Text, txtjobdescription.Text);
-        }
-    
-
         private void MainMenu_Click(object sender, EventArgs e)
         {
             Form1 MainMenu = new Form1();
@@ -53,6 +40,8 @@ namespace CallCenterProgram
 
         private void Manager_Click(object sender, EventArgs e)
         {
+            Form5 Manager = new Form5();
+            Manager.Show();
 
         }
 
@@ -64,16 +53,6 @@ namespace CallCenterProgram
         private void InsertDepartment_Click(object sender, EventArgs e)
         { 
             handler.InsertDepartMent(int.Parse(txtdepartmentid.Text), txtdepartmentname.Text, int.Parse(txtstationnumber.Text));
-        }
-
-        private void UpdateDepartment_Click(object sender, EventArgs e)
-        {
-            handler.UpdatetDepartMent(int.Parse(txtdepartmentid.Text), txtdepartmentname.Text, int.Parse(txtstationnumber.Text));
-        }
-
-        private void DeleteDepartment_Click(object sender, EventArgs e)
-        {
-            handler.DeleteDepartment(int.Parse(txtdepartmentid.Text), txtdepartmentname.Text, int.Parse(txtstationnumber.Text));
         }
 
         private void Form2_Load(object sender, EventArgs e)

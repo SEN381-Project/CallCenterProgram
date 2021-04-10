@@ -50,8 +50,8 @@ namespace CallCenterProgram
                 dataGridView1.CurrentRow.Selected = true;
 
                 txtfollowupid.Text = dataGridView1.Rows[e.RowIndex].Cells["FollowUpId"].FormattedValue.ToString();
-                txtstatus.Text = dataGridView1.Rows[e.RowIndex].Cells["FollowUpId"].FormattedValue.ToString();
-                txtfollupD.Text = dataGridView1.Rows[e.RowIndex].Cells["FollowUpId"].FormattedValue.ToString();
+                txtstatus.Text = dataGridView1.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
+                txtfollupD.Text = dataGridView1.Rows[e.RowIndex].Cells["FolloUpDate"].FormattedValue.ToString();
             }
         }
    

@@ -63,14 +63,14 @@
             this.txtdepartmentid = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DeleteEm = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmployeeAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtMjobDespription = new System.Windows.Forms.TextBox();
+            this.txtMjobtitle = new System.Windows.Forms.TextBox();
+            this.txtContactDetails = new System.Windows.Forms.TextBox();
+            this.txtEmployeesurname = new System.Windows.Forms.TextBox();
+            this.txtEmployeename = new System.Windows.Forms.TextBox();
+            this.txtEmployeeId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -87,10 +87,10 @@
             this.UpdateDp = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtSationNo = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtNameDepartment = new System.Windows.Forms.TextBox();
+            this.txtidDepartment = new System.Windows.Forms.TextBox();
             this.MainMenu = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.Employee = new System.Windows.Forms.Button();
@@ -309,7 +309,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(503, 253);
             this.panel2.TabIndex = 12;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // dataGridView2
             // 
@@ -419,14 +418,14 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.DeleteEm);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtEmployeeAddress);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.txtMjobDespription);
+            this.groupBox3.Controls.Add(this.txtMjobtitle);
+            this.groupBox3.Controls.Add(this.txtContactDetails);
+            this.groupBox3.Controls.Add(this.txtEmployeesurname);
+            this.groupBox3.Controls.Add(this.txtEmployeename);
+            this.groupBox3.Controls.Add(this.txtEmployeeId);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.button1);
@@ -453,13 +452,14 @@
             this.DeleteEm.TabIndex = 34;
             this.DeleteEm.Text = "Delete";
             this.DeleteEm.UseVisualStyleBackColor = false;
+            this.DeleteEm.Click += new System.EventHandler(this.DeleteEm_Click);
             // 
-            // textBox1
+            // txtEmployeeAddress
             // 
-            this.textBox1.Location = new System.Drawing.Point(80, 144);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 33;
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(80, 144);
+            this.txtEmployeeAddress.Name = "txtEmployeeAddress";
+            this.txtEmployeeAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeAddress.TabIndex = 33;
             // 
             // label4
             // 
@@ -470,47 +470,47 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "EmployeeId: ";
             // 
-            // textBox2
+            // txtMjobDespription
             // 
-            this.textBox2.Location = new System.Drawing.Point(363, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 28;
+            this.txtMjobDespription.Location = new System.Drawing.Point(363, 68);
+            this.txtMjobDespription.Name = "txtMjobDespription";
+            this.txtMjobDespription.Size = new System.Drawing.Size(100, 20);
+            this.txtMjobDespription.TabIndex = 28;
             // 
-            // textBox3
+            // txtMjobtitle
             // 
-            this.textBox3.Location = new System.Drawing.Point(336, 34);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 27;
+            this.txtMjobtitle.Location = new System.Drawing.Point(336, 34);
+            this.txtMjobtitle.Name = "txtMjobtitle";
+            this.txtMjobtitle.Size = new System.Drawing.Size(100, 20);
+            this.txtMjobtitle.TabIndex = 27;
             // 
-            // textBox4
+            // txtContactDetails
             // 
-            this.textBox4.Location = new System.Drawing.Point(105, 182);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 26;
+            this.txtContactDetails.Location = new System.Drawing.Point(105, 182);
+            this.txtContactDetails.Name = "txtContactDetails";
+            this.txtContactDetails.Size = new System.Drawing.Size(100, 20);
+            this.txtContactDetails.TabIndex = 26;
             // 
-            // textBox5
+            // txtEmployeesurname
             // 
-            this.textBox5.Location = new System.Drawing.Point(80, 107);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 25;
+            this.txtEmployeesurname.Location = new System.Drawing.Point(80, 107);
+            this.txtEmployeesurname.Name = "txtEmployeesurname";
+            this.txtEmployeesurname.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeesurname.TabIndex = 25;
             // 
-            // textBox6
+            // txtEmployeename
             // 
-            this.textBox6.Location = new System.Drawing.Point(80, 64);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 24;
+            this.txtEmployeename.Location = new System.Drawing.Point(80, 64);
+            this.txtEmployeename.Name = "txtEmployeename";
+            this.txtEmployeename.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeename.TabIndex = 24;
             // 
-            // textBox7
+            // txtEmployeeId
             // 
-            this.textBox7.Location = new System.Drawing.Point(80, 31);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 23;
+            this.txtEmployeeId.Location = new System.Drawing.Point(80, 31);
+            this.txtEmployeeId.Name = "txtEmployeeId";
+            this.txtEmployeeId.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeId.TabIndex = 23;
             // 
             // label6
             // 
@@ -567,6 +567,7 @@
             this.UpdateEm.TabIndex = 20;
             this.UpdateEm.Text = "Update";
             this.UpdateEm.UseVisualStyleBackColor = false;
+            this.UpdateEm.Click += new System.EventHandler(this.UpdateEm_Click);
             // 
             // label16
             // 
@@ -604,10 +605,10 @@
             this.groupBox4.Controls.Add(this.UpdateDp);
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.label19);
-            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.txtSationNo);
             this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.textBox9);
-            this.groupBox4.Controls.Add(this.textBox10);
+            this.groupBox4.Controls.Add(this.txtNameDepartment);
+            this.groupBox4.Controls.Add(this.txtidDepartment);
             this.groupBox4.ForeColor = System.Drawing.Color.Fuchsia;
             this.groupBox4.Location = new System.Drawing.Point(556, 289);
             this.groupBox4.Name = "groupBox4";
@@ -625,6 +626,7 @@
             this.DeleteDp.TabIndex = 35;
             this.DeleteDp.Text = "Delete";
             this.DeleteDp.UseVisualStyleBackColor = false;
+            this.DeleteDp.Click += new System.EventHandler(this.DeleteDp_Click);
             // 
             // button2
             // 
@@ -675,12 +677,12 @@
             this.label19.TabIndex = 17;
             this.label19.Text = "DerptmentName:";
             // 
-            // textBox8
+            // txtSationNo
             // 
-            this.textBox8.Location = new System.Drawing.Point(6, 178);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(161, 20);
-            this.textBox8.TabIndex = 31;
+            this.txtSationNo.Location = new System.Drawing.Point(6, 178);
+            this.txtSationNo.Name = "txtSationNo";
+            this.txtSationNo.Size = new System.Drawing.Size(161, 20);
+            this.txtSationNo.TabIndex = 31;
             // 
             // label20
             // 
@@ -691,19 +693,19 @@
             this.label20.TabIndex = 14;
             this.label20.Text = "StationNumber:";
             // 
-            // textBox9
+            // txtNameDepartment
             // 
-            this.textBox9.Location = new System.Drawing.Point(6, 111);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(161, 20);
-            this.textBox9.TabIndex = 30;
+            this.txtNameDepartment.Location = new System.Drawing.Point(6, 111);
+            this.txtNameDepartment.Name = "txtNameDepartment";
+            this.txtNameDepartment.Size = new System.Drawing.Size(161, 20);
+            this.txtNameDepartment.TabIndex = 30;
             // 
-            // textBox10
+            // txtidDepartment
             // 
-            this.textBox10.Location = new System.Drawing.Point(6, 62);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(161, 20);
-            this.textBox10.TabIndex = 29;
+            this.txtidDepartment.Location = new System.Drawing.Point(6, 62);
+            this.txtidDepartment.Name = "txtidDepartment";
+            this.txtidDepartment.Size = new System.Drawing.Size(161, 20);
+            this.txtidDepartment.TabIndex = 29;
             // 
             // MainMenu
             // 
@@ -715,6 +717,7 @@
             this.MainMenu.TabIndex = 29;
             this.MainMenu.Text = "MainMenu";
             this.MainMenu.UseVisualStyleBackColor = false;
+            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
             // 
             // Exit
             // 
@@ -726,6 +729,7 @@
             this.Exit.TabIndex = 30;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Employee
             // 
@@ -737,6 +741,7 @@
             this.Employee.TabIndex = 31;
             this.Employee.Text = "Employee";
             this.Employee.UseVisualStyleBackColor = false;
+            this.Employee.Click += new System.EventHandler(this.Employee_Click);
             // 
             // Form5
             // 
@@ -807,14 +812,14 @@
         private System.Windows.Forms.TextBox txtdepartmentid;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button DeleteEm;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmployeeAddress;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtMjobDespription;
+        private System.Windows.Forms.TextBox txtMjobtitle;
+        private System.Windows.Forms.TextBox txtContactDetails;
+        private System.Windows.Forms.TextBox txtEmployeesurname;
+        private System.Windows.Forms.TextBox txtEmployeename;
+        private System.Windows.Forms.TextBox txtEmployeeId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
@@ -831,10 +836,10 @@
         private System.Windows.Forms.Button UpdateDp;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtSationNo;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtNameDepartment;
+        private System.Windows.Forms.TextBox txtidDepartment;
         private System.Windows.Forms.Button MainMenu;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Exit;
