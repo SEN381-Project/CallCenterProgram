@@ -34,6 +34,9 @@ namespace CallCenterProgram
             this.btnHome = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnViewBusinessClients = new System.Windows.Forms.Button();
+            this.btnAddClient = new System.Windows.Forms.Button();
+            this.btnUpdateClient = new System.Windows.Forms.Button();
+            this.btnDeleteClient = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +73,7 @@ namespace CallCenterProgram
             // 
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(29, 254);
+            this.btnRefresh.Location = new System.Drawing.Point(265, 19);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 3;
@@ -81,19 +84,55 @@ namespace CallCenterProgram
             // 
             this.btnViewBusinessClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewBusinessClients.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewBusinessClients.Location = new System.Drawing.Point(454, 253);
+            this.btnViewBusinessClients.Location = new System.Drawing.Point(359, 19);
             this.btnViewBusinessClients.Name = "btnViewBusinessClients";
             this.btnViewBusinessClients.Size = new System.Drawing.Size(136, 23);
             this.btnViewBusinessClients.TabIndex = 4;
             this.btnViewBusinessClients.Text = "View Business Clients";
             this.btnViewBusinessClients.UseVisualStyleBackColor = true;
             // 
+            // btnAddClient
+            // 
+            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClient.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClient.Location = new System.Drawing.Point(29, 252);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(165, 23);
+            this.btnAddClient.TabIndex = 5;
+            this.btnAddClient.Text = "Add Client";
+            this.btnAddClient.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateClient
+            // 
+            this.btnUpdateClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateClient.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateClient.Location = new System.Drawing.Point(225, 252);
+            this.btnUpdateClient.Name = "btnUpdateClient";
+            this.btnUpdateClient.Size = new System.Drawing.Size(165, 23);
+            this.btnUpdateClient.TabIndex = 6;
+            this.btnUpdateClient.Text = "Update Client";
+            this.btnUpdateClient.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteClient
+            // 
+            this.btnDeleteClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteClient.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteClient.Location = new System.Drawing.Point(425, 252);
+            this.btnDeleteClient.Name = "btnDeleteClient";
+            this.btnDeleteClient.Size = new System.Drawing.Size(165, 23);
+            this.btnDeleteClient.TabIndex = 7;
+            this.btnDeleteClient.Text = "Delete Client";
+            this.btnDeleteClient.UseVisualStyleBackColor = true;
+            // 
             // Individual_Client_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(624, 450);
+            this.ClientSize = new System.Drawing.Size(624, 312);
+            this.Controls.Add(this.btnDeleteClient);
+            this.Controls.Add(this.btnUpdateClient);
+            this.Controls.Add(this.btnAddClient);
             this.Controls.Add(this.btnViewBusinessClients);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnHome);
@@ -116,5 +155,8 @@ namespace CallCenterProgram
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnViewBusinessClients;
+        private System.Windows.Forms.Button btnAddClient;
+        private System.Windows.Forms.Button btnUpdateClient;
+        private System.Windows.Forms.Button btnDeleteClient;
     }
 }

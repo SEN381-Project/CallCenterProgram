@@ -34,6 +34,9 @@ namespace CallCenterProgram
             this.btnHome = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnViewIndividualClients = new System.Windows.Forms.Button();
+            this.btnAddClient = new System.Windows.Forms.Button();
+            this.btnUpdateClient = new System.Windows.Forms.Button();
+            this.btnDeleteClient = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusinessClients)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +61,7 @@ namespace CallCenterProgram
             // 
             // btnHome
             // 
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Location = new System.Drawing.Point(515, 19);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(75, 23);
@@ -67,7 +71,8 @@ namespace CallCenterProgram
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(29, 254);
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Location = new System.Drawing.Point(263, 19);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 3;
@@ -76,19 +81,53 @@ namespace CallCenterProgram
             // 
             // btnViewIndividualClients
             // 
-            this.btnViewIndividualClients.Location = new System.Drawing.Point(454, 254);
+            this.btnViewIndividualClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewIndividualClients.Location = new System.Drawing.Point(358, 19);
             this.btnViewIndividualClients.Name = "btnViewIndividualClients";
             this.btnViewIndividualClients.Size = new System.Drawing.Size(136, 23);
             this.btnViewIndividualClients.TabIndex = 4;
             this.btnViewIndividualClients.Text = "View Individual Clients";
             this.btnViewIndividualClients.UseVisualStyleBackColor = true;
             // 
+            // btnAddClient
+            // 
+            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClient.Location = new System.Drawing.Point(29, 254);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(167, 23);
+            this.btnAddClient.TabIndex = 5;
+            this.btnAddClient.Text = "Add Client";
+            this.btnAddClient.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateClient
+            // 
+            this.btnUpdateClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateClient.Location = new System.Drawing.Point(231, 254);
+            this.btnUpdateClient.Name = "btnUpdateClient";
+            this.btnUpdateClient.Size = new System.Drawing.Size(166, 23);
+            this.btnUpdateClient.TabIndex = 6;
+            this.btnUpdateClient.Text = "Update Client";
+            this.btnUpdateClient.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteClient
+            // 
+            this.btnDeleteClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteClient.Location = new System.Drawing.Point(430, 254);
+            this.btnDeleteClient.Name = "btnDeleteClient";
+            this.btnDeleteClient.Size = new System.Drawing.Size(160, 23);
+            this.btnDeleteClient.TabIndex = 7;
+            this.btnDeleteClient.Text = "Delete Client";
+            this.btnDeleteClient.UseVisualStyleBackColor = true;
+            // 
             // Business_Client_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(624, 450);
+            this.ClientSize = new System.Drawing.Size(624, 312);
+            this.Controls.Add(this.btnDeleteClient);
+            this.Controls.Add(this.btnUpdateClient);
+            this.Controls.Add(this.btnAddClient);
             this.Controls.Add(this.btnViewIndividualClients);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnHome);
@@ -112,5 +151,8 @@ namespace CallCenterProgram
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnViewIndividualClients;
+        private System.Windows.Forms.Button btnAddClient;
+        private System.Windows.Forms.Button btnUpdateClient;
+        private System.Windows.Forms.Button btnDeleteClient;
     }
 }
