@@ -202,6 +202,7 @@
             this.label6.Size = new System.Drawing.Size(82, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "FeedBack Form";
+          
             // 
             // Insert
             // 

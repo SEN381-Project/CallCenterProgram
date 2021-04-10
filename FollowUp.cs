@@ -23,6 +23,11 @@ namespace CallCenterProgram
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            //adding colo in the form
+            BackColor = Color.FromArgb(26, 26, 26);
+            ForeColor = Color.FromArgb(102, 112, 233);
+
+            //connecting an showing tables in the datagridview
             string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
 
             SqlConnection Conn = new SqlConnection(connect);
@@ -70,17 +75,17 @@ namespace CallCenterProgram
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            handler.InsertFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, txtfollupD.Text);
+            handler.InsertFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
-            handler.UpdateFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, txtfollupD.Text);
+            handler.UpdateFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            handler.DeleteFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, txtfollupD.Text);
+            handler.DeleteFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
 
     }

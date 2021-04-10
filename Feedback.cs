@@ -20,7 +20,11 @@ namespace CallCenterProgram
         FollowUp_DataAccess handler = new FollowUp_DataAccess();
         private void Form5_Load(object sender, EventArgs e)
         {
+            //adding colo in the form
+            BackColor = Color.FromArgb(26, 26, 26);
+            ForeColor = Color.FromArgb(102, 112, 233);
 
+            //connecting an showing tables in the datagridview
             string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
 
             SqlConnection Conn = new SqlConnection(connect);
@@ -72,5 +76,7 @@ namespace CallCenterProgram
         {
             handler.InsertFeedback(int.Parse(txtfeedbackid.Text), txtproblem.Text, txthelpedontime.Text, txtcomment.Text, DateTime.Parse(txtfeedbackD.Text));
         }
+
+       
     }
 }

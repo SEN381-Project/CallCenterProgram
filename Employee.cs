@@ -75,5 +75,11 @@ namespace CallCenterProgram
         {
             handler.DeleteDepartment(int.Parse(txtdepartmentid.Text), txtdepartmentname.Text, int.Parse(txtstationnumber.Text));
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            BackColor = Color.FromArgb(26, 26, 26);
+            ForeColor = Color.FromArgb(102, 112, 233);
+        }
     }
 }

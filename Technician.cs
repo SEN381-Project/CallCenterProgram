@@ -49,5 +49,12 @@ namespace CallCenterProgram
         {
             handler.DeleteTechnicians(txtability.Text, txtq.Text);
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            //adding colo in the form
+            BackColor = Color.FromArgb(26, 26, 26);
+            ForeColor = Color.FromArgb(102, 112, 233);
+        }
     }
 }

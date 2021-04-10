@@ -403,6 +403,7 @@
             this.Controls.Add(this.Exit);
             this.Name = "Form2";
             this.Text = "Employee Form";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
