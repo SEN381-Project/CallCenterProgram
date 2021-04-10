@@ -42,9 +42,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(300, 407);
+            this.btnClose.Location = new System.Drawing.Point(400, 501);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(200, 23);
+            this.btnClose.Size = new System.Drawing.Size(267, 28);
             this.btnClose.TabIndex = 14;
             this.btnClose.Text = "Close Job";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -57,74 +58,83 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dgvIncident);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(29, 71);
+            this.panel1.Location = new System.Drawing.Point(39, 87);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(743, 303);
+            this.panel1.Size = new System.Drawing.Size(991, 373);
             this.panel1.TabIndex = 11;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(649, 273);
+            this.btnSearch.Location = new System.Drawing.Point(865, 336);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(100, 28);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // txtJobID
             // 
-            this.txtJobID.Location = new System.Drawing.Point(525, 275);
+            this.txtJobID.Location = new System.Drawing.Point(700, 338);
+            this.txtJobID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtJobID.Name = "txtJobID";
-            this.txtJobID.Size = new System.Drawing.Size(118, 20);
+            this.txtJobID.Size = new System.Drawing.Size(156, 22);
             this.txtJobID.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(402, 272);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(536, 335);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 26);
+            this.label2.Size = new System.Drawing.Size(101, 31);
             this.label2.TabIndex = 4;
             this.label2.Text = "Job ID:";
             // 
             // dgvIncident
             // 
             this.dgvIncident.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIncident.Location = new System.Drawing.Point(19, 41);
+            this.dgvIncident.Location = new System.Drawing.Point(25, 50);
+            this.dgvIncident.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvIncident.Name = "dgvIncident";
-            this.dgvIncident.Size = new System.Drawing.Size(705, 228);
+            this.dgvIncident.RowHeadersWidth = 51;
+            this.dgvIncident.Size = new System.Drawing.Size(940, 281);
             this.dgvIncident.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 12);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 26);
+            this.label1.Size = new System.Drawing.Size(73, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "View";
             // 
             // lblHeading
             // 
             this.lblHeading.AutoSize = true;
-            this.lblHeading.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(347, 22);
+            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.Location = new System.Drawing.Point(463, 27);
+            this.lblHeading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(82, 46);
+            this.lblHeading.Size = new System.Drawing.Size(99, 54);
             this.lblHeading.TabIndex = 10;
             this.lblHeading.Text = "Job";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblHeading);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
