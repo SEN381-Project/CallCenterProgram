@@ -31,10 +31,10 @@ namespace CallCenterProgram
             // solved version 1 : use unique package names to query the databse for similar package name but add  them separatly.
             for (int i = 0; i < services.Count; i++)
             {
-                dataAccess.InsertPackage(packageName, services[i].ServiceId, serviceLevels[i].SecurityLevelId);
+                dataAccess.InsertPackage(packageName, services[i].ServiceId, serviceLevels[i].SecurityLevel.SecurityLevelId);
             }
 
-            Package package = new Package(packageName,services, serviceLevels);
+            Package package = new Package(packageName, services, serviceLevels);
 
             return package;
         }

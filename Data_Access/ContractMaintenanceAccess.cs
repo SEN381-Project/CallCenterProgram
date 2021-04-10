@@ -175,6 +175,7 @@ namespace CallCenterProgram
                 conn.Close();
             }
         }
+
         // Only the manager can use this method (or anyone with clearance to update service levels data)
         public void UpdateServiceLevel(int serviceLevelID,string levelName, string optOutDetails, double penaltiesForLateWork, double penaltiesForNonPerformance)
         {
@@ -254,7 +255,7 @@ namespace CallCenterProgram
             }
         }
         // The manager can use this method (or anyone with clearance to update security levels data)
-        public void UpdateSecuriyLevel(int securityLevelID,string levelDescription, string emailSupport, string phoneSupport)
+        public void UpdateSecurityLevel(int securityLevelID,string levelDescription, string emailSupport, string phoneSupport)
         {
             string query = $"UPDATE SecurityLevel SET LevelDescription= {levelDescription}, EmailSupport = {emailSupport}, PhoneSupport = {phoneSupport} WHERE SecurityLevelID = {securityLevelID}";
 
@@ -338,7 +339,7 @@ namespace CallCenterProgram
             }
         }
         // Only the manager can use this method (or anyone with clearance to update security levels)
-        public void UpdateSecuriyLevel(int securityLevelID, int availability)
+        public void UpdateSecurityLevel(int securityLevelID, int availability)
         {
             string query = $"UPDATE SecurityLevel SET Availability = {availability} WHERE SecurityLevelID = {securityLevelID}";
 

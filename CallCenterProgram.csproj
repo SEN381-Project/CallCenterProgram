@@ -52,6 +52,7 @@
     <Compile Include="Bussiness_Logic\Incident.cs" />
     <Compile Include="Bussiness_Logic\Job.cs" />
     <Compile Include="Bussiness_Logic\Package.cs" />
+    <Compile Include="Bussiness_Logic\SecurityLevel.cs" />
     <Compile Include="Bussiness_Logic\Service.cs" />
     <Compile Include="Bussiness_Logic\ServiceLevel.cs" />
     <Compile Include="Bussiness_Logic\ServiceRequest.cs" />
@@ -98,6 +99,12 @@
     </Compile>
     <Compile Include="Bussiness_Logic\IndividualClient.cs" />
     <Compile Include="Presentation\colors.cs" />
+    <Compile Include="Presentation\Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Contract.Designer.cs">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Incident.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +122,24 @@
     </Compile>
     <Compile Include="Presentation\Job.Designer.cs">
       <DependentUpon>Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Package.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Package.Designer.cs">
+      <DependentUpon>Package.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Security Level.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Security Level.Designer.cs">
+      <DependentUpon>Security Level.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Service Level.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Service Level.Designer.cs">
+      <DependentUpon>Service Level.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Service.cs">
       <SubType>Form</SubType>
@@ -135,6 +160,9 @@
     <EmbeddedResource Include="Presentation\callForm.resx">
       <DependentUpon>callForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Contract.resx">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +176,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Individual Client Info.resx">
       <DependentUpon>Individual Client Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Package.resx">
+      <DependentUpon>Package.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Security Level.resx">
+      <DependentUpon>Security Level.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Service Level.resx">
+      <DependentUpon>Service Level.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Service.resx">
       <DependentUpon>Service.cs</DependentUpon>

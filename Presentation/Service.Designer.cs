@@ -165,6 +165,8 @@ namespace CallCenterProgram.Presentation
             // 
             // button1
             // 
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(641, 550);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 48);
@@ -174,6 +176,7 @@ namespace CallCenterProgram.Presentation
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(641, 761);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 48);
@@ -221,6 +224,7 @@ namespace CallCenterProgram.Presentation
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(28, 761);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 48);
@@ -232,7 +236,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(844, 844);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox4);
@@ -253,6 +257,7 @@ namespace CallCenterProgram.Presentation
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Name = "Service";
             this.Text = "Service";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
