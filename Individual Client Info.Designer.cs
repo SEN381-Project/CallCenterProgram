@@ -1,7 +1,7 @@
 ﻿
 namespace CallCenterProgram
 {
-    partial class Business_Client_Info
+    partial class Individual_Client_Info
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,11 @@ namespace CallCenterProgram
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvBusinessClients = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnViewIndividualClients = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBusinessClients)).BeginInit();
+            this.btnViewBusinessClients = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -43,21 +43,21 @@ namespace CallCenterProgram
             this.label1.Font = new System.Drawing.Font("Roboto Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 25);
+            this.label1.Size = new System.Drawing.Size(178, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Business Clients";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Individual Clients";
             // 
-            // dgvBusinessClients
+            // dataGridView1
             // 
-            this.dgvBusinessClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBusinessClients.Location = new System.Drawing.Point(29, 48);
-            this.dgvBusinessClients.Name = "dgvBusinessClients";
-            this.dgvBusinessClients.Size = new System.Drawing.Size(561, 200);
-            this.dgvBusinessClients.TabIndex = 1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(29, 48);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(561, 200);
+            this.dataGridView1.TabIndex = 1;
             // 
             // btnHome
             // 
+            this.btnHome.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Location = new System.Drawing.Point(515, 19);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(75, 23);
@@ -67,6 +67,7 @@ namespace CallCenterProgram
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(29, 254);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
@@ -74,32 +75,32 @@ namespace CallCenterProgram
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // btnViewIndividualClients
+            // btnViewBusinessClients
             // 
-            this.btnViewIndividualClients.Location = new System.Drawing.Point(454, 254);
-            this.btnViewIndividualClients.Name = "btnViewIndividualClients";
-            this.btnViewIndividualClients.Size = new System.Drawing.Size(136, 23);
-            this.btnViewIndividualClients.TabIndex = 4;
-            this.btnViewIndividualClients.Text = "View Individual Clients";
-            this.btnViewIndividualClients.UseVisualStyleBackColor = true;
+            this.btnViewBusinessClients.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewBusinessClients.Location = new System.Drawing.Point(454, 253);
+            this.btnViewBusinessClients.Name = "btnViewBusinessClients";
+            this.btnViewBusinessClients.Size = new System.Drawing.Size(136, 23);
+            this.btnViewBusinessClients.TabIndex = 4;
+            this.btnViewBusinessClients.Text = "View Business Clients";
+            this.btnViewBusinessClients.UseVisualStyleBackColor = true;
             // 
-            // Business_Client_Info
+            // Individual_Client_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(624, 450);
-            this.Controls.Add(this.btnViewIndividualClients);
+            this.Controls.Add(this.btnViewBusinessClients);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnHome);
-            this.Controls.Add(this.dgvBusinessClients);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.Name = "Business_Client_Info";
-            this.Text = "Business_Client_Info";
-            this.Load += new System.EventHandler(this.Business_Client_Info_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBusinessClients)).EndInit();
+            this.Name = "Individual_Client_Info";
+            this.Text = "Individual_Client_Info";
+            this.Load += new System.EventHandler(this.Individual_Client_Info_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,9 +109,9 @@ namespace CallCenterProgram
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvBusinessClients;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button btnViewIndividualClients;
+        private System.Windows.Forms.Button btnViewBusinessClients;
     }
 }
