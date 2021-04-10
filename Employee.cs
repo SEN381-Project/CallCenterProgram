@@ -62,7 +62,7 @@ namespace CallCenterProgram
         }
 
         private void InsertDepartment_Click(object sender, EventArgs e)
-        {
+        { 
             handler.InsertDepartMent(int.Parse(txtdepartmentid.Text), txtdepartmentname.Text, int.Parse(txtstationnumber.Text));
         }
 

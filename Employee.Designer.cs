@@ -45,9 +45,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtstationnumber = new System.Windows.Forms.TextBox();
-            this.txtdepartmentname = new System.Windows.Forms.TextBox();
-            this.txtdepartmentid = new System.Windows.Forms.TextBox();
             this.txtjobdescription = new System.Windows.Forms.TextBox();
             this.txtjob = new System.Windows.Forms.TextBox();
             this.txtContact = new System.Windows.Forms.TextBox();
@@ -55,6 +52,9 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtiD = new System.Windows.Forms.TextBox();
             this.txtJobtitle = new System.Windows.Forms.Label();
+            this.txtstationnumber = new System.Windows.Forms.TextBox();
+            this.txtdepartmentname = new System.Windows.Forms.TextBox();
+            this.txtdepartmentid = new System.Windows.Forms.TextBox();
             this.MainMenu = new System.Windows.Forms.Button();
             this.Techician = new System.Windows.Forms.Button();
             this.Manager = new System.Windows.Forms.Button();
@@ -238,27 +238,6 @@
             this.label13.TabIndex = 32;
             this.label13.Text = "EmployeeId: ";
             // 
-            // txtstationnumber
-            // 
-            this.txtstationnumber.Location = new System.Drawing.Point(12, 227);
-            this.txtstationnumber.Name = "txtstationnumber";
-            this.txtstationnumber.Size = new System.Drawing.Size(161, 20);
-            this.txtstationnumber.TabIndex = 31;
-            // 
-            // txtdepartmentname
-            // 
-            this.txtdepartmentname.Location = new System.Drawing.Point(12, 158);
-            this.txtdepartmentname.Name = "txtdepartmentname";
-            this.txtdepartmentname.Size = new System.Drawing.Size(161, 20);
-            this.txtdepartmentname.TabIndex = 30;
-            // 
-            // txtdepartmentid
-            // 
-            this.txtdepartmentid.Location = new System.Drawing.Point(12, 82);
-            this.txtdepartmentid.Name = "txtdepartmentid";
-            this.txtdepartmentid.Size = new System.Drawing.Size(161, 20);
-            this.txtdepartmentid.TabIndex = 29;
-            // 
             // txtjobdescription
             // 
             this.txtjobdescription.Location = new System.Drawing.Point(422, 86);
@@ -309,6 +288,27 @@
             this.txtJobtitle.Size = new System.Drawing.Size(47, 13);
             this.txtJobtitle.TabIndex = 22;
             this.txtJobtitle.Text = "JobTitle:";
+            // 
+            // txtstationnumber
+            // 
+            this.txtstationnumber.Location = new System.Drawing.Point(12, 227);
+            this.txtstationnumber.Name = "txtstationnumber";
+            this.txtstationnumber.Size = new System.Drawing.Size(161, 20);
+            this.txtstationnumber.TabIndex = 31;
+            // 
+            // txtdepartmentname
+            // 
+            this.txtdepartmentname.Location = new System.Drawing.Point(12, 158);
+            this.txtdepartmentname.Name = "txtdepartmentname";
+            this.txtdepartmentname.Size = new System.Drawing.Size(161, 20);
+            this.txtdepartmentname.TabIndex = 30;
+            // 
+            // txtdepartmentid
+            // 
+            this.txtdepartmentid.Location = new System.Drawing.Point(12, 82);
+            this.txtdepartmentid.Name = "txtdepartmentid";
+            this.txtdepartmentid.Size = new System.Drawing.Size(161, 20);
+            this.txtdepartmentid.TabIndex = 29;
             // 
             // MainMenu
             // 
@@ -402,7 +402,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Exit);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Employee Form";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

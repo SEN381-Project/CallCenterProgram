@@ -171,7 +171,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Technicain Form";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
