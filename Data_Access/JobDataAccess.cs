@@ -24,7 +24,7 @@ namespace CallCenterProgram
         //Objects
         Job objJob = new Job();
 
-        public InsertJob(int jobStatus, int incidentRef, int assignedWorkerID)
+        public void InsertJob(int jobStatus, int incidentRef, int assignedWorkerID)
         {
             string query = @"INSERT INTO Job VALUES ( '" + jobStatus + "', '" + incidentRef + "', '" + assignedWorkerID + "')";
 
@@ -49,9 +49,9 @@ namespace CallCenterProgram
             }
         }
 
-        public UpdateJob(int jobRef, int jobStatus, int assignedWorkerID)
+        public void UpdateJob(int jobRef, int jobStatus, int assignedWorkerID)
         {
-            string query = @"UPDATE Incident SET JobStatus = '" + jobStatus + "', AssignedWorkerID = '" + assignedWorkerID + "' WHERE IncidentRef = '" + jobRef + "'";
+            string query = @"UPDATE Job SET JobStatus = '" + jobStatus + "', AssignedWorkerID = '" + assignedWorkerID + "' WHERE IncidentRef = '" + jobRef + "'";
 
             conn = new SqlConnection(connect);
 
@@ -74,9 +74,9 @@ namespace CallCenterProgram
             }
         }
 
-        public CloseJob(int jobID)
+        public void CloseJob(int jobID)
         {
-            string query = @"DELETE FROM Job WHERE JobRef = '" + jobID + "'";
+            string query = @"UPDATE Job SET JobStatus = '" + 1 + "' WHERE IncidentRef = '" + jobID + "'";
 
             conn = new SqlConnection(connect);
 
@@ -99,7 +99,7 @@ namespace CallCenterProgram
             }
         }
 
-        public FindAvailableWorkers()
+        public void FindAvailableWorkers()
         {
         }
 
@@ -120,19 +120,19 @@ namespace CallCenterProgram
 
                 if (readers.Read())
                 {
-                    objJob.workerID = int.Parse(readers[0].ToString());
-                    objJob.incidentID = int.Parse(readers[1].ToString());
+                    objJob.CallWorkerID = int.Parse(readers[2].ToString());
+                    objJob.IncedentID = int.Parse(readers[1].ToString());
 
                     if (int.Parse(readers[2].ToString()) == 1)
                     {
-                        objJob.jobStatus = true;
+                        objJob.JobStatus = true;
                     }
                     else
                     {
-                        objJob.jobStatus = false;
+                        objJob.JobStatus = false;
                     }
 
-                    jobData.Add(new Job(objJob.workerID, objJob.incidentID, objJob.jobStatus));
+                    jobData.Add(new Job(objJob.CallWorkerID, objJob.JobStatus, objJob.IncedentID));
                 }
             }
             catch (Exception ex)
@@ -164,19 +164,19 @@ namespace CallCenterProgram
 
                 if (readers.Read())
                 {
-                    objJob.workerID = int.Parse(readers[0].ToString());
-                    obJob.incidentID = int.Parse(readers[1].ToString());
+                    objJob.CallWorkerID = int.Parse(readers[2].ToString());
+                    objJob.IncedentID = int.Parse(readers[1].ToString());
 
                     if (int.Parse(readers[2].ToString()) == 1)
                     {
-                        objJob.jobStatus = true;
+                        objJob.JobStatus = true;
                     }
                     else
                     {
-                        objJob.jobStatus = false;
+                        objJob.JobStatus = false;
                     }
 
-                    jobData.Add(new Job(objJob.workerID, objJob.incidentID, objJob.jobStatus));
+                    jobData.Add(new Job(objJob.CallWorkerID, objJob.JobStatus, objJob.IncedentID));
                 }
             }
             catch (Exception ex)

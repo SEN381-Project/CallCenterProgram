@@ -44,6 +44,7 @@ namespace CallCenterProgram
         public int Priority
         {
             get { return priority; }
+            set { priority = value; }
         }
 
         public string[] AbilityReq
@@ -58,11 +59,11 @@ namespace CallCenterProgram
             set { callWorkerID = value; }
         }
 
-        public void Incident()
+        public Incident()
         {
         }
 
-        public void Incident(string reportInfo, DateTime timeIssued, Double cost, int clientID, int priority, string abilityReq, int callWorkerID)
+        public Incident(string reportInfo, DateTime timeIssued, Double cost, int clientID, int priority, string[] abilityReq, int callWorkerID)
         {
             this.reportInfo = reportInfo;
             this.timeIssued = timeIssued;
