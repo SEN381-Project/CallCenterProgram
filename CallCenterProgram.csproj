@@ -62,7 +62,6 @@
     <Compile Include="Bussiness_Logic\CallStats.cs" />
     <Compile Include="Bussiness_Logic\ClientFactory.cs" />
     <Compile Include="Bussiness_Logic\ClientInfo.cs" />
-    <Compile Include="Contract.cs" />
     <Compile Include="Data_Access\ContractMaintenanceAccess.cs" />
     <Compile Include="Data_Access\IncidentDataAccess.cs" />
     <Compile Include="Data_Access\JobDataAccess.cs" />
@@ -146,10 +145,7 @@
     <Compile Include="Presentation\Feedback.Designer.cs">
       <DependentUpon>Feedback.cs</DependentUpon>
     </Compile>
-    <Compile Include="Incident.cs" />
     <Compile Include="Bussiness_Logic\IndividualClient.cs" />
-    <Compile Include="Job.cs" />
-    <Compile Include="Package.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Bussiness_Logic\Manager.cs" />
@@ -164,14 +160,9 @@
     <EmbeddedResource Include="Presentation\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Service.cs" />
-    <Compile Include="ServiceLevel.cs" />
-    <Compile Include="ServiceRequest.cs" />
     <Compile Include="Bussiness_Logic\Technicians.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceRequest.cs" />
-    <Compile Include="Technicians.cs" />
     <EmbeddedResource Include="Presentation\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
