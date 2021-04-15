@@ -39,14 +39,7 @@ namespace CallCenterProgram
             dataAccess.UpdateServiceLevel(serviceLevelID, newAvailability);
 
             // local update
-            if (newAvailability == 0)
-            {
-                this.availability = false;
-            }
-            else
-            {
-                this.availability = true;
-            }
+            this.Availability = newAvailability == 0 ? false : true;
         }
     }
 }

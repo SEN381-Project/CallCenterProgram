@@ -15,6 +15,19 @@ namespace CallCenterProgram
         private string equipmentType;
         private bool state;
 
+        public Service()
+        {
+        }
+
+        public Service(string serviceName, int serviceId, string workExpenses, string equipmentType, bool state)
+        {
+            this.serviceName = serviceName;
+            this.serviceId = serviceId;
+            this.workExpenses = workExpenses;
+            this.equipmentType = equipmentType;
+            this.state = state;
+        }
+
         public string ServiceName { get => serviceName; set => serviceName = value; }
         public int ServiceId { get => serviceId; set => serviceId = value; }
         public string WorkExpenses { get => workExpenses; set => workExpenses = value; }

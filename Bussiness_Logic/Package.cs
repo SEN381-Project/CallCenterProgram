@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,10 @@ namespace CallCenterProgram
         private List<Service> services;
         private List<ServiceLevel> serviceLevels;
 
+        public Package()
+        {
+        }
+
         public Package(string packageName, List<Service> services, List<ServiceLevel> serviceLevels)
         {
             this.packageName = packageName;
@@ -24,17 +29,23 @@ namespace CallCenterProgram
         public List<Service> Services { get => services; set => services = value; }
         public List<ServiceLevel> ServiceLevels { get => serviceLevels; set => serviceLevels = value; }
 
-        public Package CreatePackage(string packageName, List<Service> services, List<ServiceLevel> serviceLevels)
-        {
-            // every service will have a service level attatched to it. 
-            // how do I add this ti the database ????????????????????????????????????????????
-            // solved version 1 : use unique package names to query the databse for similar package name but add  them separatly.
-            for (int i = 0; i < services.Count; i++)
+        public Package CreatePackage(string packageName, string services, string serviceLevels)
+        {   
+            dataAccess.InsertPackage(packageName, services, serviceLevels);
+            List<Service> servicesLst = new List<Service>();
+            List<ServiceLevel> serviceLevelLst = new List<ServiceLevel>();
+            for (int i = 0; i < services.Length; i++)
             {
-                dataAccess.InsertPackage(packageName, services[i].ServiceId, serviceLevels[i].SecurityLevel.SecurityLevelId);
-            }
+                SqlDataReader readerService = dataAccess.GetService(int.Parse(services[i].ToString()));
+                bool state = (int)readerService[4] == 1 ? true : false;
+                Service service = new Service(readerService[0].ToString(), int.Parse(readerService[1].ToString()), readerService[2].ToString(), readerService[3].ToString(), state);
 
-            Package package = new Package(packageName, services, serviceLevels);
+                SqlDataReader readerServiceLevel = dataAccess.GetService(int.Parse(serviceLevels[i].ToString()));
+                ServiceLevel serviceLevel = new ServiceLevel()
+                servicesLst.Add(service);
+                //serviceLevelLst.Add();
+            }
+            Package package = new Package(packageName, , );
 
             return package;
         }
