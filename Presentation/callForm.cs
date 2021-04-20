@@ -140,6 +140,7 @@ namespace CallCenterProgram.Presentation
         private void btnFindClientInfo_Click(object sender, EventArgs e)
         {
             //find clients info based on client ID
+            //display the information in the data grid views
         }
 
         private void btnHome_Click(object sender, EventArgs e)
