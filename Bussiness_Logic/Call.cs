@@ -31,16 +31,11 @@ namespace CallCenterProgram
         }
 
         //methods
-        public void MakeCall()
+        public void createInitialTimestamp()
         {
             initialTimeStamp = CreateTimestamp();
         }
-
-        public void TakeCall()
-        {
-            initialTimeStamp = CreateTimestamp();
-        }
-        public void EndCall()
+        public void createFinalTimestamp()
         {
             finalTimeStamp = CreateTimestamp();
         }
