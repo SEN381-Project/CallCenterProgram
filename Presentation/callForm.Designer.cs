@@ -72,7 +72,7 @@ namespace CallCenterProgram.Presentation
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(82)))), ((int)(((byte)(203)))));
             this.lblTitle.Location = new System.Drawing.Point(503, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(230, 58);
@@ -81,6 +81,7 @@ namespace CallCenterProgram.Presentation
             // 
             // rtbFaultReport
             // 
+            this.rtbFaultReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.rtbFaultReport.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.rtbFaultReport.Location = new System.Drawing.Point(19, 134);
             this.rtbFaultReport.Name = "rtbFaultReport";
@@ -92,6 +93,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.lblFaultReport.AutoSize = true;
             this.lblFaultReport.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFaultReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.lblFaultReport.Location = new System.Drawing.Point(22, 83);
             this.lblFaultReport.Name = "lblFaultReport";
             this.lblFaultReport.Size = new System.Drawing.Size(189, 38);
@@ -102,6 +104,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.lblCallReport.AutoSize = true;
             this.lblCallReport.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCallReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.lblCallReport.Location = new System.Drawing.Point(260, 83);
             this.lblCallReport.Name = "lblCallReport";
             this.lblCallReport.Size = new System.Drawing.Size(172, 38);
@@ -112,6 +115,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.lblProblemInfo.AutoSize = true;
             this.lblProblemInfo.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProblemInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.lblProblemInfo.Location = new System.Drawing.Point(473, 83);
             this.lblProblemInfo.Name = "lblProblemInfo";
             this.lblProblemInfo.Size = new System.Drawing.Size(200, 38);
@@ -122,6 +126,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.lblWorkRequest.AutoSize = true;
             this.lblWorkRequest.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWorkRequest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.lblWorkRequest.Location = new System.Drawing.Point(696, 83);
             this.lblWorkRequest.Name = "lblWorkRequest";
             this.lblWorkRequest.Size = new System.Drawing.Size(215, 38);
@@ -130,6 +135,7 @@ namespace CallCenterProgram.Presentation
             // 
             // rtbCallReport
             // 
+            this.rtbCallReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.rtbCallReport.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.rtbCallReport.Location = new System.Drawing.Point(251, 134);
             this.rtbCallReport.Name = "rtbCallReport";
@@ -139,6 +145,7 @@ namespace CallCenterProgram.Presentation
             // 
             // rtbProblemInfo
             // 
+            this.rtbProblemInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.rtbProblemInfo.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.rtbProblemInfo.Location = new System.Drawing.Point(480, 134);
             this.rtbProblemInfo.Name = "rtbProblemInfo";
@@ -148,6 +155,7 @@ namespace CallCenterProgram.Presentation
             // 
             // rtbWorkRequest
             // 
+            this.rtbWorkRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.rtbWorkRequest.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.rtbWorkRequest.Location = new System.Drawing.Point(703, 134);
             this.rtbWorkRequest.Name = "rtbWorkRequest";
@@ -157,7 +165,7 @@ namespace CallCenterProgram.Presentation
             // 
             // pnlTitleBar
             // 
-            this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.pnlTitleBar.Controls.Add(this.btnHome);
             this.pnlTitleBar.Controls.Add(this.lblTitle);
             this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -169,9 +177,9 @@ namespace CallCenterProgram.Presentation
             // btnHome
             // 
             this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.ForeColor = System.Drawing.Color.BlueViolet;
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnHome.Location = new System.Drawing.Point(1231, 12);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(75, 42);
@@ -182,7 +190,7 @@ namespace CallCenterProgram.Presentation
             // 
             // pnlReports
             // 
-            this.pnlReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.pnlReports.Controls.Add(this.lblReports);
             this.pnlReports.Controls.Add(this.rtbWorkRequest);
             this.pnlReports.Controls.Add(this.rtbFaultReport);
@@ -201,7 +209,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.lblReports.AutoSize = true;
             this.lblReports.Font = new System.Drawing.Font("Roboto Light", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReports.ForeColor = System.Drawing.Color.Indigo;
+            this.lblReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.lblReports.Location = new System.Drawing.Point(13, 23);
             this.lblReports.Name = "lblReports";
             this.lblReports.Size = new System.Drawing.Size(151, 46);
@@ -210,7 +218,7 @@ namespace CallCenterProgram.Presentation
             // 
             // pnlClientInfo
             // 
-            this.pnlClientInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlClientInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.pnlClientInfo.Controls.Add(this.lblClientNumber);
             this.pnlClientInfo.Controls.Add(this.btnFindClientInfo);
             this.pnlClientInfo.Controls.Add(this.txtClientInfo);
@@ -228,6 +236,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.lblClientNumber.AutoSize = true;
             this.lblClientNumber.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.lblClientNumber.Location = new System.Drawing.Point(545, 23);
             this.lblClientNumber.Name = "lblClientNumber";
             this.lblClientNumber.Size = new System.Drawing.Size(135, 38);
@@ -238,6 +247,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.btnFindClientInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindClientInfo.Font = new System.Drawing.Font("Roboto Thin", 27.75F);
+            this.btnFindClientInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnFindClientInfo.Location = new System.Drawing.Point(795, 14);
             this.btnFindClientInfo.Name = "btnFindClientInfo";
             this.btnFindClientInfo.Size = new System.Drawing.Size(116, 52);
@@ -258,6 +268,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.lblAgreements.AutoSize = true;
             this.lblAgreements.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgreements.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.lblAgreements.Location = new System.Drawing.Point(532, 107);
             this.lblAgreements.Name = "lblAgreements";
             this.lblAgreements.Size = new System.Drawing.Size(189, 38);
@@ -276,6 +287,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.lblClientCallHistory.AutoSize = true;
             this.lblClientCallHistory.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientCallHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.lblClientCallHistory.Location = new System.Drawing.Point(95, 107);
             this.lblClientCallHistory.Name = "lblClientCallHistory";
             this.lblClientCallHistory.Size = new System.Drawing.Size(177, 38);
@@ -294,7 +306,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.lblClientInfo.AutoSize = true;
             this.lblClientInfo.Font = new System.Drawing.Font("Roboto Light", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientInfo.ForeColor = System.Drawing.Color.Indigo;
+            this.lblClientInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.lblClientInfo.Location = new System.Drawing.Point(12, 18);
             this.lblClientInfo.Name = "lblClientInfo";
             this.lblClientInfo.Size = new System.Drawing.Size(189, 46);
@@ -304,7 +316,7 @@ namespace CallCenterProgram.Presentation
             // pnlRightSide
             // 
             this.pnlRightSide.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.pnlRightSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlRightSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.pnlRightSide.Controls.Add(this.btnEndCall);
             this.pnlRightSide.Controls.Add(this.pnlRightBottom);
             this.pnlRightSide.Controls.Add(this.btnMakeCall);
@@ -343,18 +355,19 @@ namespace CallCenterProgram.Presentation
             // 
             // btnInsertIntoDB
             // 
+            this.btnInsertIntoDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.btnInsertIntoDB.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInsertIntoDB.FlatAppearance.BorderSize = 0;
             this.btnInsertIntoDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertIntoDB.Font = new System.Drawing.Font("Roboto Thin", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertIntoDB.ForeColor = System.Drawing.Color.BlueViolet;
+            this.btnInsertIntoDB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnInsertIntoDB.Location = new System.Drawing.Point(0, 0);
             this.btnInsertIntoDB.Name = "btnInsertIntoDB";
             this.btnInsertIntoDB.Size = new System.Drawing.Size(158, 136);
             this.btnInsertIntoDB.TabIndex = 4;
             this.btnInsertIntoDB.Text = "Insert call into database";
             this.btnInsertIntoDB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInsertIntoDB.UseVisualStyleBackColor = true;
+            this.btnInsertIntoDB.UseVisualStyleBackColor = false;
             this.btnInsertIntoDB.Click += new System.EventHandler(this.btnInsertIntoDB_Click);
             // 
             // btnMakeCall
@@ -393,7 +406,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1353, 817);
             this.Controls.Add(this.pnlRightSide);
             this.Controls.Add(this.pnlClientInfo);
