@@ -136,7 +136,7 @@ namespace CallCenterProgram.Presentation
 
         private void btnInsertIntoDB_Click(object sender, EventArgs e)
         {
-            call.InsertCallIntoDB();
+            call.InsertCallIntoDB(int.Parse(txtClientInfo.Text));
         }
 
         private void btnFindClientInfo_Click(object sender, EventArgs e)

@@ -65,13 +65,13 @@ namespace CallCenterProgram.Bussiness_Logic
             DateTime timeStamp = DateTime.Now;
             return timeStamp;
         }
-        public void InsertCallIntoDB()
+        public void InsertCallIntoDB(int clientID)
         {
             //vars 
             int callDuration = RecordCallStats(); //use RecordCallStats()
 
             //method
-            CallDB.InsertCall(initialTimeStamp, finalTimeStamp, FaultReport, CallReport,ProblemInfo,WorkRequest,callDuration);
+            CallDB.InsertCall(clientID, initialTimeStamp, finalTimeStamp, FaultReport, CallReport,ProblemInfo,WorkRequest,callDuration);
         }
     }
 }
