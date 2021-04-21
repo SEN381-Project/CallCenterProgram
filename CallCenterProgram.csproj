@@ -190,6 +190,24 @@
     <Compile Include="Bussiness_Logic\Manager.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Business_Client_Info.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Client_Home.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Employee.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Feedback.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Form3.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Form4.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Form5.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.frmIncident.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.frmServiceRequest.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Individual_Client_Info.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.job.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.callForm.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Contract.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Package.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Security_Level.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Service.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Service_Level.resources" />
+    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Properties.Resources.resources" />
     <EmbeddedResource Include="Presentation\Business Client Info.resx">
       <DependentUpon>Business Client Info.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +275,8 @@
     <None Include=".vs\slnx.sqlite" />
     <None Include=".vs\VSWorkspaceState.json" />
     <None Include="ClassDiagramUpdated.cd" />
+    <None Include="obj\Debug\CallCenterProgram.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\CallCenterProgram.csproj.GenerateResource.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -273,6 +293,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="obj\Debug\CallCenterProgram.csproj.FileListAbsolute.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\CallCenterProgram\v16\" />
