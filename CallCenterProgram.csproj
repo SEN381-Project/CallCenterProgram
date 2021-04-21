@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bussiness_Logic\BusinessClient.cs" />
+    <Compile Include="Bussiness_Logic\Caller.cs" />
     <Compile Include="Bussiness_Logic\Contract.cs" />
+    <Compile Include="Bussiness_Logic\Employee.cs" />
     <Compile Include="Bussiness_Logic\Incident.cs" />
     <Compile Include="Bussiness_Logic\IndividualClient.cs" />
     <Compile Include="Bussiness_Logic\Job.cs" />
@@ -59,18 +61,12 @@
     <Compile Include="Data_Access\ClientDataAccess.cs" />
     <Compile Include="Bussiness_Logic\Call.cs" />
     <Compile Include="Data_Access\callDataAccess.cs" />
-    <Compile Include="Bussiness_Logic\Caller.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Bussiness_Logic\CallStats.cs" />
     <Compile Include="Bussiness_Logic\ClientFactory.cs" />
     <Compile Include="Bussiness_Logic\ClientInfo.cs" />
     <Compile Include="Data_Access\ContractMaintenanceAccess.cs" />
     <Compile Include="Data_Access\IncidentDataAccess.cs" />
     <Compile Include="Data_Access\JobDataAccess.cs" />
-    <Compile Include="Bussiness_Logic\Employee.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Data_Access\Employee_DataAccess.cs" />
     <Compile Include="Bussiness_Logic\FollowUp.cs" />
     <Compile Include="Data_Access\FollowUp_DataAccess.cs" />
@@ -187,9 +183,7 @@
       <DependentUpon>Feedback.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Bussiness_Logic\Manager.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Bussiness_Logic\Manager.cs" />
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Business_Client_Info.resources" />
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Client_Home.resources" />
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Employee.resources" />
@@ -229,9 +223,7 @@
     <EmbeddedResource Include="Presentation\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Bussiness_Logic\Technicians.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Bussiness_Logic\Technicians.cs" />
     <EmbeddedResource Include="Presentation\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>

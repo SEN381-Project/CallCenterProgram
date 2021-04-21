@@ -11,7 +11,7 @@ namespace CallCenterProgram.Bussiness_Logic
 {
     class Caller : Employee
     {
-        private int stationNumber ;
+        private int stationNumber;
 
         public int StationNumber { get => stationNumber; set => stationNumber = value; }
 
