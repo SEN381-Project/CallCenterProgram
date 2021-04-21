@@ -2,12 +2,6 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-  </PropertyGroup>
-  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{89AC2BC8-2DE5-4DD3-98BE-21538B861F1D}</ProjectGuid>
@@ -190,17 +184,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Bussiness_Logic\Manager.cs" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Business_Client_Info.resources" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Client_Home.resources" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Employee.resources" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Feedback.resources" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Form3.resources" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Form4.resources" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Form5.resources" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.frmIncident.resources" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.frmServiceRequest.resources" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.Individual_Client_Info.resources" />
-    <EmbeddedResource Include="obj\Debug\CallCenterProgram.job.resources" />
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.callForm.resources" />
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Contract.resources" />
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Package.resources" />
