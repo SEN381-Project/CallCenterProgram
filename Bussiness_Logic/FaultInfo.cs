@@ -8,10 +8,6 @@ namespace CallCenterProgram
 {
     class FaultInfo : CallStats
     {
-        //fields
-        private string faultReport;
-
-        //properties
-        public string FaultReport { get => faultReport; set => faultReport = value; }
+        
     }
 }
