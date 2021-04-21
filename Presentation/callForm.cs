@@ -14,7 +14,6 @@ namespace CallCenterProgram.Presentation
     {
         //classes
         Call call = new Call();
-        FaultInfo fault = new FaultInfo();
         colors RGB = new colors();
         //constructor
         public callForm()
@@ -103,7 +102,7 @@ namespace CallCenterProgram.Presentation
             call.CallReport = rtbCallReport.Text;
             call.ProblemInfo = rtbProblemInfo.Text;
             call.WorkRequest = rtbWorkRequest.Text;
-            fault.FaultReport = rtbFaultReport.Text;
+            call.FaultReport = rtbFaultReport.Text;
         }
 
         //form components
@@ -134,7 +133,7 @@ namespace CallCenterProgram.Presentation
 
         private void btnInsertIntoDB_Click(object sender, EventArgs e)
         {
-            call.InsertCallIntoDB(fault.FaultReport);
+            call.InsertCallIntoDB();
         }
 
         private void btnFindClientInfo_Click(object sender, EventArgs e)

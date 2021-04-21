@@ -18,11 +18,14 @@ namespace CallCenterProgram
         private string callReport;
         private string problemInfo;
         private string workRequest;
+        private string faultReport;
+
 
         //properties
         public string CallReport { get => callReport; set => callReport = value; }
         public string ProblemInfo { get => problemInfo; set => problemInfo = value; }
         public string WorkRequest { get => workRequest; set => workRequest = value; }
+        public string FaultReport { get => faultReport; set => faultReport = value; }
 
         //constructor
         public Call()
@@ -59,7 +62,7 @@ namespace CallCenterProgram
             DateTime timeStamp = DateTime.Now;
             return timeStamp;
         }
-        public void InsertCallIntoDB(string FaultReport)
+        public void InsertCallIntoDB()
         {
             //vars 
             int callDuration = RecordCallStats(); //use RecordCallStats()
