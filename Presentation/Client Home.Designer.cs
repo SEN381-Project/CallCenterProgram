@@ -1,5 +1,5 @@
 ﻿
-namespace CallCenterProgram
+namespace CallCenterProgram.Presentation
 {
     partial class Client_Home
     {

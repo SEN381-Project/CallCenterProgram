@@ -8,9 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CallCenterProgram.Bussiness_Logic;
+using CallCenterProgram.Data_Access;
+using CallCenterProgram;
 
-
-namespace CallCenterProgram
+namespace CallCenterProgram.Presentation
 {
     public partial class Form5 : Form
     {
@@ -117,8 +119,8 @@ namespace CallCenterProgram
 
         private void Employee_Click(object sender, EventArgs e)
         {
-            Form2 Employee = new Form2();
-            Employee.Show();
+            //Form2 Employee = new Form2();
+            //Employee.Show();
         }
 
         private void Exit_Click(object sender, EventArgs e)

@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CallCenterProgram.Data_Access;
+using CallCenterProgram.Presentation;
+using CallCenterProgram;
 
-namespace CallCenterProgram
+namespace CallCenterProgram.Bussiness_Logic
 {
     class Call : CallStats
     {

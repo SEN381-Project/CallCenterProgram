@@ -5,8 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using CallCenterProgram;
+using CallCenterProgram.Presentation;
+using CallCenterProgram.Bussiness_Logic;
 
-namespace CallCenterProgram
+namespace CallCenterProgram.Data_Access
 {
     class ClientDataAccess
     {

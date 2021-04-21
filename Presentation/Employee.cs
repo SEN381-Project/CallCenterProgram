@@ -7,8 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CallCenterProgram.Bussiness_Logic;
+using CallCenterProgram.Data_Access;
+using CallCenterProgram;
 
-namespace CallCenterProgram
+namespace CallCenterProgram.Presentation
 {
     public partial class Employee : Form
     {

@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CallCenterProgram.Data_Access;
+using CallCenterProgram.Presentation;
+using CallCenterProgram;
 
-namespace CallCenterProgram
+namespace CallCenterProgram.Bussiness_Logic
 {
     class ServiceRequest : Incident
     {

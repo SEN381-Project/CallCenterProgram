@@ -138,6 +138,9 @@
     <Compile Include="Presentation\Manager.Designer.cs">
       <DependentUpon>Manager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\ServiceRequest.Designer.cs">
+      <DependentUpon>ServiceRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Technician.cs">
       <SubType>Form</SubType>
     </Compile>
