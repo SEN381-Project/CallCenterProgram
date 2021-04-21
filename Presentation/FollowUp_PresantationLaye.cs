@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace CallCenterProgram
 {
-    public partial class Form4 : Form
+    public partial class FollowUp_PresantationLayer : Form
     {
-        public Form4()
+        public FollowUp_PresantationLayer()
         {
             InitializeComponent();
            
@@ -63,7 +63,7 @@ namespace CallCenterProgram
 
         private void Feedback_Click(object sender, EventArgs e)
         {
-            Feedback Feedback = new Feedback();
+            Feedback_PresantationLayer Feedback = new Feedback_PresantationLayer();
             Feedback.Show();
 
         }
@@ -88,5 +88,9 @@ namespace CallCenterProgram
             handler.DeleteFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
 
+        private void btnSetReminder_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

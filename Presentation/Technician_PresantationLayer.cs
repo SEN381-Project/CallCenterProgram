@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CallCenterProgram
 {
-    public partial class Form3 : Form
+    public partial class Technician_PresantationLayer : Form
     {
-        public Form3()
+        public Technician_PresantationLayer()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace CallCenterProgram
 
         private void Employee_Click(object sender, EventArgs e)
         {
-            Form2 employee = new Form2();
+            Emploee_PresantationLayer employee = new Emploee_PresantationLayer();
             employee.Show();
         }
 

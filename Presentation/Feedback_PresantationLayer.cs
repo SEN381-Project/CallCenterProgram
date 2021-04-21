@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace CallCenterProgram
 {
-    public partial class Feedback : Form
+    public partial class Feedback_PresantationLayer : Form
     {   
-        public Feedback()
+        public Feedback_PresantationLayer()
         {
             InitializeComponent();
         }
@@ -63,7 +63,7 @@ namespace CallCenterProgram
 
         private void FollowUp_Click(object sender, EventArgs e)
         {
-            Form4 FollowUp= new Form4();
+            FollowUp_PresantationLayer FollowUp= new FollowUp_PresantationLayer();
             FollowUp.Show();
         }
 

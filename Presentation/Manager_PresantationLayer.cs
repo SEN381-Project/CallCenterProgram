@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace CallCenterProgram
 {
-    public partial class Form5 : Form
+    public partial class Manager_PresantationLayer : Form
     {
-        public Form5()
+        public Manager_PresantationLayer()
         {
             InitializeComponent();
         }
@@ -117,7 +117,7 @@ namespace CallCenterProgram
 
         private void Employee_Click(object sender, EventArgs e)
         {
-            Form2 Employee = new Form2();
+            Emploee_PresantationLayer Employee = new Emploee_PresantationLayer();
             Employee.Show();
         }
 

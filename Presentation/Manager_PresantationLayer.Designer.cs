@@ -1,6 +1,6 @@
 ﻿namespace CallCenterProgram
 {
-    partial class Form5
+    partial class Manager_PresantationLayer
     {
         /// <summary>
         /// Required designer variable.
@@ -745,7 +745,7 @@
             this.Employee.UseVisualStyleBackColor = false;
             this.Employee.Click += new System.EventHandler(this.Employee_Click);
             // 
-            // Form5
+            // Manager_PresantationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -762,7 +762,7 @@
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form5";
+            this.Name = "Manager_PresantationLayer";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load_1);
             this.panel1.ResumeLayout(false);

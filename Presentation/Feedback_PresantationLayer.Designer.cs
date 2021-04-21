@@ -1,6 +1,6 @@
 ﻿namespace CallCenterProgram
 {
-    partial class Feedback
+    partial class Feedback_PresantationLayer
     {
         /// <summary>
         /// Required designer variable.
@@ -225,7 +225,7 @@
             this.Insert.UseVisualStyleBackColor = false;
             this.Insert.Click += new System.EventHandler(this.Insert_Click);
             // 
-            // Feedback
+            // Feedback_PresantationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -240,7 +240,7 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Feedback";
+            this.Name = "Feedback_PresantationLayer";
             this.Text = "Feedback";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.panel1.ResumeLayout(false);

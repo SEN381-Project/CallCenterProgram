@@ -1,6 +1,6 @@
 ﻿namespace CallCenterProgram
 {
-    partial class Form4
+    partial class FollowUp_PresantationLayer
     {
         /// <summary>
         /// Required designer variable.
@@ -38,13 +38,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MainMenu = new System.Windows.Forms.Button();
             this.Exits = new System.Windows.Forms.Button();
             this.Feedback = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnSetReminder = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -151,17 +151,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "FollowUpId:";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.groupBox2.Location = new System.Drawing.Point(2, 341);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(797, 63);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Reminder";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
@@ -224,22 +213,34 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "FollowUp Form";
             // 
-            // Form4
+            // btnSetReminder
+            // 
+            this.btnSetReminder.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnSetReminder.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetReminder.Location = new System.Drawing.Point(2, 341);
+            this.btnSetReminder.Name = "btnSetReminder";
+            this.btnSetReminder.Size = new System.Drawing.Size(797, 62);
+            this.btnSetReminder.TabIndex = 11;
+            this.btnSetReminder.Text = "Set Reminder";
+            this.btnSetReminder.UseVisualStyleBackColor = false;
+            this.btnSetReminder.Click += new System.EventHandler(this.btnSetReminder_Click);
+            // 
+            // FollowUp_PresantationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSetReminder);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Feedback);
             this.Controls.Add(this.Exits);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form4";
+            this.Name = "FollowUp_PresantationLayer";
             this.Text = "FollowUp";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.groupBox1.ResumeLayout(false);
@@ -254,7 +255,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Delete;
@@ -270,5 +270,6 @@
         private System.Windows.Forms.Button Exits;
         private System.Windows.Forms.Button Feedback;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnSetReminder;
     }
 }

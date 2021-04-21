@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CallCenterProgram
 {
-    public partial class Form2 : Form
+    public partial class Emploee_PresantationLayer : Form
     {
-        public Form2()
+        public Emploee_PresantationLayer()
         {
             InitializeComponent();
         }
@@ -34,13 +34,13 @@ namespace CallCenterProgram
 
         private void Techician_Click(object sender, EventArgs e)
         {
-            Form3 technician = new Form3();
+            Technician_PresantationLayer technician = new Technician_PresantationLayer();
             technician.Show();
         }
 
         private void Manager_Click(object sender, EventArgs e)
         {
-            Form5 Manager = new Form5();
+            Manager_PresantationLayer Manager = new Manager_PresantationLayer();
             Manager.Show();
 
         }
