@@ -184,6 +184,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Bussiness_Logic\Manager.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.callForm.resources" />
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Contract.resources" />
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Package.resources" />

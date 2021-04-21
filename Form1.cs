@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CallCenterProgram.Presentation;
+using CallCenterProgram.Data_Access;
+using CallCenterProgram.Bussiness_Logic;
 
 namespace CallCenterProgram
 {
@@ -15,6 +18,13 @@ namespace CallCenterProgram
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnTesting_Click(object sender, EventArgs e)
+        {
+            callForm callForm = new callForm();
+            this.Hide();
+            callForm.Show();
         }
     }
 }
