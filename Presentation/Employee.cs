@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
 using CallCenterProgram.Data_Access;
 using CallCenterProgram;
+using CallCenterProgram.Presentation;
 
 namespace CallCenterProgram.Presentation
 {
@@ -37,13 +38,13 @@ namespace CallCenterProgram.Presentation
 
         private void Techician_Click(object sender, EventArgs e)
         {
-            Form3 technician = new Form3();
+            Technician technician = new Technician();
             technician.Show();
         }
 
         private void Manager_Click(object sender, EventArgs e)
         {
-            Form5 Manager = new Form5();
+            Manager Manager = new Manager();
             Manager.Show();
 
         }

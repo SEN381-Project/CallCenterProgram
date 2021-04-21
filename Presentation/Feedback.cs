@@ -66,7 +66,7 @@ namespace CallCenterProgram.Presentation
 
         private void FollowUp_Click(object sender, EventArgs e)
         {
-            Form4 FollowUp= new Form4();
+            FollowUp FollowUp= new FollowUp();
             FollowUp.Show();
         }
 

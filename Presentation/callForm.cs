@@ -31,8 +31,8 @@ namespace CallCenterProgram.Presentation
             btnInsertIntoDB.ForeColor = RGB.accentColorLighterColor;
             btnInsertIntoDB.FlatAppearance.MouseDownBackColor = RGB.accentDarkerColor;
             //btn generate reports
-            btnGenerateReports.ForeColor = RGB.accentColorLighterColor;
-            btnGenerateReports.FlatAppearance.MouseDownBackColor = RGB.accentDarkerColor;
+            //btnGenerateReports.ForeColor = RGB.accentColorLighterColor;
+            //btnGenerateReports.FlatAppearance.MouseDownBackColor = RGB.accentDarkerColor;
             //btn home
             btnHome.ForeColor = RGB.accentColor;
             btnHome.FlatAppearance.BorderColor = RGB.accentColorLighterColor;
