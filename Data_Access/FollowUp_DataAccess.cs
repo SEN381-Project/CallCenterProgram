@@ -20,7 +20,7 @@ namespace CallCenterProgram.Data_Access
         SqlDataReader Reader;
 
         //object
-        FollowUp followUp = new FollowUp();
+        Bussiness_Logic.FollowUp followUp = new Bussiness_Logic.FollowUp();
 
 
         public void InsertFollowUp(int followUpId, string status, DateTime followUpDate)
