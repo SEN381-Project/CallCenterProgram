@@ -46,14 +46,12 @@
             this.Exit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.Insert = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(4, 66);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(555, 332);
@@ -62,7 +60,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-4, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 72);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(556, 326);
             this.dataGridView1.TabIndex = 0;
@@ -80,7 +78,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.groupBox1.Location = new System.Drawing.Point(557, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(243, 340);
@@ -170,8 +168,10 @@
             // 
             // Menu
             // 
-            this.Menu.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Menu.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Menu.Location = new System.Drawing.Point(4, 404);
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(119, 44);
@@ -182,8 +182,10 @@
             // 
             // FollowUp
             // 
-            this.FollowUp.BackColor = System.Drawing.SystemColors.Desktop;
+            this.FollowUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.FollowUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FollowUp.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FollowUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.FollowUp.Location = new System.Drawing.Point(151, 404);
             this.FollowUp.Name = "FollowUp";
             this.FollowUp.Size = new System.Drawing.Size(123, 44);
@@ -193,8 +195,10 @@
             // 
             // Exit
             // 
-            this.Exit.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Exit.Location = new System.Drawing.Point(670, 404);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(130, 44);
@@ -206,7 +210,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.label6.Location = new System.Drawing.Point(251, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(240, 38);
@@ -215,8 +219,10 @@
             // 
             // Insert
             // 
-            this.Insert.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Insert.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Insert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Insert.Location = new System.Drawing.Point(311, 404);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(123, 44);
@@ -229,8 +235,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(801, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Insert);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Exit);
@@ -243,7 +250,6 @@
             this.Name = "Feedback_PresantationLayer";
             this.Text = "Feedback";
             this.Load += new System.EventHandler(this.Form5_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

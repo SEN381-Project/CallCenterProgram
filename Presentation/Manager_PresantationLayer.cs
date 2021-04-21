@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CallCenterProgram.Business_Logic;
 
 
 namespace CallCenterProgram.Presentation
@@ -89,6 +90,9 @@ namespace CallCenterProgram.Presentation
             Application.Exit();
         }
 
-       
+        private void Manager_PresantationLayer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,6 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.label1.Location = new System.Drawing.Point(264, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 38);
@@ -55,7 +56,7 @@
             // 
             this.btnAddReminder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddReminder.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddReminder.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnAddReminder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnAddReminder.Location = new System.Drawing.Point(544, 110);
             this.btnAddReminder.Name = "btnAddReminder";
             this.btnAddReminder.Size = new System.Drawing.Size(151, 34);
@@ -118,7 +119,7 @@
             // 
             this.btnFollowUpReminder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFollowUpReminder.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFollowUpReminder.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnFollowUpReminder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnFollowUpReminder.Location = new System.Drawing.Point(492, 417);
             this.btnFollowUpReminder.Name = "btnFollowUpReminder";
             this.btnFollowUpReminder.Size = new System.Drawing.Size(151, 34);
@@ -131,7 +132,7 @@
             // 
             this.btnExitReminder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitReminder.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitReminder.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnExitReminder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnExitReminder.Location = new System.Drawing.Point(649, 417);
             this.btnExitReminder.Name = "btnExitReminder";
             this.btnExitReminder.Size = new System.Drawing.Size(151, 34);
@@ -144,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnExitReminder);
             this.Controls.Add(this.btnFollowUpReminder);
@@ -156,7 +157,7 @@
             this.Controls.Add(this.btnAddReminder);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SetReminder_PresantationLayer";
             this.Text = "SetReminder_PresantationLayer";

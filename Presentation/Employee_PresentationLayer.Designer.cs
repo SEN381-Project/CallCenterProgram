@@ -64,9 +64,10 @@
             // 
             // Exit
             // 
-            Exit.BackColor = System.Drawing.SystemColors.Desktop;
+            Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             Exit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            Exit.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             Exit.Location = new System.Drawing.Point(840, 447);
             Exit.Name = "Exit";
             Exit.Size = new System.Drawing.Size(134, 44);
@@ -160,7 +161,8 @@
             // 
             // Insert
             // 
-            this.Insert.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Insert.Location = new System.Drawing.Point(30, 308);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(122, 49);
@@ -187,13 +189,14 @@
             this.groupBox1.Controls.Add(this.Insert);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.groupBox1.Location = new System.Drawing.Point(26, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(707, 364);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee_Info";
+            
             // 
             // txtAddress
             // 
@@ -285,9 +288,10 @@
             // 
             // MainMenu
             // 
-            this.MainMenu.BackColor = System.Drawing.SystemColors.Desktop;
+            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainMenu.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenu.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.MainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.MainMenu.Location = new System.Drawing.Point(14, 447);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(117, 44);
@@ -298,9 +302,10 @@
             // 
             // Techician
             // 
-            this.Techician.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Techician.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Techician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Techician.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Techician.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Techician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Techician.Location = new System.Drawing.Point(173, 447);
             this.Techician.Name = "Techician";
             this.Techician.Size = new System.Drawing.Size(153, 44);
@@ -311,9 +316,10 @@
             // 
             // Manager
             // 
-            this.Manager.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Manager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Manager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Manager.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manager.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Manager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Manager.Location = new System.Drawing.Point(349, 447);
             this.Manager.Name = "Manager";
             this.Manager.Size = new System.Drawing.Size(142, 44);
@@ -331,8 +337,9 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtdepartmentname);
             this.groupBox2.Controls.Add(this.txtdepartmentid);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.groupBox2.Location = new System.Drawing.Point(729, 49);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(245, 364);
@@ -342,7 +349,8 @@
             // 
             // InsertDepartment
             // 
-            this.InsertDepartment.BackColor = System.Drawing.SystemColors.Desktop;
+            this.InsertDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.InsertDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InsertDepartment.Location = new System.Drawing.Point(0, 308);
             this.InsertDepartment.Name = "InsertDepartment";
             this.InsertDepartment.Size = new System.Drawing.Size(118, 49);
@@ -355,7 +363,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1102, 614);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Manager);
@@ -365,11 +373,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(Exit);
             this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Emploee_PresantationLayer";
             this.Text = "Employee Form";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

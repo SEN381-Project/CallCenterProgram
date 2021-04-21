@@ -108,7 +108,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.label1.Location = new System.Drawing.Point(375, -2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 38);
@@ -436,7 +436,7 @@
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.groupBox3.Location = new System.Drawing.Point(12, 289);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(547, 250);
@@ -446,7 +446,8 @@
             // 
             // DeleteEm
             // 
-            this.DeleteEm.BackColor = System.Drawing.SystemColors.Desktop;
+            this.DeleteEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.DeleteEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteEm.Location = new System.Drawing.Point(118, 214);
             this.DeleteEm.Name = "DeleteEm";
             this.DeleteEm.Size = new System.Drawing.Size(86, 32);
@@ -561,7 +562,8 @@
             // 
             // UpdateEm
             // 
-            this.UpdateEm.BackColor = System.Drawing.SystemColors.Desktop;
+            this.UpdateEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.UpdateEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateEm.Location = new System.Drawing.Point(10, 214);
             this.UpdateEm.Name = "UpdateEm";
             this.UpdateEm.Size = new System.Drawing.Size(89, 32);
@@ -611,7 +613,7 @@
             this.groupBox4.Controls.Add(this.txtNameDepartment);
             this.groupBox4.Controls.Add(this.txtidDepartment);
             this.groupBox4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.groupBox4.Location = new System.Drawing.Point(556, 289);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(365, 250);
@@ -621,7 +623,9 @@
             // 
             // DeleteDp
             // 
-            this.DeleteDp.BackColor = System.Drawing.SystemColors.Desktop;
+            this.DeleteDp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.DeleteDp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteDp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.DeleteDp.Location = new System.Drawing.Point(135, 214);
             this.DeleteDp.Name = "DeleteDp";
             this.DeleteDp.Size = new System.Drawing.Size(92, 32);
@@ -652,7 +656,9 @@
             // 
             // UpdateDp
             // 
-            this.UpdateDp.BackColor = System.Drawing.SystemColors.Desktop;
+            this.UpdateDp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.UpdateDp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateDp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.UpdateDp.Location = new System.Drawing.Point(12, 214);
             this.UpdateDp.Name = "UpdateDp";
             this.UpdateDp.Size = new System.Drawing.Size(99, 32);
@@ -764,6 +770,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Manager_PresantationLayer";
             this.Text = "Form5";
+            this.Load += new System.EventHandler(this.Manager_PresantationLayer_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.groupBox1.Location = new System.Drawing.Point(599, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 293);
@@ -94,7 +94,7 @@
             // 
             // Delete
             // 
-            this.Delete.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Delete.Location = new System.Drawing.Point(8, 253);
             this.Delete.Name = "Delete";
@@ -106,7 +106,7 @@
             // 
             // Update
             // 
-            this.Update.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Update.Location = new System.Drawing.Point(8, 222);
             this.Update.Name = "Update";
@@ -118,7 +118,7 @@
             // 
             // Insert
             // 
-            this.Insert.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Insert.Location = new System.Drawing.Point(8, 187);
             this.Insert.Name = "Insert";
@@ -173,9 +173,10 @@
             // 
             // MainMenu
             // 
-            this.MainMenu.BackColor = System.Drawing.SystemColors.Desktop;
+            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainMenu.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.MainMenu.Location = new System.Drawing.Point(2, 404);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(95, 46);
@@ -186,9 +187,10 @@
             // 
             // Exits
             // 
-            this.Exits.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Exits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Exits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exits.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exits.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Exits.Location = new System.Drawing.Point(700, 404);
             this.Exits.Name = "Exits";
             this.Exits.Size = new System.Drawing.Size(99, 46);
@@ -199,9 +201,10 @@
             // 
             // Feedback
             // 
-            this.Feedback.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Feedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Feedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Feedback.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Feedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Feedback.Location = new System.Drawing.Point(119, 404);
             this.Feedback.Name = "Feedback";
             this.Feedback.Size = new System.Drawing.Size(94, 46);
@@ -214,6 +217,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.label6.Location = new System.Drawing.Point(245, -2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(233, 38);
@@ -222,9 +226,10 @@
             // 
             // btnSetReminder
             // 
-            this.btnSetReminder.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnSetReminder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.btnSetReminder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetReminder.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetReminder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnSetReminder.Location = new System.Drawing.Point(2, 341);
             this.btnSetReminder.Name = "btnSetReminder";
             this.btnSetReminder.Size = new System.Drawing.Size(797, 62);
@@ -237,7 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSetReminder);
             this.Controls.Add(this.label6);
