@@ -69,7 +69,6 @@
     <Compile Include="Data_Access\Employee_DataAccess.cs" />
     <Compile Include="Bussiness_Logic\FollowUp.cs" />
     <Compile Include="Data_Access\FollowUp_DataAccess.cs" />
-    <Compile Include="Bussiness_Logic\FaultInfo.cs" />
     <Compile Include="Bussiness_Logic\IClient.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
