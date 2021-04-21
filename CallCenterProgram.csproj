@@ -77,11 +77,25 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Bussiness_Logic\IndividualClient.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Presentation\Business Client Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Business Client Info.Designer.cs">
+      <DependentUpon>Business Client Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\callForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation\callForm.Designer.cs">
       <DependentUpon>callForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Client Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Client Home.Designer.cs">
+      <DependentUpon>Client Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\colors.cs" />
     <Compile Include="Presentation\Contract.cs">
@@ -98,6 +112,18 @@
     </Compile>
     <Compile Include="Presentation\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Individual Client Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Individual Client Info.Designer.cs">
+      <DependentUpon>Individual Client Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Job.Designer.cs">
+      <DependentUpon>Job.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Manager.cs">
       <SubType>Form</SubType>
@@ -156,11 +182,20 @@
     <Compile Include="Bussiness_Logic\Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\Business Client Info.resx">
+      <DependentUpon>Business Client Info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\callForm.resx">
       <DependentUpon>callForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Client Home.resx">
+      <DependentUpon>Client Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Contract.resx">
       <DependentUpon>Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Individual Client Info.resx">
+      <DependentUpon>Individual Client Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>
@@ -207,6 +242,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="ClassDiagramUpdated.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -224,6 +262,10 @@
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include=".vs\CallCenterProgram\v16\" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
