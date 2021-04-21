@@ -1,6 +1,6 @@
 ﻿namespace CallCenterProgram
 {
-    partial class Form2
+    partial class job
     {
         /// <summary>
         /// Required designer variable.
@@ -32,9 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtJobID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            //this.label2 = new System.Windows.Forms.Label();
             this.dgvIncident = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            //this.label1 = new System.Windows.Forms.Label();
             this.lblHeading = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncident)).BeginInit();
@@ -55,9 +55,9 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.txtJobID);
-            this.panel1.Controls.Add(this.label2);
+            //this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dgvIncident);
-            this.panel1.Controls.Add(this.label1);
+            //this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(39, 87);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
@@ -84,14 +84,14 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(536, 335);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 31);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Job ID:";
+            //this.label2.AutoSize = true;
+            //this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label2.Location = new System.Drawing.Point(536, 335);
+            //this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            //this.label2.Name = "label2";
+            //this.label2.Size = new System.Drawing.Size(101, 31);
+            //this.label2.TabIndex = 4;
+            //this.label2.Text = "Job ID:";
             // 
             // dgvIncident
             // 
@@ -105,14 +105,14 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "View";
+            //this.label1.AutoSize = true;
+            //this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label1.Location = new System.Drawing.Point(19, 15);
+            //this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            //this.label1.Name = "label1";
+            //this.label1.Size = new System.Drawing.Size(73, 31);
+            //this.label1.TabIndex = 2;
+            //this.label1.Text = "View";
             // 
             // lblHeading
             // 
@@ -151,9 +151,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtJobID;
-        private System.Windows.Forms.Label label2;
+        //private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvIncident;
-        private System.Windows.Forms.Label label1;
+        //private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblHeading;
     }
 }
