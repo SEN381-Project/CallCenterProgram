@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CallCenterProgram
 {
-    class Incident : FaultInfo
+    class Incident : Call
     {
         private string reportInfo;
         private DateTime timeIssued;

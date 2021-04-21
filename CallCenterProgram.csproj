@@ -49,6 +49,7 @@
     <Compile Include="Bussiness_Logic\BusinessClient.cs" />
     <Compile Include="Bussiness_Logic\Contract.cs" />
     <Compile Include="Bussiness_Logic\Incident.cs" />
+    <Compile Include="Bussiness_Logic\IndividualClient.cs" />
     <Compile Include="Bussiness_Logic\Job.cs" />
     <Compile Include="Bussiness_Logic\Package.cs" />
     <Compile Include="Bussiness_Logic\SecurityLevel.cs" />
@@ -58,14 +59,18 @@
     <Compile Include="Data_Access\ClientDataAccess.cs" />
     <Compile Include="Bussiness_Logic\Call.cs" />
     <Compile Include="Data_Access\callDataAccess.cs" />
-    <Compile Include="Bussiness_Logic\Caller.cs" />
+    <Compile Include="Bussiness_Logic\Caller.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Bussiness_Logic\CallStats.cs" />
     <Compile Include="Bussiness_Logic\ClientFactory.cs" />
     <Compile Include="Bussiness_Logic\ClientInfo.cs" />
     <Compile Include="Data_Access\ContractMaintenanceAccess.cs" />
     <Compile Include="Data_Access\IncidentDataAccess.cs" />
     <Compile Include="Data_Access\JobDataAccess.cs" />
-    <Compile Include="Bussiness_Logic\Employee.cs" />
+    <Compile Include="Bussiness_Logic\Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Data_Access\Employee_DataAccess.cs" />
     <Compile Include="Bussiness_Logic\FollowUp.cs" />
     <Compile Include="Data_Access\FollowUp_DataAccess.cs" />
@@ -76,7 +81,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bussiness_Logic\IndividualClient.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Presentation\Business Client Info.cs">
@@ -112,6 +116,9 @@
     </Compile>
     <Compile Include="Presentation\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Incident.Designer.cs">
+      <DependentUpon>Incident.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Individual Client Info.cs">
       <SubType>Form</SubType>
@@ -176,12 +183,10 @@
     <Compile Include="Presentation\Feedback.Designer.cs">
       <DependentUpon>Feedback.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bussiness_Logic\IndividualClient.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Bussiness_Logic\Manager.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Bussiness_Logic\Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="Presentation\Business Client Info.resx">
       <DependentUpon>Business Client Info.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,15 +199,18 @@
     <EmbeddedResource Include="Presentation\Contract.resx">
       <DependentUpon>Contract.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Incident.resx">
+      <DependentUpon>Incident.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Individual Client Info.resx">
       <DependentUpon>Individual Client Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Bussiness_Logic\Technicians.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Bussiness_Logic\Technicians.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="Presentation\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +246,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>

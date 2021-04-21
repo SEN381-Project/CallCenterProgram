@@ -36,12 +36,12 @@ namespace CallCenterProgram
 
         public void getDetails()
         {
-            
+
         }
 
         public void getServiceAgreement()
         {
-           
+
         }
     }
 }
