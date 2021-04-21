@@ -16,5 +16,22 @@ namespace CallCenterProgram
         {
             InitializeComponent();
         }
+
+        private void SetReminder_PresantationLayer_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnExitReminder_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnFollowUpReminder_Click(object sender, EventArgs e)
+        {
+            FollowUp_PresantationLayer FollowUp = new FollowUp_PresantationLayer();
+            FollowUp.Show();
+        }
+
     }
 }

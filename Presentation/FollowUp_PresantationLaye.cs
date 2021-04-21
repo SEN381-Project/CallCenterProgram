@@ -90,7 +90,8 @@ namespace CallCenterProgram
 
         private void btnSetReminder_Click(object sender, EventArgs e)
         {
-
+            SetReminder_PresantationLayer Reminder = new SetReminder_PresantationLayer();
+            Reminder.Show();
         }
     }
 }

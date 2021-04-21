@@ -61,6 +61,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.groupBox1.Location = new System.Drawing.Point(599, 49);
@@ -94,6 +95,7 @@
             // Delete
             // 
             this.Delete.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Delete.Location = new System.Drawing.Point(8, 253);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(100, 40);
@@ -105,6 +107,7 @@
             // Update
             // 
             this.Update.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Update.Location = new System.Drawing.Point(8, 222);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(100, 31);
@@ -116,6 +119,7 @@
             // Insert
             // 
             this.Insert.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Insert.Location = new System.Drawing.Point(8, 187);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(100, 38);
@@ -170,6 +174,7 @@
             // MainMenu
             // 
             this.MainMenu.BackColor = System.Drawing.SystemColors.Desktop;
+            this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainMenu.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenu.Location = new System.Drawing.Point(2, 404);
             this.MainMenu.Name = "MainMenu";
@@ -182,6 +187,7 @@
             // Exits
             // 
             this.Exits.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Exits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exits.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exits.Location = new System.Drawing.Point(700, 404);
             this.Exits.Name = "Exits";
@@ -194,6 +200,7 @@
             // Feedback
             // 
             this.Feedback.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Feedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Feedback.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Feedback.Location = new System.Drawing.Point(119, 404);
             this.Feedback.Name = "Feedback";
@@ -216,6 +223,7 @@
             // btnSetReminder
             // 
             this.btnSetReminder.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnSetReminder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetReminder.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetReminder.Location = new System.Drawing.Point(2, 341);
             this.btnSetReminder.Name = "btnSetReminder";
