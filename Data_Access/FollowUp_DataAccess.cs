@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using CallCenterProgram.Business_Logic;
 
-namespace CallCenterProgram
+namespace CallCenterProgram.Data_Access
 {
     class FollowUp_DataAccess
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CallCenterProgram
+namespace CallCenterProgram.Business_Logic
 {
     class FollowUp : Call
     {
