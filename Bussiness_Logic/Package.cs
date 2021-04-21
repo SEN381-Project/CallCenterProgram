@@ -41,11 +41,11 @@ namespace CallCenterProgram
                 Service service = new Service(readerService[0].ToString(), int.Parse(readerService[1].ToString()), readerService[2].ToString(), readerService[3].ToString(), state);
 
                 SqlDataReader readerServiceLevel = dataAccess.GetService(int.Parse(serviceLevels[i].ToString()));
-                ServiceLevel serviceLevel = new ServiceLevel()
+                ServiceLevel serviceLevel = new ServiceLevel();
                 servicesLst.Add(service);
                 //serviceLevelLst.Add();
             }
-            Package package = new Package(packageName, , );
+            Package package = new Package(packageName, Services, ServiceLevels);
 
             return package;
         }
