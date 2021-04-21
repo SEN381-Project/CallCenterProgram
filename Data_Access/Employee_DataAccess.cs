@@ -217,31 +217,64 @@ namespace CallCenterProgram.Data_Access
                 Conn.Close();
             }
         }
-            //delete technician info
-            public void DeleteTechnicians(string abilities, string qualification)
+        //delete technician info
+        public void DeleteTechnicians(string abilities, string qualification)
+        {
+            string query = @"DELETE INTO Employee VALUES('" + abilities + "','" + qualification + "')";
+            Conn = new SqlConnection(connect);
+            Conn.Open();
+            Command = new SqlCommand(query, Conn);
+
+            try
             {
-                string query = @"DELETE INTO Employee VALUES('" + abilities + "','" + qualification + "')";
-                Conn = new SqlConnection(connect);
-                Conn.Open();
-                Command = new SqlCommand(query, Conn);
+                Command.BeginExecuteNonQuery();
+                MessageBox.Show("Technician info deleted!");
+            }
+            catch (Exception e)
+            {
 
-                try
-                {
-                    Command.BeginExecuteNonQuery();
-                    MessageBox.Show("Technician info deleted!");
-                }
-                catch (Exception e)
-                {
+                MessageBox.Show("There is an error,Technician info is not deleted!" + e.Message);
+            }
 
-                    MessageBox.Show("There is an error,Technician info is not deleted!" + e.Message);
-                }
+            finally
+            {
+                Conn.Close();
+            }
+        }
+            public void DispayEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+            {
+                
 
-                finally
-                {
-                    Conn.Close();
-                }
-             
-            }  
+                //connecting an showing tables in the datagridview
+                string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
+
+                SqlConnection Conn = new SqlConnection(connect);
+
+                string query = @"SELECT * Employee";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, Conn);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+                //connecting an showing tables in the datagridview
+
+
+                query = @"SELECT * Department";
+
+                SqlDataAdapter da1 = new SqlDataAdapter(query, Conn);
+
+                DataTable dt1 = new DataTable();
+
+                da1.Fill(dt1);
+
+                dataGridView2.DataSource = dt1;
+            }
+        
+        
       }
     }
 
