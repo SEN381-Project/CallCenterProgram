@@ -13,6 +13,8 @@ namespace CallCenterProgram.Presentation
     public partial class callForm : System.Windows.Forms.Form
     {
         //classes
+        Call call = new Call();
+        FaultInfo fault = new FaultInfo();
         colors RGB = new colors();
         //constructor
         public callForm()
@@ -20,6 +22,7 @@ namespace CallCenterProgram.Presentation
             InitializeComponent();
         }
         //methods
+        //styling methods
         private void colorButtons()
         {
             //btn Insert Into DB
@@ -93,6 +96,15 @@ namespace CallCenterProgram.Presentation
             txtClientInfo.BackColor = RGB.bgColor;
             txtClientInfo.ForeColor = RGB.grey;
         }
+        //logic methods
+        private void setValues()
+        {
+            //set call values
+            call.CallReport = rtbCallReport.Text;
+            call.ProblemInfo = rtbProblemInfo.Text;
+            call.WorkRequest = rtbWorkRequest.Text;
+            fault.FaultReport = rtbFaultReport.Text;
+        }
 
         //form components
         private void call_Load(object sender, EventArgs e)
@@ -103,6 +115,37 @@ namespace CallCenterProgram.Presentation
             colorLabels();
             colorTextbox();
             colorReportRichTextBoxs();
+        }
+
+        private void btnTakeCall_Click(object sender, EventArgs e)
+        {
+            call.createInitialTimestamp();
+        }
+
+        private void btnMakeCall_Click(object sender, EventArgs e)
+        {
+            call.createInitialTimestamp();
+        }
+
+        private void btnEndCall_Click(object sender, EventArgs e)
+        {
+            call.createFinalTimestamp();
+        }
+
+        private void btnInsertIntoDB_Click(object sender, EventArgs e)
+        {
+            call.InsertCallIntoDB(fault.FaultReport);
+        }
+
+        private void btnFindClientInfo_Click(object sender, EventArgs e)
+        {
+            //find clients info based on client ID
+            //display the information in the data grid views
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            //go to home form
         }
     }
 }
