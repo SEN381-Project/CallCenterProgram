@@ -15,9 +15,9 @@ using CallCenterProgram;
 
 namespace CallCenterProgram.Presentation
 {
-    public partial class Form4 : Form
+    public partial class FollowUp : Form
     {
-        public Form4()
+        public FollowUp()
         {
             InitializeComponent();
            

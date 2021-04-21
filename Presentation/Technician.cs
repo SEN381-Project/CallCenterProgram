@@ -13,9 +13,9 @@ using CallCenterProgram;
 
 namespace CallCenterProgram.Presentation
 {
-    public partial class Form3 : Form
+    public partial class Technician : Form
     {
-        public Form3()
+        public Technician()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace CallCenterProgram.Presentation
 
         private void Employee_Click(object sender, EventArgs e)
         {
-            Form2 employee = new Form2();
+            Presentation.Employee employee = new Presentation.Employee();
             employee.Show();
         }
 

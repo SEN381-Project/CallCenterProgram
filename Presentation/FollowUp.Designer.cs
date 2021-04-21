@@ -1,6 +1,6 @@
 ﻿namespace CallCenterProgram.Presentation
 {
-    partial class Form4
+    partial class FollowUp
     {
         /// <summary>
         /// Required designer variable.

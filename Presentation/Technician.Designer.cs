@@ -1,6 +1,6 @@
 ﻿namespace CallCenterProgram.Presentation
 {
-    partial class Form3
+    partial class Technician
     {
         /// <summary>
         /// Required designer variable.

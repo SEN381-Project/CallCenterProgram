@@ -1,6 +1,6 @@
 ﻿namespace CallCenterProgram.Presentation
 {
-    partial class Form5
+    partial class Manager
     {
         /// <summary>
         /// Required designer variable.
