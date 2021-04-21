@@ -61,7 +61,8 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.ForeColor = System.Drawing.Color.Fuchsia;
+            this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.groupBox1.Location = new System.Drawing.Point(599, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 293);
@@ -71,23 +72,23 @@
             // 
             // txtfollupD
             // 
-            this.txtfollupD.Location = new System.Drawing.Point(8, 161);
+            this.txtfollupD.Location = new System.Drawing.Point(8, 164);
             this.txtfollupD.Name = "txtfollupD";
-            this.txtfollupD.Size = new System.Drawing.Size(100, 20);
+            this.txtfollupD.Size = new System.Drawing.Size(100, 27);
             this.txtfollupD.TabIndex = 8;
             // 
             // txtstatus
             // 
-            this.txtstatus.Location = new System.Drawing.Point(8, 112);
+            this.txtstatus.Location = new System.Drawing.Point(6, 112);
             this.txtstatus.Name = "txtstatus";
-            this.txtstatus.Size = new System.Drawing.Size(100, 20);
+            this.txtstatus.Size = new System.Drawing.Size(100, 27);
             this.txtstatus.TabIndex = 7;
             // 
             // txtfollowupid
             // 
-            this.txtfollowupid.Location = new System.Drawing.Point(8, 63);
+            this.txtfollowupid.Location = new System.Drawing.Point(6, 54);
             this.txtfollowupid.Name = "txtfollowupid";
-            this.txtfollowupid.Size = new System.Drawing.Size(100, 20);
+            this.txtfollowupid.Size = new System.Drawing.Size(100, 27);
             this.txtfollowupid.TabIndex = 6;
             // 
             // Delete
@@ -126,33 +127,34 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 145);
+            this.label3.Location = new System.Drawing.Point(7, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.Size = new System.Drawing.Size(112, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "FollowUpDate:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 96);
+            this.label2.Location = new System.Drawing.Point(7, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.Size = new System.Drawing.Size(59, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Status:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 35);
+            this.label1.Location = new System.Drawing.Point(6, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(92, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "FollowUpId:";
             // 
             // groupBox2
             // 
-            this.groupBox2.ForeColor = System.Drawing.Color.Fuchsia;
+            this.groupBox2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.groupBox2.Location = new System.Drawing.Point(2, 341);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(797, 63);
@@ -179,6 +181,7 @@
             // MainMenu
             // 
             this.MainMenu.BackColor = System.Drawing.SystemColors.Desktop;
+            this.MainMenu.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenu.Location = new System.Drawing.Point(2, 404);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(95, 46);
@@ -190,6 +193,7 @@
             // Exits
             // 
             this.Exits.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Exits.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exits.Location = new System.Drawing.Point(700, 404);
             this.Exits.Name = "Exits";
             this.Exits.Size = new System.Drawing.Size(99, 46);
@@ -201,6 +205,7 @@
             // Feedback
             // 
             this.Feedback.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Feedback.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Feedback.Location = new System.Drawing.Point(119, 404);
             this.Feedback.Name = "Feedback";
             this.Feedback.Size = new System.Drawing.Size(94, 46);
@@ -212,10 +217,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(290, 9);
+            this.label6.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(245, -2);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 24);
+            this.label6.Size = new System.Drawing.Size(233, 38);
             this.label6.TabIndex = 10;
             this.label6.Text = "FollowUp Form";
             // 
@@ -232,7 +237,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.ForeColor = System.Drawing.Color.Fuchsia;
+            this.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form4";
             this.Text = "FollowUp";

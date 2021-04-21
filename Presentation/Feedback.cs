@@ -74,7 +74,7 @@ namespace CallCenterProgram
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            handler.InsertFeedback(int.Parse(txtfeedbackid.Text), txtproblem.Text, txthelpedontime.Text, txtcomment.Text, DateTime.Parse(txtfeedbackD.Text));
+            handler.InsertFeedback(int.Parse(txtfeedbackid.Text), txtproblem.Text, bool.Parse(txthelpedontime.Text), txtcomment.Text, DateTime.Parse(txtfeedbackD.Text));
         }
 
        

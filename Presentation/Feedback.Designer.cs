@@ -79,7 +79,8 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.ForeColor = System.Drawing.Color.Fuchsia;
+            this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.groupBox1.Location = new System.Drawing.Point(557, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(243, 340);
@@ -91,35 +92,35 @@
             // 
             this.txthelpedontime.Location = new System.Drawing.Point(12, 170);
             this.txthelpedontime.Name = "txthelpedontime";
-            this.txthelpedontime.Size = new System.Drawing.Size(100, 20);
+            this.txthelpedontime.Size = new System.Drawing.Size(100, 27);
             this.txthelpedontime.TabIndex = 10;
             // 
             // txtfeedbackid
             // 
             this.txtfeedbackid.Location = new System.Drawing.Point(12, 51);
             this.txtfeedbackid.Name = "txtfeedbackid";
-            this.txtfeedbackid.Size = new System.Drawing.Size(100, 20);
+            this.txtfeedbackid.Size = new System.Drawing.Size(100, 27);
             this.txtfeedbackid.TabIndex = 9;
             // 
             // txtproblem
             // 
             this.txtproblem.Location = new System.Drawing.Point(12, 104);
             this.txtproblem.Name = "txtproblem";
-            this.txtproblem.Size = new System.Drawing.Size(100, 20);
+            this.txtproblem.Size = new System.Drawing.Size(100, 27);
             this.txtproblem.TabIndex = 8;
             // 
             // txtcomment
             // 
             this.txtcomment.Location = new System.Drawing.Point(12, 223);
             this.txtcomment.Name = "txtcomment";
-            this.txtcomment.Size = new System.Drawing.Size(100, 20);
+            this.txtcomment.Size = new System.Drawing.Size(100, 27);
             this.txtcomment.TabIndex = 6;
             // 
             // txtfeedbackD
             // 
             this.txtfeedbackD.Location = new System.Drawing.Point(12, 271);
             this.txtfeedbackD.Name = "txtfeedbackD";
-            this.txtfeedbackD.Size = new System.Drawing.Size(100, 20);
+            this.txtfeedbackD.Size = new System.Drawing.Size(100, 27);
             this.txtfeedbackD.TabIndex = 5;
             // 
             // label5
@@ -127,7 +128,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(9, 255);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 13);
+            this.label5.Size = new System.Drawing.Size(112, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "Feedbackdate:";
             // 
@@ -136,7 +137,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(9, 207);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(82, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Comment:";
             // 
@@ -145,7 +146,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.Size = new System.Drawing.Size(126, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Helped On Time:";
             // 
@@ -154,7 +155,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(72, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Problem:";
             // 
@@ -163,13 +164,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(94, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "FeedbackId:";
             // 
             // Menu
             // 
             this.Menu.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Menu.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu.Location = new System.Drawing.Point(4, 404);
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(119, 44);
@@ -181,6 +183,7 @@
             // FollowUp
             // 
             this.FollowUp.BackColor = System.Drawing.SystemColors.Desktop;
+            this.FollowUp.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FollowUp.Location = new System.Drawing.Point(151, 404);
             this.FollowUp.Name = "FollowUp";
             this.FollowUp.Size = new System.Drawing.Size(123, 44);
@@ -191,6 +194,7 @@
             // Exit
             // 
             this.Exit.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Exit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.Location = new System.Drawing.Point(670, 404);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(130, 44);
@@ -201,17 +205,18 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label6.Location = new System.Drawing.Point(293, 23);
+            this.label6.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label6.Location = new System.Drawing.Point(251, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 24);
+            this.label6.Size = new System.Drawing.Size(240, 38);
             this.label6.TabIndex = 9;
             this.label6.Text = "FeedBack Form";
             // 
             // Insert
             // 
             this.Insert.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Insert.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Insert.Location = new System.Drawing.Point(311, 404);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(123, 44);
@@ -233,7 +238,7 @@
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.Fuchsia;
+            this.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Feedback";
             this.Text = "Feedback";

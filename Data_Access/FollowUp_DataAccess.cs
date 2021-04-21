@@ -45,7 +45,7 @@ namespace CallCenterProgram
         }
 
         
-         public void InsertFeedback(int feedbackId, string problem, string helpedOnTime,string comment, DateTime feedbackDate)
+         public void InsertFeedback(int feedbackId, string problem, bool helpedOnTime,string comment, DateTime feedbackDate)
         {
             string query = @"INSERT INTO Feedback VALUES('"+ feedbackId + "','" + problem + "','" + helpedOnTime + "','" + comment + "', '"+ feedbackDate + ")";
             Conn = new SqlConnection(connect);

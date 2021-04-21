@@ -52,7 +52,8 @@
             this.groupBox1.Controls.Add(this.InsertT);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtAbilities);
-            this.groupBox1.ForeColor = System.Drawing.Color.Magenta;
+            this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.SlateBlue;
             this.groupBox1.Location = new System.Drawing.Point(41, 66);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(681, 253);
@@ -62,16 +63,16 @@
             // 
             // txtq
             // 
-            this.txtq.Location = new System.Drawing.Point(115, 113);
+            this.txtq.Location = new System.Drawing.Point(138, 113);
             this.txtq.Name = "txtq";
-            this.txtq.Size = new System.Drawing.Size(100, 20);
+            this.txtq.Size = new System.Drawing.Size(100, 27);
             this.txtq.TabIndex = 6;
             // 
             // txtability
             // 
             this.txtability.Location = new System.Drawing.Point(115, 60);
             this.txtability.Name = "txtability";
-            this.txtability.Size = new System.Drawing.Size(100, 20);
+            this.txtability.Size = new System.Drawing.Size(100, 27);
             this.txtability.TabIndex = 5;
             // 
             // DeleteT
@@ -112,7 +113,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(33, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.Size = new System.Drawing.Size(99, 19);
             this.label3.TabIndex = 1;
             this.label3.Text = "Qualification";
             // 
@@ -121,23 +122,24 @@
             this.txtAbilities.AutoSize = true;
             this.txtAbilities.Location = new System.Drawing.Point(30, 68);
             this.txtAbilities.Name = "txtAbilities";
-            this.txtAbilities.Size = new System.Drawing.Size(42, 13);
+            this.txtAbilities.Size = new System.Drawing.Size(65, 19);
             this.txtAbilities.TabIndex = 0;
             this.txtAbilities.Text = "Abilities";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Rockwell", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(254, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 23);
+            this.label1.Size = new System.Drawing.Size(257, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Technician Form";
             // 
             // MainMenu
             // 
             this.MainMenu.BackColor = System.Drawing.SystemColors.Desktop;
+            this.MainMenu.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenu.Location = new System.Drawing.Point(31, 404);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(94, 44);
@@ -149,6 +151,7 @@
             // Employee
             // 
             this.Employee.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Employee.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Employee.Location = new System.Drawing.Point(172, 404);
             this.Employee.Name = "Employee";
             this.Employee.Size = new System.Drawing.Size(96, 43);
@@ -160,6 +163,7 @@
             // Exit
             // 
             this.Exit.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Exit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.Location = new System.Drawing.Point(661, 404);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(111, 43);
@@ -179,7 +183,8 @@
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.ForeColor = System.Drawing.Color.Fuchsia;
+            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
             this.Text = "Technicain Form";

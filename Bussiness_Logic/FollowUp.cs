@@ -13,7 +13,7 @@ namespace CallCenterProgram
             private string status;
             private DateTime followUpDate;
             private string problem;
-            private string helpedOnTime;
+            private bool helpedOnTime;
             private string comment;
             private DateTime feedbackDate;
 
@@ -22,7 +22,7 @@ namespace CallCenterProgram
             public string Status { get => status; set => status = value; }
             public DateTime FollowUpDate { get => followUpDate; set => followUpDate = value; }
             public string Problem { get => problem; set => problem = value; }
-            public string HelpedOnTime { get => helpedOnTime; set => helpedOnTime = value; }
+            public bool HelpedOnTime { get => helpedOnTime; set => helpedOnTime = value; }
             public string Comment { get => comment; set => comment = value; }
             public DateTime FeedbackDate { get => feedbackDate; set => feedbackDate = value; }
            
@@ -34,7 +34,7 @@ namespace CallCenterProgram
 
         
 
-        public FollowUp(int feedbackId, string problem, string helpedOnTime, string comment)
+        public FollowUp(int feedbackId, string problem, bool helpedOnTime, string comment)
         {
             this.feedbackId = feedbackId;
             this.problem = problem;
