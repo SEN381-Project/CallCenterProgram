@@ -8,9 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CallCenterProgram.Business_Logic;
 
 
-namespace CallCenterProgram
+
+namespace CallCenterProgram.Presentation
 {
     public partial class FollowUp_PresantationLayer : Form
     {
@@ -19,30 +21,8 @@ namespace CallCenterProgram
             InitializeComponent();
            
         }
-        FollowUp_DataAccess handler = new FollowUp_DataAccess();
 
-        private void Form4_Load(object sender, EventArgs e)
-        {
-            //adding colo in the form
-            BackColor = Color.FromArgb(26, 26, 26);
-            ForeColor = Color.FromArgb(102, 112, 233);
-
-            //connecting an showing tables in the datagridview
-            string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
-
-            SqlConnection Conn = new SqlConnection(connect);
-
-            string query = @"SELECT * FollowUp";
-
-            SqlDataAdapter da = new SqlDataAdapter(query, Conn);
-
-            DataTable dt = new DataTable();
-
-            da.Fill(dt);
-
-            dataGridView1.DataSource = dt;
-
-        }
+        FollowUp followUp = new FollowUp();
         public void datagridView_CellClick(object sender, DataGridViewCellEventArgs e) {
 
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -75,23 +55,28 @@ namespace CallCenterProgram
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            handler.InsertFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
+            followUp.AddFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
-            handler.UpdateFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
+            followUp.UpdateFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            handler.DeleteFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
+            followUp.RemoveFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
 
         private void btnSetReminder_Click(object sender, EventArgs e)
         {
             SetReminder_PresantationLayer Reminder = new SetReminder_PresantationLayer();
             Reminder.Show();
+        }
+
+        private void FollowUp_PresantationLayer_Load(object sender, EventArgs e)
+        {
+            followUp.ViewFollowUps();
         }
     }
 }

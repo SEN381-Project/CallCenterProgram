@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CallCenterProgram.Data_Access;
+using CallCenterProgram.Presentation;
+
 
 namespace CallCenterProgram.Business_Logic
 {
@@ -17,7 +20,7 @@ namespace CallCenterProgram.Business_Logic
             private string comment;
             private DateTime feedbackDate;
 
-            public int FollowupId { get => followUpId; set => followUpId = value; }
+            public int FollowUpId { get => followUpId; set => followUpId = value; }
             public int FeedbackId { get => feedbackId; set => feedbackId = value; }
             public string Status { get => status; set => status = value; }
             public DateTime FollowUpDate { get => followUpDate; set => followUpDate = value; }
@@ -34,19 +37,20 @@ namespace CallCenterProgram.Business_Logic
 
         
 
-        public FollowUp(int feedbackId, string problem, bool helpedOnTime, string comment)
+        public FollowUp(int followUpId, string status, DateTime followUpDate)
+        {
+            this.followUpId = followUpId;
+            this.status = status;
+            this.followUpDate = followUpDate;
+        }
+
+        public FollowUp(int feedbackId, string problem, bool helpedOnTime, string comment, DateTime feedbackDate)
         {
             this.feedbackId = feedbackId;
             this.problem = problem;
             this.helpedOnTime = helpedOnTime;
             this.comment = comment;
-        }
-
-        public FollowUp(int followupId, string status, DateTime followUpDate)
-        {
-            followUpId = followupId;
-            this.status = status;
-            this.followUpDate = followUpDate;
+            this.feedbackDate = feedbackDate;
         }
 
         public void SetReminder()
@@ -54,5 +58,43 @@ namespace CallCenterProgram.Business_Logic
 
 
             }
-     }
+
+        FollowUp_DataAccess FollowUpData = new FollowUp_DataAccess();
+
+        public void AddFollowUp(int followUpId, string status, DateTime followUpDate)
+        {
+            FollowUpData.InsertFollowUp( followUpId, status, followUpDate);
+
+        }
+
+        public void UpdateFollowUp(int followUpId, string status, DateTime followUpDate)
+        {
+            FollowUpData.UpdateFollowUp(followUpId, status, followUpDate);
+
+        }
+
+        public void RemoveFollowUp(int followUpId, string status, DateTime followUpDate)
+        {
+            FollowUpData.DeleteFollowUp(followUpId, status, followUpDate);
+
+        }
+
+        public void AddFeedback(int feedbackId, string problem, bool helpedOnTime, string comment, DateTime feedbackDate)
+        {
+            FollowUpData.InsertFeedback( feedbackId, problem, helpedOnTime, comment, feedbackDate);
+
+        }
+
+        public List<FollowUp> ViewFollowUps()
+        {
+            List<FollowUp> followUps = FollowUpData.DisplayFollowUps();
+            return followUps;
+        }
+
+        public List<FollowUp> ViewFeedback()
+        {
+            List<FollowUp> followUps = FollowUpData.DisplayFeedbacks();
+            return followUps;
+        }
+    }
 }

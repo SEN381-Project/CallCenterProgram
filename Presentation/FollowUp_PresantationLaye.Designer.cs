@@ -1,4 +1,4 @@
-﻿namespace CallCenterProgram
+﻿namespace CallCenterProgram.Presentation
 {
     partial class FollowUp_PresantationLayer
     {
@@ -255,7 +255,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FollowUp_PresantationLayer";
             this.Text = "FollowUp";
-            this.Load += new System.EventHandler(this.Form4_Load);
+            this.Load += new System.EventHandler(this.FollowUp_PresantationLayer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);

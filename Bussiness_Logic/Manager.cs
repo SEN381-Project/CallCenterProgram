@@ -13,26 +13,48 @@ namespace CallCenterProgram.Business_Logic
     {
         Employee_DataAccess EmployeeData = new Employee_DataAccess();
 
-        public void FireEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+        public Manager(int employeeId, string name, string surname, string address, string contactDetails, string jobtitle, string jobDescription)
         {
-            EmployeeData.DeleteEmployee(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
+            EmployeeId = employeeId;
+            Name = name;
+            Surname = surname;
+            Address = address;
+            ContactDetails = contactDetails;
+            Jobtitle = jobtitle;
+            JobDescription = jobDescription;
+        }
+
+        public Manager(int departmentId, string departmentName, int stationNumber)
+        {
+            DepartmentId = departmentId;
+            DepartmentName = departmentName;
+            StationNumber = stationNumber;
+        }
+
+        public Manager()
+        {
+        }
+
+        public void FireEmployee(int employeeId, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescription)
+        {
+            EmployeeData.DeleteEmployee(employeeId, name, surname, address, contactDetails, jobTitle, jobDescription);
 
         }
 
-        public void UpdateEmployeeInf(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+        public void UpdateEmployeeInf(int employeeId, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescription)
         {
-            EmployeeData.UpdateEmployee(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
+            EmployeeData.UpdateEmployee(employeeId, name, surname, address, contactDetails, jobTitle, jobDescription);
         }
 
-        public void RemoveDepartmen(int departmentId, string derptmentName, int stationNumber)
+        public void RemoveDepartment(int departmentId, string derptmentName, int stationNumber)
         {
-            EmployeeData.DeleteDepartment(int.Parse(txtidDepartment.Text), txtNameDepartment.Text, int.Parse(txtSationNo.Text));
+            EmployeeData.DeleteDepartment(departmentId, derptmentName, stationNumber);
 
         }
 
-        public void UpdateDepartmen(int departmentId, string derptmentName, int stationNumber)
+        public void UpdateDepartment(int departmentId, string derptmentName, int stationNumber)
         {
-            EmployeeData.UpdatetDepartMent(int.Parse(txtidDepartment.Text), txtNameDepartment.Text, int.Parse(txtSationNo.Text));
+            EmployeeData.UpdatetDepartment(departmentId, derptmentName, stationNumber);
         }
         
         public override string ToString()
@@ -40,11 +62,18 @@ namespace CallCenterProgram.Business_Logic
             return base.ToString();
         }
 
-        public void Display()
+        public List<Employee> ViewEmployee()
         {
-          
-
+            List<Employee> Employees = EmployeeData.DisplayEmployee();
+            return Employees;
         }
 
+        public List<Employee> ViewDepartment()
+        {
+            List<Employee> Departments = EmployeeData.DisplayDepartment();
+            return Departments;
+        }
+
+       
     }
 }

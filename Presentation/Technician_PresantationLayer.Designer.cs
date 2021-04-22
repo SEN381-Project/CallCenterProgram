@@ -1,4 +1,4 @@
-﻿namespace CallCenterProgram
+﻿namespace CallCenterProgram.Presentation
 {
     partial class Technician_PresantationLayer
     {
@@ -194,7 +194,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Technician_PresantationLayer";
             this.Text = "Technicain Form";
-            this.Load += new System.EventHandler(this.Form3_Load);
+         
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

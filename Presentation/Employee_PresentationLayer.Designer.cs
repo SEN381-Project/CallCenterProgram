@@ -1,4 +1,4 @@
-﻿namespace CallCenterProgram
+﻿namespace CallCenterProgram.Presentation
 {
     partial class Emploee_PresantationLayer
     {
@@ -196,7 +196,6 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee_Info";
-            
             // 
             // txtAddress
             // 
@@ -377,7 +376,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Emploee_PresantationLayer";
             this.Text = "Employee Form";
-            
+            this.Load += new System.EventHandler(this.Emploee_PresantationLayer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

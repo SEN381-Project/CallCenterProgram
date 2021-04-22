@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CallCenterProgram.Business_Logic;
 
-namespace CallCenterProgram
+namespace CallCenterProgram.Presentation
 {
     public partial class Technician_PresantationLayer : Form
     {
@@ -16,7 +17,8 @@ namespace CallCenterProgram
         {
             InitializeComponent();
         }
-        Employee_DataAccess handler = new Employee_DataAccess();
+
+        Technicians technicians = new Technicians();
 
         private void Employee_Click(object sender, EventArgs e)
         {
@@ -37,24 +39,19 @@ namespace CallCenterProgram
 
         private void InsertT_Click(object sender, EventArgs e)
         {
-            handler.InsertTechnicians(txtability.Text, txtq.Text);
+            technicians.InsertTechnicians(txtability.Text, txtq.Text);
         }
 
         private void UpdateT_Click(object sender, EventArgs e)
         {
-            handler.InsertTechnicians(txtability.Text, txtq.Text);
+            technicians.InsertTechnicians(txtability.Text, txtq.Text);
         }
 
         private void DeleteT_Click(object sender, EventArgs e)
         {
-            handler.DeleteTechnicians(txtability.Text, txtq.Text);
+            technicians.DeleteTechnicians(txtability.Text, txtq.Text);
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            //adding colo in the form
-            BackColor = Color.FromArgb(26, 26, 26);
-            ForeColor = Color.FromArgb(102, 112, 233);
-        }
+       
     }
 }

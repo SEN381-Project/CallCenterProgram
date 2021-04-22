@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CallCenterProgram
+namespace CallCenterProgram.Presentation
 {
     public partial class Emploee_PresantationLayer : Form
     {
@@ -16,12 +16,12 @@ namespace CallCenterProgram
         {
             InitializeComponent();
         }
-        Employee_DataAccess handler = new Employee_DataAccess();
+
+        Employee employee = new Employee();
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            handler.InsertEmployee(int.Parse(txtiD.Text), txtName.Text, txtSurname.Text, txtAddress.Text, txtContact.Text, txtjob.Text, txtjobdescription.Text);
-
+            employee.InsertEmployee(int.Parse(txtiD.Text), txtName.Text, txtSurname.Text, txtAddress.Text, txtContact.Text, txtjob.Text, txtjobdescription.Text);
            
         }
 
@@ -51,12 +51,13 @@ namespace CallCenterProgram
         }
 
         private void InsertDepartment_Click(object sender, EventArgs e)
-        { 
-            handler.InsertDepartMent(int.Parse(txtdepartmentid.Text), txtdepartmentname.Text, int.Parse(txtstationnumber.Text));
+        {
+            employee.InsertDepartment(int.Parse(txtdepartmentid.Text), txtdepartmentname.Text, int.Parse(txtstationnumber.Text));
         }
 
-       
+        private void Emploee_PresantationLayer_Load(object sender, EventArgs e)
+        {
 
-     
+        }
     }
 }

@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CallCenterProgram.Business_Logic;
 
-namespace CallCenterProgram
+namespace CallCenterProgram.Presentation
 {
     public partial class Feedback_PresantationLayer : Form
     {   
@@ -17,40 +18,20 @@ namespace CallCenterProgram
         {
             InitializeComponent();
         }
-        FollowUp_DataAccess handler = new FollowUp_DataAccess();
-        private void Form5_Load(object sender, EventArgs e)
-        {
-            //adding colo in the form
-            BackColor = Color.FromArgb(26, 26, 26);
-            ForeColor = Color.FromArgb(102, 112, 233);
 
-            //connecting an showing tables in the datagridview
-            string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
-
-            SqlConnection Conn = new SqlConnection(connect);
-
-            string query = @"SELECT * Feedback";
-
-            SqlDataAdapter da = new SqlDataAdapter(query, Conn);
-
-            DataTable dt = new DataTable();
-
-            da.Fill(dt);
-
-            dataGridView1.DataSource = dt;
-        }
+        FollowUp feedback = new FollowUp();
 
         public void datagridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            if (datagridVFeedback.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                dataGridView1.CurrentRow.Selected = true;
+                datagridVFeedback.CurrentRow.Selected = true;
 
-                txtfeedbackid.Text = dataGridView1.Rows[e.RowIndex].Cells["FeedbackId"].FormattedValue.ToString();
-                txtproblem.Text = dataGridView1.Rows[e.RowIndex].Cells["Problem"].FormattedValue.ToString();
-                txthelpedontime.Text = dataGridView1.Rows[e.RowIndex].Cells["HelpedOnTime"].FormattedValue.ToString();
-                txtfeedbackD.Text = dataGridView1.Rows[e.RowIndex].Cells["FollowUpDate"].FormattedValue.ToString();
+                txtfeedbackid.Text = datagridVFeedback.Rows[e.RowIndex].Cells["FeedbackId"].FormattedValue.ToString();
+                txtproblem.Text = datagridVFeedback.Rows[e.RowIndex].Cells["Problem"].FormattedValue.ToString();
+                txthelpedontime.Text = datagridVFeedback.Rows[e.RowIndex].Cells["HelpedOnTime"].FormattedValue.ToString();
+                txtfeedbackD.Text = datagridVFeedback.Rows[e.RowIndex].Cells["FollowUpDate"].FormattedValue.ToString();
             }
         }
 
@@ -74,9 +55,12 @@ namespace CallCenterProgram
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            handler.InsertFeedback(int.Parse(txtfeedbackid.Text), txtproblem.Text, bool.Parse(txthelpedontime.Text), txtcomment.Text, DateTime.Parse(txtfeedbackD.Text));
+            feedback.AddFeedback(int.Parse(txtfeedbackid.Text),txtproblem.Text, bool.Parse(txthelpedontime.Text), txtcomment.Text, DateTime.Parse(txtfeedbackD.Text));
         }
 
-       
+        private void Feedback_PresantationLayer_Load(object sender, EventArgs e)
+        {
+            feedback.ViewFeedback();
+        }
     }
 }

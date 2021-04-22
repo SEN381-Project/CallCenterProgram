@@ -16,13 +16,16 @@ namespace CallCenterProgram.Data_Access
         string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
         SqlConnection Conn;
         SqlCommand Command;
+        SqlDataReader Reader;
+        SqlDataReader Reader1;
 
-        
+        //object
+        Employee objEmployee = new Manager();
 
         //Insering Employee details
-        public void InsertEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+        public void InsertEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescription)
         {
-            string query = @"INSERT INTO Employee VALUES('" + employeeID + "','" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescriptiont + "')";
+            string query = @"INSERT INTO Employee VALUES('" + employeeID + "','" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescription + "')";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -45,7 +48,7 @@ namespace CallCenterProgram.Data_Access
         }
 
         //Insering Department details
-        public void InsertDepartMent(int departmentId, string derptmentName, int stationNumber)
+        public void InsertDepartment(int departmentId, string derptmentName, int stationNumber)
             {
                 string query = @"INSERT INTO Department VALUES('" + departmentId + "','" + derptmentName + "', '" + stationNumber + "')";
                 Conn = new SqlConnection(connect);
@@ -119,7 +122,7 @@ namespace CallCenterProgram.Data_Access
         }
 
         //Updating Department details
-        public void UpdatetDepartMent(int departmentId, string derptmentName, int stationNumber)
+        public void UpdatetDepartment(int departmentId, string derptmentName, int stationNumber)
         {
             string query = @"UPDATE INTO Department VALUES('" + departmentId + "','" + derptmentName + "', '" + stationNumber + "')";
             Conn = new SqlConnection(connect);
@@ -169,9 +172,9 @@ namespace CallCenterProgram.Data_Access
         }
 
         //Deleting Employee details
-        public void DeleteEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+        public void DeleteEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescription)
         {
-            string query = @"DELETE INTO Employee VALUES('" + employeeID+ "','" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescriptiont + "')";
+            string query = @"DELETE INTO Employee VALUES('" + employeeID+ "','" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescription + "')";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -241,40 +244,89 @@ namespace CallCenterProgram.Data_Access
                 Conn.Close();
             }
         }
-            public void DispayEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+
+        public List<Manager> DisplayEmployee()
+        {
+            string query = @"SELECT * FROM Employee";
+
+            Conn = new SqlConnection(connect);
+
+            Conn.Open();
+
+            Command = new SqlCommand(query, Conn);
+            List<Manager> EmployeeData = new List<Manager>();
+           
+
+            try
             {
+               Reader = Command.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    objEmployee.EmployeeId = int.Parse(Reader[1].ToString());
+                    objEmployee.Name = Reader[2].ToString();
+                    objEmployee.Surname= Reader[3].ToString();
+                    objEmployee.Address = Reader[4].ToString();
+                    objEmployee.ContactDetails= Reader[5].ToString();
+                    objEmployee.Jobtitle = Reader[6].ToString();
+                    objEmployee.JobDescription = Reader[6].ToString();
+
+                    EmployeeData.Add(new Manager(objEmployee.EmployeeId, objEmployee.Name, objEmployee.Surname, objEmployee.Address, objEmployee.ContactDetails, objEmployee.Jobtitle, objEmployee.JobDescription));
+                }
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details could not be found: " + ex.Message);
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return EmployeeData;
+        }
+
+
+        public List<Manager> DisplayDepartment()
+        {
+            string query = @"SELECT * FROM Employee";
+
+            Conn = new SqlConnection(connect);
+
+            Conn.Open();
+
+            Command = new SqlCommand(query, Conn);
+            List<Manager> DepartmentsData = new List<Manager>();
+
+            try
+            {
+                Reader = Command.ExecuteReader();
+
                 
 
-                //connecting an showing tables in the datagridview
-                string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
+                if (Reader1.Read())
+                {
+                    objEmployee.DepartmentId = int.Parse(Reader1[1].ToString());
+                    objEmployee.DepartmentName = Reader1[2].ToString();
+                    objEmployee.StationNumber = int.Parse(Reader1[1].ToString());
 
-                SqlConnection Conn = new SqlConnection(connect);
-
-                string query = @"SELECT * Employee";
-
-                SqlDataAdapter da = new SqlDataAdapter(query, Conn);
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-
-                //connecting an showing tables in the datagridview
-
-
-                query = @"SELECT * Department";
-
-                SqlDataAdapter da1 = new SqlDataAdapter(query, Conn);
-
-                DataTable dt1 = new DataTable();
-
-                da1.Fill(dt1);
-
-                dataGridView2.DataSource = dt1;
+                    DepartmentsData.Add(new Manager(objEmployee.DepartmentId, objEmployee.DepartmentName, objEmployee.StationNumber));
+                }
             }
-        
-        
-      }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details could not be found: " + ex.Message);
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return DepartmentsData;
+        }
+
     }
+}
 

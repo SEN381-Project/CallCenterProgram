@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CallCenterProgram.Data_Access;
+
 
 namespace CallCenterProgram.Business_Logic
 {
@@ -21,10 +23,24 @@ namespace CallCenterProgram.Business_Logic
             return base.ToString();
         }
 
-        public void Display()
+        Employee_DataAccess EmployeeData = new Employee_DataAccess();
+
+        public void DeleteTechnicians(string abilities, string qualification)
         {
-            //method for displaying
+            EmployeeData.DeleteTechnicians(abilities,  qualification);
+
         }
 
+        public void InsertTechnicians(string abilities, string qualification)
+        {
+            EmployeeData.InsertTechnicians(abilities, qualification);
+
+        }
+
+        public void UpdateTechnicians(string abilities, string qualification)
+        {
+            EmployeeData.UpdateTechnicians(abilities, qualification);
+
+        }
     }
 }

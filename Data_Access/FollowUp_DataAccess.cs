@@ -18,7 +18,7 @@ namespace CallCenterProgram.Data_Access
         SqlDataReader Reader;
 
         //object
-        FollowUp followUp = new FollowUp();
+        FollowUp objFollowUp = new FollowUp();
 
 
         public void InsertFollowUp(int followUpId, string status, DateTime followUpDate)
@@ -116,11 +116,80 @@ namespace CallCenterProgram.Data_Access
             }
         }
 
-        public void SetReminder()
+        public List<FollowUp> DisplayFollowUps()
         {
-           
+            string query = @"SELECT * FROM FollowUp";
+
+            Conn = new SqlConnection(connect);
+
+            Conn.Open();
+
+            Command = new SqlCommand(query, Conn);
+            List<FollowUp> FollowUpData = new List<FollowUp>();
+
+            try
+            {
+                Reader = Command.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    objFollowUp.FollowUpId = int.Parse(Reader[1].ToString());
+                    objFollowUp.Status = Reader[2].ToString();
+                    objFollowUp.FollowUpDate = DateTime.Parse(Reader[3].ToString());
+
+
+                    FollowUpData.Add(new FollowUp(objFollowUp.FollowUpId, objFollowUp.Status, objFollowUp.FollowUpDate));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details could not be found: " + ex.Message);
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return FollowUpData;
         }
 
-      
+        public List<FollowUp> DisplayFeedbacks()
+        {
+            string query = @"SELECT * FROM Feedback";
+
+            Conn = new SqlConnection(connect);
+
+            Conn.Open();
+
+            Command = new SqlCommand(query, Conn);
+            List<FollowUp> FeedbackData = new List<FollowUp>();
+
+            try
+            {
+                Reader = Command.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    objFollowUp.FeedbackId = int.Parse(Reader[1].ToString());
+                    objFollowUp.Problem = Reader[2].ToString();
+                    objFollowUp.HelpedOnTime = bool.Parse(Reader[3].ToString());
+                    objFollowUp.Comment = Reader[4].ToString();
+                    objFollowUp.FeedbackDate = DateTime.Parse(Reader[5].ToString());
+
+
+                    FeedbackData.Add(new FollowUp(objFollowUp.FeedbackId, objFollowUp.Problem, objFollowUp.HelpedOnTime, objFollowUp.Comment, objFollowUp.FeedbackDate));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details could not be found: " + ex.Message);
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return FeedbackData;
+        }
     }
 }

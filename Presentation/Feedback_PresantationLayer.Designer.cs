@@ -1,4 +1,4 @@
-﻿namespace CallCenterProgram
+﻿namespace CallCenterProgram.Presentation
 {
     partial class Feedback_PresantationLayer
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.datagridVFeedback = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txthelpedontime = new System.Windows.Forms.TextBox();
             this.txtfeedbackid = new System.Windows.Forms.TextBox();
@@ -46,7 +46,7 @@
             this.Exit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.Insert = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridVFeedback)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,13 +57,13 @@
             this.panel1.Size = new System.Drawing.Size(555, 332);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // datagridVFeedback
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(556, 326);
-            this.dataGridView1.TabIndex = 0;
+            this.datagridVFeedback.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridVFeedback.Location = new System.Drawing.Point(3, 72);
+            this.datagridVFeedback.Name = "datagridVFeedback";
+            this.datagridVFeedback.Size = new System.Drawing.Size(556, 326);
+            this.datagridVFeedback.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -237,7 +237,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(801, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.datagridVFeedback);
             this.Controls.Add(this.Insert);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Exit);
@@ -249,8 +249,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Feedback_PresantationLayer";
             this.Text = "Feedback";
-            this.Load += new System.EventHandler(this.Form5_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Feedback_PresantationLayer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.datagridVFeedback)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -265,7 +265,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView datagridVFeedback;
         private System.Windows.Forms.TextBox txtfeedbackid;
         private System.Windows.Forms.TextBox txtproblem;
         private System.Windows.Forms.TextBox txtcomment;

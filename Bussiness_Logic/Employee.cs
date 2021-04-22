@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CallCenterProgram.Data_Access;
 
-namespace CallCenterProgram
+namespace CallCenterProgram.Business_Logic
 {
     
         public abstract class Employee
@@ -59,7 +60,21 @@ namespace CallCenterProgram
             {
                 return base.ToString();
             }
+
+        Employee_DataAccess EmployeeData = new Employee_DataAccess();
+
+        public void InsertEnployee(int employeeId, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
+        {
+            EmployeeData.InsertEmployee(employeeId, name, surname, address, contactDetails, jobTitle, jobDescription);
+
         }
+
+        public void InsertDepartmen(int departmentId, string derptmentName, int stationNumber)
+        {
+            EmployeeData.InsertDepartment(departmentId, derptmentName, stationNumber);
+
+        }
+    }
 
     
 }
