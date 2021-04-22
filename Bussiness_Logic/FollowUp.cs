@@ -19,8 +19,12 @@ namespace CallCenterProgram.Business_Logic
             private bool helpedOnTime;
             private string comment;
             private DateTime feedbackDate;
+            private int reminderId;
+            private string reminder;
+            private DateTime reminderDate;
 
-            public int FollowUpId { get => followUpId; set => followUpId = value; }
+
+        public int FollowUpId { get => followUpId; set => followUpId = value; }
             public int FeedbackId { get => feedbackId; set => feedbackId = value; }
             public string Status { get => status; set => status = value; }
             public DateTime FollowUpDate { get => followUpDate; set => followUpDate = value; }
@@ -28,7 +32,9 @@ namespace CallCenterProgram.Business_Logic
             public bool HelpedOnTime { get => helpedOnTime; set => helpedOnTime = value; }
             public string Comment { get => comment; set => comment = value; }
             public DateTime FeedbackDate { get => feedbackDate; set => feedbackDate = value; }
-           
+            public int ReminderId { get => reminderId; set => reminderId = value; }
+            public string Reminder { get => reminder; set => reminder = value; }
+            public DateTime ReminderDate { get => reminderDate; set => reminderDate = value; }
 
         public FollowUp()
             {
@@ -53,11 +59,22 @@ namespace CallCenterProgram.Business_Logic
             this.feedbackDate = feedbackDate;
         }
 
-        public void SetReminder()
+        public void InsertReminder(int reminderId,string reminder, DateTime reminderDate)
             {
 
-
+            FollowUpData.InsertSetReminder(reminderId, reminder, reminderDate);
             }
+        public void UpdateReminder(int reminderId, string reminder, DateTime reminderDate)
+        {
+
+            FollowUpData.UpdateSetReminder(reminderId, reminder, reminderDate);
+        }
+
+        public void RemoveReminder(int reminderId, string reminder, DateTime reminderDate)
+        {
+
+            FollowUpData.DeleteSetReminder(reminderId, reminder, reminderDate);
+        }
 
         FollowUp_DataAccess FollowUpData = new FollowUp_DataAccess();
 

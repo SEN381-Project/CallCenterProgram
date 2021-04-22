@@ -20,7 +20,7 @@ namespace CallCenterProgram.Data_Access
         //object
         FollowUp objFollowUp = new FollowUp();
 
-
+        #region Insert Data
         public void InsertFollowUp(int followUpId, string status, DateTime followUpDate)
         {
             string query = @"INSERT INTO FollowUp VALUES('"+ followUpId + "','" + status + "', '" + followUpDate + "')";
@@ -69,6 +69,33 @@ namespace CallCenterProgram.Data_Access
                 Conn.Close();
             }
         }
+
+        public void InsertSetReminder( int reminderId, string reminder, DateTime reminderDate)
+        {
+            string query = @"INSERT INTO Reminder VALUES('" + reminderId + "','" + reminder + "','" + reminderDate + "')";
+            Conn = new SqlConnection(connect);
+            Conn.Open();
+            Command = new SqlCommand(query, Conn);
+
+            try
+            {
+                Command.BeginExecuteNonQuery();
+                MessageBox.Show("Reminder inserted!");
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("There is and error, Reminder is not added!" + e.Message);
+            }
+
+            finally
+            {
+                Conn.Close();
+            }
+        }
+#endregion
+
+        #region Update Data
         public void UpdateFollowUp(int followUpId, string status, DateTime followUpDate)
         {
             string query = @"UPDATE INTO FollowUp VALUES('" + followUpId + "','" + status + "', '" + followUpDate + "')";
@@ -92,6 +119,34 @@ namespace CallCenterProgram.Data_Access
                 Conn.Close();
             }
         }
+
+        public void UpdateSetReminder(int reminderId, string reminder, DateTime reminderDate)
+        {
+            string query = @"UPDATE INTO Reminder VALUES('" + reminderId + "','" + reminder + "','" + reminderDate + "')";
+            Conn = new SqlConnection(connect);
+            Conn.Open();
+            Command = new SqlCommand(query, Conn);
+
+            try
+            {
+                Command.BeginExecuteNonQuery();
+                MessageBox.Show("Reminder Updated!");
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("There is and error, Reminder is not updated!" + e.Message);
+            }
+
+            finally
+            {
+                Conn.Close();
+            }
+        }
+
+        #endregion
+
+        #region Delete Data
         public void DeleteFollowUp(int followUpId, string status, DateTime followUpDate)
         {
             string query = @"DELETE INTO FollowUp VALUES('" + followUpId + "','" + status + "', '" + followUpDate + "')";
@@ -116,6 +171,33 @@ namespace CallCenterProgram.Data_Access
             }
         }
 
+        public void DeleteSetReminder(int reminderId, string reminder, DateTime reminderDate)
+        {
+            string query = @"DELETE INTO Reminder VALUES('" +reminderId+"','"+ reminder + "','" + reminderDate + "')";
+            Conn = new SqlConnection(connect);
+            Conn.Open();
+            Command = new SqlCommand(query, Conn);
+
+            try
+            {
+                Command.BeginExecuteNonQuery();
+                MessageBox.Show("Reminder Deleted!");
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("There is and error, Reminder is not deleted!" + e.Message);
+            }
+
+            finally
+            {
+                Conn.Close();
+            }
+        }
+
+        #endregion
+
+        #region DisplayData
         public List<FollowUp> DisplayFollowUps()
         {
             string query = @"SELECT * FROM FollowUp";
@@ -191,5 +273,44 @@ namespace CallCenterProgram.Data_Access
 
             return FeedbackData;
         }
+
+        public List<FollowUp> DisplayReminder()
+        {
+            string query = @"SELECT * FROM Reminder";
+
+            Conn = new SqlConnection(connect);
+
+            Conn.Open();
+
+            Command = new SqlCommand(query, Conn);
+            List<FollowUp> ReminderData = new List<FollowUp>();
+
+            try
+            {
+                Reader = Command.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    objFollowUp.ReminderId = int.Parse(Reader[1].ToString());
+                    objFollowUp.Reminder= Reader[2].ToString();
+                    objFollowUp.ReminderDate = DateTime.Parse(Reader[5].ToString());
+
+
+                    ReminderData.Add(new FollowUp(objFollowUp.FeedbackId, objFollowUp.Problem, objFollowUp.HelpedOnTime, objFollowUp.Comment, objFollowUp.FeedbackDate));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details could not be found: " + ex.Message);
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return ReminderData;
+        }
+
+        #endregion
     }
 }
