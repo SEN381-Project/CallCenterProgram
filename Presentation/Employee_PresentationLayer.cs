@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CallCenterProgram.Bussiness_Logic;
 
 namespace CallCenterProgram.Presentation
 {
@@ -17,17 +18,17 @@ namespace CallCenterProgram.Presentation
             InitializeComponent();
         }
 
-        Employee employee = new Employee();
+        Manager employee = new Manager();
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            employee.InsertEmployee(int.Parse(txtiD.Text), txtName.Text, txtSurname.Text, txtAddress.Text, txtContact.Text, txtjob.Text, txtjobdescription.Text);
+            employee.InsertEnployee(int.Parse(txtiD.Text), txtName.Text, txtSurname.Text, txtAddress.Text, txtContact.Text, txtjob.Text, txtjobdescription.Text);
            
         }
 
         private void MainMenu_Click(object sender, EventArgs e)
         {
-            Form1 MainMenu = new Form1();
+            HomeForm MainMenu = new HomeForm();
             MainMenu.Show();
         }
     

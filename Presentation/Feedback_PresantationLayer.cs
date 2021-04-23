@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using CallCenterProgram.Business_Logic;
+using CallCenterProgram.Bussiness_Logic;
 
 namespace CallCenterProgram.Presentation
 {
@@ -37,7 +37,7 @@ namespace CallCenterProgram.Presentation
 
         private void Menu_Click(object sender, EventArgs e)
         {
-            Form1 MainMenu = new Form1();
+            HomeForm MainMenu = new HomeForm();
             MainMenu.Show();
         }
     

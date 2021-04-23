@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CallCenterProgram.Business_Logic;
+using CallCenterProgram.Bussiness_Logic;
 
 namespace CallCenterProgram.Presentation
 {

@@ -7,7 +7,7 @@ using CallCenterProgram.Data_Access;
 using CallCenterProgram.Presentation;
 
 
-namespace CallCenterProgram.Business_Logic
+namespace CallCenterProgram.Bussiness_Logic
 {
     class Manager : Employee
     {
@@ -46,6 +46,11 @@ namespace CallCenterProgram.Business_Logic
             EmployeeData.UpdateEmployee(employeeId, name, surname, address, contactDetails, jobTitle, jobDescription);
         }
 
+        internal void InsertDepartment(int v1, string text, int v2)
+        {
+            throw new NotImplementedException();
+        }
+
         public void RemoveDepartment(int departmentId, string derptmentName, int stationNumber)
         {
             EmployeeData.DeleteDepartment(departmentId, derptmentName, stationNumber);
@@ -62,18 +67,30 @@ namespace CallCenterProgram.Business_Logic
             return base.ToString();
         }
 
-        public List<Employee> ViewEmployee()
+        public List<Manager> ViewEmployee()
         {
-            List<Employee> Employees = EmployeeData.DisplayEmployee();
+            List<Manager> Employees = EmployeeData.DisplayEmployee();
             return Employees;
         }
 
-        public List<Employee> ViewDepartment()
+        public List<Manager> ViewDepartment()
         {
-            List<Employee> Departments = EmployeeData.DisplayDepartment();
+            List<Manager> Departments = EmployeeData.DisplayDepartment();
             return Departments;
         }
+        
 
-       
+        public void InsertEnployee(int employeeId, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescription)
+        {
+            EmployeeData.InsertEmployee(employeeId, name, surname, address, contactDetails, jobTitle, jobDescription);
+
+        }
+
+        public void InsertDepartmen(int departmentId, string derptmentName, int stationNumber)
+        {
+            EmployeeData.InsertDepartment(departmentId, derptmentName, stationNumber);
+
+        }
+
     }
 }

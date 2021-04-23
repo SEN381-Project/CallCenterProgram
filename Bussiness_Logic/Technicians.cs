@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CallCenterProgram.Data_Access;
 
 
-namespace CallCenterProgram.Business_Logic
+namespace CallCenterProgram.Bussiness_Logic
 {
     class Technicians : Employee
     {

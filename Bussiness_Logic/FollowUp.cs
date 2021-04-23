@@ -7,7 +7,7 @@ using CallCenterProgram.Data_Access;
 using CallCenterProgram.Presentation;
 
 
-namespace CallCenterProgram.Business_Logic
+namespace CallCenterProgram.Bussiness_Logic
 {
     class FollowUp : Call
     {

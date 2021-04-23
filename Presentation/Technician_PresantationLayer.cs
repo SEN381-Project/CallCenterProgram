@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CallCenterProgram.Business_Logic;
+using CallCenterProgram.Bussiness_Logic;
 
 namespace CallCenterProgram.Presentation
 {
@@ -33,7 +33,7 @@ namespace CallCenterProgram.Presentation
 
         private void MainMenu_Click(object sender, EventArgs e)
         {
-            Form1 MainMenu = new Form1();
+            HomeForm MainMenu = new HomeForm();
             MainMenu.Show();
         }
 
@@ -52,6 +52,9 @@ namespace CallCenterProgram.Presentation
             technicians.DeleteTechnicians(txtability.Text, txtq.Text);
         }
 
-       
+        private void Technician_PresantationLayer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
