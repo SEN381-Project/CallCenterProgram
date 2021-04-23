@@ -25,5 +25,26 @@ namespace CallCenterProgram.Presentation
             BackColor = Color.FromArgb(26, 26, 26);
             ForeColor = Color.FromArgb(102, 112, 233);
         }
+
+        private void btnViewBusinessClients_Click(object sender, EventArgs e)
+        {
+            Business_Client_Info businessform = new Business_Client_Info();
+            businessform.Show();
+            this.Close();
+        }
+
+        private void btnViewIndividualClients_Click(object sender, EventArgs e)
+        {
+            Individual_Client_Info individualform = new Individual_Client_Info();
+            individualform.Show();
+            this.Close();
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Close();
+        }
     }
 }

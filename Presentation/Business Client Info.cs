@@ -31,5 +31,19 @@ namespace CallCenterProgram.Presentation
             BackColor = Color.FromArgb(26, 26, 26);
             ForeColor = Color.FromArgb(102, 112, 233);
         }
+
+        private void btnViewIndividualClients_Click(object sender, EventArgs e)
+        {
+            Individual_Client_Info individualform = new Individual_Client_Info();
+            individualform.Show();
+            this.Close();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Client_Home homeform = new Client_Home();
+            homeform.Show();
+            this.Close();
+        }
     }
 }

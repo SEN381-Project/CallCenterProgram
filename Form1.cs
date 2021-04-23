@@ -26,5 +26,17 @@ namespace CallCenterProgram
             this.Hide();
             callForm.Show();
         }
+
+        private void btnClientHome_Click(object sender, EventArgs e)
+        {
+            Client_Home clienthomeform = new Client_Home();
+            clienthomeform.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

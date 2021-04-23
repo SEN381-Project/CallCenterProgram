@@ -255,6 +255,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include=".vs\slnx.sqlite" />
     <None Include=".vs\VSWorkspaceState.json" />
@@ -278,6 +279,7 @@
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
     <Content Include="obj\Debug\CallCenterProgram.csproj.FileListAbsolute.txt" />
+    <None Include="Resources\Icons\tegan.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\CallCenterProgram\v16\" />

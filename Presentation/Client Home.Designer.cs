@@ -43,6 +43,7 @@ namespace CallCenterProgram.Presentation
             this.btnViewBusinessClients.TabIndex = 0;
             this.btnViewBusinessClients.Text = "View Business Clients";
             this.btnViewBusinessClients.UseVisualStyleBackColor = true;
+            this.btnViewBusinessClients.Click += new System.EventHandler(this.btnViewBusinessClients_Click);
             // 
             // btnViewIndividualClients
             // 
@@ -53,6 +54,7 @@ namespace CallCenterProgram.Presentation
             this.btnViewIndividualClients.TabIndex = 1;
             this.btnViewIndividualClients.Text = "View Individual Clients";
             this.btnViewIndividualClients.UseVisualStyleBackColor = true;
+            this.btnViewIndividualClients.Click += new System.EventHandler(this.btnViewIndividualClients_Click);
             // 
             // btnMain
             // 
@@ -63,6 +65,7 @@ namespace CallCenterProgram.Presentation
             this.btnMain.TabIndex = 2;
             this.btnMain.Text = "Main Page";
             this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // Client_Home
             // 

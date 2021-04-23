@@ -68,6 +68,7 @@ namespace CallCenterProgram.Presentation
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnRefresh
             // 
@@ -88,6 +89,7 @@ namespace CallCenterProgram.Presentation
             this.btnViewIndividualClients.TabIndex = 4;
             this.btnViewIndividualClients.Text = "View Individual Clients";
             this.btnViewIndividualClients.UseVisualStyleBackColor = true;
+            this.btnViewIndividualClients.Click += new System.EventHandler(this.btnViewIndividualClients_Click);
             // 
             // btnAddClient
             // 
