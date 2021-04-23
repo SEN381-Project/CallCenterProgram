@@ -59,7 +59,7 @@ namespace CallCenterProgram.Presentation
 
         private void Menu_Click(object sender, EventArgs e)
         {
-            Form1 MainMenu = new Form1();
+            HomeForm MainMenu = new HomeForm();
             MainMenu.Show();
         }
     

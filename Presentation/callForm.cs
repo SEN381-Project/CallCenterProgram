@@ -148,6 +148,8 @@ namespace CallCenterProgram.Presentation
         private void btnHome_Click(object sender, EventArgs e)
         {
             //go to home form
+            HomeForm.instance.Show();
+            this.Close();
         }
     }
 }

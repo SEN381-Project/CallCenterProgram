@@ -42,8 +42,7 @@ namespace CallCenterProgram.Presentation
 
         private void btnMain_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-            form.Show();
+            HomeForm.instance.Show();
             this.Close();
         }
     }

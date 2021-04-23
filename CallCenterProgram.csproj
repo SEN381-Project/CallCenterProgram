@@ -71,11 +71,11 @@
     <Compile Include="Bussiness_Logic\FollowUp.cs" />
     <Compile Include="Data_Access\FollowUp_DataAccess.cs" />
     <Compile Include="Bussiness_Logic\IClient.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
@@ -184,8 +184,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Bussiness_Logic\Manager.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.callForm.resources" />
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Contract.resources" />
