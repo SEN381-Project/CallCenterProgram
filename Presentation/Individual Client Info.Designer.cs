@@ -142,6 +142,7 @@ namespace CallCenterProgram.Presentation
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Name = "Individual_Client_Info";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Individual_Client_Info";
             this.Load += new System.EventHandler(this.Individual_Client_Info_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

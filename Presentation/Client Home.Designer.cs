@@ -79,6 +79,7 @@ namespace CallCenterProgram.Presentation
             this.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Name = "Client_Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Client_Home";
             this.Load += new System.EventHandler(this.Client_Home_Load);
             this.ResumeLayout(false);
