@@ -36,33 +36,33 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximizeToggle = new System.Windows.Forms.Button();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.lblPanelTitle = new System.Windows.Forms.Label();
-            this.btnContract = new System.Windows.Forms.Button();
-            this.btnIncident = new System.Windows.Forms.Button();
-            this.btnFollowUp = new System.Windows.Forms.Button();
-            this.btnPackage = new System.Windows.Forms.Button();
-            this.btnJob = new System.Windows.Forms.Button();
-            this.btnServiceRequest = new System.Windows.Forms.Button();
-            this.btnEmployeeForm = new System.Windows.Forms.Button();
-            this.btnManager = new System.Windows.Forms.Button();
-            this.btnFeedback = new System.Windows.Forms.Button();
-            this.btnTechnician = new System.Windows.Forms.Button();
-            this.btnSecurityLevel = new System.Windows.Forms.Button();
-            this.btnService = new System.Windows.Forms.Button();
-            this.pnlContract = new System.Windows.Forms.Panel();
-            this.pnlIncident = new System.Windows.Forms.Panel();
-            this.pnlFollowUp = new System.Windows.Forms.Panel();
             this.pnlSubContent = new System.Windows.Forms.Panel();
-            this.pnlCall = new System.Windows.Forms.Panel();
+            this.pnlFollowUp = new System.Windows.Forms.Panel();
+            this.btnTechnician = new System.Windows.Forms.Button();
+            this.btnFeedback = new System.Windows.Forms.Button();
+            this.btnManager = new System.Windows.Forms.Button();
+            this.btnEmployeeForm = new System.Windows.Forms.Button();
+            this.btnFollowUp = new System.Windows.Forms.Button();
+            this.pnlIncident = new System.Windows.Forms.Panel();
+            this.btnServiceRequest = new System.Windows.Forms.Button();
+            this.btnJob = new System.Windows.Forms.Button();
+            this.btnIncident = new System.Windows.Forms.Button();
+            this.pnlContract = new System.Windows.Forms.Panel();
+            this.btnService = new System.Windows.Forms.Button();
+            this.btnSecurityLevel = new System.Windows.Forms.Button();
+            this.btnPackage = new System.Windows.Forms.Button();
+            this.btnContract = new System.Windows.Forms.Button();
             this.pnlClientHome = new System.Windows.Forms.Panel();
+            this.pnlCall = new System.Windows.Forms.Panel();
+            this.lblPanelTitle = new System.Windows.Forms.Label();
             this.pnlTitleBar.SuspendLayout();
             this.pnlContent.SuspendLayout();
-            this.pnlContract.SuspendLayout();
-            this.pnlIncident.SuspendLayout();
-            this.pnlFollowUp.SuspendLayout();
             this.pnlSubContent.SuspendLayout();
-            this.pnlCall.SuspendLayout();
+            this.pnlFollowUp.SuspendLayout();
+            this.pnlIncident.SuspendLayout();
+            this.pnlContract.SuspendLayout();
             this.pnlClientHome.SuspendLayout();
+            this.pnlCall.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCallForm
@@ -150,6 +150,7 @@
             this.btnMinimize.TabIndex = 3;
             this.btnMinimize.Text = "Minimize";
             this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnMaximizeToggle
             // 
@@ -176,170 +177,29 @@
             this.pnlContent.Size = new System.Drawing.Size(934, 541);
             this.pnlContent.TabIndex = 4;
             // 
-            // lblPanelTitle
+            // pnlSubContent
             // 
-            this.lblPanelTitle.AutoSize = true;
-            this.lblPanelTitle.Font = new System.Drawing.Font("Roboto Light", 24.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.lblPanelTitle.Location = new System.Drawing.Point(353, 14);
-            this.lblPanelTitle.Name = "lblPanelTitle";
-            this.lblPanelTitle.Size = new System.Drawing.Size(207, 39);
-            this.lblPanelTitle.TabIndex = 2;
-            this.lblPanelTitle.Text = "Departments";
+            this.pnlSubContent.Controls.Add(this.pnlFollowUp);
+            this.pnlSubContent.Controls.Add(this.pnlIncident);
+            this.pnlSubContent.Controls.Add(this.pnlContract);
+            this.pnlSubContent.Controls.Add(this.pnlClientHome);
+            this.pnlSubContent.Controls.Add(this.pnlCall);
+            this.pnlSubContent.Location = new System.Drawing.Point(58, 80);
+            this.pnlSubContent.Name = "pnlSubContent";
+            this.pnlSubContent.Size = new System.Drawing.Size(843, 418);
+            this.pnlSubContent.TabIndex = 18;
             // 
-            // btnContract
+            // pnlFollowUp
             // 
-            this.btnContract.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnContract.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnContract.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnContract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContract.Font = new System.Drawing.Font("Roboto Light", 18F);
-            this.btnContract.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnContract.Location = new System.Drawing.Point(0, 0);
-            this.btnContract.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnContract.Name = "btnContract";
-            this.btnContract.Padding = new System.Windows.Forms.Padding(5);
-            this.btnContract.Size = new System.Drawing.Size(166, 60);
-            this.btnContract.TabIndex = 3;
-            this.btnContract.Text = "Contract";
-            this.btnContract.UseVisualStyleBackColor = true;
-            this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
-            // 
-            // btnIncident
-            // 
-            this.btnIncident.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnIncident.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnIncident.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnIncident.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIncident.Font = new System.Drawing.Font("Roboto Light", 18F);
-            this.btnIncident.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnIncident.Location = new System.Drawing.Point(0, 0);
-            this.btnIncident.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIncident.Name = "btnIncident";
-            this.btnIncident.Size = new System.Drawing.Size(166, 60);
-            this.btnIncident.TabIndex = 4;
-            this.btnIncident.Text = "Incident";
-            this.btnIncident.UseVisualStyleBackColor = true;
-            this.btnIncident.Click += new System.EventHandler(this.btnIncident_Click);
-            // 
-            // btnFollowUp
-            // 
-            this.btnFollowUp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFollowUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnFollowUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnFollowUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFollowUp.Font = new System.Drawing.Font("Roboto Light", 18F);
-            this.btnFollowUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnFollowUp.Location = new System.Drawing.Point(0, 0);
-            this.btnFollowUp.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFollowUp.Name = "btnFollowUp";
-            this.btnFollowUp.Size = new System.Drawing.Size(166, 60);
-            this.btnFollowUp.TabIndex = 5;
-            this.btnFollowUp.Text = " Follow Up";
-            this.btnFollowUp.UseVisualStyleBackColor = true;
-            this.btnFollowUp.Click += new System.EventHandler(this.btnFollowUp_Click);
-            // 
-            // btnPackage
-            // 
-            this.btnPackage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPackage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnPackage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnPackage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPackage.Font = new System.Drawing.Font("Roboto Light", 18F);
-            this.btnPackage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnPackage.Location = new System.Drawing.Point(0, 60);
-            this.btnPackage.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnPackage.Name = "btnPackage";
-            this.btnPackage.Size = new System.Drawing.Size(166, 60);
-            this.btnPackage.TabIndex = 6;
-            this.btnPackage.Text = "Package";
-            this.btnPackage.UseVisualStyleBackColor = true;
-            this.btnPackage.Click += new System.EventHandler(this.btnPackage_Click);
-            // 
-            // btnJob
-            // 
-            this.btnJob.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnJob.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnJob.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJob.Font = new System.Drawing.Font("Roboto Light", 18F);
-            this.btnJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnJob.Location = new System.Drawing.Point(0, 60);
-            this.btnJob.Margin = new System.Windows.Forms.Padding(2);
-            this.btnJob.Name = "btnJob";
-            this.btnJob.Size = new System.Drawing.Size(166, 60);
-            this.btnJob.TabIndex = 7;
-            this.btnJob.Text = "Job";
-            this.btnJob.UseVisualStyleBackColor = true;
-            this.btnJob.Click += new System.EventHandler(this.btnJob_Click);
-            // 
-            // btnServiceRequest
-            // 
-            this.btnServiceRequest.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnServiceRequest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnServiceRequest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnServiceRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServiceRequest.Font = new System.Drawing.Font("Roboto Light", 14F);
-            this.btnServiceRequest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnServiceRequest.Location = new System.Drawing.Point(0, 120);
-            this.btnServiceRequest.Margin = new System.Windows.Forms.Padding(2);
-            this.btnServiceRequest.Name = "btnServiceRequest";
-            this.btnServiceRequest.Size = new System.Drawing.Size(166, 60);
-            this.btnServiceRequest.TabIndex = 8;
-            this.btnServiceRequest.Text = "Service Request";
-            this.btnServiceRequest.UseVisualStyleBackColor = true;
-            this.btnServiceRequest.Click += new System.EventHandler(this.btnServiceRequest_Click);
-            // 
-            // btnEmployeeForm
-            // 
-            this.btnEmployeeForm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmployeeForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnEmployeeForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnEmployeeForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployeeForm.Font = new System.Drawing.Font("Roboto Light", 18F);
-            this.btnEmployeeForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnEmployeeForm.Location = new System.Drawing.Point(0, 60);
-            this.btnEmployeeForm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEmployeeForm.Name = "btnEmployeeForm";
-            this.btnEmployeeForm.Size = new System.Drawing.Size(166, 60);
-            this.btnEmployeeForm.TabIndex = 9;
-            this.btnEmployeeForm.Text = "Employee";
-            this.btnEmployeeForm.UseVisualStyleBackColor = true;
-            this.btnEmployeeForm.Click += new System.EventHandler(this.btnEmployeeForm_Click);
-            // 
-            // btnManager
-            // 
-            this.btnManager.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManager.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnManager.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManager.Font = new System.Drawing.Font("Roboto Light", 18F);
-            this.btnManager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnManager.Location = new System.Drawing.Point(0, 120);
-            this.btnManager.Margin = new System.Windows.Forms.Padding(2);
-            this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(166, 60);
-            this.btnManager.TabIndex = 10;
-            this.btnManager.Text = "Manager";
-            this.btnManager.UseVisualStyleBackColor = true;
-            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
-            // 
-            // btnFeedback
-            // 
-            this.btnFeedback.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFeedback.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnFeedback.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeedback.Font = new System.Drawing.Font("Roboto Light", 18F);
-            this.btnFeedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnFeedback.Location = new System.Drawing.Point(0, 180);
-            this.btnFeedback.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(166, 60);
-            this.btnFeedback.TabIndex = 11;
-            this.btnFeedback.Text = "Feedback";
-            this.btnFeedback.UseVisualStyleBackColor = true;
-            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+            this.pnlFollowUp.Controls.Add(this.btnTechnician);
+            this.pnlFollowUp.Controls.Add(this.btnFeedback);
+            this.pnlFollowUp.Controls.Add(this.btnManager);
+            this.pnlFollowUp.Controls.Add(this.btnEmployeeForm);
+            this.pnlFollowUp.Controls.Add(this.btnFollowUp);
+            this.pnlFollowUp.Location = new System.Drawing.Point(664, 0);
+            this.pnlFollowUp.Name = "pnlFollowUp";
+            this.pnlFollowUp.Size = new System.Drawing.Size(166, 418);
+            this.pnlFollowUp.TabIndex = 17;
             // 
             // btnTechnician
             // 
@@ -358,39 +218,134 @@
             this.btnTechnician.UseVisualStyleBackColor = true;
             this.btnTechnician.Click += new System.EventHandler(this.btnTechnician_Click);
             // 
-            // btnSecurityLevel
+            // btnFeedback
             // 
-            this.btnSecurityLevel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSecurityLevel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnSecurityLevel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnSecurityLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSecurityLevel.Font = new System.Drawing.Font("Roboto Light", 14F);
-            this.btnSecurityLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnSecurityLevel.Location = new System.Drawing.Point(0, 120);
-            this.btnSecurityLevel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnSecurityLevel.Name = "btnSecurityLevel";
-            this.btnSecurityLevel.Size = new System.Drawing.Size(166, 60);
-            this.btnSecurityLevel.TabIndex = 13;
-            this.btnSecurityLevel.Text = "Security Level";
-            this.btnSecurityLevel.UseVisualStyleBackColor = true;
-            this.btnSecurityLevel.Click += new System.EventHandler(this.btnSecurityLevel_Click);
+            this.btnFeedback.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFeedback.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnFeedback.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeedback.Font = new System.Drawing.Font("Roboto Light", 18F);
+            this.btnFeedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnFeedback.Location = new System.Drawing.Point(0, 180);
+            this.btnFeedback.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(166, 60);
+            this.btnFeedback.TabIndex = 11;
+            this.btnFeedback.Text = "Feedback";
+            this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
             // 
-            // btnService
+            // btnManager
             // 
-            this.btnService.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService.Font = new System.Drawing.Font("Roboto Light", 18F);
-            this.btnService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnService.Location = new System.Drawing.Point(0, 180);
-            this.btnService.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnService.Name = "btnService";
-            this.btnService.Size = new System.Drawing.Size(166, 60);
-            this.btnService.TabIndex = 14;
-            this.btnService.Text = "Service";
-            this.btnService.UseVisualStyleBackColor = true;
-            this.btnService.Click += new System.EventHandler(this.btnService_Click);
+            this.btnManager.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManager.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnManager.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManager.Font = new System.Drawing.Font("Roboto Light", 18F);
+            this.btnManager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnManager.Location = new System.Drawing.Point(0, 120);
+            this.btnManager.Margin = new System.Windows.Forms.Padding(2);
+            this.btnManager.Name = "btnManager";
+            this.btnManager.Size = new System.Drawing.Size(166, 60);
+            this.btnManager.TabIndex = 10;
+            this.btnManager.Text = "Manager";
+            this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
+            // 
+            // btnEmployeeForm
+            // 
+            this.btnEmployeeForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployeeForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnEmployeeForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnEmployeeForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeForm.Font = new System.Drawing.Font("Roboto Light", 18F);
+            this.btnEmployeeForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnEmployeeForm.Location = new System.Drawing.Point(0, 60);
+            this.btnEmployeeForm.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmployeeForm.Name = "btnEmployeeForm";
+            this.btnEmployeeForm.Size = new System.Drawing.Size(166, 60);
+            this.btnEmployeeForm.TabIndex = 9;
+            this.btnEmployeeForm.Text = "Employee";
+            this.btnEmployeeForm.UseVisualStyleBackColor = true;
+            this.btnEmployeeForm.Click += new System.EventHandler(this.btnEmployeeForm_Click);
+            // 
+            // btnFollowUp
+            // 
+            this.btnFollowUp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFollowUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnFollowUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnFollowUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFollowUp.Font = new System.Drawing.Font("Roboto Light", 18F);
+            this.btnFollowUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnFollowUp.Location = new System.Drawing.Point(0, 0);
+            this.btnFollowUp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFollowUp.Name = "btnFollowUp";
+            this.btnFollowUp.Size = new System.Drawing.Size(166, 60);
+            this.btnFollowUp.TabIndex = 5;
+            this.btnFollowUp.Text = " Follow Up";
+            this.btnFollowUp.UseVisualStyleBackColor = true;
+            this.btnFollowUp.Click += new System.EventHandler(this.btnFollowUp_Click);
+            // 
+            // pnlIncident
+            // 
+            this.pnlIncident.Controls.Add(this.btnServiceRequest);
+            this.pnlIncident.Controls.Add(this.btnJob);
+            this.pnlIncident.Controls.Add(this.btnIncident);
+            this.pnlIncident.Location = new System.Drawing.Point(498, 0);
+            this.pnlIncident.Name = "pnlIncident";
+            this.pnlIncident.Size = new System.Drawing.Size(166, 418);
+            this.pnlIncident.TabIndex = 16;
+            // 
+            // btnServiceRequest
+            // 
+            this.btnServiceRequest.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnServiceRequest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnServiceRequest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnServiceRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServiceRequest.Font = new System.Drawing.Font("Roboto Light", 14F);
+            this.btnServiceRequest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnServiceRequest.Location = new System.Drawing.Point(0, 120);
+            this.btnServiceRequest.Margin = new System.Windows.Forms.Padding(2);
+            this.btnServiceRequest.Name = "btnServiceRequest";
+            this.btnServiceRequest.Size = new System.Drawing.Size(166, 60);
+            this.btnServiceRequest.TabIndex = 8;
+            this.btnServiceRequest.Text = "Service Request";
+            this.btnServiceRequest.UseVisualStyleBackColor = true;
+            this.btnServiceRequest.Click += new System.EventHandler(this.btnServiceRequest_Click);
+            // 
+            // btnJob
+            // 
+            this.btnJob.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJob.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnJob.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJob.Font = new System.Drawing.Font("Roboto Light", 18F);
+            this.btnJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnJob.Location = new System.Drawing.Point(0, 60);
+            this.btnJob.Margin = new System.Windows.Forms.Padding(2);
+            this.btnJob.Name = "btnJob";
+            this.btnJob.Size = new System.Drawing.Size(166, 60);
+            this.btnJob.TabIndex = 7;
+            this.btnJob.Text = "Job";
+            this.btnJob.UseVisualStyleBackColor = true;
+            this.btnJob.Click += new System.EventHandler(this.btnJob_Click);
+            // 
+            // btnIncident
+            // 
+            this.btnIncident.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnIncident.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnIncident.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnIncident.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncident.Font = new System.Drawing.Font("Roboto Light", 18F);
+            this.btnIncident.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnIncident.Location = new System.Drawing.Point(0, 0);
+            this.btnIncident.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIncident.Name = "btnIncident";
+            this.btnIncident.Size = new System.Drawing.Size(166, 60);
+            this.btnIncident.TabIndex = 4;
+            this.btnIncident.Text = "Incident";
+            this.btnIncident.UseVisualStyleBackColor = true;
+            this.btnIncident.Click += new System.EventHandler(this.btnIncident_Click);
             // 
             // pnlContract
             // 
@@ -403,39 +358,82 @@
             this.pnlContract.Size = new System.Drawing.Size(166, 418);
             this.pnlContract.TabIndex = 15;
             // 
-            // pnlIncident
+            // btnService
             // 
-            this.pnlIncident.Controls.Add(this.btnServiceRequest);
-            this.pnlIncident.Controls.Add(this.btnJob);
-            this.pnlIncident.Controls.Add(this.btnIncident);
-            this.pnlIncident.Location = new System.Drawing.Point(498, 0);
-            this.pnlIncident.Name = "pnlIncident";
-            this.pnlIncident.Size = new System.Drawing.Size(166, 418);
-            this.pnlIncident.TabIndex = 16;
+            this.btnService.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnService.Font = new System.Drawing.Font("Roboto Light", 18F);
+            this.btnService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnService.Location = new System.Drawing.Point(0, 180);
+            this.btnService.Margin = new System.Windows.Forms.Padding(0);
+            this.btnService.Name = "btnService";
+            this.btnService.Size = new System.Drawing.Size(166, 60);
+            this.btnService.TabIndex = 14;
+            this.btnService.Text = "Service";
+            this.btnService.UseVisualStyleBackColor = true;
+            this.btnService.Click += new System.EventHandler(this.btnService_Click);
             // 
-            // pnlFollowUp
+            // btnSecurityLevel
             // 
-            this.pnlFollowUp.Controls.Add(this.btnTechnician);
-            this.pnlFollowUp.Controls.Add(this.btnFeedback);
-            this.pnlFollowUp.Controls.Add(this.btnManager);
-            this.pnlFollowUp.Controls.Add(this.btnEmployeeForm);
-            this.pnlFollowUp.Controls.Add(this.btnFollowUp);
-            this.pnlFollowUp.Location = new System.Drawing.Point(664, 0);
-            this.pnlFollowUp.Name = "pnlFollowUp";
-            this.pnlFollowUp.Size = new System.Drawing.Size(166, 418);
-            this.pnlFollowUp.TabIndex = 17;
+            this.btnSecurityLevel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSecurityLevel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnSecurityLevel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnSecurityLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSecurityLevel.Font = new System.Drawing.Font("Roboto Light", 14F);
+            this.btnSecurityLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnSecurityLevel.Location = new System.Drawing.Point(0, 120);
+            this.btnSecurityLevel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSecurityLevel.Name = "btnSecurityLevel";
+            this.btnSecurityLevel.Size = new System.Drawing.Size(166, 60);
+            this.btnSecurityLevel.TabIndex = 13;
+            this.btnSecurityLevel.Text = "Security Level";
+            this.btnSecurityLevel.UseVisualStyleBackColor = true;
+            this.btnSecurityLevel.Click += new System.EventHandler(this.btnSecurityLevel_Click);
             // 
-            // pnlSubContent
+            // btnPackage
             // 
-            this.pnlSubContent.Controls.Add(this.pnlFollowUp);
-            this.pnlSubContent.Controls.Add(this.pnlIncident);
-            this.pnlSubContent.Controls.Add(this.pnlContract);
-            this.pnlSubContent.Controls.Add(this.pnlClientHome);
-            this.pnlSubContent.Controls.Add(this.pnlCall);
-            this.pnlSubContent.Location = new System.Drawing.Point(58, 80);
-            this.pnlSubContent.Name = "pnlSubContent";
-            this.pnlSubContent.Size = new System.Drawing.Size(843, 418);
-            this.pnlSubContent.TabIndex = 18;
+            this.btnPackage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPackage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnPackage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnPackage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPackage.Font = new System.Drawing.Font("Roboto Light", 18F);
+            this.btnPackage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnPackage.Location = new System.Drawing.Point(0, 60);
+            this.btnPackage.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPackage.Name = "btnPackage";
+            this.btnPackage.Size = new System.Drawing.Size(166, 60);
+            this.btnPackage.TabIndex = 6;
+            this.btnPackage.Text = "Package";
+            this.btnPackage.UseVisualStyleBackColor = true;
+            this.btnPackage.Click += new System.EventHandler(this.btnPackage_Click);
+            // 
+            // btnContract
+            // 
+            this.btnContract.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContract.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnContract.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnContract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContract.Font = new System.Drawing.Font("Roboto Light", 18F);
+            this.btnContract.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnContract.Location = new System.Drawing.Point(0, 0);
+            this.btnContract.Margin = new System.Windows.Forms.Padding(0);
+            this.btnContract.Name = "btnContract";
+            this.btnContract.Padding = new System.Windows.Forms.Padding(5);
+            this.btnContract.Size = new System.Drawing.Size(166, 60);
+            this.btnContract.TabIndex = 3;
+            this.btnContract.Text = "Contract";
+            this.btnContract.UseVisualStyleBackColor = true;
+            this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
+            // 
+            // pnlClientHome
+            // 
+            this.pnlClientHome.Controls.Add(this.btnClientHome);
+            this.pnlClientHome.Location = new System.Drawing.Point(166, 0);
+            this.pnlClientHome.Name = "pnlClientHome";
+            this.pnlClientHome.Size = new System.Drawing.Size(166, 418);
+            this.pnlClientHome.TabIndex = 19;
             // 
             // pnlCall
             // 
@@ -445,13 +443,16 @@
             this.pnlCall.Size = new System.Drawing.Size(166, 418);
             this.pnlCall.TabIndex = 18;
             // 
-            // pnlClientHome
+            // lblPanelTitle
             // 
-            this.pnlClientHome.Controls.Add(this.btnClientHome);
-            this.pnlClientHome.Location = new System.Drawing.Point(166, 0);
-            this.pnlClientHome.Name = "pnlClientHome";
-            this.pnlClientHome.Size = new System.Drawing.Size(166, 418);
-            this.pnlClientHome.TabIndex = 19;
+            this.lblPanelTitle.AutoSize = true;
+            this.lblPanelTitle.Font = new System.Drawing.Font("Roboto Light", 24.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.lblPanelTitle.Location = new System.Drawing.Point(353, 14);
+            this.lblPanelTitle.Name = "lblPanelTitle";
+            this.lblPanelTitle.Size = new System.Drawing.Size(207, 39);
+            this.lblPanelTitle.TabIndex = 2;
+            this.lblPanelTitle.Text = "Departments";
             // 
             // HomeForm
             // 
@@ -468,12 +469,12 @@
             this.pnlTitleBar.PerformLayout();
             this.pnlContent.ResumeLayout(false);
             this.pnlContent.PerformLayout();
-            this.pnlContract.ResumeLayout(false);
-            this.pnlIncident.ResumeLayout(false);
-            this.pnlFollowUp.ResumeLayout(false);
             this.pnlSubContent.ResumeLayout(false);
-            this.pnlCall.ResumeLayout(false);
+            this.pnlFollowUp.ResumeLayout(false);
+            this.pnlIncident.ResumeLayout(false);
+            this.pnlContract.ResumeLayout(false);
             this.pnlClientHome.ResumeLayout(false);
+            this.pnlCall.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
