@@ -41,7 +41,7 @@ namespace CallCenterProgram.Data_Access
                 }
             }
 
-            string query = @"INSERT INTO Incedent VALUES ( '" + reportInfo + "', '" + timeIssued + "', '" + priority + "', '" + cost + "', '" + abilityrequirement + "', '" + clientID + "', '" + callEmplpoyeeID + "')";
+            string query = @"INSERT INTO Incident(ClientID, CallEmployeeID, ReportInfo, TimeIssued, [Priority], Cost, AbilityReq) VALUES ( '" + clientID + "', '" + callEmplpoyeeID + "', '" + reportInfo + "', '" + timeIssued + "', '" + priority + "', '" + cost + "', '" + abilityrequirement + "')";
 
             conn = new SqlConnection(connect);
 
@@ -51,7 +51,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                command.BeginExecuteNonQuery();
+                command.ExecuteNonQuery();
                 MessageBox.Show("Work request made!");
             }
             catch (Exception ex)
@@ -78,7 +78,7 @@ namespace CallCenterProgram.Data_Access
                 }
             }
 
-            string query = @"UPDATE Incident SET ReportInfo = '" + reportInfo + "', TimeIssued = '" + timeIssued + "', Priority = '" + priority + "', Cost = '" + cost + "', AbilityReq = '" + abilityrequirement + "' WHERE IncidentRef = '" + incidentID + "'";
+            string query = @"INSERT INTO Incident(ReportInfo, TimeIssued, [Priority], Cost, AbilityReq) VALUES ( '" + reportInfo + "', '" + timeIssued + "', '" + priority + "', '" + cost + "', '" + abilityrequirement + "')";
 
             conn = new SqlConnection(connect);
 
@@ -128,7 +128,7 @@ namespace CallCenterProgram.Data_Access
 
         public List<Incident> DisplayIncident(int incidentID)
         {
-            string query = @"SELECT * FROM Jobs WHERE incidentRef = ( '" + incidentID + "' )";
+            string query = @"SELECT * FROM Incident WHERE incidentRef = ( '" + incidentID + "' )";
 
             conn = new SqlConnection(connect);
 
@@ -169,7 +169,7 @@ namespace CallCenterProgram.Data_Access
 
         public List<Incident> DisplayIncident()
         {
-            string query = @"SELECT * FROM Jobs";
+            string query = @"SELECT * FROM Incident";
 
             conn = new SqlConnection(connect);
 

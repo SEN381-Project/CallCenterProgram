@@ -108,7 +108,7 @@ namespace CallCenterProgram.Data_Access
 
         public List<Job> DisplayJob()
         {
-            string query = @"SELECT * FROM Jobs";
+            string query = @"SELECT * FROM Job";
 
             conn = new SqlConnection(connect);
 
@@ -125,15 +125,7 @@ namespace CallCenterProgram.Data_Access
                 {
                     objJob.WorkerID = int.Parse(readers[2].ToString());
                     objJob.IncedentID = int.Parse(readers[1].ToString());
-
-                    if (int.Parse(readers[2].ToString()) == 1)
-                    {
-                        objJob.JobStatus = true;
-                    }
-                    else
-                    {
-                        objJob.JobStatus = false;
-                    }
+                    objJob.JobStatus = bool.Parse(readers[3].ToString());
 
                     jobData.Add(new Job(objJob.WorkerID, objJob.JobStatus, objJob.IncedentID));
                 }
@@ -152,7 +144,7 @@ namespace CallCenterProgram.Data_Access
 
         public List<Job> DisplayJob(int employeeID)
         {
-            string query = @"SELECT * FROM Jobs WHERE employeeID = ( '" + employeeID + "' )";
+            string query = @"SELECT * FROM Job WHERE AssignedWorkerID = ( '" + employeeID + "' )";
 
             conn = new SqlConnection(connect);
 
@@ -169,15 +161,7 @@ namespace CallCenterProgram.Data_Access
                 {
                     objJob.WorkerID = int.Parse(readers[2].ToString());
                     objJob.IncedentID = int.Parse(readers[1].ToString());
-
-                    if (int.Parse(readers[2].ToString()) == 1)
-                    {
-                        objJob.JobStatus = true;
-                    }
-                    else
-                    {
-                        objJob.JobStatus = false;
-                    }
+                    objJob.JobStatus = bool.Parse(readers[3].ToString());
 
                     jobData.Add(new Job(objJob.WorkerID, objJob.JobStatus, objJob.IncedentID));
                 }
