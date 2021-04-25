@@ -177,5 +177,10 @@ namespace CallCenterProgram
             this.Hide();
             service.Show();
         }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

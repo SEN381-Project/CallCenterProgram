@@ -156,6 +156,7 @@
             this.btnMinimize.TabIndex = 3;
             this.btnMinimize.Text = "Minimize";
             this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnMaximizeToggle
             // 

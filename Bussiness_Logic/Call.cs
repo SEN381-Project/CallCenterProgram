@@ -22,6 +22,8 @@ namespace CallCenterProgram.Bussiness_Logic
         private string problemInfo;
         private string workRequest;
         private string faultReport;
+        private int stationNumber;
+        private int clientID;
 
 
         //properties
@@ -29,6 +31,8 @@ namespace CallCenterProgram.Bussiness_Logic
         public string ProblemInfo { get => problemInfo; set => problemInfo = value; }
         public string WorkRequest { get => workRequest; set => workRequest = value; }
         public string FaultReport { get => faultReport; set => faultReport = value; }
+        public int StationNumber { get => stationNumber; set => stationNumber = value; }
+        public int ClientID { get => clientID; set => clientID = value; }
 
         //constructor
         public Call()
@@ -50,7 +54,7 @@ namespace CallCenterProgram.Bussiness_Logic
             //ask about this.
             MessageBox.Show("Added call to old system.");
         }
-        public int RecordCallStats()
+        public int GetCallDuration()
         {
             int timeDiff = 0;
 
@@ -68,7 +72,7 @@ namespace CallCenterProgram.Bussiness_Logic
         public void InsertCallIntoDB(int clientID)
         {
             //vars 
-            int callDuration = RecordCallStats(); //use RecordCallStats()
+            int callDuration = GetCallDuration(); //use RecordCallStats()
 
             //method
             CallDB.InsertCall(clientID, initialTimeStamp, finalTimeStamp, FaultReport, CallReport,ProblemInfo,WorkRequest,callDuration);
