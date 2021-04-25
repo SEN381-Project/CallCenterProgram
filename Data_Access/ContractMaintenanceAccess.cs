@@ -245,20 +245,18 @@ namespace CallCenterProgram.Data_Access
             }
         }
         // The manager can use this method (or anyone with clearance to update security levels data)
-        public void UpdateSecurityLevel(int securityLevelID,string levelDescription, string emailSupport, string phoneSupport)
+        public void UpdateSecurityLevel(int securityLevelID,string levelDescription, string emailSupport, string phoneSupport, int availability)
         {
-            string query = $"UPDATE SecurityLevel SET LevelDescription= {levelDescription}, EmailSupport = {emailSupport}, PhoneSupport = {phoneSupport} WHERE SecurityLevelID = {securityLevelID}";
+            string query = $"UPDATE SecurityLevel SET LevelDescription= {levelDescription}, EmailSupport = {emailSupport}, PhoneSupport = {phoneSupport}, [Availability] = {availability} WHERE SecurityLevelID = {securityLevelID}";
 
             conn = new SqlConnection(connect);
-
-            conn.Open();
-
             command = new SqlCommand(query, conn);
 
             try
             {
+                conn.Open();
                 command.ExecuteNonQuery();
-                MessageBox.Show("Security Level updated succesfully", "Security Level update Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Security Level: {levelDescription} updated succesfully", "Security Level update Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -405,7 +403,6 @@ namespace CallCenterProgram.Data_Access
             {
                 // MessageBox.Show() overload number 7
                 //MessageBox.Show("Failed to insert new Service: " + ex.Message, "Insert Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                Console.WriteLine("Cannot find specified Service Level");
             }
             finally
             {
