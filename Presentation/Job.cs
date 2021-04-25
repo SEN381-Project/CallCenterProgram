@@ -36,14 +36,25 @@ namespace CallCenterProgram.Presentation
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtJobID.Text != "")
+            if (txtWorkerID.Text != "")
             {
-                dgvIncident.DataSource = jobObj.ViewJob(int.Parse(txtJobID.Text));
+                dgvIncident.DataSource = jobObj.ViewJob(int.Parse(txtWorkerID.Text));
             }
             else
             {
                 dgvIncident.DataSource = jobObj.ViewJob();
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            HomeForm.instance.Show();
+            this.Close();
         }
     }
 }

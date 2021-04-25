@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
-using CallCenterProgram.Data_Access;
 using CallCenterProgram;
 
 namespace CallCenterProgram.Presentation
@@ -50,6 +49,12 @@ namespace CallCenterProgram.Presentation
         {
             frmIncident incidentForm = new frmIncident();
             incidentForm.Show();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            HomeForm.instance.Show();
+            this.Close();
         }
     }
 }

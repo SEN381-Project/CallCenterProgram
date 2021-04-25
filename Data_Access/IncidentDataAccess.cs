@@ -141,7 +141,7 @@ namespace CallCenterProgram.Data_Access
             {
                 readers = command.ExecuteReader();
 
-                if (readers.Read())
+                while (readers.Read())
                 {
                     objIncident.IncidentID = int.Parse(readers[0].ToString());
                     objIncident.ReportInfo = readers[3].ToString();
@@ -182,7 +182,7 @@ namespace CallCenterProgram.Data_Access
             {
                 readers = command.ExecuteReader();
 
-                if (readers.Read())
+                while (readers.Read())
                 {
                     objIncident.IncidentID = int.Parse(readers[0].ToString());
                     objIncident.ReportInfo = readers[3].ToString();

@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CallCenterProgram.Data_Access;
-using CallCenterProgram.Presentation;
 using CallCenterProgram;
 
 namespace CallCenterProgram.Bussiness_Logic
 {
     class Job
     {
+        private int jobID;
         private int workerID;
         private bool jobStatus;
         private int incidentID;
+
+        public int JobID
+        {
+            get { return jobID; }
+            set { jobID = value; }
+        }
 
         public int WorkerID
         {
@@ -37,8 +42,9 @@ namespace CallCenterProgram.Bussiness_Logic
         {
         }
 
-        public Job(int workerID, bool jobStatus, int incidentID)
+        public Job(int jobID, int workerID, bool jobStatus, int incidentID)
         {
+            this.jobID = jobID;
             this.workerID = workerID;
             this.jobStatus = jobStatus;
             this.incidentID = incidentID;

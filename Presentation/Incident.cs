@@ -5,10 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
-using CallCenterProgram.Data_Access;
 using CallCenterProgram;
 
 namespace CallCenterProgram.Presentation
@@ -71,7 +71,7 @@ namespace CallCenterProgram.Presentation
                 }
 
                 serviceReqObj.CreateServiceRequest(rtbReportInfo.Text, dtpDateIssued.Value, int.Parse(cbxPriority.Text), int.Parse(txtCost.Text), abilityReq.Split(','), int.Parse(txtClientID.Text), int.Parse(txtCallerID.Text));
-
+                serviceReqObj.AssignJob(11);
                 //Thread assignJobThread = new Thread(new ThreadStart(AssignJobThread));
                 //assignJobThread.Start();
             }
@@ -105,6 +105,17 @@ namespace CallCenterProgram.Presentation
                     incID = 0;
                 }
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            HomeForm.instance.Show();
+            this.Close();
         }
     }
 }

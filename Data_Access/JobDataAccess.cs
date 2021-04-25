@@ -23,13 +23,14 @@ namespace CallCenterProgram.Data_Access
         SqlConnection conn;
         SqlCommand command;
         SqlDataReader readers;
+        SqlDataAdapter adapter;
 
         //Objects
         Job objJob = new Job();
 
         public void InsertJob(int jobStatus, int incidentRef, int assignedWorkerID)
         {
-            string query = @"INSERT INTO Job VALUES ( '" + jobStatus + "', '" + incidentRef + "', '" + assignedWorkerID + "')";
+            string query = @"INSERT INTO Job(IncidentRef, AssignedWorkerID, JobStatus) VALUES ( '" + incidentRef + "', '" + assignedWorkerID + "', '" + jobStatus + "')";
 
             conn = new SqlConnection(connect);
 
@@ -39,7 +40,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                command.BeginExecuteNonQuery();
+                command.ExecuteNonQuery();
                 MessageBox.Show("Job Made!");
             }
             catch (Exception ex)
@@ -79,7 +80,7 @@ namespace CallCenterProgram.Data_Access
 
         public void CloseJob(int jobID)
         {
-            string query = @"UPDATE Job SET JobStatus = '" + 1 + "' WHERE IncidentRef = '" + jobID + "'";
+            string query = @"UPDATE Job SET JobStatus = ( '" + true + "' ) WHERE JobRef = ( '" + jobID + "' )";
 
             conn = new SqlConnection(connect);
 
@@ -89,7 +90,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                command.BeginExecuteNonQuery();
+                command.ExecuteNonQuery();
                 MessageBox.Show("Job Closed!");
             }
             catch (Exception ex)
@@ -121,13 +122,14 @@ namespace CallCenterProgram.Data_Access
             {
                 readers = command.ExecuteReader();
 
-                if (readers.Read())
+                while (readers.Read())
                 {
+                    objJob.JobID = int.Parse(readers[0].ToString());
                     objJob.WorkerID = int.Parse(readers[2].ToString());
                     objJob.IncedentID = int.Parse(readers[1].ToString());
                     objJob.JobStatus = bool.Parse(readers[3].ToString());
 
-                    jobData.Add(new Job(objJob.WorkerID, objJob.JobStatus, objJob.IncedentID));
+                    jobData.Add(new Job(objJob.JobID, objJob.WorkerID, objJob.JobStatus, objJob.IncedentID));
                 }
             }
             catch (Exception ex)
@@ -157,13 +159,14 @@ namespace CallCenterProgram.Data_Access
             {
                 readers = command.ExecuteReader();
 
-                if (readers.Read())
+                while (readers.Read())
                 {
+                    objJob.JobID = int.Parse(readers[0].ToString());
                     objJob.WorkerID = int.Parse(readers[2].ToString());
                     objJob.IncedentID = int.Parse(readers[1].ToString());
                     objJob.JobStatus = bool.Parse(readers[3].ToString());
 
-                    jobData.Add(new Job(objJob.WorkerID, objJob.JobStatus, objJob.IncedentID));
+                    jobData.Add(new Job(objJob.JobID ,objJob.WorkerID, objJob.JobStatus, objJob.IncedentID));
                 }
             }
             catch (Exception ex)
