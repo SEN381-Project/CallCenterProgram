@@ -58,10 +58,10 @@ namespace CallCenterProgram.Presentation
                 txtUpdateAllDesc.Text = dgvExistingSecurityLevels.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
                 txtUpdateAllEmail.Text = dgvExistingSecurityLevels.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
                 txtUpdateAllPhone.Text = dgvExistingSecurityLevels.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
-                cmbUpdateAll.Text = dgvExistingSecurityLevels.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                cmbUpdateAll.Text = dgvExistingSecurityLevels.Rows[e.RowIndex].Cells[2].FormattedValue.ToString() == "True" ? "Available" : "Not-Available";
 
                 txtIDUpdate1.Text = dgvExistingSecurityLevels.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
-                cmbUpdate1.Text = dgvExistingSecurityLevels.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                cmbUpdate1.Text = dgvExistingSecurityLevels.Rows[e.RowIndex].Cells[2].FormattedValue.ToString() == "True" ? "Available" : "Not-Available";
             }
         }
 
@@ -80,7 +80,7 @@ namespace CallCenterProgram.Presentation
         private void btnUpdateAvailability_Click(object sender, EventArgs e)
         {
             int ID = int.Parse(txtIDUpdate1.Text);
-            int availability = cmbUpdateAll.Text == "Available" ? 1 : 0;
+            int availability = cmbUpdate1.Text == "Available" ? 1 : 0;
             dataAccess.UpdateSecurityLevel(ID, availability);
             bs.DataSource = dataAccess.GetAllSecurityLevels();
             bs.ResetBindings(true);

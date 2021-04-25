@@ -247,7 +247,7 @@ namespace CallCenterProgram.Data_Access
         // The manager can use this method (or anyone with clearance to update security levels data)
         public void UpdateSecurityLevel(int securityLevelID,string levelDescription, string emailSupport, string phoneSupport, int availability)
         {
-            string query = $"UPDATE SecurityLevel SET LevelDescription= {levelDescription}, EmailSupport = {emailSupport}, PhoneSupport = {phoneSupport}, [Availability] = {availability} WHERE SecurityLevelID = {securityLevelID}";
+            string query = $"UPDATE SecurityLevel SET LevelDescription= '{levelDescription}', EmailSupport = '{emailSupport}', PhoneSupport = '{phoneSupport}', [Availability] = {availability} WHERE SecurityLevelID = {securityLevelID}";
 
             conn = new SqlConnection(connect);
             command = new SqlCommand(query, conn);
