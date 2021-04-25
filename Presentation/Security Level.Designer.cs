@@ -43,7 +43,7 @@ namespace CallCenterProgram.Presentation
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvExistingSecurityLevels = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -62,7 +62,7 @@ namespace CallCenterProgram.Presentation
             this.txtSearchSecurityLevel = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExistingSecurityLevels)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,7 +127,7 @@ namespace CallCenterProgram.Presentation
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(946, 628);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(741, 63);
+            this.label7.Size = new System.Drawing.Size(593, 50);
             this.label7.TabIndex = 45;
             this.label7.Text = "UPDATE SECURITY LEVEL AVAILABILITY \r\nONLY SECTION: (ALL FIELDS TO BE FILLED IN!)";
             // 
@@ -195,15 +195,15 @@ namespace CallCenterProgram.Presentation
             this.label2.TabIndex = 36;
             this.label2.Text = "ADD SECURITY LEVEL SECTION: (ALL FIELDS TO BE FILLED IN!)";
             // 
-            // dataGridView1
+            // dgvExistingSecurityLevels
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 57);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(781, 235);
-            this.dataGridView1.TabIndex = 54;
+            this.dgvExistingSecurityLevels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExistingSecurityLevels.Location = new System.Drawing.Point(37, 57);
+            this.dgvExistingSecurityLevels.Name = "dgvExistingSecurityLevels";
+            this.dgvExistingSecurityLevels.RowHeadersWidth = 51;
+            this.dgvExistingSecurityLevels.RowTemplate.Height = 24;
+            this.dgvExistingSecurityLevels.Size = new System.Drawing.Size(781, 235);
+            this.dgvExistingSecurityLevels.TabIndex = 54;
             // 
             // label1
             // 
@@ -333,7 +333,7 @@ namespace CallCenterProgram.Presentation
             this.label14.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(944, 19);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(921, 63);
+            this.label14.Size = new System.Drawing.Size(737, 50);
             this.label14.TabIndex = 58;
             this.label14.Text = "UPDATE ALL DETAILS OF  \r\nSECURITY LEVEL SECTION: (ALL FIELDS TO BE FILLED IN!)";
             // 
@@ -396,7 +396,7 @@ namespace CallCenterProgram.Presentation
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvExistingSecurityLevels);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.textBox4);
@@ -415,7 +415,8 @@ namespace CallCenterProgram.Presentation
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Name = "Security_Level";
             this.Text = "Security_Level";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Security_Level_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExistingSecurityLevels)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -438,7 +439,7 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvExistingSecurityLevels;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox textBox1;

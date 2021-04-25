@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
 using CallCenterProgram.Data_Access;
 using CallCenterProgram;
+using System.Data.SqlClient;
 
 namespace CallCenterProgram.Presentation
 {
@@ -19,12 +20,20 @@ namespace CallCenterProgram.Presentation
         {
             InitializeComponent();
         }
+        ContractMaintenanceAccess dataAccess = new ContractMaintenanceAccess();
+        BindingSource bs = new BindingSource();
 
         private void button3_Click(object sender, EventArgs e)
         {
             HomeForm main = new HomeForm();
             this.Hide();
             main.Show();
+        }
+
+        private void Security_Level_Load(object sender, EventArgs e)
+        {
+            bs.DataSource = dataAccess.GetAllSecurityLevels();
+            dgvExistingSecurityLevels.DataSource = bs;
         }
     }
 }
