@@ -384,32 +384,33 @@ namespace CallCenterProgram.Data_Access
             return service;
         }
 
-        public SqlDataReader GetServiceLevel(int serviceLevelID)
+        public List<Bussiness_Logic.ServiceLevel> GetAllServiceLevels()
         {
-            string query = $"SELECT * FROM ServiceLevel WHERE ServiceLevelID = {serviceLevelID}";
+            List<Bussiness_Logic.ServiceLevel> levels = new List<ServiceLevel>();
+            string query = $"SELECT * FROM ServiceLevel";
 
             SqlConnection conn = new SqlConnection(connect);
             SqlCommand command = new SqlCommand(query, conn);
-            SqlDataReader service = null;
+
             try
             {
                 conn.Open();
-                service = command.ExecuteReader();
-                // MessageBox.Show() overload number 7
-                //MessageBox.Show("New service inserted succesfully", "Service Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Console.WriteLine("Specified Service Level Found");
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Bussiness_Logic.ServiceLevel level = new ServiceLevel(reader.GetInt32(6), reader.GetBoolean(5), reader.GetInt32(0), reader.GetString(1), reader.GetString(2), double.Parse(reader.GetDecimal(3).ToString()), double.Parse(reader.GetDecimal(4).ToString()));
+                    levels.Add(level);
+                }
             }
             catch (Exception ex)
             {
-                // MessageBox.Show() overload number 7
-                //MessageBox.Show("Failed to insert new Service: " + ex.Message, "Insert Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                MessageBox.Show("Could not  find Service Levels " + ex.Message);
             }
             finally
             {
                 conn.Close();
             }
-
-            return service;
+            return levels;
         }
 
         public List<Bussiness_Logic.SecurityLevel> GetAllSecurityLevels()

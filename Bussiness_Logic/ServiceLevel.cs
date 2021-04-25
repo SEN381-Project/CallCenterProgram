@@ -13,7 +13,7 @@ namespace CallCenterProgram.Bussiness_Logic
     {
         ContractMaintenanceAccess dataAccess = new ContractMaintenanceAccess();
         // Service Level Table
-        private SecurityLevel securityLevel;
+        private int securityLevelID;
         private bool availability;
         private int sericeLevelId;
         private string levelName;
@@ -27,15 +27,26 @@ namespace CallCenterProgram.Bussiness_Logic
         public string OptOutDetails { get => optOutDetails; set => optOutDetails = value; }
         public double PenaltiesForLateWork { get => penaltiesForLateWork; set => penaltiesForLateWork = value; }
         public double PenaltiesForNonPerformance { get => penaltiesForNonPerformance; set => penaltiesForNonPerformance = value; }
-        public SecurityLevel SecurityLevel { get => securityLevel; set => securityLevel = value; }
+        public int SecurityLevelID { get => securityLevelID; set => securityLevelID = value; }
 
-        public ServiceLevel AddServiceLevel(string levelName, string optOutDetails, double penaltiesForLateWork, double penaltiesForNonPerformance, int state, int securityLevelID)
+        public ServiceLevel(int securityLevelID, bool availability, int sericeLevelId, string levelName, string optOutDetails, double penaltiesForLateWork, double penaltiesForNonPerformance)
         {
-            dataAccess.InsertServiceLevel(levelName, optOutDetails, penaltiesForLateWork, penaltiesForNonPerformance, state, securityLevelID);
-
-            ServiceLevel serviceLevel = new ServiceLevel();
-            return serviceLevel;
+            this.securityLevelID = securityLevelID;
+            this.availability = availability;
+            this.sericeLevelId = sericeLevelId;
+            this.levelName = levelName;
+            this.optOutDetails = optOutDetails;
+            this.penaltiesForLateWork = penaltiesForLateWork;
+            this.penaltiesForNonPerformance = penaltiesForNonPerformance;
         }
+
+        //public ServiceLevel AddServiceLevel(string levelName, string optOutDetails, double penaltiesForLateWork, double penaltiesForNonPerformance, int state, int securityLevelID)
+        //{
+        //    //dataAccess.InsertServiceLevel(levelName, optOutDetails, penaltiesForLateWork, penaltiesForNonPerformance, state, securityLevelID);
+
+        //    //ServiceLevel serviceLevel = new ServiceLevel();
+        //    //return serviceLevel;
+        //}
 
         public void ChangeAvailability(int serviceLevelID, int newAvailability)
         {

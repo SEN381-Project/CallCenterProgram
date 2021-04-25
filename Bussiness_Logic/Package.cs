@@ -32,26 +32,26 @@ namespace CallCenterProgram.Bussiness_Logic
         public List<Service> Services { get => services; set => services = value; }
         public List<ServiceLevel> ServiceLevels { get => serviceLevels; set => serviceLevels = value; }
 
-        public Package CreatePackage(string packageName, string services, string serviceLevels)
-        {   
-            dataAccess.InsertPackage(packageName, services, serviceLevels);
-            List<Service> servicesLst = new List<Service>();
-            List<ServiceLevel> serviceLevelLst = new List<ServiceLevel>();
-            for (int i = 0; i < services.Length; i++)
-            {
-                SqlDataReader readerService = dataAccess.GetService(int.Parse(services[i].ToString()));
-                bool state = (int)readerService[4] == 1 ? true : false;
-                Service service = new Service(readerService[0].ToString(), int.Parse(readerService[1].ToString()), readerService[2].ToString(), readerService[3].ToString(), state);
+        //public Package CreatePackage(string packageName, string services, string serviceLevels)
+        //{   
+        //    //dataAccess.InsertPackage(packageName, services, serviceLevels);
+        //    //List<Service> servicesLst = new List<Service>();
+        //    //List<ServiceLevel> serviceLevelLst = new List<ServiceLevel>();
+        //    //for (int i = 0; i < services.Length; i++)
+        //    //{
+        //    //    SqlDataReader readerService = dataAccess.GetService(int.Parse(services[i].ToString()));
+        //    //    bool state = (int)readerService[4] == 1 ? true : false;
+        //    //    Service service = new Service(readerService[0].ToString(), int.Parse(readerService[1].ToString()), readerService[2].ToString(), readerService[3].ToString(), state);
 
-                SqlDataReader readerServiceLevel = dataAccess.GetService(int.Parse(serviceLevels[i].ToString()));
-                ServiceLevel serviceLevel = new ServiceLevel();
-                servicesLst.Add(service);
-                //serviceLevelLst.Add();
-            }
-            Package package = new Package(packageName, Services, ServiceLevels);
+        //    //    SqlDataReader readerServiceLevel = dataAccess.GetService(int.Parse(serviceLevels[i].ToString()));
+        //    //    ServiceLevel serviceLevel = new ServiceLevel();
+        //    //    servicesLst.Add(service);
+        //    //    //serviceLevelLst.Add();
+        //    //}
+        //    //Package package = new Package(packageName, Services, ServiceLevels);
 
-            return package;
-        }
+        //    //return package;
+        //}
         public void ViewPerformance(int contractTypeId)
         {
             // no implementation details yet 
