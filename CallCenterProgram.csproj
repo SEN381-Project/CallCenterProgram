@@ -53,6 +53,7 @@
     <Compile Include="Bussiness_Logic\Incident.cs" />
     <Compile Include="Bussiness_Logic\IndividualClient.cs" />
     <Compile Include="Bussiness_Logic\Job.cs" />
+    <Compile Include="Bussiness_Logic\JobBussinessLogic.cs" />
     <Compile Include="Bussiness_Logic\Package.cs" />
     <Compile Include="Bussiness_Logic\SecurityLevel.cs" />
     <Compile Include="Bussiness_Logic\Service.cs" />
@@ -77,7 +78,7 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\.NETFrameworkVersionv4.7.2.AssemblyAttributes.cs" />
     <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Presentation\Business Client Info.cs">
       <SubType>Form</SubType>

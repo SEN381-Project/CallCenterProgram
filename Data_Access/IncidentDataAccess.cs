@@ -143,15 +143,16 @@ namespace CallCenterProgram.Data_Access
 
                 if (readers.Read())
                 {
+                    objIncident.IncidentID = int.Parse(readers[0].ToString());
                     objIncident.ReportInfo = readers[3].ToString();
                     objIncident.TimeIssued = DateTime.Parse(readers[4].ToString());
                     objIncident.Cost = Double.Parse(readers[6].ToString());
-                    objIncident.ClientID = int.Parse(readers[3].ToString());
+                    objIncident.ClientID = int.Parse(readers[1].ToString());
                     objIncident.Priority = int.Parse(readers[5].ToString());
                     objIncident.AbilityReq = readers[7].ToString().Split(',');
                     objIncident.CallWorkerID = int.Parse(readers[2].ToString());
 
-                    incidentData.Add(new Incident(objIncident.ReportInfo, objIncident.TimeIssued, objIncident.Cost, objIncident.ClientID, objIncident.Priority, objIncident.AbilityReq, objIncident.CallWorkerID));
+                    incidentData.Add(new Incident(objIncident.IncidentID, objIncident.ReportInfo, objIncident.TimeIssued, objIncident.Cost, objIncident.ClientID, objIncident.Priority, objIncident.AbilityReq, objIncident.CallWorkerID));
                 }
             }
             catch (Exception ex)
@@ -183,15 +184,16 @@ namespace CallCenterProgram.Data_Access
 
                 if (readers.Read())
                 {
+                    objIncident.IncidentID = int.Parse(readers[0].ToString());
                     objIncident.ReportInfo = readers[3].ToString();
                     objIncident.TimeIssued = DateTime.Parse(readers[4].ToString());
                     objIncident.Cost = Double.Parse(readers[6].ToString());
-                    objIncident.ClientID = int.Parse(readers[3].ToString());
+                    objIncident.ClientID = int.Parse(readers[1].ToString());
                     objIncident.Priority = int.Parse(readers[5].ToString());
                     objIncident.AbilityReq = readers[7].ToString().Split(',');
                     objIncident.CallWorkerID = int.Parse(readers[2].ToString());
 
-                    incidentData.Add(new Incident(objIncident.ReportInfo, objIncident.TimeIssued, objIncident.Cost, objIncident.ClientID, objIncident.Priority, objIncident.AbilityReq, objIncident.CallWorkerID));
+                    incidentData.Add(new Incident(objIncident.IncidentID, objIncident.ReportInfo, objIncident.TimeIssued, objIncident.Cost, objIncident.ClientID, objIncident.Priority, objIncident.AbilityReq, objIncident.CallWorkerID));
                 }
             }
             catch (Exception ex)

@@ -11,6 +11,7 @@ namespace CallCenterProgram.Bussiness_Logic
 {
     class Incident : Call
     {
+        private int incidentID;
         private string reportInfo;
         private DateTime timeIssued;
         private Double cost;
@@ -19,6 +20,11 @@ namespace CallCenterProgram.Bussiness_Logic
         private string[] abilityReq;
         private int callWorkerID;
 
+        public int IncidentID
+        {
+            get { return incidentID; }
+            set { incidentID = value; }
+        }
 
         public string ReportInfo
         {
@@ -66,8 +72,9 @@ namespace CallCenterProgram.Bussiness_Logic
         {
         }
 
-        public Incident(string reportInfo, DateTime timeIssued, Double cost, int clientID, int priority, string[] abilityReq, int callWorkerID)
+        public Incident(int incidentID, string reportInfo, DateTime timeIssued, Double cost, int clientID, int priority, string[] abilityReq, int callWorkerID)
         {
+            this.incidentID = incidentID;
             this.reportInfo = reportInfo;
             this.timeIssued = timeIssued;
             this.cost = cost;

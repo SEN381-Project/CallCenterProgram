@@ -123,7 +123,7 @@ namespace CallCenterProgram.Data_Access
 
                 if (readers.Read())
                 {
-                    objJob.CallWorkerID = int.Parse(readers[2].ToString());
+                    objJob.WorkerID = int.Parse(readers[2].ToString());
                     objJob.IncedentID = int.Parse(readers[1].ToString());
 
                     if (int.Parse(readers[2].ToString()) == 1)
@@ -135,7 +135,7 @@ namespace CallCenterProgram.Data_Access
                         objJob.JobStatus = false;
                     }
 
-                    jobData.Add(new Job(objJob.CallWorkerID, objJob.JobStatus, objJob.IncedentID));
+                    jobData.Add(new Job(objJob.WorkerID, objJob.JobStatus, objJob.IncedentID));
                 }
             }
             catch (Exception ex)
@@ -167,7 +167,7 @@ namespace CallCenterProgram.Data_Access
 
                 if (readers.Read())
                 {
-                    objJob.CallWorkerID = int.Parse(readers[2].ToString());
+                    objJob.WorkerID = int.Parse(readers[2].ToString());
                     objJob.IncedentID = int.Parse(readers[1].ToString());
 
                     if (int.Parse(readers[2].ToString()) == 1)
@@ -179,7 +179,7 @@ namespace CallCenterProgram.Data_Access
                         objJob.JobStatus = false;
                     }
 
-                    jobData.Add(new Job(objJob.CallWorkerID, objJob.JobStatus, objJob.IncedentID));
+                    jobData.Add(new Job(objJob.WorkerID, objJob.JobStatus, objJob.IncedentID));
                 }
             }
             catch (Exception ex)

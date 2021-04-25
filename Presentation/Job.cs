@@ -15,9 +15,35 @@ namespace CallCenterProgram.Presentation
 {
     public partial class job : Form
     {
+        JobBussinessLogic jobObj = new JobBussinessLogic();
+
         public job()
         {
             InitializeComponent();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (txtJobID.Text != "")
+            {
+                jobObj.CloseJob(int.Parse(txtJobID.Text));
+            }
+            else
+            {
+                MessageBox.Show("Please enter the jobs ID!", "Wrong Field", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtJobID.Text != "")
+            {
+                dgvIncident.DataSource = jobObj.ViewJob(int.Parse(txtJobID.Text));
+            }
+            else
+            {
+                dgvIncident.DataSource = jobObj.ViewJob();
+            }
         }
     }
 }

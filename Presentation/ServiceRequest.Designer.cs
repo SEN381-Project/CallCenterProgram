@@ -30,11 +30,11 @@
         {
             this.lblHeading = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvIncident = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtIncidentID = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.txtIncidentID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvIncident = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnCreateJob = new System.Windows.Forms.Button();
             this.btnEscalateJob = new System.Windows.Forms.Button();
             this.btnReassignJob = new System.Windows.Forms.Button();
@@ -65,23 +65,22 @@
             this.panel1.Size = new System.Drawing.Size(743, 303);
             this.panel1.TabIndex = 2;
             // 
-            // label1
+            // btnSearch
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "View";
+            this.btnSearch.Location = new System.Drawing.Point(649, 273);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // dgvIncident
+            // txtIncidentID
             // 
-            this.dgvIncident.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIncident.Location = new System.Drawing.Point(19, 41);
-            this.dgvIncident.Name = "dgvIncident";
-            this.dgvIncident.Size = new System.Drawing.Size(705, 228);
-            this.dgvIncident.TabIndex = 3;
+            this.txtIncidentID.Location = new System.Drawing.Point(525, 275);
+            this.txtIncidentID.Name = "txtIncidentID";
+            this.txtIncidentID.Size = new System.Drawing.Size(118, 20);
+            this.txtIncidentID.TabIndex = 5;
             // 
             // label2
             // 
@@ -93,21 +92,23 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Incident ID:";
             // 
-            // txtIncidentID
+            // dgvIncident
             // 
-            this.txtIncidentID.Location = new System.Drawing.Point(525, 275);
-            this.txtIncidentID.Name = "txtIncidentID";
-            this.txtIncidentID.Size = new System.Drawing.Size(118, 20);
-            this.txtIncidentID.TabIndex = 5;
+            this.dgvIncident.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIncident.Location = new System.Drawing.Point(19, 41);
+            this.dgvIncident.Name = "dgvIncident";
+            this.dgvIncident.Size = new System.Drawing.Size(705, 228);
+            this.dgvIncident.TabIndex = 3;
             // 
-            // btnSearch
+            // label1
             // 
-            this.btnSearch.Location = new System.Drawing.Point(649, 273);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 26);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "View";
             // 
             // btnCreateJob
             // 
@@ -117,6 +118,7 @@
             this.btnCreateJob.TabIndex = 7;
             this.btnCreateJob.Text = "Create Job";
             this.btnCreateJob.UseVisualStyleBackColor = true;
+            this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
             // 
             // btnEscalateJob
             // 
@@ -126,6 +128,7 @@
             this.btnEscalateJob.TabIndex = 8;
             this.btnEscalateJob.Text = "Escalate Job";
             this.btnEscalateJob.UseVisualStyleBackColor = true;
+            this.btnEscalateJob.Click += new System.EventHandler(this.btnEscalateJob_Click);
             // 
             // btnReassignJob
             // 
@@ -135,6 +138,7 @@
             this.btnReassignJob.TabIndex = 9;
             this.btnReassignJob.Text = "Re-Assign Job";
             this.btnReassignJob.UseVisualStyleBackColor = true;
+            this.btnReassignJob.Click += new System.EventHandler(this.btnReassignJob_Click);
             // 
             // frmServiceRequest
             // 

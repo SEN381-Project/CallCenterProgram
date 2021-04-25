@@ -9,15 +9,13 @@ using CallCenterProgram;
 
 namespace CallCenterProgram.Bussiness_Logic
 {
-    class Job : ServiceRequest
+    class Job
     {
         private int workerID;
         private bool jobStatus;
         private int incidentID;
 
-        JobDataAccess jobData = new JobDataAccess();
-
-        public int JobRef
+        public int WorkerID
         {
             get { return workerID; }
             set { workerID = value; }
@@ -44,23 +42,6 @@ namespace CallCenterProgram.Bussiness_Logic
             this.workerID = workerID;
             this.jobStatus = jobStatus;
             this.incidentID = incidentID;
-        }
-
-        public List<Job> ViewJob()
-        {
-            List<Job> jobs = jobData.DisplayJob();
-            return jobs;
-        }
-
-        public List<Job> ViewJob(int jobID)
-        {
-            List<Job> jobs = jobData.DisplayJob(jobID);
-            return jobs;
-        }
-
-        public void CloseJob(int jobID)
-        {
-            jobData.CloseJob(jobID);
         }
     }
 }

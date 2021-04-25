@@ -9,7 +9,7 @@ using CallCenterProgram;
 
 namespace CallCenterProgram.Bussiness_Logic
 {
-    class ServiceRequest : Incident
+    class ServiceRequest
     {
         IncidentDataAccess incidentData = new IncidentDataAccess();
         JobDataAccess jobData = new JobDataAccess();
