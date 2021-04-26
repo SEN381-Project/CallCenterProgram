@@ -30,14 +30,15 @@
         {
             this.lblHeading = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvIncident = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtIncidentID = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.txtIncidentID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvIncident = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnCreateJob = new System.Windows.Forms.Button();
             this.btnEscalateJob = new System.Windows.Forms.Button();
             this.btnReassignJob = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncident)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +47,7 @@
             // 
             this.lblHeading.AutoSize = true;
             this.lblHeading.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.lblHeading.Location = new System.Drawing.Point(245, 19);
             this.lblHeading.Name = "lblHeading";
             this.lblHeading.Size = new System.Drawing.Size(279, 46);
@@ -54,7 +56,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.txtIncidentID);
             this.panel1.Controls.Add(this.label2);
@@ -64,6 +66,44 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(743, 303);
             this.panel1.TabIndex = 2;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnSearch.Location = new System.Drawing.Point(649, 273);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtIncidentID
+            // 
+            this.txtIncidentID.Location = new System.Drawing.Point(525, 275);
+            this.txtIncidentID.Name = "txtIncidentID";
+            this.txtIncidentID.Size = new System.Drawing.Size(118, 20);
+            this.txtIncidentID.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.label2.Location = new System.Drawing.Point(402, 272);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 26);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Incident ID:";
+            // 
+            // dgvIncident
+            // 
+            this.dgvIncident.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIncident.Location = new System.Drawing.Point(19, 41);
+            this.dgvIncident.Name = "dgvIncident";
+            this.dgvIncident.Size = new System.Drawing.Size(705, 228);
+            this.dgvIncident.TabIndex = 3;
             // 
             // label1
             // 
@@ -75,73 +115,62 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "View";
             // 
-            // dgvIncident
-            // 
-            this.dgvIncident.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIncident.Location = new System.Drawing.Point(19, 41);
-            this.dgvIncident.Name = "dgvIncident";
-            this.dgvIncident.Size = new System.Drawing.Size(705, 228);
-            this.dgvIncident.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(402, 272);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 26);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Incident ID:";
-            // 
-            // txtIncidentID
-            // 
-            this.txtIncidentID.Location = new System.Drawing.Point(525, 275);
-            this.txtIncidentID.Name = "txtIncidentID";
-            this.txtIncidentID.Size = new System.Drawing.Size(118, 20);
-            this.txtIncidentID.TabIndex = 5;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(649, 273);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
             // btnCreateJob
             // 
+            this.btnCreateJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnCreateJob.Location = new System.Drawing.Point(36, 405);
             this.btnCreateJob.Name = "btnCreateJob";
             this.btnCreateJob.Size = new System.Drawing.Size(200, 23);
             this.btnCreateJob.TabIndex = 7;
             this.btnCreateJob.Text = "Create Job";
             this.btnCreateJob.UseVisualStyleBackColor = true;
+            this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
             // 
             // btnEscalateJob
             // 
+            this.btnEscalateJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEscalateJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnEscalateJob.Location = new System.Drawing.Point(579, 405);
             this.btnEscalateJob.Name = "btnEscalateJob";
             this.btnEscalateJob.Size = new System.Drawing.Size(200, 23);
             this.btnEscalateJob.TabIndex = 8;
             this.btnEscalateJob.Text = "Escalate Job";
             this.btnEscalateJob.UseVisualStyleBackColor = true;
+            this.btnEscalateJob.Click += new System.EventHandler(this.btnEscalateJob_Click);
             // 
             // btnReassignJob
             // 
+            this.btnReassignJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReassignJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnReassignJob.Location = new System.Drawing.Point(307, 405);
             this.btnReassignJob.Name = "btnReassignJob";
             this.btnReassignJob.Size = new System.Drawing.Size(200, 23);
             this.btnReassignJob.TabIndex = 9;
             this.btnReassignJob.Text = "Re-Assign Job";
             this.btnReassignJob.UseVisualStyleBackColor = true;
+            this.btnReassignJob.Click += new System.EventHandler(this.btnReassignJob_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnHome.Location = new System.Drawing.Point(696, 19);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(83, 27);
+            this.btnHome.TabIndex = 18;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // frmServiceRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnReassignJob);
             this.Controls.Add(this.btnEscalateJob);
             this.Controls.Add(this.btnCreateJob);
@@ -170,5 +199,6 @@
         private System.Windows.Forms.Button btnCreateJob;
         private System.Windows.Forms.Button btnEscalateJob;
         private System.Windows.Forms.Button btnReassignJob;
+        private System.Windows.Forms.Button btnHome;
     }
 }

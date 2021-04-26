@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CallCenterProgram.Data_Access;
-using CallCenterProgram.Presentation;
 using CallCenterProgram;
 
 namespace CallCenterProgram.Bussiness_Logic
 {
-    class Job : ServiceRequest
+    class Job
     {
+        private int jobID;
         private int workerID;
         private bool jobStatus;
         private int incidentID;
 
-        JobDataAccess jobData = new JobDataAccess();
+        public int JobID
+        {
+            get { return jobID; }
+            set { jobID = value; }
+        }
 
-        public int JobRef
+        public int WorkerID
         {
             get { return workerID; }
             set { workerID = value; }
@@ -39,28 +42,12 @@ namespace CallCenterProgram.Bussiness_Logic
         {
         }
 
-        public Job(int workerID, bool jobStatus, int incidentID)
+        public Job(int jobID, int workerID, bool jobStatus, int incidentID)
         {
+            this.jobID = jobID;
             this.workerID = workerID;
             this.jobStatus = jobStatus;
             this.incidentID = incidentID;
-        }
-
-        public List<Job> ViewJob()
-        {
-            List<Job> jobs = jobData.DisplayJob();
-            return jobs;
-        }
-
-        public List<Job> ViewJob(int jobID)
-        {
-            List<Job> jobs = jobData.DisplayJob(jobID);
-            return jobs;
-        }
-
-        public void CloseJob(int jobID)
-        {
-            jobData.CloseJob(jobID);
         }
     }
 }

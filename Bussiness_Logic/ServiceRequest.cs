@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CallCenterProgram.Data_Access;
-using CallCenterProgram.Presentation;
 using CallCenterProgram;
 
 namespace CallCenterProgram.Bussiness_Logic
 {
-    class ServiceRequest : Incident
+    class ServiceRequest
     {
         IncidentDataAccess incidentData = new IncidentDataAccess();
         JobDataAccess jobData = new JobDataAccess();
@@ -55,7 +54,7 @@ namespace CallCenterProgram.Bussiness_Logic
 
         private int getAvailableWorkers(string[] abilityReq)
         {
-            int workerID = 5;
+            int workerID = 1;
             return workerID;
         }
     }
