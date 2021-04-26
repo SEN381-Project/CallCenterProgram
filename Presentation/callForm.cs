@@ -90,10 +90,10 @@ namespace CallCenterProgram.Presentation
 
         private void colorReportRichTextBoxs()
         {
-            colorRichTextBox(rtbCallReport);
-            colorRichTextBox(rtbFaultReport);
-            colorRichTextBox(rtbProblemInfo);
-            colorRichTextBox(rtbWorkRequest);
+            colorRichTextBox(rtxtCallReport);
+            colorRichTextBox(rtxtFaultReport);
+            colorRichTextBox(rtxtProblemInfo);
+            colorRichTextBox(rtxtWorkRequest);
         }
 
         private void colorRichTextBox(RichTextBox rtb)
@@ -122,10 +122,10 @@ namespace CallCenterProgram.Presentation
         private void setValues()
         {
             //set call values
-            call.CallReport = rtbCallReport.Text;
-            call.ProblemInfo = rtbProblemInfo.Text;
-            call.WorkRequest = rtbWorkRequest.Text;
-            call.FaultReport = rtbFaultReport.Text;
+            call.CallReport = rtxtCallReport.Text;
+            call.ProblemInfo = rtxtProblemInfo.Text;
+            call.WorkRequest = rtxtWorkRequest.Text;
+            call.FaultReport = rtxtFaultReport.Text;
         }
 
         //form components
@@ -159,6 +159,10 @@ namespace CallCenterProgram.Presentation
 
         private void btnInsertIntoDB_Click(object sender, EventArgs e)
         {
+            call.CallReport = rtxtCallReport.Text;
+            call.WorkRequest = rtxtWorkRequest.Text;
+            call.FaultReport = rtxtFaultReport.Text;
+            call.ProblemInfo = rtxtProblemInfo.Text;
             try
             {
                 call.InsertCallIntoDB((int) numClientID.Value);
