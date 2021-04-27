@@ -45,9 +45,14 @@
             this.Feedback = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSetReminder = new System.Windows.Forms.Button();
+            this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximizeToggle = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVFollowUp)).BeginInit();
+            this.pnlTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -63,7 +68,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(223)))));
-            this.groupBox1.Location = new System.Drawing.Point(599, 49);
+            this.groupBox1.Location = new System.Drawing.Point(609, 99);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(273, 358);
             this.groupBox1.TabIndex = 0;
@@ -157,7 +162,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridVFollowUp);
-            this.panel1.Location = new System.Drawing.Point(2, 49);
+            this.panel1.Location = new System.Drawing.Point(12, 99);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(598, 358);
             this.panel1.TabIndex = 2;
@@ -175,7 +180,7 @@
             this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainMenu.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenu.Location = new System.Drawing.Point(5, 410);
+            this.MainMenu.Location = new System.Drawing.Point(15, 460);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(135, 46);
             this.MainMenu.TabIndex = 3;
@@ -188,7 +193,7 @@
             this.Exits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Exits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exits.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exits.Location = new System.Drawing.Point(736, 410);
+            this.Exits.Location = new System.Drawing.Point(746, 460);
             this.Exits.Name = "Exits";
             this.Exits.Size = new System.Drawing.Size(136, 46);
             this.Exits.TabIndex = 4;
@@ -201,7 +206,7 @@
             this.Feedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Feedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Feedback.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Feedback.Location = new System.Drawing.Point(155, 410);
+            this.Feedback.Location = new System.Drawing.Point(165, 460);
             this.Feedback.Name = "Feedback";
             this.Feedback.Size = new System.Drawing.Size(140, 46);
             this.Feedback.TabIndex = 5;
@@ -213,7 +218,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(290, 9);
+            this.label6.Location = new System.Drawing.Point(300, 59);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(231, 38);
             this.label6.TabIndex = 10;
@@ -224,7 +229,7 @@
             this.btnSetReminder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.btnSetReminder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetReminder.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetReminder.Location = new System.Drawing.Point(301, 410);
+            this.btnSetReminder.Location = new System.Drawing.Point(311, 460);
             this.btnSetReminder.Name = "btnSetReminder";
             this.btnSetReminder.Size = new System.Drawing.Size(155, 46);
             this.btnSetReminder.TabIndex = 11;
@@ -232,12 +237,69 @@
             this.btnSetReminder.UseVisualStyleBackColor = false;
             this.btnSetReminder.Click += new System.EventHandler(this.btnSetReminder_Click);
             // 
+            // pnlTitleBar
+            // 
+            this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.pnlTitleBar.Controls.Add(this.btnMinimize);
+            this.pnlTitleBar.Controls.Add(this.btnMaximizeToggle);
+            this.pnlTitleBar.Controls.Add(this.btnExit);
+            this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitleBar.Name = "pnlTitleBar";
+            this.pnlTitleBar.Size = new System.Drawing.Size(892, 56);
+            this.pnlTitleBar.TabIndex = 12;
+            this.pnlTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitleBar_MouseMove);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.ForeColor = System.Drawing.Color.Black;
+            this.btnMinimize.Location = new System.Drawing.Point(671, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(75, 56);
+            this.btnMinimize.TabIndex = 3;
+            this.btnMinimize.Text = "Minimize";
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnMaximizeToggle
+            // 
+            this.btnMaximizeToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMaximizeToggle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximizeToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizeToggle.ForeColor = System.Drawing.Color.Black;
+            this.btnMaximizeToggle.Location = new System.Drawing.Point(746, 0);
+            this.btnMaximizeToggle.Name = "btnMaximizeToggle";
+            this.btnMaximizeToggle.Size = new System.Drawing.Size(75, 56);
+            this.btnMaximizeToggle.TabIndex = 4;
+            this.btnMaximizeToggle.Text = "Maximize";
+            this.btnMaximizeToggle.UseVisualStyleBackColor = false;
+            this.btnMaximizeToggle.Click += new System.EventHandler(this.btnMaximizeToggle_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.Black;
+            this.btnExit.Location = new System.Drawing.Point(821, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(71, 56);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // FollowUp_Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(892, 471);
+            this.ClientSize = new System.Drawing.Size(892, 546);
+            this.Controls.Add(this.pnlTitleBar);
             this.Controls.Add(this.btnSetReminder);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Feedback);
@@ -254,6 +316,7 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVFollowUp)).EndInit();
+            this.pnlTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +341,9 @@
         private System.Windows.Forms.Button Feedback;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSetReminder;
+        private System.Windows.Forms.Panel pnlTitleBar;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnMaximizeToggle;
+        private System.Windows.Forms.Button btnExit;
     }
 }
