@@ -121,4 +121,10 @@
   <data name="callcenterexit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\callcenterexit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="callcentermaximize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\callcentermaximize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="callcenterminimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\callcenterminimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

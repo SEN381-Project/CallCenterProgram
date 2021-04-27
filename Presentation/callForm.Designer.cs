@@ -55,7 +55,7 @@ namespace CallCenterProgram.Presentation
             this.lblAgreements = new System.Windows.Forms.Label();
             this.dgvCallHistory = new System.Windows.Forms.DataGridView();
             this.lblClientCallHistory = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAgreements = new System.Windows.Forms.DataGridView();
             this.lblClientInfo = new System.Windows.Forms.Label();
             this.pnlRightSide = new System.Windows.Forms.Panel();
             this.btnEndCall = new System.Windows.Forms.Button();
@@ -69,7 +69,7 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numClientID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgreements)).BeginInit();
             this.pnlRightSide.SuspendLayout();
             this.pnlRightBottom.SuspendLayout();
             this.SuspendLayout();
@@ -189,40 +189,45 @@ namespace CallCenterProgram.Presentation
             // btnMinimize
             // 
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMinimize.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterminimize;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Location = new System.Drawing.Point(1173, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(75, 72);
             this.btnMinimize.TabIndex = 7;
-            this.btnMinimize.Text = "Minimize";
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnMaximizeToggle
             // 
             this.btnMaximizeToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMaximizeToggle.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcentermaximize;
+            this.btnMaximizeToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMaximizeToggle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximizeToggle.FlatAppearance.BorderSize = 0;
             this.btnMaximizeToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizeToggle.Location = new System.Drawing.Point(1248, 0);
             this.btnMaximizeToggle.Name = "btnMaximizeToggle";
             this.btnMaximizeToggle.Size = new System.Drawing.Size(75, 72);
             this.btnMaximizeToggle.TabIndex = 8;
-            this.btnMaximizeToggle.Text = "Maximize";
             this.btnMaximizeToggle.UseVisualStyleBackColor = false;
             this.btnMaximizeToggle.Click += new System.EventHandler(this.btnMaximizeToggle_Click);
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterexit;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Location = new System.Drawing.Point(1323, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(71, 72);
             this.btnExit.TabIndex = 6;
-            this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -311,7 +316,7 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.Controls.Add(this.lblAgreements);
             this.pnlClientInfo.Controls.Add(this.dgvCallHistory);
             this.pnlClientInfo.Controls.Add(this.lblClientCallHistory);
-            this.pnlClientInfo.Controls.Add(this.dataGridView1);
+            this.pnlClientInfo.Controls.Add(this.dgvAgreements);
             this.pnlClientInfo.Controls.Add(this.lblClientInfo);
             this.pnlClientInfo.Location = new System.Drawing.Point(150, 435);
             this.pnlClientInfo.Name = "pnlClientInfo";
@@ -379,13 +384,13 @@ namespace CallCenterProgram.Presentation
             this.lblClientCallHistory.TabIndex = 17;
             this.lblClientCallHistory.Text = "Call History";
             // 
-            // dataGridView1
+            // dgvAgreements
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 148);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(254, 187);
-            this.dataGridView1.TabIndex = 16;
+            this.dgvAgreements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAgreements.Location = new System.Drawing.Point(29, 148);
+            this.dgvAgreements.Name = "dgvAgreements";
+            this.dgvAgreements.Size = new System.Drawing.Size(254, 187);
+            this.dgvAgreements.TabIndex = 16;
             // 
             // lblClientInfo
             // 
@@ -509,7 +514,7 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numClientID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgreements)).EndInit();
             this.pnlRightSide.ResumeLayout(false);
             this.pnlRightBottom.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -532,7 +537,7 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Label lblClientInfo;
         private System.Windows.Forms.Label lblClientCallHistory;
         private System.Windows.Forms.DataGridView dgvCallHistory;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAgreements;
         private System.Windows.Forms.Label lblAgreements;
         private System.Windows.Forms.Label lblReports;
         private System.Windows.Forms.Button btnHome;
