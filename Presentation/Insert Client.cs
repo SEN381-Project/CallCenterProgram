@@ -22,6 +22,19 @@ namespace CallCenterProgram.Presentation
         {
             BackColor = Color.FromArgb(26, 26, 26);
             ForeColor = Color.FromArgb(102, 112, 233);
+
+            nudID.Value = 0;
+            nudStreetNumber.Value = 0;
+            txtName.Clear();
+            txtSurname.Clear();
+            txtEmail.Clear();
+            txtCellphone.Clear();
+            txtStreetName.Clear();
+            txtCity.Clear();
+            lstCountries.ClearSelected();
+            lstCurrentClient.ClearSelected();
+            rtbStatus.Clear();
+            nudID.Focus();
         }
 
         private void btnInsertClient_Click(object sender, EventArgs e)
@@ -53,6 +66,10 @@ namespace CallCenterProgram.Presentation
 
             IndividualClient client = new IndividualClient(id, name, surname, email, cellphone, status, currentclient, streetnumber, streetname, city, country);
             client.SendClientToDataAccess(client);
+
+            Individual_Client_Info clientform= new Individual_Client_Info();
+            clientform.Show();
+            this.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)

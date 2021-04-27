@@ -30,6 +30,8 @@ namespace CallCenterProgram.Presentation
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtRole = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.nudID = new System.Windows.Forms.NumericUpDown();
             this.btnInsertClient = new System.Windows.Forms.Button();
@@ -53,8 +55,6 @@ namespace CallCenterProgram.Presentation
             this.label1 = new System.Windows.Forms.Label();
             this.rtbStatus = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtRole = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStreetNumber)).BeginInit();
@@ -90,6 +90,23 @@ namespace CallCenterProgram.Presentation
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(407, 552);
             this.panel1.TabIndex = 25;
+            // 
+            // txtRole
+            // 
+            this.txtRole.Location = new System.Drawing.Point(202, 423);
+            this.txtRole.Name = "txtRole";
+            this.txtRole.Size = new System.Drawing.Size(117, 23);
+            this.txtRole.TabIndex = 26;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Roboto Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(85, 423);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(33, 15);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Role";
             // 
             // btnBack
             // 
@@ -305,23 +322,6 @@ namespace CallCenterProgram.Presentation
             this.panel2.Size = new System.Drawing.Size(407, 48);
             this.panel2.TabIndex = 26;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Roboto Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(85, 423);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(33, 15);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Role";
-            // 
-            // txtRole
-            // 
-            this.txtRole.Location = new System.Drawing.Point(202, 423);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(117, 23);
-            this.txtRole.TabIndex = 26;
-            // 
             // Insert_Business_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -335,6 +335,7 @@ namespace CallCenterProgram.Presentation
             this.Name = "Insert_Business_Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insert_Business_Client";
+            this.Load += new System.EventHandler(this.Insert_Business_Client_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();

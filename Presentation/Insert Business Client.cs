@@ -43,6 +43,29 @@ namespace CallCenterProgram.Presentation
 
             BusinessClient client = new BusinessClient(id, name, surname, email, cellphone, status, role, streetnumber, streetname, city, country);
             client.SendClientToDataAccess(client);
+
+            Business_Client_Info client_Info = new Business_Client_Info();
+            client_Info.Show();
+            this.Close();
+        }
+
+        private void Insert_Business_Client_Load(object sender, EventArgs e)
+        {
+            BackColor = Color.FromArgb(26, 26, 26);
+            ForeColor = Color.FromArgb(102, 112, 233);
+
+            nudID.Value = 0;
+            nudStreetNumber.Value = 0;
+            txtName.Clear();
+            txtSurname.Clear();
+            txtEmail.Clear();
+            txtCellphone.Clear();
+            txtStreetName.Clear();
+            txtCity.Clear();
+            lstCountries.ClearSelected();
+            rtbStatus.Clear();
+            txtRole.Clear();
+            nudID.Focus();
         }
     }
 }
