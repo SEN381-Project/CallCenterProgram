@@ -30,14 +30,14 @@ namespace CallCenterProgram.Presentation
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvIndividualClients = new System.Windows.Forms.DataGridView();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnViewBusinessClients = new System.Windows.Forms.Button();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.btnUpdateClient = new System.Windows.Forms.Button();
             this.btnDeleteClient = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIndividualClients)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,13 +50,13 @@ namespace CallCenterProgram.Presentation
             this.label1.TabIndex = 0;
             this.label1.Text = "Individual Clients";
             // 
-            // dataGridView1
+            // dgvIndividualClients
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(561, 200);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvIndividualClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIndividualClients.Location = new System.Drawing.Point(29, 48);
+            this.dgvIndividualClients.Name = "dgvIndividualClients";
+            this.dgvIndividualClients.Size = new System.Drawing.Size(561, 200);
+            this.dgvIndividualClients.TabIndex = 1;
             // 
             // btnHome
             // 
@@ -139,14 +139,14 @@ namespace CallCenterProgram.Presentation
             this.Controls.Add(this.btnViewBusinessClients);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnHome);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvIndividualClients);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Name = "Individual_Client_Info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Individual_Client_Info";
             this.Load += new System.EventHandler(this.Individual_Client_Info_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIndividualClients)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +155,7 @@ namespace CallCenterProgram.Presentation
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvIndividualClients;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnViewBusinessClients;

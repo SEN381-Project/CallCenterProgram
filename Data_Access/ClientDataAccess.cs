@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using CallCenterProgram;
 using CallCenterProgram.Bussiness_Logic;
+using System.Data;
 
 namespace CallCenterProgram.Data_Access
 {
@@ -149,6 +150,30 @@ namespace CallCenterProgram.Data_Access
                 conn.Close();
             }
 
+        }
+
+        public BindingSource FillIndividualDGV()
+        {
+            BindingSource src = new BindingSource();
+            string query = @"SELECT Client.ClientID, Client.ClientName, Client.ClientSurname, IndividualClientInfo.ClientStatus, IndividualClientInfo.IsCurrentClient, ClientAddress.StreetNumber, ClientAddress.StreetName, ClientAddress.City, ClientAddress.Country, ClientContactInfo.Email, ClientContactInfo.PhoneNumber
+                             FROM Client, IndividualClientInfo, ClientAddress, ClientContactInfo";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            src.DataSource = table;
+            return src;
+        }
+
+        public BindingSource FillBusinessDGV()
+        {
+            BindingSource src = new BindingSource();
+            string query = @"SELECT Client.ClientID, Client.ClientName, Client.ClientSurname, BusinessClientInfo.ClientRole, BusinessClientInfo.ClientStatus, ClientAddress.StreetNumber, ClientAddress.StreetName, ClientAddress.City, ClientAddress.Country, ClientContactInfo.Email, ClientContactInfo.PhoneNumber
+                             FROM Client, BusinessClientInfo, ClientAddress, ClientContactInfo";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            src.DataSource = table;
+            return src;
         }
     }
 }

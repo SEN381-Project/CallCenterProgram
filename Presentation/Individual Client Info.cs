@@ -12,8 +12,12 @@ using CallCenterProgram;
 
 namespace CallCenterProgram.Presentation
 {
+    
     public partial class Individual_Client_Info : Form
     {
+
+        BindingSource source = new BindingSource();
+
         public Individual_Client_Info()
         {
             InitializeComponent();
@@ -23,6 +27,10 @@ namespace CallCenterProgram.Presentation
         {
             BackColor = Color.FromArgb(26, 26, 26);
             ForeColor = Color.FromArgb(102, 112, 233);
+
+            IndividualClient client = new IndividualClient();
+            source.DataSource = client.GetCustomTable();
+            dgvIndividualClients.DataSource = source;
         }
 
         private void btnViewBusinessClients_Click(object sender, EventArgs e)

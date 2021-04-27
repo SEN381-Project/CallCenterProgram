@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CallCenterProgram.Data_Access;
 using CallCenterProgram.Presentation;
 using CallCenterProgram;
+using System.Windows.Forms;
 
 namespace CallCenterProgram.Bussiness_Logic
 {
@@ -70,6 +71,14 @@ namespace CallCenterProgram.Bussiness_Logic
         {
             ClientDataAccess publish = new ClientDataAccess();
             publish.InsertBusinessClient(client);
+        }
+
+        public BindingSource GetCustomTable()
+        {
+            BindingSource src = new BindingSource();
+            ClientDataAccess dataAccess = new ClientDataAccess();
+            src.DataSource = dataAccess.FillBusinessDGV();
+            return src;
         }
 
         public void getDetailsForInsert()
