@@ -136,7 +136,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.lblTitle.Location = new System.Drawing.Point(474, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(154, 58);
+            this.lblTitle.Size = new System.Drawing.Size(153, 58);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Home";
             // 
@@ -185,6 +185,7 @@
             this.pnlSubContent.Controls.Add(this.pnlContract);
             this.pnlSubContent.Controls.Add(this.pnlClientHome);
             this.pnlSubContent.Controls.Add(this.pnlCall);
+            this.pnlSubContent.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlSubContent.Location = new System.Drawing.Point(58, 80);
             this.pnlSubContent.Name = "pnlSubContent";
             this.pnlSubContent.Size = new System.Drawing.Size(843, 418);
@@ -364,7 +365,7 @@
             // 
             this.btnServiceLevel.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnServiceLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServiceLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServiceLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btnServiceLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnServiceLevel.Location = new System.Drawing.Point(0, 240);
             this.btnServiceLevel.Margin = new System.Windows.Forms.Padding(2);
@@ -381,7 +382,7 @@
             this.btnService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
             this.btnService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
             this.btnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnService.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.btnService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnService.Location = new System.Drawing.Point(0, 180);
             this.btnService.Margin = new System.Windows.Forms.Padding(0);
@@ -398,7 +399,7 @@
             this.btnSecurityLevel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
             this.btnSecurityLevel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
             this.btnSecurityLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSecurityLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSecurityLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btnSecurityLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnSecurityLevel.Location = new System.Drawing.Point(0, 120);
             this.btnSecurityLevel.Margin = new System.Windows.Forms.Padding(0);
@@ -465,9 +466,9 @@
             this.lblPanelTitle.AutoSize = true;
             this.lblPanelTitle.Font = new System.Drawing.Font("Roboto", 24.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.lblPanelTitle.Location = new System.Drawing.Point(371, 14);
+            this.lblPanelTitle.Location = new System.Drawing.Point(371, 20);
             this.lblPanelTitle.Name = "lblPanelTitle";
-            this.lblPanelTitle.Size = new System.Drawing.Size(207, 41);
+            this.lblPanelTitle.Size = new System.Drawing.Size(208, 39);
             this.lblPanelTitle.TabIndex = 2;
             this.lblPanelTitle.Text = "Departments";
             // 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblHeading = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rtbReportInfo = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,20 +47,15 @@
             this.txtCallerID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnCreateIncident = new System.Windows.Forms.Button();
+            this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.Incidents = new System.Windows.Forms.Label();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximizeToggle = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.pnlTitleBar.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblHeading
-            // 
-            this.lblHeading.AutoSize = true;
-            this.lblHeading.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(82)))), ((int)(((byte)(203)))));
-            this.lblHeading.Location = new System.Drawing.Point(323, 9);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(149, 46);
-            this.lblHeading.TabIndex = 0;
-            this.lblHeading.Text = "Incident";
             // 
             // label1
             // 
@@ -161,10 +155,10 @@
             this.radioButton4.AutoSize = true;
             this.radioButton4.Location = new System.Drawing.Point(6, 88);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(48, 17);
+            this.radioButton4.Size = new System.Drawing.Size(72, 17);
             this.radioButton4.TabIndex = 3;
             this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "skill4";
+            this.radioButton4.Text = "Technical";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton3
@@ -172,10 +166,10 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(6, 65);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(48, 17);
+            this.radioButton3.Size = new System.Drawing.Size(71, 17);
             this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "skill3";
+            this.radioButton3.Text = "Hardware";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -183,22 +177,24 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(6, 42);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(48, 17);
+            this.radioButton2.Size = new System.Drawing.Size(67, 17);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "skill2";
+            this.radioButton2.Text = "Software";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(6, 19);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(48, 17);
+            this.radioButton1.Size = new System.Drawing.Size(80, 17);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "skill1";
+            this.radioButton1.Text = "Mechanical";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label5
             // 
@@ -260,18 +256,86 @@
             this.btnCreateIncident.UseVisualStyleBackColor = false;
             this.btnCreateIncident.Click += new System.EventHandler(this.btnCreateIncident_Click);
             // 
+            // pnlTitleBar
+            // 
+            this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.pnlTitleBar.Controls.Add(this.btnHome);
+            this.pnlTitleBar.Controls.Add(this.Incidents);
+            this.pnlTitleBar.Controls.Add(this.btnMinimize);
+            this.pnlTitleBar.Controls.Add(this.btnMaximizeToggle);
+            this.pnlTitleBar.Controls.Add(this.btnExit);
+            this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitleBar.Name = "pnlTitleBar";
+            this.pnlTitleBar.Size = new System.Drawing.Size(800, 56);
+            this.pnlTitleBar.TabIndex = 16;
+            this.pnlTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitleBar_MouseMove);
+            // 
+            // Incidents
+            // 
+            this.Incidents.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Incidents.AutoSize = true;
+            this.Incidents.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Incidents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.Incidents.Location = new System.Drawing.Point(275, 0);
+            this.Incidents.Name = "Incidents";
+            this.Incidents.Size = new System.Drawing.Size(217, 58);
+            this.Incidents.TabIndex = 5;
+            this.Incidents.Text = "Incidents";
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Location = new System.Drawing.Point(579, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(75, 56);
+            this.btnMinimize.TabIndex = 3;
+            this.btnMinimize.Text = "Minimize";
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnMaximizeToggle
+            // 
+            this.btnMaximizeToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMaximizeToggle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximizeToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizeToggle.Location = new System.Drawing.Point(654, 0);
+            this.btnMaximizeToggle.Name = "btnMaximizeToggle";
+            this.btnMaximizeToggle.Size = new System.Drawing.Size(75, 56);
+            this.btnMaximizeToggle.TabIndex = 4;
+            this.btnMaximizeToggle.Text = "Maximize";
+            this.btnMaximizeToggle.UseVisualStyleBackColor = false;
+            this.btnMaximizeToggle.Click += new System.EventHandler(this.btnMaximizeToggle_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(729, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(71, 56);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnHome.Location = new System.Drawing.Point(677, 27);
+            this.btnHome.Location = new System.Drawing.Point(498, 7);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(83, 27);
-            this.btnHome.TabIndex = 16;
+            this.btnHome.Size = new System.Drawing.Size(75, 42);
+            this.btnHome.TabIndex = 8;
             this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click_1);
             // 
             // frmIncident
             // 
@@ -279,7 +343,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(800, 596);
-            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.pnlTitleBar);
             this.Controls.Add(this.btnCreateIncident);
             this.Controls.Add(this.txtCallerID);
             this.Controls.Add(this.label7);
@@ -295,20 +359,19 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rtbReportInfo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblHeading);
             this.Name = "frmIncident";
             this.Text = "Incident";
             this.Load += new System.EventHandler(this.frmIncident_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.pnlTitleBar.ResumeLayout(false);
+            this.pnlTitleBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtbReportInfo;
         private System.Windows.Forms.Label label2;
@@ -328,6 +391,11 @@
         private System.Windows.Forms.TextBox txtCallerID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnCreateIncident;
+        private System.Windows.Forms.Panel pnlTitleBar;
+        private System.Windows.Forms.Label Incidents;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnMaximizeToggle;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnHome;
     }
 }
