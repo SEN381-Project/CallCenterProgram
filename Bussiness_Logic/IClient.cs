@@ -11,7 +11,7 @@ namespace CallCenterProgram.Bussiness_Logic
 {
     public interface IClient
     {
-        void getDetails();
+        //IClient GetDetailsForInsert();
         void getServiceAgreement();
     }
 

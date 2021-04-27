@@ -36,7 +36,7 @@ namespace CallCenterProgram.Bussiness_Logic
             //method for displaying
         }
 
-        public void getDetails()
+        public void getDetailsForInsert()
         {
             
         }

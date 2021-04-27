@@ -12,7 +12,7 @@ namespace CallCenterProgram.Data_Access
 {
     class ClientDataAccess
     {
-        SqlConnection conn = new SqlConnection(@"DataSource=.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI");
+        SqlConnection conn = new SqlConnection(@"Data Source=.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI");
         SqlCommand cmd;
         String query;
 
@@ -83,11 +83,11 @@ namespace CallCenterProgram.Data_Access
             }
         }
 
-        public void InsertIndividualClient(int ID, string name, string surname, string email, string cellphone, string status, string role, int currentclient, int streetnumber, string streetname, string city, string country)
+        public void InsertIndividualClient(IndividualClient client)
         {
             try //this part inserts the ID, name and surname into the Client table
             {
-                query = @"INSERT INTO Client VALUES ('" + ID + "', '" + name + "', '" + surname + "')";
+                query = @"INSERT INTO Client VALUES ('" + client.ClientID + "', '" + client.Name + "', '" + client.Surname + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -103,14 +103,14 @@ namespace CallCenterProgram.Data_Access
 
             try //this part inserts the client status and if the client is a current client into the individual client info table
             {
-                query = @"INSERT INTO IndividualClientInfo VALUES ('" + ID + "', '" + status + "', '" + currentclient + "')";
+                query = @"INSERT INTO IndividualClientInfo VALUES ('" + client.ClientID + "', '" + client.ClientStatus + "', '" + client.IsCurrentClient + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
-                MessageBox.Show("Could not insert to the BusinessClientInfo table: {0}", e.Message);
+                MessageBox.Show("Could not insert to the IndividualClientInfo table: {0}", e.Message);
             }
             finally
             {
@@ -119,7 +119,7 @@ namespace CallCenterProgram.Data_Access
 
             try //this part inserts the client address into the client address table
             {
-                query = @"INSERT INTO ClientAddress VALUES ('" + ID + "', '" + streetnumber + "', '" + streetname + "', '" + city + "', '" + country + "')";
+                query = @"INSERT INTO ClientAddress VALUES ('" + client.ClientID + "', '" + client.Streetnumber + "', '" + client.Streetname + "', '" + client.City + "', '" + client.Country + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -135,7 +135,7 @@ namespace CallCenterProgram.Data_Access
 
             try //this part inserts the client contact info into the ClientContactInfo table
             {
-                query = @"INSERT INTO ClientAddress VALUES ('" + ID + "', '" + email + "', '" + cellphone + "')";
+                query = @"INSERT INTO ClientContactInfo VALUES ('" + client.ClientID + "', '" + client.Email + "', '" + client.Cellphone + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();

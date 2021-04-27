@@ -44,5 +44,12 @@ namespace CallCenterProgram.Presentation
             homeform.Show();
             this.Close();
         }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            Insert_Client client = new Insert_Client();
+            client.Show();
+            this.Close();
+        }
     }
 }
