@@ -142,19 +142,18 @@ namespace CallCenterProgram.Data_Access
 
         #region Update Functions: Update data
         // Only the manager can use this method (or anyone with clearance to update services data)
-        public void UpdateService(int serviceID, string name, string equipmentType, string workExpenses)
+        public void UpdateService(int serviceID, string name, string equipmentType, string workExpenses, int state)
         {
-            string query = $"UPDATE Service SET Name = {name}, EquipmentType = {equipmentType}, WorkExpenses = {workExpenses} WHERE ServiceID = {serviceID}";
+            string query = $"UPDATE Service SET Name = '{name}', EquipmentType = '{equipmentType}', [State] = {state}, WorkExpenses = '{workExpenses}' WHERE ServiceID = {serviceID}";
+
             conn = new SqlConnection(connect);
-
-            conn.Open();
-
             command = new SqlCommand(query, conn);
 
             try
             {
+                conn.Open();
                 command.ExecuteNonQuery();
-                MessageBox.Show("Service updated succesfully", "Service update Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Service: {name} updated succesfully", "Service update Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -277,14 +276,13 @@ namespace CallCenterProgram.Data_Access
         public void UpdateService(int serviceID, int state)
         {
             string query = $"UPDATE Service SET State = {state} WHERE ServiceID = {serviceID}";
+
             conn = new SqlConnection(connect);
-
-            conn.Open();
-
             command = new SqlCommand(query, conn);
 
             try
             {
+                conn.Open();
                 command.ExecuteNonQuery();
                 // MessageBox.Show() overload number 7
                 MessageBox.Show("State updated succesfully", "Service State Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -440,6 +438,36 @@ namespace CallCenterProgram.Data_Access
             }
 
             return levels;
+        }
+
+        public List<Bussiness_Logic.Service> GetAllServices()
+        {
+            List<Bussiness_Logic.Service> services = new List<Bussiness_Logic.Service>();
+            string query = $"SELECT * FROM [Service]";
+
+            SqlConnection conn = new SqlConnection(connect);
+            SqlCommand command = new SqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Bussiness_Logic.Service service = new Bussiness_Logic.Service(reader.GetString(1), reader.GetInt32(0), reader.GetString(3), reader.GetString(2), reader.GetBoolean(4));
+                    services.Add(service);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not find Services " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return services;
         }
         #endregion
     }
