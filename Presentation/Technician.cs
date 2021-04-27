@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
-using CallCenterProgram.Data_Access;
 using CallCenterProgram;
 
 namespace CallCenterProgram.Presentation
@@ -19,11 +18,12 @@ namespace CallCenterProgram.Presentation
         {
             InitializeComponent();
         }
-        Employee_DataAccess handler = new Employee_DataAccess();
+
+        Technicians technicians = new Technicians();
 
         private void Employee_Click(object sender, EventArgs e)
         {
-            Presentation.Employee employee = new Presentation.Employee();
+            Employee employee = new Employee();
             employee.Show();
         }
 
@@ -40,24 +40,22 @@ namespace CallCenterProgram.Presentation
 
         private void InsertT_Click(object sender, EventArgs e)
         {
-            handler.InsertTechnicians(txtability.Text, txtq.Text);
+            technicians.InsertTechnicians(txtability.Text, txtq.Text);
         }
 
         private void UpdateT_Click(object sender, EventArgs e)
         {
-            handler.InsertTechnicians(txtability.Text, txtq.Text);
+            technicians.InsertTechnicians(txtability.Text, txtq.Text);
         }
 
         private void DeleteT_Click(object sender, EventArgs e)
         {
-            handler.DeleteTechnicians(txtability.Text, txtq.Text);
+            technicians.DeleteTechnicians(txtability.Text, txtq.Text);
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void Technician_Load(object sender, EventArgs e)
         {
-            //adding colo in the form
-            BackColor = Color.FromArgb(26, 26, 26);
-            ForeColor = Color.FromArgb(102, 112, 233);
+
         }
     }
 }

@@ -113,7 +113,7 @@ namespace CallCenterProgram
         //follow up
         private void btnFollowUp_Click(object sender, EventArgs e)
         {
-            FollowUp form = new FollowUp();
+            FollowUp_Presentation form = new FollowUp_Presentation();
             showForm(form);
         }
 
@@ -125,7 +125,7 @@ namespace CallCenterProgram
 
         private void btnManager_Click(object sender, EventArgs e)
         {
-            Manager form = new Manager();
+            Manager_Presentation form = new Manager_Presentation();
             showForm(form);
         }
 

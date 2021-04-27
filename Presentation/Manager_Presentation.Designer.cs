@@ -1,6 +1,6 @@
 ﻿namespace CallCenterProgram.Presentation
 {
-    partial class Manager
+    partial class Manager_Presentation
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridVEmployee = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -49,18 +49,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Insert = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.DeleteDepartment = new System.Windows.Forms.Button();
-            this.UpdateDepartment = new System.Windows.Forms.Button();
-            this.InsertDepartment = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtstationnumber = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtdepartmentname = new System.Windows.Forms.TextBox();
-            this.txtdepartmentid = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DeleteEm = new System.Windows.Forms.Button();
             this.txtEmployeeAddress = new System.Windows.Forms.TextBox();
@@ -95,11 +83,8 @@
             this.Exit = new System.Windows.Forms.Button();
             this.Employee = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridVEmployee)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -107,30 +92,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label1.Location = new System.Drawing.Point(455, 9);
+            this.label1.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.label1.Location = new System.Drawing.Point(439, -2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 25);
+            this.label1.Size = new System.Drawing.Size(143, 38);
             this.label1.TabIndex = 10;
             this.label1.Text = "Manager";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridVEmployee);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(12, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(499, 253);
+            this.panel1.Size = new System.Drawing.Size(990, 253);
             this.panel1.TabIndex = 11;
             // 
-            // dataGridView1
+            // dataGridVEmployee
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(493, 250);
-            this.dataGridView1.TabIndex = 29;
+            this.dataGridVEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridVEmployee.Location = new System.Drawing.Point(3, 3);
+            this.dataGridVEmployee.Name = "dataGridVEmployee";
+            this.dataGridVEmployee.Size = new System.Drawing.Size(984, 250);
+            this.dataGridVEmployee.TabIndex = 29;
             // 
             // groupBox1
             // 
@@ -301,120 +286,6 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "JobDescription:";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Location = new System.Drawing.Point(508, 36);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(503, 253);
-            this.panel2.TabIndex = 12;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(491, 250);
-            this.dataGridView2.TabIndex = 30;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.DeleteDepartment);
-            this.groupBox2.Controls.Add(this.UpdateDepartment);
-            this.groupBox2.Controls.Add(this.InsertDepartment);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtstationnumber);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txtdepartmentname);
-            this.groupBox2.Controls.Add(this.txtdepartmentid);
-            this.groupBox2.ForeColor = System.Drawing.Color.Fuchsia;
-            this.groupBox2.Location = new System.Drawing.Point(124, 253);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(376, 338);
-            this.groupBox2.TabIndex = 29;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Department_Info";
-            // 
-            // DeleteDepartment
-            // 
-            this.DeleteDepartment.BackColor = System.Drawing.SystemColors.Desktop;
-            this.DeleteDepartment.Location = new System.Drawing.Point(135, 309);
-            this.DeleteDepartment.Name = "DeleteDepartment";
-            this.DeleteDepartment.Size = new System.Drawing.Size(75, 23);
-            this.DeleteDepartment.TabIndex = 34;
-            this.DeleteDepartment.Text = "Delete";
-            this.DeleteDepartment.UseVisualStyleBackColor = false;
-            // 
-            // UpdateDepartment
-            // 
-            this.UpdateDepartment.BackColor = System.Drawing.SystemColors.Desktop;
-            this.UpdateDepartment.Location = new System.Drawing.Point(19, 309);
-            this.UpdateDepartment.Name = "UpdateDepartment";
-            this.UpdateDepartment.Size = new System.Drawing.Size(75, 23);
-            this.UpdateDepartment.TabIndex = 33;
-            this.UpdateDepartment.Text = "Update";
-            this.UpdateDepartment.UseVisualStyleBackColor = false;
-            // 
-            // InsertDepartment
-            // 
-            this.InsertDepartment.BackColor = System.Drawing.SystemColors.Desktop;
-            this.InsertDepartment.Location = new System.Drawing.Point(21, 266);
-            this.InsertDepartment.Name = "InsertDepartment";
-            this.InsertDepartment.Size = new System.Drawing.Size(75, 23);
-            this.InsertDepartment.TabIndex = 32;
-            this.InsertDepartment.Text = "Insert";
-            this.InsertDepartment.UseVisualStyleBackColor = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 49);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "DepartmentId:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 126);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 13);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "DerptmentName:";
-            // 
-            // txtstationnumber
-            // 
-            this.txtstationnumber.Location = new System.Drawing.Point(12, 227);
-            this.txtstationnumber.Name = "txtstationnumber";
-            this.txtstationnumber.Size = new System.Drawing.Size(161, 20);
-            this.txtstationnumber.TabIndex = 31;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 190);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "StationNumber:";
-            // 
-            // txtdepartmentname
-            // 
-            this.txtdepartmentname.Location = new System.Drawing.Point(12, 158);
-            this.txtdepartmentname.Name = "txtdepartmentname";
-            this.txtdepartmentname.Size = new System.Drawing.Size(161, 20);
-            this.txtdepartmentname.TabIndex = 30;
-            // 
-            // txtdepartmentid
-            // 
-            this.txtdepartmentid.Location = new System.Drawing.Point(12, 82);
-            this.txtdepartmentid.Name = "txtdepartmentid";
-            this.txtdepartmentid.Size = new System.Drawing.Size(161, 20);
-            this.txtdepartmentid.TabIndex = 29;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.DeleteEm);
@@ -435,18 +306,20 @@
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.ForeColor = System.Drawing.Color.Fuchsia;
+            this.groupBox3.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.groupBox3.Location = new System.Drawing.Point(12, 289);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(547, 250);
+            this.groupBox3.Size = new System.Drawing.Size(547, 261);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Employee_Info";
             // 
             // DeleteEm
             // 
-            this.DeleteEm.BackColor = System.Drawing.SystemColors.Desktop;
-            this.DeleteEm.Location = new System.Drawing.Point(119, 215);
+            this.DeleteEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.DeleteEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteEm.Location = new System.Drawing.Point(119, 226);
             this.DeleteEm.Name = "DeleteEm";
             this.DeleteEm.Size = new System.Drawing.Size(86, 32);
             this.DeleteEm.TabIndex = 34;
@@ -456,60 +329,60 @@
             // 
             // txtEmployeeAddress
             // 
-            this.txtEmployeeAddress.Location = new System.Drawing.Point(80, 144);
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(96, 154);
             this.txtEmployeeAddress.Name = "txtEmployeeAddress";
-            this.txtEmployeeAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeAddress.Size = new System.Drawing.Size(139, 30);
             this.txtEmployeeAddress.TabIndex = 33;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 34);
+            this.label4.Location = new System.Drawing.Point(6, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.Size = new System.Drawing.Size(118, 23);
             this.label4.TabIndex = 32;
             this.label4.Text = "EmployeeId: ";
             // 
             // txtMjobDespription
             // 
-            this.txtMjobDespription.Location = new System.Drawing.Point(363, 68);
+            this.txtMjobDespription.Location = new System.Drawing.Point(405, 66);
             this.txtMjobDespription.Name = "txtMjobDespription";
-            this.txtMjobDespription.Size = new System.Drawing.Size(100, 20);
+            this.txtMjobDespription.Size = new System.Drawing.Size(100, 30);
             this.txtMjobDespription.TabIndex = 28;
             // 
             // txtMjobtitle
             // 
             this.txtMjobtitle.Location = new System.Drawing.Point(336, 34);
             this.txtMjobtitle.Name = "txtMjobtitle";
-            this.txtMjobtitle.Size = new System.Drawing.Size(100, 20);
+            this.txtMjobtitle.Size = new System.Drawing.Size(169, 30);
             this.txtMjobtitle.TabIndex = 27;
             // 
             // txtContactDetails
             // 
-            this.txtContactDetails.Location = new System.Drawing.Point(105, 182);
+            this.txtContactDetails.Location = new System.Drawing.Point(135, 190);
             this.txtContactDetails.Name = "txtContactDetails";
-            this.txtContactDetails.Size = new System.Drawing.Size(100, 20);
+            this.txtContactDetails.Size = new System.Drawing.Size(100, 30);
             this.txtContactDetails.TabIndex = 26;
             // 
             // txtEmployeesurname
             // 
-            this.txtEmployeesurname.Location = new System.Drawing.Point(80, 107);
+            this.txtEmployeesurname.Location = new System.Drawing.Point(121, 118);
             this.txtEmployeesurname.Name = "txtEmployeesurname";
-            this.txtEmployeesurname.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeesurname.Size = new System.Drawing.Size(114, 30);
             this.txtEmployeesurname.TabIndex = 25;
             // 
             // txtEmployeename
             // 
-            this.txtEmployeename.Location = new System.Drawing.Point(80, 64);
+            this.txtEmployeename.Location = new System.Drawing.Point(96, 81);
             this.txtEmployeename.Name = "txtEmployeename";
-            this.txtEmployeename.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeename.Size = new System.Drawing.Size(139, 30);
             this.txtEmployeename.TabIndex = 24;
             // 
             // txtEmployeeId
             // 
-            this.txtEmployeeId.Location = new System.Drawing.Point(80, 31);
+            this.txtEmployeeId.Location = new System.Drawing.Point(130, 35);
             this.txtEmployeeId.Name = "txtEmployeeId";
-            this.txtEmployeeId.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeId.Size = new System.Drawing.Size(105, 30);
             this.txtEmployeeId.TabIndex = 23;
             // 
             // label6
@@ -517,16 +390,16 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(256, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.Size = new System.Drawing.Size(81, 23);
             this.label6.TabIndex = 22;
             this.label6.Text = "JobTitle:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 71);
+            this.label12.Location = new System.Drawing.Point(6, 84);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.Size = new System.Drawing.Size(64, 23);
             this.label12.TabIndex = 10;
             this.label12.Text = "Name:";
             // 
@@ -543,25 +416,26 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 185);
+            this.label14.Location = new System.Drawing.Point(6, 197);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 13);
+            this.label14.Size = new System.Drawing.Size(135, 23);
             this.label14.TabIndex = 18;
             this.label14.Text = "ContactDetails:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 107);
+            this.label15.Location = new System.Drawing.Point(2, 124);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 13);
+            this.label15.Size = new System.Drawing.Size(88, 23);
             this.label15.TabIndex = 11;
             this.label15.Text = "Surname:";
             // 
             // UpdateEm
             // 
-            this.UpdateEm.BackColor = System.Drawing.SystemColors.Desktop;
-            this.UpdateEm.Location = new System.Drawing.Point(10, 215);
+            this.UpdateEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.UpdateEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateEm.Location = new System.Drawing.Point(6, 227);
             this.UpdateEm.Name = "UpdateEm";
             this.UpdateEm.Size = new System.Drawing.Size(89, 32);
             this.UpdateEm.TabIndex = 20;
@@ -572,9 +446,9 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 147);
+            this.label16.Location = new System.Drawing.Point(6, 158);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 13);
+            this.label16.Size = new System.Drawing.Size(84, 23);
             this.label16.TabIndex = 12;
             this.label16.Text = "Address:";
             // 
@@ -593,7 +467,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(256, 71);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 13);
+            this.label17.Size = new System.Drawing.Size(140, 23);
             this.label17.TabIndex = 15;
             this.label17.Text = "JobDescription:";
             // 
@@ -609,18 +483,20 @@
             this.groupBox4.Controls.Add(this.label20);
             this.groupBox4.Controls.Add(this.txtNameDepartment);
             this.groupBox4.Controls.Add(this.txtidDepartment);
-            this.groupBox4.ForeColor = System.Drawing.Color.Fuchsia;
+            this.groupBox4.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.groupBox4.Location = new System.Drawing.Point(556, 289);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(446, 250);
+            this.groupBox4.Size = new System.Drawing.Size(446, 261);
             this.groupBox4.TabIndex = 28;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Department_Info";
             // 
             // DeleteDp
             // 
-            this.DeleteDp.BackColor = System.Drawing.SystemColors.Desktop;
-            this.DeleteDp.Location = new System.Drawing.Point(135, 215);
+            this.DeleteDp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.DeleteDp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteDp.Location = new System.Drawing.Point(135, 227);
             this.DeleteDp.Name = "DeleteDp";
             this.DeleteDp.Size = new System.Drawing.Size(92, 32);
             this.DeleteDp.TabIndex = 35;
@@ -650,8 +526,9 @@
             // 
             // UpdateDp
             // 
-            this.UpdateDp.BackColor = System.Drawing.SystemColors.Desktop;
-            this.UpdateDp.Location = new System.Drawing.Point(12, 215);
+            this.UpdateDp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.UpdateDp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateDp.Location = new System.Drawing.Point(10, 226);
             this.UpdateDp.Name = "UpdateDp";
             this.UpdateDp.Size = new System.Drawing.Size(99, 32);
             this.UpdateDp.TabIndex = 32;
@@ -664,7 +541,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(6, 40);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 13);
+            this.label18.Size = new System.Drawing.Size(128, 23);
             this.label18.TabIndex = 16;
             this.label18.Text = "DepartmentId:";
             // 
@@ -673,7 +550,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(6, 95);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(87, 13);
+            this.label19.Size = new System.Drawing.Size(152, 23);
             this.label19.TabIndex = 17;
             this.label19.Text = "DerptmentName:";
             // 
@@ -681,39 +558,41 @@
             // 
             this.txtSationNo.Location = new System.Drawing.Point(6, 178);
             this.txtSationNo.Name = "txtSationNo";
-            this.txtSationNo.Size = new System.Drawing.Size(161, 20);
+            this.txtSationNo.Size = new System.Drawing.Size(161, 30);
             this.txtSationNo.TabIndex = 31;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 145);
+            this.label20.Location = new System.Drawing.Point(6, 154);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(80, 13);
+            this.label20.Size = new System.Drawing.Size(139, 23);
             this.label20.TabIndex = 14;
             this.label20.Text = "StationNumber:";
             // 
             // txtNameDepartment
             // 
-            this.txtNameDepartment.Location = new System.Drawing.Point(6, 111);
+            this.txtNameDepartment.Location = new System.Drawing.Point(6, 121);
             this.txtNameDepartment.Name = "txtNameDepartment";
-            this.txtNameDepartment.Size = new System.Drawing.Size(161, 20);
+            this.txtNameDepartment.Size = new System.Drawing.Size(161, 30);
             this.txtNameDepartment.TabIndex = 30;
             // 
             // txtidDepartment
             // 
             this.txtidDepartment.Location = new System.Drawing.Point(6, 62);
             this.txtidDepartment.Name = "txtidDepartment";
-            this.txtidDepartment.Size = new System.Drawing.Size(161, 20);
+            this.txtidDepartment.Size = new System.Drawing.Size(161, 30);
             this.txtidDepartment.TabIndex = 29;
             // 
             // MainMenu
             // 
-            this.MainMenu.BackColor = System.Drawing.SystemColors.Desktop;
-            this.MainMenu.ForeColor = System.Drawing.Color.Fuchsia;
-            this.MainMenu.Location = new System.Drawing.Point(0, 540);
+            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainMenu.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.MainMenu.Location = new System.Drawing.Point(12, 550);
             this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(97, 32);
+            this.MainMenu.Size = new System.Drawing.Size(113, 38);
             this.MainMenu.TabIndex = 29;
             this.MainMenu.Text = "MainMenu";
             this.MainMenu.UseVisualStyleBackColor = false;
@@ -721,11 +600,13 @@
             // 
             // Exit
             // 
-            this.Exit.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Exit.ForeColor = System.Drawing.Color.Fuchsia;
-            this.Exit.Location = new System.Drawing.Point(921, 540);
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.Exit.Location = new System.Drawing.Point(868, 550);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(87, 32);
+            this.Exit.Size = new System.Drawing.Size(134, 38);
             this.Exit.TabIndex = 30;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = false;
@@ -733,41 +614,40 @@
             // 
             // Employee
             // 
-            this.Employee.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Employee.ForeColor = System.Drawing.Color.Fuchsia;
-            this.Employee.Location = new System.Drawing.Point(117, 540);
+            this.Employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Employee.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Employee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.Employee.Location = new System.Drawing.Point(168, 550);
             this.Employee.Name = "Employee";
-            this.Employee.Size = new System.Drawing.Size(100, 32);
+            this.Employee.Size = new System.Drawing.Size(141, 38);
             this.Employee.TabIndex = 31;
             this.Employee.Text = "Employee";
             this.Employee.UseVisualStyleBackColor = false;
             this.Employee.Click += new System.EventHandler(this.Employee_Click);
             // 
-            // Form5
+            // Manager_Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1011, 572);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.ClientSize = new System.Drawing.Size(1062, 588);
             this.Controls.Add(this.Employee);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form5";
-            this.Text = "Form5";
+            this.Name = "Manager_Presentation";
+            this.Text = "Manager";
+            this.Load += new System.EventHandler(this.Manager_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridVEmployee)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -781,7 +661,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label13;
@@ -800,16 +679,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Insert;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button DeleteDepartment;
-        private System.Windows.Forms.Button UpdateDepartment;
         private System.Windows.Forms.Button InsertDepartment;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtstationnumber;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtdepartmentname;
-        private System.Windows.Forms.TextBox txtdepartmentid;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button DeleteEm;
         private System.Windows.Forms.TextBox txtEmployeeAddress;
@@ -841,9 +711,8 @@
         private System.Windows.Forms.TextBox txtNameDepartment;
         private System.Windows.Forms.TextBox txtidDepartment;
         private System.Windows.Forms.Button MainMenu;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridVEmployee;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Employee;
-        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

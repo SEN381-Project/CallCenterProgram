@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CallCenterProgram.Data_Access;
 using CallCenterProgram.Presentation;
 using CallCenterProgram;
 
@@ -33,20 +32,6 @@ namespace CallCenterProgram.Bussiness_Logic
         public int DepartmentId { get => departmentId; set => departmentId = value; }
         public string DepartmentName { get => derptmentName; set => derptmentName = value; }
         public int StationNumber { get => stationNumber; set => stationNumber = value; }
-
-        //public Employee()
-        //{
-        //    this.EmployeeId = employeeId;
-        //    this.Name = name;
-        //    this.Surname = surname;
-        //    this.Address = address;
-        //    this.ContactDetails = contactDetails;
-        //    this.Jobtitle = jobTitle;
-        //    this.JobDescription = jobDescription;
-        //    this.DepartmentId = departmentId;
-        //    this.DepartmentName = DepartmentName;
-        //    this.StationNumber = stationNumber;
-        //}
 
         public override bool Equals(object obj)
         {

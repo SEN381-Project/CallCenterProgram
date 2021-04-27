@@ -71,12 +71,14 @@
     <Compile Include="Bussiness_Logic\FollowUp.cs" />
     <Compile Include="Data_Access\FollowUp_DataAccess.cs" />
     <Compile Include="Bussiness_Logic\IClient.cs" />
-    <Compile Include="HomeForm.cs">
+    <Compile Include="FollowUpBusiness.cs" />
+    <Compile Include="Presentation\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeForm.Designer.cs">
+    <Compile Include="Presentation\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bussiness_Logic\ManagerBusiness.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Presentation\Business Client Info.cs">
@@ -128,11 +130,11 @@
     <Compile Include="Presentation\Job.Designer.cs">
       <DependentUpon>Job.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Manager.cs">
+    <Compile Include="Presentation\Manager_Presentation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\Manager.Designer.cs">
-      <DependentUpon>Manager.cs</DependentUpon>
+    <Compile Include="Presentation\Manager_Presentation.Designer.cs">
+      <DependentUpon>Manager_Presentation.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ServiceRequest.Designer.cs">
       <DependentUpon>ServiceRequest.cs</DependentUpon>
@@ -170,11 +172,11 @@
     <Compile Include="Presentation\ServiceRequest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\FollowUp.cs">
+    <Compile Include="Presentation\FollowUp_Presentation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\FollowUp.Designer.cs">
-      <DependentUpon>FollowUp.cs</DependentUpon>
+    <Compile Include="Presentation\FollowUp_Presentation.Designer.cs">
+      <DependentUpon>FollowUp_Presentation.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Feedback.cs">
       <SubType>Form</SubType>
@@ -184,7 +186,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Bussiness_Logic\Manager.cs" />
-    <EmbeddedResource Include="HomeForm.resx">
+    <Compile Include="Presentation\SetReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\SetReminder.Designer.cs">
+      <DependentUpon>SetReminder.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentation\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.callForm.resources" />
@@ -234,14 +242,14 @@
     <EmbeddedResource Include="Presentation\ServiceRequest.resx">
       <DependentUpon>ServiceRequest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Manager.resx">
-      <DependentUpon>Manager.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\Manager_Presentation.resx">
+      <DependentUpon>Manager_Presentation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Technician.resx">
       <DependentUpon>Technician.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\FollowUp.resx">
-      <DependentUpon>FollowUp.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\FollowUp_Presentation.resx">
+      <DependentUpon>FollowUp_Presentation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>
@@ -257,6 +265,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Presentation\SetReminder.resx">
+      <DependentUpon>SetReminder.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include=".vs\slnx.sqlite" />
     <None Include=".vs\VSWorkspaceState.json" />
     <None Include="ClassDiagramUpdated.cd" />

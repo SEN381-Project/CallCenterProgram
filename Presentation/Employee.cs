@@ -8,9 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
-using CallCenterProgram.Data_Access;
 using CallCenterProgram;
-using CallCenterProgram.Presentation;
+
 
 namespace CallCenterProgram.Presentation
 {
@@ -20,13 +19,12 @@ namespace CallCenterProgram.Presentation
         {
             InitializeComponent();
         }
-        Employee_DataAccess handler = new Employee_DataAccess();
+
+        ManagerBusiness employee = new ManagerBusiness();
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            handler.InsertEmployee(int.Parse(txtiD.Text), txtName.Text, txtSurname.Text, txtAddress.Text, txtContact.Text, txtjob.Text, txtjobdescription.Text);
-
-           
+            employee.AddEmployee(int.Parse(txtiD.Text), txtName.Text, txtSurname.Text, txtAddress.Text, txtContact.Text, txtjob.Text, txtjobdescription.Text);
         }
 
         private void MainMenu_Click(object sender, EventArgs e)
@@ -44,7 +42,7 @@ namespace CallCenterProgram.Presentation
 
         private void Manager_Click(object sender, EventArgs e)
         {
-            Manager Manager = new Manager();
+            Manager_Presentation Manager = new Manager_Presentation();
             Manager.Show();
 
         }
@@ -55,14 +53,14 @@ namespace CallCenterProgram.Presentation
         }
 
         private void InsertDepartment_Click(object sender, EventArgs e)
-        { 
-            handler.InsertDepartMent(int.Parse(txtdepartmentid.Text), txtdepartmentname.Text, int.Parse(txtstationnumber.Text));
+        {
+           
+            employee.AddDepartment(int.Parse(txtdepartmentid.Text), txtdepartmentname.Text, int.Parse(txtstationnumber.Text));
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Employee_Load(object sender, EventArgs e)
         {
-            BackColor = Color.FromArgb(26, 26, 26);
-            ForeColor = Color.FromArgb(102, 112, 233);
+
         }
     }
 }

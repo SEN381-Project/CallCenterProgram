@@ -12,35 +12,23 @@ namespace CallCenterProgram.Bussiness_Logic
     class Manager : Employee
     {
 
-        public void AssignJob()
+        public Manager()
         {
-
         }
 
-        public void EscalateIncident()
-        {
 
+        public Manager(int employeeId, string name, string surname, string address, string contactDetails, string jobtitle, string jobDescription, int departmentId, string departmentName, int stationNumber)
+        { 
+            EmployeeId = employeeId;
+            Name = name;
+            Surname = surname;
+            Address = address;
+            ContactDetails = contactDetails;
+            Jobtitle = jobtitle;
+            JobDescription = jobDescription;
+            DepartmentId = departmentId;
+            DepartmentName = departmentName;
+            StationNumber = stationNumber;
         }
-
-        public void FireEmployee()
-        {
-
-        }
-
-        public void ShowStats()
-        {
-
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
-        public void Display()
-        {
-            //method for displaying
-        }
-
     }
-}
+    }
