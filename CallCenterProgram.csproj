@@ -122,6 +122,12 @@
     <Compile Include="Presentation\Individual Client Info.Designer.cs">
       <DependentUpon>Individual Client Info.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Insert Business Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Insert Business Client.Designer.cs">
+      <DependentUpon>Insert Business Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Insert Client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Individual Client Info.resx">
       <DependentUpon>Individual Client Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Insert Business Client.resx">
+      <DependentUpon>Insert Business Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Insert Client.resx">
       <DependentUpon>Insert Client.cs</DependentUpon>

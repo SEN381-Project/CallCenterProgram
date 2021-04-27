@@ -47,7 +47,7 @@ namespace CallCenterProgram.Presentation
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            Insert_Client client = new Insert_Client();
+            Insert_Business_Client client = new Insert_Business_Client();
             client.Show();
             this.Close();
         }

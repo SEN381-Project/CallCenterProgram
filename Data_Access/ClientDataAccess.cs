@@ -68,7 +68,7 @@ namespace CallCenterProgram.Data_Access
 
             try //this part inserts the client contact info into the ClientContactInfo table
             {
-                query = @"INSERT INTO ClientAddress VALUES ('" + ID + "', '" + email + "', '" + cellphone + "')";
+                query = @"INSERT INTO ClientContactInfo VALUES ('" + ID + "', '" + email + "', '" + cellphone + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
