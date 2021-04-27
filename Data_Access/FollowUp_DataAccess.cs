@@ -216,8 +216,8 @@ namespace CallCenterProgram.Data_Access
                 while(Reader.Read())
                 {
                     objFollowUp.FollowUpId = int.Parse(Reader[0].ToString());
-                    objFollowUp.Status = Reader[1].ToString();
-                    objFollowUp.FollowUpDate = DateTime.Parse(Reader[2].ToString());
+                    objFollowUp.Status = Reader[2].ToString();
+                    objFollowUp.FollowUpDate = DateTime.Parse(Reader[3].ToString());
 
 
                     FollowUpData.Add(new FollowUp(objFollowUp.FollowUpId, objFollowUp.Status, objFollowUp.FollowUpDate));
