@@ -189,20 +189,19 @@ namespace CallCenterProgram.Data_Access
             }
         }
         // Only the manager can use this method (or anyone with clearance to update packages data)
-        public void UpdatePackage(int contractTypeID, string packageName, int serviceID, int serviceLevelID)
+        public void UpdatePackage(int contractTypeID, string packageName, string serviceIDs, string serviceLevelIDs)
         {
-            string query = $"UPDATE ContractType SET PackageName = {packageName}, ServiceID = {serviceID}, ServiceLevelID= {serviceLevelID} WHERE ContractTypeID = {contractTypeID}";
+            // testing only change SrviceID to Services and ServiceLevelID to ServiceLevels after testing   
+            string query = $"UPDATE ContractType SET PackageName = '{packageName}', ServiceID = '{serviceIDs}', ServiceLevelID = '{serviceLevelIDs}' WHERE ContractTypeID = {contractTypeID}";
 
             conn = new SqlConnection(connect);
-
-            conn.Open();
-
             command = new SqlCommand(query, conn);
 
             try
             {
+                conn.Open();
                 command.ExecuteNonQuery();
-                MessageBox.Show("Package updated succesfully", "Package update Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Package: {packageName} updated succesfully", "Package update Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -468,6 +467,36 @@ namespace CallCenterProgram.Data_Access
             }
 
             return services;
+        }
+
+        public List<Bussiness_Logic.Package> GetAllPackages()
+        {
+            List<Bussiness_Logic.Package> packages = new List<Bussiness_Logic.Package>();
+            string query = $"SELECT * FROM ContractType";
+
+            SqlConnection conn = new SqlConnection(connect);
+            SqlCommand command = new SqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Bussiness_Logic.Package package = new Bussiness_Logic.Package(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(0));
+                    packages.Add(package);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not find packages " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return packages;
         }
         #endregion
     }
