@@ -331,12 +331,12 @@ namespace CallCenterProgram.Data_Access
 
                 while (Reader.Read())
                 {
-                    objEmployee.EmployeeId = int.Parse(Reader[1].ToString());
-                    objEmployee.Name = Reader[2].ToString();
-                    objEmployee.Surname = Reader[3].ToString();
-                    objEmployee.Address = Reader[4].ToString();
-                    objEmployee.ContactDetails = Reader[5].ToString();
-                    objEmployee.Jobtitle = Reader[6].ToString();
+                    objEmployee.EmployeeId = int.Parse(Reader[0].ToString());
+                    objEmployee.Name = Reader[1].ToString();
+                    objEmployee.Surname = Reader[2].ToString();
+                    objEmployee.Address = Reader[3].ToString();
+                    objEmployee.ContactDetails = Reader[4].ToString();
+                    objEmployee.Jobtitle = Reader[5].ToString();
                     objEmployee.JobDescription = Reader[6].ToString();
                     objEmployee.DepartmentId = int.Parse(Reader[7].ToString());
                     objEmployee.DepartmentName = Reader[8].ToString();

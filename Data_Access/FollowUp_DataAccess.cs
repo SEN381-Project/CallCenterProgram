@@ -213,7 +213,7 @@ namespace CallCenterProgram.Data_Access
             {
                 Reader = Command.ExecuteReader();
 
-                if (Reader.Read())
+                while(Reader.Read())
                 {
                     objFollowUp.FollowUpId = int.Parse(Reader[0].ToString());
                     objFollowUp.Status = Reader[1].ToString();
@@ -292,8 +292,8 @@ namespace CallCenterProgram.Data_Access
                 while(Reader.Read())
                 {
                     objFollowUp.ReminderId = int.Parse(Reader[0].ToString());
-                    objFollowUp.Reminder = Reader[2].ToString();
-                    objFollowUp.ReminderDate = DateTime.Parse(Reader[3].ToString());
+                    objFollowUp.Reminder = Reader[1].ToString();
+                    objFollowUp.ReminderDate = DateTime.Parse(Reader[2].ToString());
 
 
                     ReminderData.Add(new FollowUp(objFollowUp.FeedbackId, objFollowUp.Problem, objFollowUp.HelpedOnTime, objFollowUp.Comment, objFollowUp.FeedbackDate));
