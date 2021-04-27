@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
-using CallCenterProgram.Data_Access;
 using CallCenterProgram;
 
 namespace CallCenterProgram.Presentation
 {
+    
     public partial class Individual_Client_Info : Form
     {
+
+        BindingSource source = new BindingSource();
+
         public Individual_Client_Info()
         {
             InitializeComponent();
@@ -38,6 +41,20 @@ namespace CallCenterProgram.Presentation
             Client_Home homeform = new Client_Home();
             homeform.Show();
             this.Close();
+        }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            Insert_Client insert = new Insert_Client();
+            insert.Show();
+            this.Close();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            IndividualClient client = new IndividualClient();
+            source.DataSource = client.GetCustomTable();
+            dgvIndividualClients.DataSource = source;
         }
     }
 }
