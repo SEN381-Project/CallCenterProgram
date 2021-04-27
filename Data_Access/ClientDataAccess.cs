@@ -21,7 +21,7 @@ namespace CallCenterProgram.Data_Access
         {
             try //this part inserts the ID, name and surname into the Client table
             {
-                query = @"INSERT INTO Client VALUES ('" + client.ClientID + "', '" + client.Name + "', '" + client.Surname + "')";
+                query = @"INSERT INTO Client VALUES ('" + client.ClientID + "', '" + client.Name + "', '" + client.Surname + "', 'Business')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -88,7 +88,7 @@ namespace CallCenterProgram.Data_Access
         {
             try //this part inserts the ID, name and surname into the Client table
             {
-                query = @"INSERT INTO Client VALUES ('" + client.ClientID + "', '" + client.Name + "', '" + client.Surname + "')";
+                query = @"INSERT INTO Client VALUES ('" + client.ClientID + "', '" + client.Name + "', '" + client.Surname + "', 'Individual')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -156,7 +156,10 @@ namespace CallCenterProgram.Data_Access
         {
             BindingSource src = new BindingSource();
             string query = @"SELECT Client.ClientID, Client.ClientName, Client.ClientSurname, IndividualClientInfo.ClientStatus, IndividualClientInfo.IsCurrentClient, ClientAddress.StreetNumber, ClientAddress.StreetName, ClientAddress.City, ClientAddress.Country, ClientContactInfo.Email, ClientContactInfo.PhoneNumber
-                             FROM Client, IndividualClientInfo, ClientAddress, ClientContactInfo";
+                             FROM Client INNER JOIN IndividualClientInfo ON Client.ClientID = IndividualClientInfo.ClientID
+			                 INNER JOIN ClientAddress ON Client.ClientID = ClientAddress.ClientID
+			                 INNER JOIN ClientContactInfo ON Client.ClientID = ClientContactInfo.ClientID
+                             WHERE  Client.ClientType = 'Individual'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -168,7 +171,10 @@ namespace CallCenterProgram.Data_Access
         {
             BindingSource src = new BindingSource();
             string query = @"SELECT Client.ClientID, Client.ClientName, Client.ClientSurname, BusinessClientInfo.ClientRole, BusinessClientInfo.ClientStatus, ClientAddress.StreetNumber, ClientAddress.StreetName, ClientAddress.City, ClientAddress.Country, ClientContactInfo.Email, ClientContactInfo.PhoneNumber
-                             FROM Client, BusinessClientInfo, ClientAddress, ClientContactInfo";
+                             FROM Client INNER JOIN BusinessClientInfo ON Client.ClientID = BusinessClientInfo.ClientID
+			                 INNER JOIN ClientAddress ON Client.ClientID = ClientAddress.ClientID
+			                 INNER JOIN ClientContactInfo ON Client.ClientID = ClientContactInfo.ClientID
+                             WHERE Client.CLientType = 'Business'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
             DataTable table = new DataTable();
             adapter.Fill(table);

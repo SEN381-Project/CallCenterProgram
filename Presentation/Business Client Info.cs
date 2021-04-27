@@ -31,10 +31,6 @@ namespace CallCenterProgram.Presentation
         {
             BackColor = Color.FromArgb(26, 26, 26);
             ForeColor = Color.FromArgb(102, 112, 233);
-
-            BusinessClient client = new BusinessClient();
-            source.DataSource = client.GetCustomTable();
-            dgvBusinessClients.DataSource = source;
         }
 
         private void btnViewIndividualClients_Click(object sender, EventArgs e)
@@ -56,6 +52,13 @@ namespace CallCenterProgram.Presentation
             Insert_Business_Client client = new Insert_Business_Client();
             client.Show();
             this.Close();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            BusinessClient client = new BusinessClient();
+            source.DataSource = client.GetCustomTable();
+            dgvBusinessClients.DataSource = source;
         }
     }
 }
