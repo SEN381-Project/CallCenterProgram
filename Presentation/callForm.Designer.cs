@@ -354,7 +354,7 @@ namespace CallCenterProgram.Presentation
             this.lblAgreements.AutoSize = true;
             this.lblAgreements.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgreements.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.lblAgreements.Location = new System.Drawing.Point(532, 107);
+            this.lblAgreements.Location = new System.Drawing.Point(64, 107);
             this.lblAgreements.Name = "lblAgreements";
             this.lblAgreements.Size = new System.Drawing.Size(189, 38);
             this.lblAgreements.TabIndex = 19;
@@ -363,9 +363,9 @@ namespace CallCenterProgram.Presentation
             // dgvCallHistory
             // 
             this.dgvCallHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCallHistory.Location = new System.Drawing.Point(29, 148);
+            this.dgvCallHistory.Location = new System.Drawing.Point(289, 148);
             this.dgvCallHistory.Name = "dgvCallHistory";
-            this.dgvCallHistory.Size = new System.Drawing.Size(299, 187);
+            this.dgvCallHistory.Size = new System.Drawing.Size(598, 187);
             this.dgvCallHistory.TabIndex = 18;
             // 
             // lblClientCallHistory
@@ -373,7 +373,7 @@ namespace CallCenterProgram.Presentation
             this.lblClientCallHistory.AutoSize = true;
             this.lblClientCallHistory.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientCallHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.lblClientCallHistory.Location = new System.Drawing.Point(95, 107);
+            this.lblClientCallHistory.Location = new System.Drawing.Point(496, 107);
             this.lblClientCallHistory.Name = "lblClientCallHistory";
             this.lblClientCallHistory.Size = new System.Drawing.Size(177, 38);
             this.lblClientCallHistory.TabIndex = 17;
@@ -382,9 +382,9 @@ namespace CallCenterProgram.Presentation
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(350, 148);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 148);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(545, 187);
+            this.dataGridView1.Size = new System.Drawing.Size(254, 187);
             this.dataGridView1.TabIndex = 16;
             // 
             // lblClientInfo
