@@ -37,5 +37,74 @@ namespace CallCenterProgram.Presentation
             this.Hide();
             main.Show();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            int security = int.Parse(txtAddSecurityID.Text);
+            decimal late = decimal.Parse(txtAddLateWork.Text);
+            decimal noPerformance = decimal.Parse(txtAddNonPerformance.Text);
+            string name = txtAddName.Text;
+            string optOut = txtAddOptOut.Text;
+            int state = cmbAdd.Text == "Active" ? 1 : 0;
+            ServiceLevel service = new ServiceLevel();
+            service.AddServiceLevel(name, optOut, late, noPerformance, state, security);
+            txtAddSecurityID.Clear();
+            txtAddLateWork.Clear();
+            txtAddNonPerformance.Clear();
+            txtAddName.Clear();
+            txtAddOptOut.Clear();
+            bsService.DataSource = dataAccess.GetAllServiceLevels();
+            bsService.ResetBindings(true);
+        }
+
+        private void dgvExistingServiceLevels_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                txtUpdateServiceID.Text = dgvExistingServiceLevels.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                txtUpdateSecurityID.Text = dgvExistingServiceLevels.Rows[e.RowIndex].Cells[6].FormattedValue.ToString();
+                txtUpdateName.Text = dgvExistingServiceLevels.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                txtUpdateOptOut.Text = dgvExistingServiceLevels.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
+                txtUpdateLate.Text = dgvExistingServiceLevels.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
+                txtUpdatePerformance.Text = dgvExistingServiceLevels.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
+                cmbUpdateAll.Text = dgvExistingServiceLevels.Rows[e.RowIndex].Cells[0].FormattedValue.ToString() == "True" ? "Active" : "Not-Active";
+
+                txtUpdate1.Text = dgvExistingServiceLevels.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                cmbUpdate1.Text = dgvExistingServiceLevels.Rows[e.RowIndex].Cells[0].FormattedValue.ToString() == "True" ? "Active" : "Not-Active";
+            }
+        }
+
+        private void btnUpdateAll_Click(object sender, EventArgs e)
+        {
+            int security = int.Parse(txtUpdateSecurityID.Text);
+            int ServiceLevelID = int.Parse(txtUpdateServiceID.Text);
+            decimal late = decimal.Parse(txtUpdateLate.Text);
+            decimal noPerformance = decimal.Parse(txtUpdatePerformance.Text);
+            string name = txtUpdateName.Text;
+            string optOut = txtUpdateOptOut.Text;
+            int state = cmbUpdateAll.Text == "Active" ? 1 : 0;
+            ServiceLevel service = new ServiceLevel();
+            service.UpdateServiceLevel(ServiceLevelID, name, optOut, late, noPerformance, security, state);
+            bsService.DataSource = dataAccess.GetAllServiceLevels();
+            bsService.ResetBindings(true);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomeForm home = new HomeForm();
+            this.Hide();
+            home.Show();
+        }
+
+        private void btnUpdate1_Click(object sender, EventArgs e)
+        {
+            int serviceLevelID = int.Parse(txtUpdate1.Text);
+            int state = cmbUpdate1.Text == "Active" ? 1 : 0;
+            ServiceLevel service = new ServiceLevel();
+            service.UpdateServiceLevelAvailability(serviceLevelID, state);
+            bsService.DataSource = dataAccess.GetAllServiceLevels();
+            bsService.ResetBindings(true);
+        }
     }
 }

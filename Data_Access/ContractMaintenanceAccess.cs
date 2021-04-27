@@ -46,7 +46,7 @@ namespace CallCenterProgram.Data_Access
             }
         }
         // Only the manager can use this method (or anyone with clearance to create service levels)
-        public void InsertServiceLevel(string levelName, string optOutDetails, double penaltiesForLateWork, double penaltiesForNonPerformance, int state, int securityLevelID)
+        public void InsertServiceLevel(string levelName, string optOutDetails, decimal penaltiesForLateWork, decimal penaltiesForNonPerformance, int state, int securityLevelID)
         {
             string query = $"INSERT INTO ServiceLevel VALUES('{levelName}', '{optOutDetails}', {penaltiesForLateWork},{penaltiesForNonPerformance},{state},{securityLevelID})";
 
@@ -167,20 +167,18 @@ namespace CallCenterProgram.Data_Access
         }
 
         // Only the manager can use this method (or anyone with clearance to update service levels data)
-        public void UpdateServiceLevel(int serviceLevelID,string levelName, string optOutDetails, double penaltiesForLateWork, double penaltiesForNonPerformance)
+        public void UpdateServiceLevel(int serviceLevelID,string levelName, string optOutDetails, decimal penaltiesForLateWork, decimal penaltiesForNonPerformance, int securityLevelID, int state)
         {
-            string query = $"UPDATE ServiceLevel SET Name = {levelName}, OptOutDetails = {optOutDetails}, PenaltiesForLateWork = {penaltiesForLateWork}, PenaltiesForNOnPerformance= {penaltiesForNonPerformance} WHERE ServiceLevelID = {serviceLevelID}";
+            string query = $"UPDATE ServiceLevel SET LevelName = '{levelName}', OptOutDetails = '{optOutDetails}', PenaltiesForLateWork = {penaltiesForLateWork}, PenaltiesForNOnPerformance= {penaltiesForNonPerformance}, [State] = {state}, SecurityLevelID = {securityLevelID} WHERE ServiceLevelID = {serviceLevelID}";
 
             conn = new SqlConnection(connect);
-
-            conn.Open();
-
             command = new SqlCommand(query, conn);
 
             try
             {
+                conn.Open();
                 command.ExecuteNonQuery();
-                MessageBox.Show("Service Level updated succesfully", "Service Level update Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Service Level: {levelName} updated succesfully", "Service Level update Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

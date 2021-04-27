@@ -70,13 +70,14 @@ namespace CallCenterProgram.Presentation
             this.txtUpdateServiceID = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.btnMainMenu = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExistingServiceLevels)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExistingSecurityLevels)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUpdate1
             // 
-            this.txtUpdate1.Location = new System.Drawing.Point(1233, 915);
+            this.txtUpdate1.Location = new System.Drawing.Point(1233, 834);
             this.txtUpdate1.Name = "txtUpdate1";
             this.txtUpdate1.Size = new System.Drawing.Size(402, 22);
             this.txtUpdate1.TabIndex = 34;
@@ -85,7 +86,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(875, 916);
+            this.label9.Location = new System.Drawing.Point(875, 835);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(203, 21);
             this.label9.TabIndex = 33;
@@ -93,12 +94,13 @@ namespace CallCenterProgram.Presentation
             // 
             // btnUpdate1
             // 
-            this.btnUpdate1.Location = new System.Drawing.Point(1492, 1002);
+            this.btnUpdate1.Location = new System.Drawing.Point(1492, 921);
             this.btnUpdate1.Name = "btnUpdate1";
             this.btnUpdate1.Size = new System.Drawing.Size(147, 48);
             this.btnUpdate1.TabIndex = 32;
             this.btnUpdate1.Text = "UPDATE SERVICE LEVEL";
             this.btnUpdate1.UseVisualStyleBackColor = true;
+            this.btnUpdate1.Click += new System.EventHandler(this.btnUpdate1_Click);
             // 
             // btnAdd
             // 
@@ -108,14 +110,15 @@ namespace CallCenterProgram.Presentation
             this.btnAdd.TabIndex = 29;
             this.btnAdd.Text = "ADD SERVICE LEVEL";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(870, 854);
+            this.label7.Location = new System.Drawing.Point(870, 773);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(703, 63);
+            this.label7.Size = new System.Drawing.Size(562, 50);
             this.label7.TabIndex = 28;
             this.label7.Text = "UPDATE SERVICE LEVEL AVILABILITY ONLY\r\nSECTION: (ALL FIELDS TO BE FILLED IN!)";
             // 
@@ -211,6 +214,7 @@ namespace CallCenterProgram.Presentation
             this.dgvExistingServiceLevels.RowTemplate.Height = 24;
             this.dgvExistingServiceLevels.Size = new System.Drawing.Size(781, 235);
             this.dgvExistingServiceLevels.TabIndex = 37;
+            this.dgvExistingServiceLevels.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExistingServiceLevels_CellClick);
             // 
             // label1
             // 
@@ -282,7 +286,7 @@ namespace CallCenterProgram.Presentation
             this.cmbUpdate1.Items.AddRange(new object[] {
             "Active",
             "Not-Active"});
-            this.cmbUpdate1.Location = new System.Drawing.Point(1233, 957);
+            this.cmbUpdate1.Location = new System.Drawing.Point(1233, 876);
             this.cmbUpdate1.Name = "cmbUpdate1";
             this.cmbUpdate1.Size = new System.Drawing.Size(201, 24);
             this.cmbUpdate1.TabIndex = 45;
@@ -291,7 +295,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(875, 957);
+            this.label8.Location = new System.Drawing.Point(875, 876);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(291, 21);
             this.label8.TabIndex = 44;
@@ -333,12 +337,13 @@ namespace CallCenterProgram.Presentation
             // 
             // btnUpdateAll
             // 
-            this.btnUpdateAll.Location = new System.Drawing.Point(1490, 753);
+            this.btnUpdateAll.Location = new System.Drawing.Point(1492, 706);
             this.btnUpdateAll.Name = "btnUpdateAll";
             this.btnUpdateAll.Size = new System.Drawing.Size(147, 48);
             this.btnUpdateAll.TabIndex = 55;
             this.btnUpdateAll.Text = "UPDATE SERVICE LEVEL";
             this.btnUpdateAll.UseVisualStyleBackColor = true;
+            this.btnUpdateAll.Click += new System.EventHandler(this.btnUpdateAll_Click);
             // 
             // txtUpdateOptOut
             // 
@@ -419,7 +424,7 @@ namespace CallCenterProgram.Presentation
             this.label19.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(874, 355);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(1033, 31);
+            this.label19.Size = new System.Drawing.Size(826, 25);
             this.label19.TabIndex = 46;
             this.label19.Text = "UPDATE SERVICE LEVEL SECTION: (ALL FIELDS TO BE FILLED IN!)";
             // 
@@ -450,12 +455,23 @@ namespace CallCenterProgram.Presentation
             this.btnMainMenu.UseVisualStyleBackColor = true;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(579, 981);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(499, 48);
+            this.button1.TabIndex = 63;
+            this.button1.Text = "MAIN MENU";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Service_Level
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(1750, 1151);
+            this.ClientSize = new System.Drawing.Size(1750, 1055);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.txtUpdateServiceID);
             this.Controls.Add(this.label20);
@@ -550,5 +566,6 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.TextBox txtUpdateServiceID;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnMainMenu;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -26,6 +26,10 @@ namespace CallCenterProgram.Bussiness_Logic
         public string EmailSupport { get => emailSupport; set => emailSupport = value; }
         public string PhoneSupport { get => phoneSupport; set => phoneSupport = value; }
 
+        public SecurityLevel()
+        {
+        }
+
         public SecurityLevel(int securityLevelId, string levelDescription, bool availability, string emailSupport, string phoneSupport)
         {
             this.securityLevelId = securityLevelId;
@@ -35,19 +39,19 @@ namespace CallCenterProgram.Bussiness_Logic
             this.phoneSupport = phoneSupport;
         }
 
-        public void ChangeAvailability(int securityLevelID, int newAvailability)
+        public void AddSecurityLevel(string desc, int availability, string email, string phone)
         {
-            dataAccess.UpdateSecurityLevel(securityLevelID, newAvailability);
+            dataAccess.InsertSecuriyLevel(desc, availability, email, phone);
+        }
 
-            // local update
-            if (newAvailability == 0)
-            {
-                this.availability = false;
-            }
-            else
-            {
-                this.availability = true;
-            }
+        public void UpdateSecurityLevel(int ID, string  desc, string email, string phone, int availability)
+        {
+            dataAccess.UpdateSecurityLevel(ID, desc, email, phone, availability);
+        }
+
+        public void UpdateSecurityLevelAvailability(int ID, int availability)
+        {
+            dataAccess.UpdateSecurityLevel(ID, availability);
         }
     }
 }
