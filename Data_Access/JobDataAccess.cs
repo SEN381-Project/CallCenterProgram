@@ -23,7 +23,6 @@ namespace CallCenterProgram.Data_Access
         SqlConnection conn;
         SqlCommand command;
         SqlDataReader readers;
-        SqlDataAdapter adapter;
 
         //Objects
         Job objJob = new Job();
@@ -92,6 +91,31 @@ namespace CallCenterProgram.Data_Access
             {
                 command.ExecuteNonQuery();
                 MessageBox.Show("Job Closed!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Job wasn't closed: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void DeleteJob(int jobID)
+        {
+            string query = @"DELETE FROM Job Where JobRef = ( '" + jobID + "' )";
+
+            conn = new SqlConnection(connect);
+
+            conn.Open();
+
+            command = new SqlCommand(query, conn);
+
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Job Deleted!");
             }
             catch (Exception ex)
             {

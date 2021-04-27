@@ -35,14 +35,12 @@ namespace CallCenterProgram.Presentation
 
         private void btnCreateJob_Click(object sender, EventArgs e)
         {
-            frmIncident incidentForm = new frmIncident();
-            incidentForm.Show();
+            serviceReqObj.AssignJob(int.Parse(txtCreateJob.Text));
         }
 
         private void btnReassignJob_Click(object sender, EventArgs e)
         {
-            frmIncident incidentForm = new frmIncident();
-            incidentForm.Show();
+            serviceReqObj.ReassignJob(int.Parse(txtReAssaignJob.Text));
         }
 
         private void btnEscalateJob_Click(object sender, EventArgs e)

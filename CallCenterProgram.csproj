@@ -53,6 +53,7 @@
     <Compile Include="Bussiness_Logic\Incident.cs" />
     <Compile Include="Bussiness_Logic\IndividualClient.cs" />
     <Compile Include="Bussiness_Logic\Job.cs" />
+    <Compile Include="Bussiness_Logic\JobAssignment.cs" />
     <Compile Include="Bussiness_Logic\JobBussinessLogic.cs" />
     <Compile Include="Bussiness_Logic\Package.cs" />
     <Compile Include="Bussiness_Logic\SecurityLevel.cs" />

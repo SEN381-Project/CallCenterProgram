@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using CallCenterProgram.Data_Access;
 using CallCenterProgram;
 
@@ -12,6 +13,7 @@ namespace CallCenterProgram.Bussiness_Logic
     {
         IncidentDataAccess incidentData = new IncidentDataAccess();
         JobDataAccess jobData = new JobDataAccess();
+        Employee_DataAccess employeeData = new Employee_DataAccess();
 
         public void CreateServiceRequest(string reportInfo, DateTime timeIssued, int priority, decimal cost, string[] abilityReq, int clientID, int callEmplpoyeeID)
         {
@@ -37,13 +39,24 @@ namespace CallCenterProgram.Bussiness_Logic
 
         public void AssignJob(int incidentID)
         {
-            string[] ability = new string[1];
-            jobData.InsertJob(0, incidentID, getAvailableWorkers(ability));
+            jobData.InsertJob(0, incidentID, getAvailableWorkers(incidentData.DisplayIncident(incidentID)[0].AbilityReq));
         }
 
-        public void ReassignJob(int jobID, int incidentID)
+        public void ReassignJob(int incidentID)
         {
-            jobData.CloseJob(jobID);
+            List<Job> jobs = jobData.DisplayJob();
+            int jobToDelete = 0;
+
+            foreach (Job item in jobs)
+            {
+                if (item.IncedentID == incidentID)
+                {
+                    jobToDelete = item.JobID;
+                }
+            }
+
+            jobData.DeleteJob(jobToDelete);
+
             AssignJob(incidentID);
         }
 
@@ -54,8 +67,19 @@ namespace CallCenterProgram.Bussiness_Logic
 
         private int getAvailableWorkers(string[] abilityReq)
         {
-            int workerID = 1;
-            return workerID;
+            List<string> employees = employeeData.DisplayEmployeeSkills();
+
+            foreach (string item in employees)
+            {
+                string[] currentEmployee = item.Split(',');
+
+                if (currentEmployee[1] == abilityReq[0])
+                {
+                    return int.Parse(currentEmployee[0]);
+                }
+            }
+
+            return 0;
         }
     }
 }

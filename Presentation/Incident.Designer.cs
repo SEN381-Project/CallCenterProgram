@@ -298,6 +298,7 @@
             this.Controls.Add(this.lblHeading);
             this.Name = "frmIncident";
             this.Text = "Incident";
+            this.Load += new System.EventHandler(this.frmIncident_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
