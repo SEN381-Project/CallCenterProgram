@@ -57,8 +57,13 @@
             this.Manager = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.InsertDepartment = new System.Windows.Forms.Button();
+            this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximizeToggle = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.pnlTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // Exit
@@ -67,7 +72,7 @@
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.Exit.Location = new System.Drawing.Point(720, 415);
+            this.Exit.Location = new System.Drawing.Point(712, 479);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(115, 41);
             this.Exit.TabIndex = 8;
@@ -80,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.label1.Location = new System.Drawing.Point(221, 9);
+            this.label1.Location = new System.Drawing.Point(213, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(261, 42);
             this.label1.TabIndex = 9;
@@ -189,7 +194,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.groupBox1.Location = new System.Drawing.Point(22, 46);
+            this.groupBox1.Location = new System.Drawing.Point(14, 110);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(606, 338);
             this.groupBox1.TabIndex = 22;
@@ -290,7 +295,7 @@
             this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainMenu.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.MainMenu.Location = new System.Drawing.Point(12, 415);
+            this.MainMenu.Location = new System.Drawing.Point(4, 479);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(141, 41);
             this.MainMenu.TabIndex = 24;
@@ -304,7 +309,7 @@
             this.Techician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Techician.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Techician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.Techician.Location = new System.Drawing.Point(228, 415);
+            this.Techician.Location = new System.Drawing.Point(220, 479);
             this.Techician.Name = "Techician";
             this.Techician.Size = new System.Drawing.Size(131, 41);
             this.Techician.TabIndex = 25;
@@ -318,7 +323,7 @@
             this.Manager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Manager.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Manager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.Manager.Location = new System.Drawing.Point(400, 415);
+            this.Manager.Location = new System.Drawing.Point(392, 479);
             this.Manager.Name = "Manager";
             this.Manager.Size = new System.Drawing.Size(122, 41);
             this.Manager.TabIndex = 26;
@@ -337,7 +342,7 @@
             this.groupBox2.Controls.Add(this.txtdepartmentid);
             this.groupBox2.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.groupBox2.Location = new System.Drawing.Point(625, 46);
+            this.groupBox2.Location = new System.Drawing.Point(617, 110);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(210, 338);
             this.groupBox2.TabIndex = 27;
@@ -356,12 +361,66 @@
             this.InsertDepartment.UseVisualStyleBackColor = false;
             this.InsertDepartment.Click += new System.EventHandler(this.InsertDepartment_Click);
             // 
-            // Employee
+            // pnlTitleBar
+            // 
+            this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.pnlTitleBar.Controls.Add(this.btnMinimize);
+            this.pnlTitleBar.Controls.Add(this.btnMaximizeToggle);
+            this.pnlTitleBar.Controls.Add(this.btnExit);
+            this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitleBar.Name = "pnlTitleBar";
+            this.pnlTitleBar.Size = new System.Drawing.Size(837, 56);
+            this.pnlTitleBar.TabIndex = 28;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.ForeColor = System.Drawing.Color.Black;
+            this.btnMinimize.Location = new System.Drawing.Point(616, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(75, 56);
+            this.btnMinimize.TabIndex = 3;
+            this.btnMinimize.Text = "Minimize";
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            // 
+            // btnMaximizeToggle
+            // 
+            this.btnMaximizeToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMaximizeToggle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximizeToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizeToggle.ForeColor = System.Drawing.Color.Black;
+            this.btnMaximizeToggle.Location = new System.Drawing.Point(691, 0);
+            this.btnMaximizeToggle.Name = "btnMaximizeToggle";
+            this.btnMaximizeToggle.Size = new System.Drawing.Size(75, 56);
+            this.btnMaximizeToggle.TabIndex = 4;
+            this.btnMaximizeToggle.Text = "Maximize";
+            this.btnMaximizeToggle.UseVisualStyleBackColor = false;
+            this.btnMaximizeToggle.Click += new System.EventHandler(this.btnMaximizeToggle_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.Black;
+            this.btnExit.Location = new System.Drawing.Point(766, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(71, 56);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
+            // Employee_Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(837, 456);
+            this.ClientSize = new System.Drawing.Size(837, 561);
+            this.Controls.Add(this.pnlTitleBar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Manager);
             this.Controls.Add(this.Techician);
@@ -371,13 +430,14 @@
             this.Controls.Add(this.Exit);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Employee";
+            this.Name = "Employee_Presentation";
             this.Text = "Employee Form";
             this.Load += new System.EventHandler(this.Employee_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.pnlTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +473,9 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button InsertDepartment;
+        private System.Windows.Forms.Panel pnlTitleBar;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnMaximizeToggle;
+        private System.Windows.Forms.Button btnExit;
     }
 }
