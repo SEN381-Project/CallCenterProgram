@@ -47,7 +47,7 @@ namespace CallCenterProgram.Presentation
         {
             Set.ReminderId = Convert.ToInt32(txtReminderId.Text);
             Set.Reminder = txtReminder.Text;
-            Set.ReminderDate = Convert.ToDateTime(txtTime.Text);
+            Set.ReminderDate = DateTime.Parse(txtTime.Text);
 
             setReminder.InsertReminder(int.Parse(txtReminderId.Text), txtReminder.Text, DateTime.Parse(txtTime.Text));
         }
@@ -56,7 +56,7 @@ namespace CallCenterProgram.Presentation
         {
             Set.ReminderId = Convert.ToInt32(txtReminderId.Text);
             Set.Reminder = txtReminder.Text;
-            Set.ReminderDate = Convert.ToDateTime(txtTime.Text);
+            Set.ReminderDate = DateTime.Parse(txtTime.Text);
 
             setReminder.UpdateReminder(int.Parse(txtReminderId.Text), txtReminder.Text, DateTime.Parse(txtTime.Text));
         }
@@ -65,7 +65,7 @@ namespace CallCenterProgram.Presentation
         {
             Set.ReminderId = Convert.ToInt32(txtReminderId.Text);
             Set.Reminder = txtReminder.Text;
-            Set.ReminderDate = Convert.ToDateTime(txtTime.Text);
+            Set.ReminderDate = DateTime.Parse(txtTime.Text);
 
             setReminder.RemoveReminder(int.Parse(txtReminderId.Text), txtReminder.Text, DateTime.Parse(txtTime.Text));
         }

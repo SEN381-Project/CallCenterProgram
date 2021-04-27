@@ -61,7 +61,7 @@ namespace CallCenterProgram.Presentation
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
             Set.Status = txtstatus.Text;
-            Set.FollowUpDate = Convert.ToDateTime(txtfollupD.Text);
+            Set.FollowUpDate = DateTime.Parse(txtfollupD.Text);
 
             followUp.AddFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
@@ -70,7 +70,7 @@ namespace CallCenterProgram.Presentation
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
             Set.Status = txtstatus.Text;
-            Set.FollowUpDate = Convert.ToDateTime(txtfollupD.Text);
+            Set.FollowUpDate = DateTime.Parse(txtfollupD.Text);
 
             followUp.UpdateFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
@@ -79,7 +79,7 @@ namespace CallCenterProgram.Presentation
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
             Set.Status = txtstatus.Text;
-            Set.FollowUpDate = Convert.ToDateTime(txtfollupD.Text);
+            Set.FollowUpDate = DateTime.Parse(txtfollupD.Text);
 
             followUp.RemoveFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
@@ -88,6 +88,12 @@ namespace CallCenterProgram.Presentation
         {
             dataGridVFollowUp.DataSource = followUp.ViewFollowUps();
 
+        }
+
+        private void btnSetReminder_Click(object sender, EventArgs e)
+        {
+            SetReminder reminder = new SetReminder();
+            reminder.Show();
         }
     }
 }

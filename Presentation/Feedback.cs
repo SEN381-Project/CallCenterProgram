@@ -57,9 +57,9 @@ namespace CallCenterProgram.Presentation
         {
              Set.FeedbackId = Convert.ToInt32(txtfeedbackid.Text);
              Set.Problem = txtproblem.Text;
-             Set.HelpedOnTime= Convert.ToBoolean(txthelpedontime);
+             Set.HelpedOnTime = bool.Parse(txthelpedontime.Text);
              Set.Comment = txtcomment.Text;
-             Set.FeedbackDate = Convert.ToDateTime(txtfeedbackD.Text);
+             Set.FeedbackDate = DateTime.Parse(txtfeedbackD.Text);
 
             feedback.AddFeedback(int.Parse(txtfeedbackid.Text), txtproblem.Text, bool.Parse(txthelpedontime.Text), txtcomment.Text, DateTime.Parse(txtfeedbackD.Text));
         }

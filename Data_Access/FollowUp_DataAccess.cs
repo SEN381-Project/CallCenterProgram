@@ -12,7 +12,7 @@ namespace CallCenterProgram.Data_Access
 {
     class FollowUp_DataAccess
     { //Set Connection String
-        string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
+        string connect = "Data Source =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
         SqlConnection Conn;
         SqlCommand Command;
         SqlDataReader Reader;
@@ -200,7 +200,7 @@ namespace CallCenterProgram.Data_Access
         #region DisplayData
         public List<FollowUp> DisplayFollowUps()
         {
-            string query = @"SELECT * FROM FollowUp";
+            string query = @"SELECT FollowUpID, ClientID, Status, FollowUpDate FROM FollowUp "; 
 
             Conn = new SqlConnection(connect);
 
@@ -237,7 +237,7 @@ namespace CallCenterProgram.Data_Access
 
         public List<FollowUp> DisplayFeedbacks()
         {
-            string query = @"SELECT * FROM Feedback";
+            string query = @"SELECT FeedbackID, ClientID, HelpedOnTime, Problem, Comment, FeedbackDate FROM Feedback";
 
             Conn = new SqlConnection(connect);
 
@@ -276,7 +276,7 @@ namespace CallCenterProgram.Data_Access
 
         public List<FollowUp> DisplayReminder()
         {
-            string query = @"SELECT * FROM Reminder";
+            string query = @"SELECT ReminderId, Reminder, ReminderDate FROM  Reminder"; 
 
             Conn = new SqlConnection(connect);
 
