@@ -71,7 +71,7 @@ namespace CallCenterProgram.Data_Access
             {
                 reader = command.ExecuteReader();
 
-                if (reader.Read())
+                while (reader.Read())
                 {
                     tempCall.ClientID = int.Parse(reader[1].ToString());
                     tempCall.InitialTimeStamp = (DateTime)reader[2];
