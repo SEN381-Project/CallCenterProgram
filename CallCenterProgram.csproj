@@ -318,6 +318,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="callcenterexit.png" />
     <Content Include="obj\Debug\CallCenterProgram.csproj.FileListAbsolute.txt" />
     <None Include="Resources\Icons\tegan.png" />
   </ItemGroup>

@@ -102,7 +102,8 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackColor = System.Drawing.Color.SlateGray;
+            this.btnExit.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterexit;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -110,7 +111,6 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(71, 56);
             this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
