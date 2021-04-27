@@ -39,6 +39,9 @@
             this.btnEscalateJob = new System.Windows.Forms.Button();
             this.btnReassignJob = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.txtCreateJob = new System.Windows.Forms.TextBox();
+            this.txtReAssaignJob = new System.Windows.Forms.TextBox();
+            this.txtEscalateJob = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncident)).BeginInit();
             this.SuspendLayout();
@@ -164,12 +167,36 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // txtCreateJob
+            // 
+            this.txtCreateJob.Location = new System.Drawing.Point(36, 379);
+            this.txtCreateJob.Name = "txtCreateJob";
+            this.txtCreateJob.Size = new System.Drawing.Size(200, 20);
+            this.txtCreateJob.TabIndex = 7;
+            // 
+            // txtReAssaignJob
+            // 
+            this.txtReAssaignJob.Location = new System.Drawing.Point(307, 379);
+            this.txtReAssaignJob.Name = "txtReAssaignJob";
+            this.txtReAssaignJob.Size = new System.Drawing.Size(200, 20);
+            this.txtReAssaignJob.TabIndex = 19;
+            // 
+            // txtEscalateJob
+            // 
+            this.txtEscalateJob.Location = new System.Drawing.Point(579, 379);
+            this.txtEscalateJob.Name = "txtEscalateJob";
+            this.txtEscalateJob.Size = new System.Drawing.Size(200, 20);
+            this.txtEscalateJob.TabIndex = 20;
+            // 
             // frmServiceRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtEscalateJob);
+            this.Controls.Add(this.txtReAssaignJob);
+            this.Controls.Add(this.txtCreateJob);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnReassignJob);
             this.Controls.Add(this.btnEscalateJob);
@@ -200,5 +227,8 @@
         private System.Windows.Forms.Button btnEscalateJob;
         private System.Windows.Forms.Button btnReassignJob;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.TextBox txtCreateJob;
+        private System.Windows.Forms.TextBox txtReAssaignJob;
+        private System.Windows.Forms.TextBox txtEscalateJob;
     }
 }

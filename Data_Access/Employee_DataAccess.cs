@@ -15,10 +15,11 @@ namespace CallCenterProgram.Data_Access
     class Employee_DataAccess
     {
          //Set Connection String
-        string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
+        string connect = "Data Source=.; Initial Catalog= CallCenterDatabase; Integrated Security= SSPI";
         SqlConnection Conn;
         SqlCommand Command;
-        
+        SqlDataReader readers;
+
 
         //Insering Employee details
         public void InsertEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
@@ -218,8 +219,77 @@ namespace CallCenterProgram.Data_Access
                 Conn.Close();
             }
         }
-            //delete technician info
-            public void DeleteTechnicians(string abilities, string qualification)
+
+        public string DisplayEmployeeSkills(int employeeID)
+        {
+            string query = @"SELECT Qualification FROM Employee WHERE EmployeeID = ( '" + employeeID + "' )";
+
+            Conn = new SqlConnection(connect);
+
+            Conn.Open();
+
+            Command = new SqlCommand(query, Conn);
+            string qualifications = string.Empty;
+
+            try
+            {
+                readers = Command.ExecuteReader();
+
+                while (readers.Read())
+                {
+                    qualifications = readers[0].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details could not be found: " + ex.Message);
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return qualifications;
+        }
+
+        public List<string> DisplayEmployeeSkills()
+        {
+            string query = @"SELECT EmployeeID, Qualification FROM Employee";
+
+            Conn = new SqlConnection(connect);
+
+            Conn.Open();
+
+            Command = new SqlCommand(query, Conn);
+            List<string> info = new List<string>();
+
+            try
+            {
+                readers = Command.ExecuteReader();
+
+                while (readers.Read())
+                {
+                    string infoStr;
+                    infoStr = readers[0].ToString();
+                    infoStr += ',' + readers[1].ToString();
+
+                    info.Add(infoStr);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details could not be found: " + ex.Message);
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return info;
+        }
+
+        //delete technician info
+        public void DeleteTechnicians(string abilities, string qualification)
             {
                 string query = @"DELETE INTO Employee VALUES('" + abilities + "','" + qualification + "')";
                 Conn = new SqlConnection(connect);
