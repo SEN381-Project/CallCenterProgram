@@ -8,14 +8,38 @@ using System.Text;
 using System.Threading.Tasks;
 using CallCenterProgram.Bussiness_Logic;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace CallCenterProgram.Presentation
 {
     public partial class Insert_Business_Client : Form
     {
+
+        bool Maximized = false;
+
+        //DLL stuff
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
         public Insert_Business_Client()
         {
             InitializeComponent();
+            Maximized = false;
+            CreateMyBorderlessWindow();
+        }
+
+        public void CreateMyBorderlessWindow()
+        {
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            // Remove the control box so the form will only display client area.
+            this.ControlBox = false;
         }
 
         private void txtBack_Click(object sender, EventArgs e)
@@ -66,6 +90,50 @@ namespace CallCenterProgram.Presentation
             rtbStatus.Clear();
             txtRole.Clear();
             nudID.Focus();
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            if (Maximized == false)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMax.Text = "Normal";
+                Maximized = true;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                btnMax.Text = "Maximize";
+                Maximized = false;
+            }
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void Insert_Business_Client_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }

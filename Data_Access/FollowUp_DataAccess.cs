@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using CallCenterProgram;
 using CallCenterProgram.Bussiness_Logic;
 
 namespace CallCenterProgram.Data_Access

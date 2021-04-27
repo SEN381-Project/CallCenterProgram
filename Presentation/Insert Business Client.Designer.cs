@@ -55,13 +55,18 @@ namespace CallCenterProgram.Presentation
             this.label1 = new System.Windows.Forms.Label();
             this.rtbStatus = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnMin = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStreetNumber)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.Controls.Add(this.txtRole);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnBack);
@@ -317,10 +322,51 @@ namespace CallCenterProgram.Presentation
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(14, 0);
+            this.panel2.Controls.Add(this.btnMin);
+            this.panel2.Controls.Add(this.btnMax);
+            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(407, 48);
+            this.panel2.Size = new System.Drawing.Size(435, 48);
             this.panel2.TabIndex = 26;
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // btnMin
+            // 
+            this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Location = new System.Drawing.Point(269, 0);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(54, 48);
+            this.btnMin.TabIndex = 21;
+            this.btnMin.Text = "Minimize";
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Location = new System.Drawing.Point(323, 0);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(56, 48);
+            this.btnMax.TabIndex = 20;
+            this.btnMax.Text = "Maximize";
+            this.btnMax.UseVisualStyleBackColor = true;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(379, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(56, 48);
+            this.btnExit.TabIndex = 19;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Insert_Business_Client
             // 
@@ -336,10 +382,12 @@ namespace CallCenterProgram.Presentation
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insert_Business_Client";
             this.Load += new System.EventHandler(this.Insert_Business_Client_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Insert_Business_Client_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStreetNumber)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -372,5 +420,8 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtRole;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnMin;
+        private System.Windows.Forms.Button btnMax;
+        private System.Windows.Forms.Button btnExit;
     }
 }
