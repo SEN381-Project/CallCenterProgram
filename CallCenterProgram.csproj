@@ -59,6 +59,7 @@
     <Compile Include="Bussiness_Logic\Incident.cs" />
     <Compile Include="Bussiness_Logic\IndividualClient.cs" />
     <Compile Include="Bussiness_Logic\Job.cs" />
+    <Compile Include="Bussiness_Logic\JobAssignment.cs" />
     <Compile Include="Bussiness_Logic\JobBussinessLogic.cs" />
     <Compile Include="Bussiness_Logic\Package.cs" />
     <Compile Include="Bussiness_Logic\SecurityLevel.cs" />
@@ -130,6 +131,18 @@
     </Compile>
     <Compile Include="Presentation\Individual Client Info.Designer.cs">
       <DependentUpon>Individual Client Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Insert Business Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Insert Business Client.Designer.cs">
+      <DependentUpon>Insert Business Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Insert Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Insert Client.Designer.cs">
+      <DependentUpon>Insert Client.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Job.cs">
       <SubType>Form</SubType>
@@ -229,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Individual Client Info.resx">
       <DependentUpon>Individual Client Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Insert Business Client.resx">
+      <DependentUpon>Insert Business Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Insert Client.resx">
+      <DependentUpon>Insert Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Job.resx">
       <DependentUpon>Job.cs</DependentUpon>

@@ -220,6 +220,74 @@ namespace CallCenterProgram.Data_Access
                 Conn.Close();
             }
         }
+
+        public string DisplayEmployeeSkills(int employeeID)
+        {
+            string query = @"SELECT Qualification FROM Employee WHERE EmployeeID = ( '" + employeeID + "' )";
+
+            Conn = new SqlConnection(connect);
+
+            Conn.Open();
+
+            Command = new SqlCommand(query, Conn);
+            string qualifications = string.Empty;
+
+            try
+            {
+                Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    qualifications = Reader[0].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details could not be found: " + ex.Message);
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return qualifications;
+        }
+
+        public List<string> DisplayEmployeeSkills()
+        {
+            string query = @"SELECT EmployeeID, Qualification FROM Employee";
+
+            Conn = new SqlConnection(connect);
+
+            Conn.Open();
+
+            Command = new SqlCommand(query, Conn);
+            List<string> info = new List<string>();
+
+            try
+            {
+                Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    string infoStr;
+                    infoStr = Reader[0].ToString();
+                    infoStr += ',' + Reader[1].ToString();
+
+                    info.Add(infoStr);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Details could not be found: " + ex.Message);
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return info;
+        }
         //delete technician info
         public void DeleteTechnicians(string abilities, string qualification)
         {

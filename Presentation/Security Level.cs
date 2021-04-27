@@ -42,7 +42,8 @@ namespace CallCenterProgram.Presentation
             string email = txtAddEmail.Text;
             string phone = txtAddPhone.Text;
             int availability = cmbAdd.Text == "Available" ? 1 : 0;
-            dataAccess.InsertSecuriyLevel(desc, availability, email, phone);
+            SecurityLevel sl = new SecurityLevel();
+            sl.AddSecurityLevel(desc, availability, email, phone);
             txtAddDesc.Clear();
             txtAddEmail.Clear();
             txtAddPhone.Clear();
@@ -72,7 +73,8 @@ namespace CallCenterProgram.Presentation
             string email = txtUpdateAllEmail.Text;
             string phone = txtUpdateAllPhone.Text;
             int availability = cmbUpdateAll.Text == "Available" ? 1 : 0;
-            dataAccess.UpdateSecurityLevel(ID, desc, email, phone, availability);
+            SecurityLevel sl = new SecurityLevel();
+            sl.UpdateSecurityLevel(ID, desc, email, phone, availability);
             bs.DataSource = dataAccess.GetAllSecurityLevels();
             bs.ResetBindings(true);
         }
@@ -81,7 +83,8 @@ namespace CallCenterProgram.Presentation
         {
             int ID = int.Parse(txtIDUpdate1.Text);
             int availability = cmbUpdate1.Text == "Available" ? 1 : 0;
-            dataAccess.UpdateSecurityLevel(ID, availability);
+            SecurityLevel sl = new SecurityLevel();
+            sl.UpdateSecurityLevelAvailability(ID, availability);
             bs.DataSource = dataAccess.GetAllSecurityLevels();
             bs.ResetBindings(true);
         }

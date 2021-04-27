@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
@@ -59,51 +58,18 @@ namespace CallCenterProgram.Presentation
                 }
                 else if (radioButton2.Checked)
                 {
-                    abilityReq += "," + radioButton2.Text;
+                    abilityReq += radioButton2.Text;
                 }
                 else if (radioButton3.Checked)
                 {
-                    abilityReq += "," + radioButton3.Text;
+                    abilityReq += radioButton3.Text;
                 }
                 else if (radioButton4.Checked)
                 {
-                    abilityReq += "," + radioButton4.Text;
+                    abilityReq += radioButton4.Text;
                 }
 
                 serviceReqObj.CreateServiceRequest(rtbReportInfo.Text, dtpDateIssued.Value, int.Parse(cbxPriority.Text), int.Parse(txtCost.Text), abilityReq.Split(','), int.Parse(txtClientID.Text), int.Parse(txtCallerID.Text));
-                serviceReqObj.AssignJob(11);
-                //Thread assignJobThread = new Thread(new ThreadStart(AssignJobThread));
-                //assignJobThread.Start();
-            }
-        }
-
-        public void AssignJobThread()
-        {
-            JobBussinessLogic jobObj = new JobBussinessLogic();
-
-            List<Job> jobs = jobObj.ViewJob();
-            List<Incident> incidents = serviceReqObj.ViewRequest();
-
-            bool create = true;
-            int incID = 0;
-
-            for (int i = 0; i < jobs.Count; i++)
-            {
-                for (int j = 0; j < incidents.Count; j++)
-                {
-                    if (jobs[i].IncedentID == incidents[j].IncidentID)
-                    {
-                        create = false;
-                        incID = incidents[j].IncidentID;
-                    }
-
-                    if (create)
-                    {
-                        serviceReqObj.AssignJob(incID);
-                    }
-                    create = false;
-                    incID = 0;
-                }
             }
         }
 
@@ -116,6 +82,12 @@ namespace CallCenterProgram.Presentation
         {
             HomeForm.instance.Show();
             this.Close();
+        }
+
+        private void frmIncident_Load(object sender, EventArgs e)
+        {
+            //JobAssignment jobAssignment = new JobAssignment();
+            //jobAssignment.RunJobAssigner();
         }
     }
 }

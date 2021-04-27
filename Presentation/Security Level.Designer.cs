@@ -294,7 +294,7 @@ namespace CallCenterProgram.Presentation
             this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(952, 367);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(375, 26);
+            this.label10.Size = new System.Drawing.Size(300, 21);
             this.label10.TabIndex = 62;
             this.label10.Text = "Availability Of The Security Level:";
             // 
@@ -304,7 +304,7 @@ namespace CallCenterProgram.Presentation
             this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(952, 321);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(169, 26);
+            this.label11.Size = new System.Drawing.Size(135, 21);
             this.label11.TabIndex = 61;
             this.label11.Text = "Phone Support:";
             // 
@@ -314,7 +314,7 @@ namespace CallCenterProgram.Presentation
             this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(952, 277);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(174, 26);
+            this.label12.Size = new System.Drawing.Size(139, 21);
             this.label12.TabIndex = 60;
             this.label12.Text = "Email Support: ";
             // 
@@ -324,7 +324,7 @@ namespace CallCenterProgram.Presentation
             this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(952, 208);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(294, 26);
+            this.label13.Size = new System.Drawing.Size(235, 21);
             this.label13.TabIndex = 59;
             this.label13.Text = "Security Level Description:";
             // 

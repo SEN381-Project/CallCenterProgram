@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using CallCenterProgram;
-using CallCenterProgram.Presentation;
 using CallCenterProgram.Bussiness_Logic;
+using System.Data;
 
 namespace CallCenterProgram.Data_Access
 {
     class ClientDataAccess
     {
-        SqlConnection conn = new SqlConnection(@"DataSource=.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI");
+        SqlConnection conn = new SqlConnection(@"Data Source=.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI");
         SqlCommand cmd;
         String query;
 
-        public void InsertBusinessClient(int ID, string name, string surname, string email, string cellphone, string status, string role, int streetnumber, string streetname, string city, string country)
+        public void InsertBusinessClient(BusinessClient client)
         {
             try //this part inserts the ID, name and surname into the Client table
             {
-                query = @"INSERT INTO Client VALUES ('" + ID + "', '" + name + "', '" + surname + "')";
+                query = @"INSERT INTO Client VALUES ('" + client.ClientID + "', '" + client.Name + "', '" + client.Surname + "', 'Business')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -37,7 +37,7 @@ namespace CallCenterProgram.Data_Access
 
             try //this part inserts the client status and role into the business client info table
             {
-                query = @"INSERT INTO BusinessClientInfo VALUES ('" + ID + "', '" + status + "', '" + role + "')";
+                query = @"INSERT INTO BusinessClientInfo VALUES ('" + client.ClientID + "', '" + client.ClientStatus + "', '" + client.ClientRole + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -53,7 +53,7 @@ namespace CallCenterProgram.Data_Access
 
             try //this part inserts the client address into the client address table
             {
-                query = @"INSERT INTO ClientAddress VALUES ('" + ID + "', '" + streetnumber + "', '" + streetname + "', '" + city + "', '" + country + "')";
+                query = @"INSERT INTO ClientAddress VALUES ('" + client.ClientID + "', '" + client.Streetnumber + "', '" + client.Streetname + "', '" + client.City + "', '" + client.Country + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -69,7 +69,7 @@ namespace CallCenterProgram.Data_Access
 
             try //this part inserts the client contact info into the ClientContactInfo table
             {
-                query = @"INSERT INTO ClientAddress VALUES ('" + ID + "', '" + email + "', '" + cellphone + "')";
+                query = @"INSERT INTO ClientContactInfo VALUES ('" + client.ClientID + "', '" + client.Email + "', '" + client.Cellphone + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -84,11 +84,11 @@ namespace CallCenterProgram.Data_Access
             }
         }
 
-        public void InsertIndividualClient(int ID, string name, string surname, string email, string cellphone, string status, string role, int currentclient, int streetnumber, string streetname, string city, string country)
+        public void InsertIndividualClient(IndividualClient client)
         {
             try //this part inserts the ID, name and surname into the Client table
             {
-                query = @"INSERT INTO Client VALUES ('" + ID + "', '" + name + "', '" + surname + "')";
+                query = @"INSERT INTO Client VALUES ('" + client.ClientID + "', '" + client.Name + "', '" + client.Surname + "', 'Individual')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -104,14 +104,14 @@ namespace CallCenterProgram.Data_Access
 
             try //this part inserts the client status and if the client is a current client into the individual client info table
             {
-                query = @"INSERT INTO IndividualClientInfo VALUES ('" + ID + "', '" + status + "', '" + currentclient + "')";
+                query = @"INSERT INTO IndividualClientInfo VALUES ('" + client.ClientID + "', '" + client.ClientStatus + "', '" + client.IsCurrentClient + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
-                MessageBox.Show("Could not insert to the BusinessClientInfo table: {0}", e.Message);
+                MessageBox.Show("Could not insert to the IndividualClientInfo table: {0}", e.Message);
             }
             finally
             {
@@ -120,7 +120,7 @@ namespace CallCenterProgram.Data_Access
 
             try //this part inserts the client address into the client address table
             {
-                query = @"INSERT INTO ClientAddress VALUES ('" + ID + "', '" + streetnumber + "', '" + streetname + "', '" + city + "', '" + country + "')";
+                query = @"INSERT INTO ClientAddress VALUES ('" + client.ClientID + "', '" + client.Streetnumber + "', '" + client.Streetname + "', '" + client.City + "', '" + client.Country + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -136,7 +136,7 @@ namespace CallCenterProgram.Data_Access
 
             try //this part inserts the client contact info into the ClientContactInfo table
             {
-                query = @"INSERT INTO ClientAddress VALUES ('" + ID + "', '" + email + "', '" + cellphone + "')";
+                query = @"INSERT INTO ClientContactInfo VALUES ('" + client.ClientID + "', '" + client.Email + "', '" + client.Cellphone + "')";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -150,6 +150,36 @@ namespace CallCenterProgram.Data_Access
                 conn.Close();
             }
 
+        }
+
+        public BindingSource FillIndividualDGV()
+        {
+            BindingSource src = new BindingSource();
+            string query = @"SELECT Client.ClientID, Client.ClientName, Client.ClientSurname, IndividualClientInfo.ClientStatus, IndividualClientInfo.IsCurrentClient, ClientAddress.StreetNumber, ClientAddress.StreetName, ClientAddress.City, ClientAddress.Country, ClientContactInfo.Email, ClientContactInfo.PhoneNumber
+                             FROM Client INNER JOIN IndividualClientInfo ON Client.ClientID = IndividualClientInfo.ClientID
+			                 INNER JOIN ClientAddress ON Client.ClientID = ClientAddress.ClientID
+			                 INNER JOIN ClientContactInfo ON Client.ClientID = ClientContactInfo.ClientID
+                             WHERE  Client.ClientType = 'Individual'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            src.DataSource = table;
+            return src;
+        }
+
+        public BindingSource FillBusinessDGV()
+        {
+            BindingSource src = new BindingSource();
+            string query = @"SELECT Client.ClientID, Client.ClientName, Client.ClientSurname, BusinessClientInfo.ClientRole, BusinessClientInfo.ClientStatus, ClientAddress.StreetNumber, ClientAddress.StreetName, ClientAddress.City, ClientAddress.Country, ClientContactInfo.Email, ClientContactInfo.PhoneNumber
+                             FROM Client INNER JOIN BusinessClientInfo ON Client.ClientID = BusinessClientInfo.ClientID
+			                 INNER JOIN ClientAddress ON Client.ClientID = ClientAddress.ClientID
+			                 INNER JOIN ClientContactInfo ON Client.ClientID = ClientContactInfo.ClientID
+                             WHERE Client.CLientType = 'Business'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            src.DataSource = table;
+            return src;
         }
     }
 }

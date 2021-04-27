@@ -182,5 +182,10 @@ namespace CallCenterProgram
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

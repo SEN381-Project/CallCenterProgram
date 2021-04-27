@@ -37,42 +37,19 @@ namespace CallCenterProgram.Bussiness_Logic
         public string EquipmentType { get => equipmentType; set => equipmentType = value; }
         public bool State { get => state; set => state = value; }
 
-        public Service AddService(string name, string equipmentType, string workExpenses, int state)
+        public void AddService(string name, string equipmentType, string workExpenses, int state)
         {
-            // 1. from presentation layer: get the data 
-            // 2. pass it as parameters 
-            // tid can be caused maybe by button push etc. 
-
-            // send data to database
             dataAccess.InsertService(name, equipmentType, workExpenses, state);
-
-            // create service object and return it 
-            // gonna use these to build a list of services that will go into the package.
-            Service service = new Service(); // create constructor with appropriate parameters 
-            // major issue ?? GETTING THE SERVICE ID to create a complete service object  
-            return service;
         }
 
-        public void ChangeState(int serviceID, int newState)
+        public void UpdateService(int serviceID, string name, string equipmentType, string workExpenses, int state)
         {
-            // Change the state of a service from active to active (vice versa)
-            // from presentation find out which service should be updated 
-            // and what the new state should be then use that here
-            // most likey to be used in the form: amanger side when asked to make changes ?
+            dataAccess.UpdateService(serviceID, name, equipmentType, workExpenses, state);   
+        }
 
-            // database update 
+        public void UpdateServiceState(int serviceID, int newState)
+        {
             dataAccess.UpdateService(serviceID, newState);
-
-            // local update
-            if (newState == 0)
-            {
-                this.state = false;
-            }
-            else
-            {
-                this.state = true;
-            }
-             
         }
     }
 }
