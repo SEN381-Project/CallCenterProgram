@@ -9,9 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using CallCenterProgram.Bussiness_Logic;
-using CallCenterProgram.Data_Access;
-using CallCenterProgram;
-
 
 namespace CallCenterProgram.Presentation
 {
