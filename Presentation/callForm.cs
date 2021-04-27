@@ -178,15 +178,19 @@ namespace CallCenterProgram.Presentation
         {
             try
             {
+                //find clients info based on client ID
                 call.ClientID = (int) numClientID.Value;
+                List<Call> callHistory = call.GetCallHistoryFromDB();
+
+                //display the information in the data grid views
+                dgvCallHistory.DataSource = callHistory;
             }
             catch (Exception er)
             {
                 MessageBox.Show("could not find client id due to error: " + er.Message);
             }
             
-            //find clients info based on client ID
-            //display the information in the data grid views
+            
         }
 
         private void btnHome_Click(object sender, EventArgs e)
