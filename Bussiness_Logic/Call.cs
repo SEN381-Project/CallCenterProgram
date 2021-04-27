@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CallCenterProgram.Data_Access;
 using CallCenterProgram.Presentation;
-using CallCenterProgram;
 
 namespace CallCenterProgram.Bussiness_Logic
 {
@@ -14,6 +13,7 @@ namespace CallCenterProgram.Bussiness_Logic
     {
         //classes
         call_DataAccess CallDB = new call_DataAccess();
+        ContractMaintenanceAccess contractDB = new ContractMaintenanceAccess();
 
         //fields
         private DateTime initialTimeStamp;
@@ -86,6 +86,12 @@ namespace CallCenterProgram.Bussiness_Logic
         {
             List<Call> callHistory = CallDB.GetCallHistory(ClientID);
             return callHistory;
+        }
+
+        public List<Contract> getAllClientAgreements()
+        {
+            List<Contract> contractList = contractDB.GetAllContracts(ClientID);
+            return contractList;
         }
     }
 }

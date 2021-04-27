@@ -55,7 +55,7 @@ namespace CallCenterProgram.Presentation
             this.lblAgreements = new System.Windows.Forms.Label();
             this.dgvCallHistory = new System.Windows.Forms.DataGridView();
             this.lblClientCallHistory = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAgreements = new System.Windows.Forms.DataGridView();
             this.lblClientInfo = new System.Windows.Forms.Label();
             this.pnlRightSide = new System.Windows.Forms.Panel();
             this.btnEndCall = new System.Windows.Forms.Button();
@@ -69,7 +69,7 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numClientID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgreements)).BeginInit();
             this.pnlRightSide.SuspendLayout();
             this.pnlRightBottom.SuspendLayout();
             this.SuspendLayout();
@@ -316,7 +316,7 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.Controls.Add(this.lblAgreements);
             this.pnlClientInfo.Controls.Add(this.dgvCallHistory);
             this.pnlClientInfo.Controls.Add(this.lblClientCallHistory);
-            this.pnlClientInfo.Controls.Add(this.dataGridView1);
+            this.pnlClientInfo.Controls.Add(this.dgvAgreements);
             this.pnlClientInfo.Controls.Add(this.lblClientInfo);
             this.pnlClientInfo.Location = new System.Drawing.Point(150, 435);
             this.pnlClientInfo.Name = "pnlClientInfo";
@@ -384,13 +384,13 @@ namespace CallCenterProgram.Presentation
             this.lblClientCallHistory.TabIndex = 17;
             this.lblClientCallHistory.Text = "Call History";
             // 
-            // dataGridView1
+            // dgvAgreements
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 148);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(254, 187);
-            this.dataGridView1.TabIndex = 16;
+            this.dgvAgreements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAgreements.Location = new System.Drawing.Point(29, 148);
+            this.dgvAgreements.Name = "dgvAgreements";
+            this.dgvAgreements.Size = new System.Drawing.Size(254, 187);
+            this.dgvAgreements.TabIndex = 16;
             // 
             // lblClientInfo
             // 
@@ -514,7 +514,7 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numClientID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgreements)).EndInit();
             this.pnlRightSide.ResumeLayout(false);
             this.pnlRightBottom.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -537,7 +537,7 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Label lblClientInfo;
         private System.Windows.Forms.Label lblClientCallHistory;
         private System.Windows.Forms.DataGridView dgvCallHistory;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAgreements;
         private System.Windows.Forms.Label lblAgreements;
         private System.Windows.Forms.Label lblReports;
         private System.Windows.Forms.Button btnHome;
