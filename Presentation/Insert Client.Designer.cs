@@ -53,8 +53,8 @@ namespace CallCenterProgram.Presentation
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStreetNumber)).BeginInit();
             this.panel1.SuspendLayout();
@@ -64,9 +64,9 @@ namespace CallCenterProgram.Presentation
             // 
             this.btnInsertClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnInsertClient.Location = new System.Drawing.Point(89, 456);
+            this.btnInsertClient.Location = new System.Drawing.Point(92, 456);
             this.btnInsertClient.Name = "btnInsertClient";
-            this.btnInsertClient.Size = new System.Drawing.Size(227, 27);
+            this.btnInsertClient.Size = new System.Drawing.Size(224, 27);
             this.btnInsertClient.TabIndex = 0;
             this.btnInsertClient.Text = "Insert Client";
             this.btnInsertClient.UseVisualStyleBackColor = true;
@@ -281,7 +281,7 @@ namespace CallCenterProgram.Presentation
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtBack);
+            this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.nudID);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnInsertClient);
@@ -307,8 +307,20 @@ namespace CallCenterProgram.Presentation
             this.panel1.Controls.Add(this.rtbStatus);
             this.panel1.Location = new System.Drawing.Point(22, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(407, 491);
+            this.panel1.Size = new System.Drawing.Size(407, 550);
             this.panel1.TabIndex = 24;
+            // 
+            // btnBack
+            // 
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnBack.Location = new System.Drawing.Point(92, 505);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(224, 27);
+            this.btnBack.TabIndex = 24;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.txtBack_Click);
             // 
             // panel2
             // 
@@ -317,24 +329,12 @@ namespace CallCenterProgram.Presentation
             this.panel2.Size = new System.Drawing.Size(407, 48);
             this.panel2.TabIndex = 25;
             // 
-            // txtBack
-            // 
-            this.txtBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.txtBack.Location = new System.Drawing.Point(12, 456);
-            this.txtBack.Name = "txtBack";
-            this.txtBack.Size = new System.Drawing.Size(60, 27);
-            this.txtBack.TabIndex = 24;
-            this.txtBack.Text = "Back";
-            this.txtBack.UseVisualStyleBackColor = true;
-            this.txtBack.Click += new System.EventHandler(this.txtBack_Click);
-            // 
             // Insert_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(455, 555);
+            this.ClientSize = new System.Drawing.Size(455, 616);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -377,7 +377,7 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button txtBack;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel2;
     }
 }

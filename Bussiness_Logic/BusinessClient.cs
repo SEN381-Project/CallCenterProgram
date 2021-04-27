@@ -13,18 +13,48 @@ namespace CallCenterProgram.Bussiness_Logic
     {
 
         private int clientID;
-        private String name;
-        private String surname;
-        private String clientAddress; //may have to expand this into its separate parts
-        private String clientStatus;
+        private string name;
+        private string surname;
+        private string clientStatus;
         private string clientRole;
+        private string email;
+        private string cellphone;
+        private int streetnumber;
+        private string streetname;
+        private string city;
+        private string country;
 
-        public string ClientRole { get => clientRole; set => clientRole = value; }
         public int ClientID { get => clientID; set => clientID = value; }
         public string Name { get => name; set => name = value; }
         public string Surname { get => surname; set => surname = value; }
-        public string ClientAddress { get => clientAddress; set => clientAddress = value; }
         public string ClientStatus { get => clientStatus; set => clientStatus = value; }
+        public string ClientRole { get => clientRole; set => clientRole = value; }
+        public string Email { get => email; set => email = value; }
+        public string Cellphone { get => cellphone; set => cellphone = value; }
+        public int Streetnumber { get => streetnumber; set => streetnumber = value; }
+        public string Streetname { get => streetname; set => streetname = value; }
+        public string City { get => city; set => city = value; }
+        public string Country { get => country; set => country = value; }
+
+        public BusinessClient(int clientID, string name, string surname, string clientStatus, string clientRole, string email, string cellphone, int streetnumber, string streetname, string city, string country)
+        {
+            this.clientID = clientID;
+            this.name = name;
+            this.surname = surname;
+            this.clientStatus = clientStatus;
+            this.clientRole = clientRole;
+            this.email = email;
+            this.cellphone = cellphone;
+            this.streetnumber = streetnumber;
+            this.streetname = streetname;
+            this.city = city;
+            this.country = country;
+        }
+
+        public BusinessClient()
+        {
+
+        }
 
         public override string ToString()
         {
@@ -34,6 +64,12 @@ namespace CallCenterProgram.Bussiness_Logic
         public void Display()
         {
             //method for displaying
+        }
+
+        public void SendClientToDataAccess(BusinessClient client)
+        {
+            ClientDataAccess publish = new ClientDataAccess();
+            publish.InsertBusinessClient(client);
         }
 
         public void getDetailsForInsert()

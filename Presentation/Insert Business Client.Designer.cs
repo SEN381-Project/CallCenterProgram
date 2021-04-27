@@ -53,6 +53,8 @@ namespace CallCenterProgram.Presentation
             this.label1 = new System.Windows.Forms.Label();
             this.rtbStatus = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtRole = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStreetNumber)).BeginInit();
@@ -60,6 +62,8 @@ namespace CallCenterProgram.Presentation
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtRole);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.nudID);
             this.panel1.Controls.Add(this.btnInsertClient);
@@ -82,7 +86,7 @@ namespace CallCenterProgram.Presentation
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.rtbStatus);
-            this.panel1.Location = new System.Drawing.Point(14, 68);
+            this.panel1.Location = new System.Drawing.Point(14, 54);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(407, 552);
             this.panel1.TabIndex = 25;
@@ -116,6 +120,7 @@ namespace CallCenterProgram.Presentation
             this.btnInsertClient.TabIndex = 0;
             this.btnInsertClient.Text = "Insert Client";
             this.btnInsertClient.UseVisualStyleBackColor = true;
+            this.btnInsertClient.Click += new System.EventHandler(this.btnInsertClient_Click);
             // 
             // label10
             // 
@@ -289,28 +294,46 @@ namespace CallCenterProgram.Presentation
             // 
             this.rtbStatus.Location = new System.Drawing.Point(202, 354);
             this.rtbStatus.Name = "rtbStatus";
-            this.rtbStatus.Size = new System.Drawing.Size(117, 74);
+            this.rtbStatus.Size = new System.Drawing.Size(117, 56);
             this.rtbStatus.TabIndex = 12;
             this.rtbStatus.Text = "";
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(14, 14);
+            this.panel2.Location = new System.Drawing.Point(14, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(407, 48);
             this.panel2.TabIndex = 26;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Roboto Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(85, 423);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(33, 15);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Role";
+            // 
+            // txtRole
+            // 
+            this.txtRole.Location = new System.Drawing.Point(202, 423);
+            this.txtRole.Name = "txtRole";
+            this.txtRole.Size = new System.Drawing.Size(117, 23);
+            this.txtRole.TabIndex = 26;
             // 
             // Insert_Business_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(435, 632);
+            this.ClientSize = new System.Drawing.Size(435, 615);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Name = "Insert_Business_Client";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insert_Business_Client";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -346,5 +369,7 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtbStatus;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtRole;
+        private System.Windows.Forms.Label label11;
     }
 }

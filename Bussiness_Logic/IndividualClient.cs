@@ -65,23 +65,6 @@ namespace CallCenterProgram.Bussiness_Logic
             //method for displaying
         }
 
-        //public IClient GetDetailsForInsert(int ID, string name, string surname, string email, string cellphone, string status, int currentclient, int streetnumber, string streetname, string city, string country)
-        //{
-        //    IndividualClient client = new IndividualClient();
-        //    client.ClientID = ID;
-        //    client.Name = name;
-        //    client.Surname = surname;
-        //    client.Email = email;
-        //    client.Cellphone = cellphone;
-        //    client.ClientStatus = status;
-        //    client.IsCurrentClient = currentclient;
-        //    client.Streetnumber = streetnumber;
-        //    client.Streetname = streetname;
-        //    client.City = city;
-        //    client.Country = country;
-        //    return client;
-        //}
-
         public void SendClientToDataAccess(IndividualClient client)
         {
             ClientDataAccess publish = new ClientDataAccess();

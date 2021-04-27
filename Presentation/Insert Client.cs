@@ -26,6 +26,8 @@ namespace CallCenterProgram.Presentation
 
         private void btnInsertClient_Click(object sender, EventArgs e)
         {
+            //assign values to variables
+
             int id = Convert.ToInt32(nudID.Value);
             string name = txtName.Text;
             string surname = txtSurname.Text;
@@ -47,8 +49,7 @@ namespace CallCenterProgram.Presentation
             string streetname = txtStreetName.Text;
             string city = txtCity.Text;
             string country = lstCountries.SelectedItem.ToString();
-
-            //assign values to variables
+            
 
             IndividualClient client = new IndividualClient(id, name, surname, email, cellphone, status, currentclient, streetnumber, streetname, city, country);
             client.SendClientToDataAccess(client);
