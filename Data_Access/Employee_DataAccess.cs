@@ -234,11 +234,11 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                readers = Command.ExecuteReader();
+                Reader = Command.ExecuteReader();
 
-                while (readers.Read())
+                while (Reader.Read())
                 {
-                    qualifications = readers[0].ToString();
+                    qualifications = Reader[0].ToString();
                 }
             }
             catch (Exception ex)
@@ -266,13 +266,13 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                readers = Command.ExecuteReader();
+                Reader = Command.ExecuteReader();
 
-                while (readers.Read())
+                while (Reader.Read())
                 {
                     string infoStr;
-                    infoStr = readers[0].ToString();
-                    infoStr += ',' + readers[1].ToString();
+                    infoStr = Reader[0].ToString();
+                    infoStr += ',' + Reader[1].ToString();
 
                     info.Add(infoStr);
                 }
