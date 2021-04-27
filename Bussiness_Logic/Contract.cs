@@ -12,28 +12,41 @@ namespace CallCenterProgram.Bussiness_Logic
     class Contract
     {
         ContractMaintenanceAccess dataAccess = new ContractMaintenanceAccess();
-        private bool onGoing;
+        private bool state;
         private int packageID;
         private int clientID;
+        private int contractID;
 
-        public bool OnGoing { get => onGoing; set => onGoing = value; }
+        public bool State { get => state; set => state = value; }
         public int PackageID { get => packageID; set => packageID = value; }
         public int ClientID { get => clientID; set => clientID = value; }
+        public int ContractID { get => contractID; set => contractID = value; }
 
-        public void CreateContract(Package package, int clientID)
+        public Contract()
         {
-            // gotta use package name as the identifier of a contract so we can be able to collect the different services and stuff
-            // 
         }
 
-        public void TerminateContract(int contractID, int newOnGoing)
+        public Contract(bool state, int packageID, int clientID, int contractID)
         {
-            //dataAccess.UpdateContract();
-            // add onGoing to database (aka the state so it can be changed)
-            if (true)
-            {
+            this.state = state;
+            this.packageID = packageID;
+            this.clientID = clientID;
+            this.contractID = contractID;
+        }
 
-            }
+        public void CreateContract(int contractTypeID, int clientID, int state)
+        {
+            dataAccess.InsertContract(contractTypeID, clientID, state);
+        }
+        public void UpdateContract(int contractID, int state)
+        {
+            dataAccess.UpdateContract(contractID, state);
+        }
+
+        public List<Bussiness_Logic.Contract> SearchContract(int clientID)
+        {
+            List<Bussiness_Logic.Contract> contracts = dataAccess.GetAllContracts(clientID);
+            return contracts;
         }
     }
 }
