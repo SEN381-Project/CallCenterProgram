@@ -41,6 +41,7 @@ namespace CallCenterProgram.Presentation
         {
             FollowUp_Presentation FollowUpForm = new FollowUp_Presentation();
             FollowUpForm.Show();
+            this.Close();
         }
 
         private void btnAddReminder_Click(object sender, EventArgs e)

@@ -25,6 +25,7 @@ namespace CallCenterProgram.Presentation
         {
             Employee_Presentation employee = new Employee_Presentation();
             employee.Show();
+            this.Close();
         }
 
         private void Exit_Click(object sender, EventArgs e)

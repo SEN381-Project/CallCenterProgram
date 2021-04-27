@@ -49,7 +49,7 @@ namespace CallCenterProgram.Presentation
         {
             Feedback Feedback = new Feedback();
             Feedback.Show();
-
+            this.Close();
         }
 
         private void Exits_Click(object sender, EventArgs e)
@@ -94,6 +94,7 @@ namespace CallCenterProgram.Presentation
         {
             SetReminder reminder = new SetReminder();
             reminder.Show();
+            this.Close();
         }
     }
 }
