@@ -223,13 +223,11 @@ namespace CallCenterProgram.Presentation
             if (Maximized == false)
             {
                 this.WindowState = FormWindowState.Maximized;
-                btnMaximizeToggle.Text = "Normal";
                 Maximized = true;
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                btnMaximizeToggle.Text = "Maximize";
                 Maximized = false;
             }
         }
