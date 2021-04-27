@@ -12,7 +12,7 @@ namespace CallCenterProgram.Data_Access
 {
     class FollowUp_DataAccess
     { //Set Connection String
-        string connect = "Data Source =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
+        string connect = "Data Source =.; Initial Catalog = CallCenterDatabaseDemo; Integrated Security = SSPI";
         SqlConnection Conn;
         SqlCommand Command;
         SqlDataReader Reader;
@@ -30,7 +30,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Follow up inserted!");
             }
             catch (Exception e)
@@ -55,7 +55,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Feedback inserted!");
             }
             catch (Exception e)
@@ -79,7 +79,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Reminder inserted!");
             }
             catch (Exception e)
@@ -105,7 +105,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Follow up updated!");
             }
             catch (Exception e)
@@ -129,7 +129,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Reminder Updated!");
             }
             catch (Exception e)
@@ -215,9 +215,9 @@ namespace CallCenterProgram.Data_Access
 
                 if (Reader.Read())
                 {
-                    objFollowUp.FollowUpId = int.Parse(Reader[1].ToString());
-                    objFollowUp.Status = Reader[2].ToString();
-                    objFollowUp.FollowUpDate = DateTime.Parse(Reader[3].ToString());
+                    objFollowUp.FollowUpId = int.Parse(Reader[0].ToString());
+                    objFollowUp.Status = Reader[1].ToString();
+                    objFollowUp.FollowUpDate = DateTime.Parse(Reader[2].ToString());
 
 
                     FollowUpData.Add(new FollowUp(objFollowUp.FollowUpId, objFollowUp.Status, objFollowUp.FollowUpDate));
@@ -252,11 +252,11 @@ namespace CallCenterProgram.Data_Access
 
                 while(Reader.Read())
                 {
-                    objFollowUp.FeedbackId = int.Parse(Reader[1].ToString());
-                    objFollowUp.Problem = Reader[2].ToString();
-                    objFollowUp.HelpedOnTime = bool.Parse(Reader[3].ToString());
-                    objFollowUp.Comment = Reader[4].ToString();
-                    objFollowUp.FeedbackDate = DateTime.Parse(Reader[5].ToString());
+                    objFollowUp.FeedbackId = int.Parse(Reader[0].ToString());
+                    objFollowUp.Problem = Reader[1].ToString();
+                    objFollowUp.HelpedOnTime = bool.Parse(Reader[2].ToString());
+                    objFollowUp.Comment = Reader[3].ToString();
+                    objFollowUp.FeedbackDate = DateTime.Parse(Reader[4].ToString());
 
 
                     FeedbackData.Add(new FollowUp(objFollowUp.FeedbackId, objFollowUp.Problem, objFollowUp.HelpedOnTime, objFollowUp.Comment, objFollowUp.FeedbackDate));
@@ -291,9 +291,9 @@ namespace CallCenterProgram.Data_Access
 
                 while(Reader.Read())
                 {
-                    objFollowUp.ReminderId = int.Parse(Reader[1].ToString());
+                    objFollowUp.ReminderId = int.Parse(Reader[0].ToString());
                     objFollowUp.Reminder = Reader[2].ToString();
-                    objFollowUp.ReminderDate = DateTime.Parse(Reader[5].ToString());
+                    objFollowUp.ReminderDate = DateTime.Parse(Reader[3].ToString());
 
 
                     ReminderData.Add(new FollowUp(objFollowUp.FeedbackId, objFollowUp.Problem, objFollowUp.HelpedOnTime, objFollowUp.Comment, objFollowUp.FeedbackDate));
