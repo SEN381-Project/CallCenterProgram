@@ -24,15 +24,19 @@ namespace CallCenterProgram.Bussiness_Logic
         private string faultReport;
         private int stationNumber;
         private int clientID;
-
+        private int callDuration;
 
         //properties
+        public DateTime InitialTimeStamp { get => initialTimeStamp; set => initialTimeStamp = value; }
+        public DateTime FinalTimeStamp { get => finalTimeStamp; set => finalTimeStamp = value; }
         public string CallReport { get => callReport; set => callReport = value; }
         public string ProblemInfo { get => problemInfo; set => problemInfo = value; }
         public string WorkRequest { get => workRequest; set => workRequest = value; }
         public string FaultReport { get => faultReport; set => faultReport = value; }
         public int StationNumber { get => stationNumber; set => stationNumber = value; }
         public int ClientID { get => clientID; set => clientID = value; }
+        public int CallDuration { get => callDuration; set => callDuration = value; }
+
 
         //constructor
         public Call()
@@ -43,11 +47,11 @@ namespace CallCenterProgram.Bussiness_Logic
         //methods
         public void createInitialTimestamp()
         {
-            initialTimeStamp = CreateTimestamp();
+            InitialTimeStamp = CreateTimestamp();
         }
         public void createFinalTimestamp()
         {
-            finalTimeStamp = CreateTimestamp();
+            FinalTimeStamp = CreateTimestamp();
         }
         public void CrossReference()
         {
@@ -59,7 +63,7 @@ namespace CallCenterProgram.Bussiness_Logic
             int timeDiff = 0;
 
             //Use dateDiff to calculate time difference between final and initial timestamps.
-            System.TimeSpan dtDiff = finalTimeStamp.Subtract(initialTimeStamp);
+            System.TimeSpan dtDiff = FinalTimeStamp.Subtract(InitialTimeStamp);
             timeDiff = dtDiff.Seconds;
 
             return timeDiff;
@@ -72,10 +76,16 @@ namespace CallCenterProgram.Bussiness_Logic
         public void InsertCallIntoDB(int clientID)
         {
             //vars 
-            int callDuration = GetCallDuration(); //use RecordCallStats()
+            CallDuration = GetCallDuration(); //use RecordCallStats()
 
             //method
-            CallDB.InsertCall(clientID, initialTimeStamp, finalTimeStamp, FaultReport, CallReport,ProblemInfo,WorkRequest,callDuration);
+            CallDB.InsertCall(clientID, InitialTimeStamp, FinalTimeStamp, FaultReport, CallReport,ProblemInfo,WorkRequest, CallDuration);
+        }
+
+        public List<Call> GetCallHistoryFromDB()
+        {
+            List<Call> callHistory = CallDB.GetCallHistory(ClientID);
+            return callHistory;
         }
     }
 }
