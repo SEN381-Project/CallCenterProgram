@@ -71,11 +71,11 @@
     <Compile Include="Bussiness_Logic\FollowUp.cs" />
     <Compile Include="Data_Access\FollowUp_DataAccess.cs" />
     <Compile Include="Bussiness_Logic\IClient.cs" />
-    <Compile Include="FollowUpBusiness.cs" />
-    <Compile Include="Presentation\HomeForm.cs">
+    <Compile Include="Bussiness_Logic\FollowUpBusiness.cs" />
+    <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\HomeForm.Designer.cs">
+    <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Bussiness_Logic\ManagerBusiness.cs" />
@@ -192,7 +192,7 @@
     <Compile Include="Presentation\SetReminder.Designer.cs">
       <DependentUpon>SetReminder.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Presentation\HomeForm.resx">
+    <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.callForm.resources" />
