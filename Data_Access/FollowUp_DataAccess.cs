@@ -12,7 +12,7 @@ namespace CallCenterProgram.Data_Access
 {
     class FollowUp_DataAccess
     { //Set Connection String
-        string connect = "Data Source =.; Initial Catalog = CallCenterDatabaseDemo; Integrated Security = SSPI";
+        string connect = "Data Source =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
         SqlConnection Conn;
         SqlCommand Command;
         SqlDataReader Reader;
@@ -216,8 +216,8 @@ namespace CallCenterProgram.Data_Access
                 if (Reader.Read())
                 {
                     objFollowUp.FollowUpId = int.Parse(Reader[0].ToString());
-                    objFollowUp.Status = Reader[1].ToString();
-                    objFollowUp.FollowUpDate = DateTime.Parse(Reader[2].ToString());
+                    objFollowUp.Status = Reader[2].ToString();
+                    objFollowUp.FollowUpDate = DateTime.Parse(Reader[3].ToString());
 
 
                     FollowUpData.Add(new FollowUp(objFollowUp.FollowUpId, objFollowUp.Status, objFollowUp.FollowUpDate));
