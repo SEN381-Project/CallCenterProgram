@@ -38,8 +38,8 @@ namespace CallCenterProgram.Presentation
 
         private void MainMenu_Click(object sender, EventArgs e)
         {
-            HomeForm MainMenu = new HomeForm();
-            MainMenu.Show();
+            HomeForm.instance.Show();
+            this.Close();
         }
 
 

@@ -41,8 +41,9 @@ namespace CallCenterProgram.Presentation
    
         private void MainMenu_Click(object sender, EventArgs e)
         {
-            HomeForm MainMenu = new HomeForm();
-            MainMenu.Show();
+            this.Close();
+            HomeForm.instance.Show();
+
         }
 
         private void Feedback_Click(object sender, EventArgs e)
