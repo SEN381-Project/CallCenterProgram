@@ -14,7 +14,7 @@ namespace CallCenterProgram.Data_Access
     class Employee_DataAccess
     {
         //Set Connection String
-        string connect = "Data Source=.; Initial Catalog= CallCenterDatabase; Integrated Security= SSPI";
+        string connect = "Data Source=.; Initial Catalog= CallCenterDatabaseDemo; Integrated Security= SSPI";
         SqlConnection Conn;
         SqlCommand Command;
         SqlDataReader Reader;

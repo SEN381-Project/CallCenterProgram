@@ -21,6 +21,7 @@ namespace CallCenterProgram.Bussiness_Logic
         private int departmentId;
         private string derptmentName;
         private int stationNumber;
+       
 
         public int EmployeeId { get => employeeId; set => employeeId = value; }
         public string Name { get => name; set => name = value; }
@@ -32,6 +33,7 @@ namespace CallCenterProgram.Bussiness_Logic
         public int DepartmentId { get => departmentId; set => departmentId = value; }
         public string DepartmentName { get => derptmentName; set => derptmentName = value; }
         public int StationNumber { get => stationNumber; set => stationNumber = value; }
+        
 
         public override bool Equals(object obj)
         {

@@ -24,6 +24,7 @@ namespace CallCenterProgram.Presentation
         }
 
         FollowUpBusiness followUp = new FollowUpBusiness();
+        FollowUp Set = new FollowUp();
         
 
         public void datagridView_CellClick(object sender, DataGridViewCellEventArgs e) {
@@ -58,16 +59,28 @@ namespace CallCenterProgram.Presentation
 
         private void Insert_Click(object sender, EventArgs e)
         {
+            Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
+            Set.Status = txtstatus.Text;
+            Set.FollowUpDate = Convert.ToDateTime(txtfollupD.Text);
+
             followUp.AddFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
+            Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
+            Set.Status = txtstatus.Text;
+            Set.FollowUpDate = Convert.ToDateTime(txtfollupD.Text);
+
             followUp.UpdateFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
+            Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
+            Set.Status = txtstatus.Text;
+            Set.FollowUpDate = Convert.ToDateTime(txtfollupD.Text);
+
             followUp.RemoveFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
         }
 

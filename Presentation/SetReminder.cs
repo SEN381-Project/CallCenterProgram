@@ -21,11 +21,15 @@ namespace CallCenterProgram.Presentation
         }
 
         FollowUpBusiness setReminder = new FollowUpBusiness();
+        FollowUp Set = new FollowUp();
         
         private void SetReminder_Load(object sender, EventArgs e)
         {
             dataGridVReminder.DataSource = setReminder.ViewSetReminder();
-
+            if (Set.ReminderDate == DateTime.Now)
+            {
+                MessageBox.Show("Reminder For: " +Set.Reminder);
+            }
         }
 
         private void btnExitReminder_Click(object sender, EventArgs e)
@@ -41,16 +45,28 @@ namespace CallCenterProgram.Presentation
 
         private void btnAddReminder_Click(object sender, EventArgs e)
         {
+            Set.ReminderId = Convert.ToInt32(txtReminderId.Text);
+            Set.Reminder = txtReminder.Text;
+            Set.ReminderDate = Convert.ToDateTime(txtTime.Text);
+
             setReminder.InsertReminder(int.Parse(txtReminderId.Text), txtReminder.Text, DateTime.Parse(txtTime.Text));
         }
 
         private void btbUpdateR_Click(object sender, EventArgs e)
         {
+            Set.ReminderId = Convert.ToInt32(txtReminderId.Text);
+            Set.Reminder = txtReminder.Text;
+            Set.ReminderDate = Convert.ToDateTime(txtTime.Text);
+
             setReminder.UpdateReminder(int.Parse(txtReminderId.Text), txtReminder.Text, DateTime.Parse(txtTime.Text));
         }
 
         private void btnDeleteR_Click(object sender, EventArgs e)
         {
+            Set.ReminderId = Convert.ToInt32(txtReminderId.Text);
+            Set.Reminder = txtReminder.Text;
+            Set.ReminderDate = Convert.ToDateTime(txtTime.Text);
+
             setReminder.RemoveReminder(int.Parse(txtReminderId.Text), txtReminder.Text, DateTime.Parse(txtTime.Text));
         }
     }

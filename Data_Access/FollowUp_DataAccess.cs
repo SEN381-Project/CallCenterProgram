@@ -12,7 +12,7 @@ namespace CallCenterProgram.Data_Access
 {
     class FollowUp_DataAccess
     { //Set Connection String
-        string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabase; Integrated Security = SSPI";
+        string connect = "Data Sourse =.; Initial Catalog = CallCenterDatabaseDemo; Integrated Security = SSPI";
         SqlConnection Conn;
         SqlCommand Command;
         SqlDataReader Reader;

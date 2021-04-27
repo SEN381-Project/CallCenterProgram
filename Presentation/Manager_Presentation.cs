@@ -22,7 +22,8 @@ namespace CallCenterProgram.Presentation
         }
 
         ManagerBusiness manager = new ManagerBusiness();
-
+        Employee Set = new Manager();
+        Authorization authorize = new Authorization();
         public void datagridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -46,23 +47,59 @@ namespace CallCenterProgram.Presentation
 
         private void UpdateEm_Click(object sender, EventArgs e)
         {
-            manager.UpdateEmployeeInf(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
+            
+            Set.EmployeeId = Convert.ToInt32(txtEmployeeId.Text);
+            Set.Name = txtEmployeename.Text;
+            Set.Surname = txtEmployeesurname.Text;
+            Set.Address = txtEmployeeAddress.Text;
+            Set.ContactDetails = txtContactDetails.Text;
+            Set.Jobtitle = txtMjobtitle.Text;
+            Set.JobDescription = txtMjobDespription.Text;
+
+            
+            authorize.Show();
+
+            if(manager.Authorize == "M145628")
+            {
+                manager.UpdateEmployeeInf(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
+            }
+            else
+            {
+                MessageBox.Show("Invalid Pin!!");
+            }
+            
 
         }
 
         private void DeleteEm_Click(object sender, EventArgs e)
         {
+            int employeeId = Convert.ToInt32(txtEmployeeId.Text);
+            string name = txtEmployeename.Text;
+            string surname = txtEmployeesurname.Text;
+            string address = txtEmployeeAddress.Text;
+            string contactDetails = txtContactDetails.Text;
+            string jobTitle = txtMjobtitle.Text;
+            string jobDescription = txtMjobDespription.Text;
+
             manager.FireEmployee(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
 
         }
 
         private void UpdateDp_Click(object sender, EventArgs e)
         {
+            int departmentId = Convert.ToInt32(txtidDepartment.Text);
+            string derptmentName = txtNameDepartment.Text;
+            int stationNumber = Convert.ToInt32(txtSationNo.Text);
+
             manager.UpdateDepartment(int.Parse(txtidDepartment.Text), txtNameDepartment.Text, int.Parse(txtSationNo.Text));
         }
 
         private void DeleteDp_Click(object sender, EventArgs e)
         {
+            Set.DepartmentId = Convert.ToInt32(txtidDepartment.Text);
+            Set.DepartmentName = txtNameDepartment.Text;
+            Set.StationNumber = Convert.ToInt32(txtSationNo.Text);
+
             manager.RemoveDepartment(int.Parse(txtidDepartment.Text), txtNameDepartment.Text, int.Parse(txtSationNo.Text));
         }
 
@@ -74,7 +111,7 @@ namespace CallCenterProgram.Presentation
 
         private void Employee_Click(object sender, EventArgs e)
         {
-            Employee EmployeeForm = new Employee();
+            Employee_Presentation EmployeeForm = new Employee_Presentation();
             EmployeeForm.Show();
         }
 
