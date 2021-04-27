@@ -30,16 +30,21 @@
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtWorkerID = new System.Windows.Forms.TextBox();
             this.dgvIncident = new System.Windows.Forms.DataGridView();
-            this.lblHeading = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtJobID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximizeToggle = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncident)).BeginInit();
+            this.pnlTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -65,6 +70,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(743, 303);
             this.panel1.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.label2.Location = new System.Drawing.Point(412, 272);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 26);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Worker ID:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnSearch
             // 
@@ -94,29 +111,6 @@
             this.dgvIncident.Size = new System.Drawing.Size(705, 249);
             this.dgvIncident.TabIndex = 3;
             // 
-            // lblHeading
-            // 
-            this.lblHeading.AutoSize = true;
-            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(82)))), ((int)(((byte)(203)))));
-            this.lblHeading.Location = new System.Drawing.Point(347, 22);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(79, 42);
-            this.lblHeading.TabIndex = 10;
-            this.lblHeading.Text = "Job";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.label2.Location = new System.Drawing.Point(412, 272);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 26);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Worker ID:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // txtJobID
             // 
             this.txtJobID.Location = new System.Drawing.Point(300, 381);
@@ -135,18 +129,87 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Job ID:";
             // 
+            // pnlTitleBar
+            // 
+            this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.pnlTitleBar.Controls.Add(this.btnHome);
+            this.pnlTitleBar.Controls.Add(this.lblTitle);
+            this.pnlTitleBar.Controls.Add(this.btnMinimize);
+            this.pnlTitleBar.Controls.Add(this.btnMaximizeToggle);
+            this.pnlTitleBar.Controls.Add(this.btnExit);
+            this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitleBar.Name = "pnlTitleBar";
+            this.pnlTitleBar.Size = new System.Drawing.Size(800, 56);
+            this.pnlTitleBar.TabIndex = 16;
+            this.pnlTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitleBar_MouseMove);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.lblTitle.Location = new System.Drawing.Point(332, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(105, 58);
+            this.lblTitle.TabIndex = 5;
+            this.lblTitle.Text = "Job";
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Location = new System.Drawing.Point(579, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(75, 56);
+            this.btnMinimize.TabIndex = 3;
+            this.btnMinimize.Text = "Minimize";
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimize_MouseMove);
+            // 
+            // btnMaximizeToggle
+            // 
+            this.btnMaximizeToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMaximizeToggle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximizeToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizeToggle.Location = new System.Drawing.Point(654, 0);
+            this.btnMaximizeToggle.Name = "btnMaximizeToggle";
+            this.btnMaximizeToggle.Size = new System.Drawing.Size(75, 56);
+            this.btnMaximizeToggle.TabIndex = 4;
+            this.btnMaximizeToggle.Text = "Maximize";
+            this.btnMaximizeToggle.UseVisualStyleBackColor = false;
+            this.btnMaximizeToggle.Click += new System.EventHandler(this.btnMaximizeToggle_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(729, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(71, 56);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnHome.Location = new System.Drawing.Point(689, 22);
+            this.btnHome.Location = new System.Drawing.Point(498, 7);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(83, 27);
-            this.btnHome.TabIndex = 17;
+            this.btnHome.Size = new System.Drawing.Size(75, 42);
+            this.btnHome.TabIndex = 6;
             this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click_1);
             // 
             // job
             // 
@@ -154,17 +217,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.pnlTitleBar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtJobID);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblHeading);
             this.Name = "job";
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncident)).EndInit();
+            this.pnlTitleBar.ResumeLayout(false);
+            this.pnlTitleBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,11 +242,14 @@
         private System.Windows.Forms.TextBox txtWorkerID;
         //private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvIncident;
-        //private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtJobID;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlTitleBar;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnMaximizeToggle;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnHome;
     }
 }
