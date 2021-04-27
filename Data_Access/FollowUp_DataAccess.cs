@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using CallCenterProgram;
 using CallCenterProgram.Bussiness_Logic;
 
 namespace CallCenterProgram.Data_Access
@@ -253,10 +252,10 @@ namespace CallCenterProgram.Data_Access
                 while(Reader.Read())
                 {
                     objFollowUp.FeedbackId = int.Parse(Reader[0].ToString());
-                    objFollowUp.Problem = Reader[1].ToString();
                     objFollowUp.HelpedOnTime = bool.Parse(Reader[2].ToString());
-                    objFollowUp.Comment = Reader[3].ToString();
-                    objFollowUp.FeedbackDate = DateTime.Parse(Reader[4].ToString());
+                    objFollowUp.Problem = Reader[3].ToString();
+                    objFollowUp.Comment = Reader[4].ToString();
+                    objFollowUp.FeedbackDate = DateTime.Parse(Reader[5].ToString());
 
 
                     FeedbackData.Add(new FollowUp(objFollowUp.FeedbackId, objFollowUp.Problem, objFollowUp.HelpedOnTime, objFollowUp.Comment, objFollowUp.FeedbackDate));

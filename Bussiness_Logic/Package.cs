@@ -14,44 +14,37 @@ namespace CallCenterProgram.Bussiness_Logic
     {
         ContractMaintenanceAccess dataAccess = new ContractMaintenanceAccess();
         private string packageName;
-        private List<Service> services;
-        private List<ServiceLevel> serviceLevels;
+        private string services;
+        private string serviceLevels;
+        private int packageID;
+
+        public Package(string packageName, string services, string serviceLevels, int packageID)
+        {
+            this.packageName = packageName;
+            this.services = services;
+            this.serviceLevels = serviceLevels;
+            this.packageID = packageID;
+        }
 
         public Package()
         {
         }
 
-        public Package(string packageName, List<Service> services, List<ServiceLevel> serviceLevels)
+        public string PackageName { get => packageName; set => packageName = value; }
+        public string Services { get => services; set => services = value; }
+        public string ServiceLevels { get => serviceLevels; set => serviceLevels = value; }
+        public int PackageID { get => packageID; set => packageID = value; }
+
+        public void AddPackage(string packageName, string serviceIDs, string serviceLevelIDs)
         {
-            this.packageName = packageName;
-            this.services = services;
-            this.serviceLevels = serviceLevels;
+            dataAccess.InsertPackage(packageName, serviceIDs, serviceLevelIDs);
         }
 
-        public string PackageName { get => packageName; set => packageName = value; }
-        public List<Service> Services { get => services; set => services = value; }
-        public List<ServiceLevel> ServiceLevels { get => serviceLevels; set => serviceLevels = value; }
+        public void UpdatePackage(int packageId, string packageName, string serviceIDs, string serviceLevelIDs)
+        {
+            dataAccess.UpdatePackage(packageId, packageName, serviceIDs, serviceLevelIDs);
+        }
 
-        //public Package CreatePackage(string packageName, string services, string serviceLevels)
-        //{   
-        //    //dataAccess.InsertPackage(packageName, services, serviceLevels);
-        //    //List<Service> servicesLst = new List<Service>();
-        //    //List<ServiceLevel> serviceLevelLst = new List<ServiceLevel>();
-        //    //for (int i = 0; i < services.Length; i++)
-        //    //{
-        //    //    SqlDataReader readerService = dataAccess.GetService(int.Parse(services[i].ToString()));
-        //    //    bool state = (int)readerService[4] == 1 ? true : false;
-        //    //    Service service = new Service(readerService[0].ToString(), int.Parse(readerService[1].ToString()), readerService[2].ToString(), readerService[3].ToString(), state);
-
-        //    //    SqlDataReader readerServiceLevel = dataAccess.GetService(int.Parse(serviceLevels[i].ToString()));
-        //    //    ServiceLevel serviceLevel = new ServiceLevel();
-        //    //    servicesLst.Add(service);
-        //    //    //serviceLevelLst.Add();
-        //    //}
-        //    //Package package = new Package(packageName, Services, ServiceLevels);
-
-        //    //return package;
-        //}
         public void ViewPerformance(int contractTypeId)
         {
             // no implementation details yet 

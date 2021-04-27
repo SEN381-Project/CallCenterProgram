@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
-using CallCenterProgram;
+
 
 
 namespace CallCenterProgram.Presentation
 {
     public partial class Employee_Presentation : Form
     {
+        //fields
+        bool Maximized = false;
         public Employee_Presentation()
         {
             InitializeComponent();
+            Maximized = false;
         }
 
         ManagerBusiness employee = new ManagerBusiness();
@@ -38,8 +41,8 @@ namespace CallCenterProgram.Presentation
 
         private void MainMenu_Click(object sender, EventArgs e)
         {
-            HomeForm MainMenu = new HomeForm();
-            MainMenu.Show();
+            HomeForm.instance.Show();
+            this.Close();
         }
 
 
@@ -72,6 +75,22 @@ namespace CallCenterProgram.Presentation
 
         private void Employee_Load(object sender, EventArgs e)
         {
-        } 
+        }
+
+        private void btnMaximizeToggle_Click(object sender, EventArgs e)
+        {
+            if (Maximized == false)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximizeToggle.Text = "Normal";
+                Maximized = true;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                btnMaximizeToggle.Text = "Maximize";
+                Maximized = false;
+            }
+        }
     }
 }
