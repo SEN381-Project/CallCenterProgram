@@ -26,6 +26,15 @@ namespace CallCenterProgram.Bussiness_Logic
         public string EmailSupport { get => emailSupport; set => emailSupport = value; }
         public string PhoneSupport { get => phoneSupport; set => phoneSupport = value; }
 
+        public SecurityLevel(int securityLevelId, string levelDescription, bool availability, string emailSupport, string phoneSupport)
+        {
+            this.securityLevelId = securityLevelId;
+            this.levelDescription = levelDescription;
+            this.availability = availability;
+            this.emailSupport = emailSupport;
+            this.phoneSupport = phoneSupport;
+        }
+
         public void ChangeAvailability(int securityLevelID, int newAvailability)
         {
             dataAccess.UpdateSecurityLevel(securityLevelID, newAvailability);

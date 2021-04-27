@@ -29,105 +29,120 @@ namespace CallCenterProgram.Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnMainMenu = new System.Windows.Forms.Button();
+            this.txtIDUpdate1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUpdateAvailability = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddSecurityLevel = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAddPhone = new System.Windows.Forms.TextBox();
+            this.txtAddEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvExistingSecurityLevels = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cmbUpdate1 = new System.Windows.Forms.ComboBox();
+            this.txtAddDesc = new System.Windows.Forms.TextBox();
+            this.cmbAdd = new System.Windows.Forms.ComboBox();
+            this.cmbUpdateAll = new System.Windows.Forms.ComboBox();
+            this.txtUpdateAllDesc = new System.Windows.Forms.TextBox();
+            this.btnUpdateSecurityLevel = new System.Windows.Forms.Button();
+            this.txtUpdateAllPhone = new System.Windows.Forms.TextBox();
+            this.txtUpdateAllEmail = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtUpdateAllID = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExistingSecurityLevels)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // btnMainMenu
             // 
-            this.button3.Location = new System.Drawing.Point(48, 825);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 48);
-            this.button3.TabIndex = 52;
-            this.button3.Text = "EXIT";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnMainMenu.Location = new System.Drawing.Point(671, 725);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(538, 48);
+            this.btnMainMenu.TabIndex = 52;
+            this.btnMainMenu.Text = "MAIN MENU";
+            this.btnMainMenu.UseVisualStyleBackColor = true;
+            this.btnMainMenu.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox4
+            // txtIDUpdate1
             // 
-            this.textBox4.Location = new System.Drawing.Point(417, 740);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(401, 22);
-            this.textBox4.TabIndex = 51;
+            this.txtIDUpdate1.Location = new System.Drawing.Point(1323, 522);
+            this.txtIDUpdate1.Name = "txtIDUpdate1";
+            this.txtIDUpdate1.Size = new System.Drawing.Size(409, 22);
+            this.txtIDUpdate1.TabIndex = 51;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(46, 739);
+            this.label9.Location = new System.Drawing.Point(952, 523);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(210, 21);
             this.label9.TabIndex = 50;
             this.label9.Text = "Enter Security Level ID:";
             // 
-            // button2
+            // btnUpdateAvailability
             // 
-            this.button2.Location = new System.Drawing.Point(671, 825);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 48);
-            this.button2.TabIndex = 49;
-            this.button2.Text = "UPDATE SECURITY LEVEL";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUpdateAvailability.Location = new System.Drawing.Point(1585, 632);
+            this.btnUpdateAvailability.Name = "btnUpdateAvailability";
+            this.btnUpdateAvailability.Size = new System.Drawing.Size(147, 48);
+            this.btnUpdateAvailability.TabIndex = 49;
+            this.btnUpdateAvailability.Text = "UPDATE SECURITY LEVEL";
+            this.btnUpdateAvailability.UseVisualStyleBackColor = true;
+            this.btnUpdateAvailability.Click += new System.EventHandler(this.btnUpdateAvailability_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(44, 778);
+            this.label8.Location = new System.Drawing.Point(950, 562);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(355, 21);
             this.label8.TabIndex = 47;
             this.label8.Text = "Select Availability Of The Security Level:";
             // 
-            // button1
+            // btnAddSecurityLevel
             // 
-            this.button1.Location = new System.Drawing.Point(671, 605);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 48);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "ADD SECURITY LEVEL";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddSecurityLevel.Location = new System.Drawing.Point(671, 605);
+            this.btnAddSecurityLevel.Name = "btnAddSecurityLevel";
+            this.btnAddSecurityLevel.Size = new System.Drawing.Size(147, 48);
+            this.btnAddSecurityLevel.TabIndex = 46;
+            this.btnAddSecurityLevel.Text = "ADD SECURITY LEVEL";
+            this.btnAddSecurityLevel.UseVisualStyleBackColor = true;
+            this.btnAddSecurityLevel.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(45, 677);
+            this.label7.Location = new System.Drawing.Point(934, 435);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(844, 25);
+            this.label7.Size = new System.Drawing.Size(593, 50);
             this.label7.TabIndex = 45;
-            this.label7.Text = "UPDATE SECURITY LEVEL SECTION: (ALL FIELDS TO BE FILLED IN!)";
+            this.label7.Text = "UPDATE SECURITY LEVEL AVAILABILITY \r\nONLY SECTION: (ALL FIELDS TO BE FILLED IN!)";
             // 
-            // textBox3
+            // txtAddPhone
             // 
-            this.textBox3.Location = new System.Drawing.Point(332, 515);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(486, 22);
-            this.textBox3.TabIndex = 44;
+            this.txtAddPhone.Location = new System.Drawing.Point(332, 515);
+            this.txtAddPhone.Name = "txtAddPhone";
+            this.txtAddPhone.Size = new System.Drawing.Size(486, 22);
+            this.txtAddPhone.TabIndex = 44;
             // 
-            // textBox2
+            // txtAddEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(332, 472);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(486, 22);
-            this.textBox2.TabIndex = 43;
+            this.txtAddEmail.Location = new System.Drawing.Point(332, 472);
+            this.txtAddEmail.Name = "txtAddEmail";
+            this.txtAddEmail.Size = new System.Drawing.Size(486, 22);
+            this.txtAddEmail.TabIndex = 43;
             // 
             // label6
             // 
@@ -145,9 +160,9 @@ namespace CallCenterProgram.Presentation
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(46, 515);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(183, 21);
+            this.label5.Size = new System.Drawing.Size(184, 21);
             this.label5.TabIndex = 39;
-            this.label5.Text = "Enter Email Support:";
+            this.label5.Text = "Enter Phone Support:";
             // 
             // label4
             // 
@@ -175,19 +190,20 @@ namespace CallCenterProgram.Presentation
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(45, 355);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(998, 31);
+            this.label2.Size = new System.Drawing.Size(798, 25);
             this.label2.TabIndex = 36;
             this.label2.Text = "ADD SECURITY LEVEL SECTION: (ALL FIELDS TO BE FILLED IN!)";
             // 
-            // dataGridView1
+            // dgvExistingSecurityLevels
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 57);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(781, 235);
-            this.dataGridView1.TabIndex = 54;
+            this.dgvExistingSecurityLevels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExistingSecurityLevels.Location = new System.Drawing.Point(37, 57);
+            this.dgvExistingSecurityLevels.Name = "dgvExistingSecurityLevels";
+            this.dgvExistingSecurityLevels.RowHeadersWidth = 51;
+            this.dgvExistingSecurityLevels.RowTemplate.Height = 24;
+            this.dgvExistingSecurityLevels.Size = new System.Drawing.Size(781, 235);
+            this.dgvExistingSecurityLevels.TabIndex = 54;
+            this.dgvExistingSecurityLevels.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExistingSecurityLevels_CellClick);
             // 
             // label1
             // 
@@ -195,60 +211,182 @@ namespace CallCenterProgram.Presentation
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(34, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(349, 31);
+            this.label1.Size = new System.Drawing.Size(279, 25);
             this.label1.TabIndex = 53;
             this.label1.Text = "Existing Security Levels:";
             // 
-            // comboBox2
+            // cmbUpdate1
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbUpdate1.FormattingEnabled = true;
+            this.cmbUpdate1.Items.AddRange(new object[] {
             "Available",
             "Not-Available"});
-            this.comboBox2.Location = new System.Drawing.Point(417, 778);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(201, 24);
-            this.comboBox2.TabIndex = 55;
+            this.cmbUpdate1.Location = new System.Drawing.Point(1323, 562);
+            this.cmbUpdate1.Name = "cmbUpdate1";
+            this.cmbUpdate1.Size = new System.Drawing.Size(409, 24);
+            this.cmbUpdate1.TabIndex = 55;
             // 
-            // textBox1
+            // txtAddDesc
             // 
-            this.textBox1.Location = new System.Drawing.Point(332, 402);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(486, 42);
-            this.textBox1.TabIndex = 56;
+            this.txtAddDesc.Location = new System.Drawing.Point(332, 402);
+            this.txtAddDesc.Multiline = true;
+            this.txtAddDesc.Name = "txtAddDesc";
+            this.txtAddDesc.Size = new System.Drawing.Size(486, 42);
+            this.txtAddDesc.TabIndex = 56;
             // 
-            // comboBox1
+            // cmbAdd
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbAdd.FormattingEnabled = true;
+            this.cmbAdd.Items.AddRange(new object[] {
             "Available",
             "Not-Available"});
-            this.comboBox1.Location = new System.Drawing.Point(427, 558);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(201, 24);
-            this.comboBox1.TabIndex = 57;
+            this.cmbAdd.Location = new System.Drawing.Point(427, 558);
+            this.cmbAdd.Name = "cmbAdd";
+            this.cmbAdd.Size = new System.Drawing.Size(201, 24);
+            this.cmbAdd.TabIndex = 57;
+            // 
+            // cmbUpdateAll
+            // 
+            this.cmbUpdateAll.FormattingEnabled = true;
+            this.cmbUpdateAll.Items.AddRange(new object[] {
+            "Available",
+            "Not-Available"});
+            this.cmbUpdateAll.Location = new System.Drawing.Point(1333, 364);
+            this.cmbUpdateAll.Name = "cmbUpdateAll";
+            this.cmbUpdateAll.Size = new System.Drawing.Size(201, 24);
+            this.cmbUpdateAll.TabIndex = 67;
+            // 
+            // txtUpdateAllDesc
+            // 
+            this.txtUpdateAllDesc.Location = new System.Drawing.Point(1238, 208);
+            this.txtUpdateAllDesc.Multiline = true;
+            this.txtUpdateAllDesc.Name = "txtUpdateAllDesc";
+            this.txtUpdateAllDesc.Size = new System.Drawing.Size(486, 42);
+            this.txtUpdateAllDesc.TabIndex = 66;
+            // 
+            // btnUpdateSecurityLevel
+            // 
+            this.btnUpdateSecurityLevel.Location = new System.Drawing.Point(1585, 368);
+            this.btnUpdateSecurityLevel.Name = "btnUpdateSecurityLevel";
+            this.btnUpdateSecurityLevel.Size = new System.Drawing.Size(147, 48);
+            this.btnUpdateSecurityLevel.TabIndex = 65;
+            this.btnUpdateSecurityLevel.Text = "UPDATE SECURITY LEVEL";
+            this.btnUpdateSecurityLevel.UseVisualStyleBackColor = true;
+            this.btnUpdateSecurityLevel.Click += new System.EventHandler(this.btnUpdateSecurityLevel_Click);
+            // 
+            // txtUpdateAllPhone
+            // 
+            this.txtUpdateAllPhone.Location = new System.Drawing.Point(1238, 321);
+            this.txtUpdateAllPhone.Name = "txtUpdateAllPhone";
+            this.txtUpdateAllPhone.Size = new System.Drawing.Size(486, 22);
+            this.txtUpdateAllPhone.TabIndex = 64;
+            // 
+            // txtUpdateAllEmail
+            // 
+            this.txtUpdateAllEmail.Location = new System.Drawing.Point(1238, 278);
+            this.txtUpdateAllEmail.Name = "txtUpdateAllEmail";
+            this.txtUpdateAllEmail.Size = new System.Drawing.Size(486, 22);
+            this.txtUpdateAllEmail.TabIndex = 63;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(952, 367);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(375, 26);
+            this.label10.TabIndex = 62;
+            this.label10.Text = "Availability Of The Security Level:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(952, 321);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(169, 26);
+            this.label11.TabIndex = 61;
+            this.label11.Text = "Phone Support:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(952, 277);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(174, 26);
+            this.label12.TabIndex = 60;
+            this.label12.Text = "Email Support: ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(952, 208);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(294, 26);
+            this.label13.TabIndex = 59;
+            this.label13.Text = "Security Level Description:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(944, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(737, 50);
+            this.label14.TabIndex = 58;
+            this.label14.Text = "UPDATE ALL DETAILS OF  \r\nSECURITY LEVEL SECTION: (ALL FIELDS TO BE FILLED IN!)";
+            // 
+            // txtUpdateAllID
+            // 
+            this.txtUpdateAllID.Location = new System.Drawing.Point(1238, 165);
+            this.txtUpdateAllID.Name = "txtUpdateAllID";
+            this.txtUpdateAllID.Size = new System.Drawing.Size(486, 22);
+            this.txtUpdateAllID.TabIndex = 73;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(952, 164);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(166, 21);
+            this.label16.TabIndex = 72;
+            this.label16.Text = "Security Level ID: ";
             // 
             // Security_Level
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(900, 894);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1849, 786);
+            this.Controls.Add(this.txtUpdateAllID);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.cmbUpdateAll);
+            this.Controls.Add(this.txtUpdateAllDesc);
+            this.Controls.Add(this.btnUpdateSecurityLevel);
+            this.Controls.Add(this.txtUpdateAllPhone);
+            this.Controls.Add(this.txtUpdateAllEmail);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.cmbAdd);
+            this.Controls.Add(this.txtAddDesc);
+            this.Controls.Add(this.cmbUpdate1);
+            this.Controls.Add(this.dgvExistingSecurityLevels);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.btnMainMenu);
+            this.Controls.Add(this.txtIDUpdate1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnUpdateAvailability);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddSecurityLevel);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAddPhone);
+            this.Controls.Add(this.txtAddEmail);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -257,7 +395,8 @@ namespace CallCenterProgram.Presentation
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Name = "Security_Level";
             this.Text = "Security_Level";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Security_Level_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExistingSecurityLevels)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,24 +404,36 @@ namespace CallCenterProgram.Presentation
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnMainMenu;
+        private System.Windows.Forms.TextBox txtIDUpdate1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUpdateAvailability;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddSecurityLevel;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAddPhone;
+        private System.Windows.Forms.TextBox txtAddEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvExistingSecurityLevels;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbUpdate1;
+        private System.Windows.Forms.TextBox txtAddDesc;
+        private System.Windows.Forms.ComboBox cmbAdd;
+        private System.Windows.Forms.ComboBox cmbUpdateAll;
+        private System.Windows.Forms.TextBox txtUpdateAllDesc;
+        private System.Windows.Forms.Button btnUpdateSecurityLevel;
+        private System.Windows.Forms.TextBox txtUpdateAllPhone;
+        private System.Windows.Forms.TextBox txtUpdateAllEmail;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtUpdateAllID;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -30,22 +30,28 @@ namespace CallCenterProgram.Presentation
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
-            this.rtbFaultReport = new System.Windows.Forms.RichTextBox();
+            this.rtxtFaultReport = new System.Windows.Forms.RichTextBox();
             this.lblFaultReport = new System.Windows.Forms.Label();
             this.lblCallReport = new System.Windows.Forms.Label();
             this.lblProblemInfo = new System.Windows.Forms.Label();
             this.lblWorkRequest = new System.Windows.Forms.Label();
-            this.rtbCallReport = new System.Windows.Forms.RichTextBox();
-            this.rtbProblemInfo = new System.Windows.Forms.RichTextBox();
-            this.rtbWorkRequest = new System.Windows.Forms.RichTextBox();
+            this.rtxtCallReport = new System.Windows.Forms.RichTextBox();
+            this.rtxtProblemInfo = new System.Windows.Forms.RichTextBox();
+            this.rtxtWorkRequest = new System.Windows.Forms.RichTextBox();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximizeToggle = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlReports = new System.Windows.Forms.Panel();
+            this.numStationNumber = new System.Windows.Forms.NumericUpDown();
+            this.btnSetStationNumber = new System.Windows.Forms.Button();
+            this.lblStationNumber = new System.Windows.Forms.Label();
             this.lblReports = new System.Windows.Forms.Label();
             this.pnlClientInfo = new System.Windows.Forms.Panel();
+            this.numClientID = new System.Windows.Forms.NumericUpDown();
             this.lblClientNumber = new System.Windows.Forms.Label();
             this.btnFindClientInfo = new System.Windows.Forms.Button();
-            this.txtClientInfo = new System.Windows.Forms.TextBox();
             this.lblAgreements = new System.Windows.Forms.Label();
             this.dgvCallHistory = new System.Windows.Forms.DataGridView();
             this.lblClientCallHistory = new System.Windows.Forms.Label();
@@ -59,7 +65,9 @@ namespace CallCenterProgram.Presentation
             this.btnTakeCall = new System.Windows.Forms.Button();
             this.pnlTitleBar.SuspendLayout();
             this.pnlReports.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numStationNumber)).BeginInit();
             this.pnlClientInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numClientID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlRightSide.SuspendLayout();
@@ -79,15 +87,15 @@ namespace CallCenterProgram.Presentation
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Call Form";
             // 
-            // rtbFaultReport
+            // rtxtFaultReport
             // 
-            this.rtbFaultReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.rtbFaultReport.Font = new System.Drawing.Font("Roboto", 11.25F);
-            this.rtbFaultReport.Location = new System.Drawing.Point(19, 134);
-            this.rtbFaultReport.Name = "rtbFaultReport";
-            this.rtbFaultReport.Size = new System.Drawing.Size(192, 155);
-            this.rtbFaultReport.TabIndex = 6;
-            this.rtbFaultReport.Text = "";
+            this.rtxtFaultReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.rtxtFaultReport.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.rtxtFaultReport.Location = new System.Drawing.Point(19, 134);
+            this.rtxtFaultReport.Name = "rtxtFaultReport";
+            this.rtxtFaultReport.Size = new System.Drawing.Size(192, 155);
+            this.rtxtFaultReport.TabIndex = 6;
+            this.rtxtFaultReport.Text = "";
             // 
             // lblFaultReport
             // 
@@ -133,46 +141,90 @@ namespace CallCenterProgram.Presentation
             this.lblWorkRequest.TabIndex = 10;
             this.lblWorkRequest.Text = "Work Request";
             // 
-            // rtbCallReport
+            // rtxtCallReport
             // 
-            this.rtbCallReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.rtbCallReport.Font = new System.Drawing.Font("Roboto", 11.25F);
-            this.rtbCallReport.Location = new System.Drawing.Point(251, 134);
-            this.rtbCallReport.Name = "rtbCallReport";
-            this.rtbCallReport.Size = new System.Drawing.Size(192, 155);
-            this.rtbCallReport.TabIndex = 11;
-            this.rtbCallReport.Text = "";
+            this.rtxtCallReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.rtxtCallReport.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.rtxtCallReport.Location = new System.Drawing.Point(251, 134);
+            this.rtxtCallReport.Name = "rtxtCallReport";
+            this.rtxtCallReport.Size = new System.Drawing.Size(192, 155);
+            this.rtxtCallReport.TabIndex = 11;
+            this.rtxtCallReport.Text = "";
             // 
-            // rtbProblemInfo
+            // rtxtProblemInfo
             // 
-            this.rtbProblemInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.rtbProblemInfo.Font = new System.Drawing.Font("Roboto", 11.25F);
-            this.rtbProblemInfo.Location = new System.Drawing.Point(480, 134);
-            this.rtbProblemInfo.Name = "rtbProblemInfo";
-            this.rtbProblemInfo.Size = new System.Drawing.Size(192, 155);
-            this.rtbProblemInfo.TabIndex = 12;
-            this.rtbProblemInfo.Text = "";
+            this.rtxtProblemInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.rtxtProblemInfo.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.rtxtProblemInfo.Location = new System.Drawing.Point(480, 134);
+            this.rtxtProblemInfo.Name = "rtxtProblemInfo";
+            this.rtxtProblemInfo.Size = new System.Drawing.Size(192, 155);
+            this.rtxtProblemInfo.TabIndex = 12;
+            this.rtxtProblemInfo.Text = "";
             // 
-            // rtbWorkRequest
+            // rtxtWorkRequest
             // 
-            this.rtbWorkRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.rtbWorkRequest.Font = new System.Drawing.Font("Roboto", 11.25F);
-            this.rtbWorkRequest.Location = new System.Drawing.Point(703, 134);
-            this.rtbWorkRequest.Name = "rtbWorkRequest";
-            this.rtbWorkRequest.Size = new System.Drawing.Size(192, 155);
-            this.rtbWorkRequest.TabIndex = 13;
-            this.rtbWorkRequest.Text = "";
+            this.rtxtWorkRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.rtxtWorkRequest.Font = new System.Drawing.Font("Roboto", 11.25F);
+            this.rtxtWorkRequest.Location = new System.Drawing.Point(703, 134);
+            this.rtxtWorkRequest.Name = "rtxtWorkRequest";
+            this.rtxtWorkRequest.Size = new System.Drawing.Size(192, 155);
+            this.rtxtWorkRequest.TabIndex = 13;
+            this.rtxtWorkRequest.Text = "";
             // 
             // pnlTitleBar
             // 
             this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.pnlTitleBar.Controls.Add(this.btnMinimize);
+            this.pnlTitleBar.Controls.Add(this.btnMaximizeToggle);
+            this.pnlTitleBar.Controls.Add(this.btnExit);
             this.pnlTitleBar.Controls.Add(this.btnHome);
             this.pnlTitleBar.Controls.Add(this.lblTitle);
             this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTitleBar.Name = "pnlTitleBar";
-            this.pnlTitleBar.Size = new System.Drawing.Size(1353, 72);
+            this.pnlTitleBar.Size = new System.Drawing.Size(1394, 72);
             this.pnlTitleBar.TabIndex = 15;
+            this.pnlTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitleBar_MouseMove);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Location = new System.Drawing.Point(1173, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(75, 72);
+            this.btnMinimize.TabIndex = 7;
+            this.btnMinimize.Text = "Minimize";
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnMaximizeToggle
+            // 
+            this.btnMaximizeToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMaximizeToggle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximizeToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizeToggle.Location = new System.Drawing.Point(1248, 0);
+            this.btnMaximizeToggle.Name = "btnMaximizeToggle";
+            this.btnMaximizeToggle.Size = new System.Drawing.Size(75, 72);
+            this.btnMaximizeToggle.TabIndex = 8;
+            this.btnMaximizeToggle.Text = "Maximize";
+            this.btnMaximizeToggle.UseVisualStyleBackColor = false;
+            this.btnMaximizeToggle.Click += new System.EventHandler(this.btnMaximizeToggle_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(1323, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(71, 72);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnHome
             // 
@@ -180,7 +232,7 @@ namespace CallCenterProgram.Presentation
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnHome.Location = new System.Drawing.Point(1231, 12);
+            this.btnHome.Location = new System.Drawing.Point(1080, 15);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(75, 42);
             this.btnHome.TabIndex = 5;
@@ -191,19 +243,53 @@ namespace CallCenterProgram.Presentation
             // pnlReports
             // 
             this.pnlReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.pnlReports.Controls.Add(this.numStationNumber);
+            this.pnlReports.Controls.Add(this.btnSetStationNumber);
+            this.pnlReports.Controls.Add(this.lblStationNumber);
             this.pnlReports.Controls.Add(this.lblReports);
-            this.pnlReports.Controls.Add(this.rtbWorkRequest);
-            this.pnlReports.Controls.Add(this.rtbFaultReport);
+            this.pnlReports.Controls.Add(this.rtxtWorkRequest);
+            this.pnlReports.Controls.Add(this.rtxtFaultReport);
             this.pnlReports.Controls.Add(this.lblFaultReport);
             this.pnlReports.Controls.Add(this.lblCallReport);
-            this.pnlReports.Controls.Add(this.rtbProblemInfo);
+            this.pnlReports.Controls.Add(this.rtxtProblemInfo);
             this.pnlReports.Controls.Add(this.lblProblemInfo);
-            this.pnlReports.Controls.Add(this.rtbCallReport);
+            this.pnlReports.Controls.Add(this.rtxtCallReport);
             this.pnlReports.Controls.Add(this.lblWorkRequest);
             this.pnlReports.Location = new System.Drawing.Point(150, 90);
             this.pnlReports.Name = "pnlReports";
             this.pnlReports.Size = new System.Drawing.Size(925, 318);
             this.pnlReports.TabIndex = 16;
+            // 
+            // numStationNumber
+            // 
+            this.numStationNumber.Location = new System.Drawing.Point(661, 27);
+            this.numStationNumber.Name = "numStationNumber";
+            this.numStationNumber.Size = new System.Drawing.Size(120, 20);
+            this.numStationNumber.TabIndex = 27;
+            // 
+            // btnSetStationNumber
+            // 
+            this.btnSetStationNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetStationNumber.Font = new System.Drawing.Font("Roboto Thin", 27.75F);
+            this.btnSetStationNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnSetStationNumber.Location = new System.Drawing.Point(787, 10);
+            this.btnSetStationNumber.Name = "btnSetStationNumber";
+            this.btnSetStationNumber.Size = new System.Drawing.Size(116, 52);
+            this.btnSetStationNumber.TabIndex = 26;
+            this.btnSetStationNumber.Text = "Set";
+            this.btnSetStationNumber.UseVisualStyleBackColor = true;
+            this.btnSetStationNumber.Click += new System.EventHandler(this.btnSetStationNumber_Click);
+            // 
+            // lblStationNumber
+            // 
+            this.lblStationNumber.AutoSize = true;
+            this.lblStationNumber.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStationNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.lblStationNumber.Location = new System.Drawing.Point(416, 10);
+            this.lblStationNumber.Name = "lblStationNumber";
+            this.lblStationNumber.Size = new System.Drawing.Size(239, 38);
+            this.lblStationNumber.TabIndex = 26;
+            this.lblStationNumber.Text = "Station Number";
             // 
             // lblReports
             // 
@@ -219,9 +305,9 @@ namespace CallCenterProgram.Presentation
             // pnlClientInfo
             // 
             this.pnlClientInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.pnlClientInfo.Controls.Add(this.numClientID);
             this.pnlClientInfo.Controls.Add(this.lblClientNumber);
             this.pnlClientInfo.Controls.Add(this.btnFindClientInfo);
-            this.pnlClientInfo.Controls.Add(this.txtClientInfo);
             this.pnlClientInfo.Controls.Add(this.lblAgreements);
             this.pnlClientInfo.Controls.Add(this.dgvCallHistory);
             this.pnlClientInfo.Controls.Add(this.lblClientCallHistory);
@@ -232,12 +318,19 @@ namespace CallCenterProgram.Presentation
             this.pnlClientInfo.Size = new System.Drawing.Size(925, 363);
             this.pnlClientInfo.TabIndex = 17;
             // 
+            // numClientID
+            // 
+            this.numClientID.Location = new System.Drawing.Point(503, 40);
+            this.numClientID.Name = "numClientID";
+            this.numClientID.Size = new System.Drawing.Size(120, 20);
+            this.numClientID.TabIndex = 26;
+            // 
             // lblClientNumber
             // 
             this.lblClientNumber.AutoSize = true;
             this.lblClientNumber.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.lblClientNumber.Location = new System.Drawing.Point(545, 23);
+            this.lblClientNumber.Location = new System.Drawing.Point(362, 30);
             this.lblClientNumber.Name = "lblClientNumber";
             this.lblClientNumber.Size = new System.Drawing.Size(135, 38);
             this.lblClientNumber.TabIndex = 25;
@@ -248,21 +341,13 @@ namespace CallCenterProgram.Presentation
             this.btnFindClientInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindClientInfo.Font = new System.Drawing.Font("Roboto Thin", 27.75F);
             this.btnFindClientInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnFindClientInfo.Location = new System.Drawing.Point(795, 14);
+            this.btnFindClientInfo.Location = new System.Drawing.Point(629, 14);
             this.btnFindClientInfo.Name = "btnFindClientInfo";
-            this.btnFindClientInfo.Size = new System.Drawing.Size(116, 52);
+            this.btnFindClientInfo.Size = new System.Drawing.Size(282, 66);
             this.btnFindClientInfo.TabIndex = 24;
             this.btnFindClientInfo.Text = "Find Client Info";
             this.btnFindClientInfo.UseVisualStyleBackColor = true;
             this.btnFindClientInfo.Click += new System.EventHandler(this.btnFindClientInfo_Click);
-            // 
-            // txtClientInfo
-            // 
-            this.txtClientInfo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientInfo.Location = new System.Drawing.Point(686, 32);
-            this.txtClientInfo.Name = "txtClientInfo";
-            this.txtClientInfo.Size = new System.Drawing.Size(103, 26);
-            this.txtClientInfo.TabIndex = 23;
             // 
             // lblAgreements
             // 
@@ -322,7 +407,7 @@ namespace CallCenterProgram.Presentation
             this.pnlRightSide.Controls.Add(this.btnMakeCall);
             this.pnlRightSide.Controls.Add(this.btnTakeCall);
             this.pnlRightSide.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRightSide.Location = new System.Drawing.Point(1166, 72);
+            this.pnlRightSide.Location = new System.Drawing.Point(1207, 72);
             this.pnlRightSide.Name = "pnlRightSide";
             this.pnlRightSide.Size = new System.Drawing.Size(187, 745);
             this.pnlRightSide.TabIndex = 18;
@@ -407,7 +492,7 @@ namespace CallCenterProgram.Presentation
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(1353, 817);
+            this.ClientSize = new System.Drawing.Size(1394, 817);
             this.Controls.Add(this.pnlRightSide);
             this.Controls.Add(this.pnlClientInfo);
             this.Controls.Add(this.pnlReports);
@@ -419,8 +504,10 @@ namespace CallCenterProgram.Presentation
             this.pnlTitleBar.PerformLayout();
             this.pnlReports.ResumeLayout(false);
             this.pnlReports.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numStationNumber)).EndInit();
             this.pnlClientInfo.ResumeLayout(false);
             this.pnlClientInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numClientID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlRightSide.ResumeLayout(false);
@@ -431,14 +518,14 @@ namespace CallCenterProgram.Presentation
 
         #endregion
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.RichTextBox rtbFaultReport;
+        private System.Windows.Forms.RichTextBox rtxtFaultReport;
         private System.Windows.Forms.Label lblFaultReport;
         private System.Windows.Forms.Label lblCallReport;
         private System.Windows.Forms.Label lblProblemInfo;
         private System.Windows.Forms.Label lblWorkRequest;
-        private System.Windows.Forms.RichTextBox rtbCallReport;
-        private System.Windows.Forms.RichTextBox rtbProblemInfo;
-        private System.Windows.Forms.RichTextBox rtbWorkRequest;
+        private System.Windows.Forms.RichTextBox rtxtCallReport;
+        private System.Windows.Forms.RichTextBox rtxtProblemInfo;
+        private System.Windows.Forms.RichTextBox rtxtWorkRequest;
         private System.Windows.Forms.Panel pnlTitleBar;
         private System.Windows.Forms.Panel pnlReports;
         private System.Windows.Forms.Panel pnlClientInfo;
@@ -451,12 +538,18 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label lblClientNumber;
         private System.Windows.Forms.Button btnFindClientInfo;
-        private System.Windows.Forms.TextBox txtClientInfo;
         private System.Windows.Forms.Panel pnlRightSide;
         private System.Windows.Forms.Button btnEndCall;
         private System.Windows.Forms.Panel pnlRightBottom;
         private System.Windows.Forms.Button btnInsertIntoDB;
         private System.Windows.Forms.Button btnMakeCall;
         private System.Windows.Forms.Button btnTakeCall;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnMaximizeToggle;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnSetStationNumber;
+        private System.Windows.Forms.Label lblStationNumber;
+        private System.Windows.Forms.NumericUpDown numClientID;
+        private System.Windows.Forms.NumericUpDown numStationNumber;
     }
 }

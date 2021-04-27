@@ -170,5 +170,17 @@ namespace CallCenterProgram
         {
             Application.Exit();
         }
+
+        private void btnServiceLevel_Click(object sender, EventArgs e)
+        {
+            Service_Level service = new Service_Level();
+            this.Hide();
+            service.Show();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

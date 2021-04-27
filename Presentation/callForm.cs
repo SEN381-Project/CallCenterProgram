@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
-using CallCenterProgram.Data_Access;
 using CallCenterProgram;
+using System.Runtime.InteropServices;
 
 namespace CallCenterProgram.Presentation
 {
@@ -18,10 +18,22 @@ namespace CallCenterProgram.Presentation
         //classes
         Call call = new Call();
         colors RGB = new colors();
+        //fields
+        bool Maximized = false;
+        //DLL stuff
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
         //constructor
         public callForm()
         {
             InitializeComponent();
+            Maximized = false;
+            CreateMyBorderlessWindow();
         }
         //methods
         //styling methods
@@ -30,9 +42,6 @@ namespace CallCenterProgram.Presentation
             //btn Insert Into DB
             btnInsertIntoDB.ForeColor = RGB.accentColorLighterColor;
             btnInsertIntoDB.FlatAppearance.MouseDownBackColor = RGB.accentDarkerColor;
-            //btn generate reports
-            //btnGenerateReports.ForeColor = RGB.accentColorLighterColor;
-            //btnGenerateReports.FlatAppearance.MouseDownBackColor = RGB.accentDarkerColor;
             //btn home
             btnHome.ForeColor = RGB.accentColor;
             btnHome.FlatAppearance.BorderColor = RGB.accentColorLighterColor;
@@ -81,10 +90,10 @@ namespace CallCenterProgram.Presentation
 
         private void colorReportRichTextBoxs()
         {
-            colorRichTextBox(rtbCallReport);
-            colorRichTextBox(rtbFaultReport);
-            colorRichTextBox(rtbProblemInfo);
-            colorRichTextBox(rtbWorkRequest);
+            colorRichTextBox(rtxtCallReport);
+            colorRichTextBox(rtxtFaultReport);
+            colorRichTextBox(rtxtProblemInfo);
+            colorRichTextBox(rtxtWorkRequest);
         }
 
         private void colorRichTextBox(RichTextBox rtb)
@@ -95,17 +104,28 @@ namespace CallCenterProgram.Presentation
 
         private void colorTextbox()
         {
-            txtClientInfo.BackColor = RGB.bgColor;
-            txtClientInfo.ForeColor = RGB.grey;
+            numClientID.BackColor = RGB.bgColor;
+            numClientID.ForeColor = RGB.grey;
         }
+
+        public void CreateMyBorderlessWindow()
+        {
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            // Remove the control box so the form will only display client area.
+            this.ControlBox = false;
+        }
+
         //logic methods
         private void setValues()
         {
             //set call values
-            call.CallReport = rtbCallReport.Text;
-            call.ProblemInfo = rtbProblemInfo.Text;
-            call.WorkRequest = rtbWorkRequest.Text;
-            call.FaultReport = rtbFaultReport.Text;
+            call.CallReport = rtxtCallReport.Text;
+            call.ProblemInfo = rtxtProblemInfo.Text;
+            call.WorkRequest = rtxtWorkRequest.Text;
+            call.FaultReport = rtxtFaultReport.Text;
         }
 
         //form components
@@ -122,25 +142,49 @@ namespace CallCenterProgram.Presentation
         private void btnTakeCall_Click(object sender, EventArgs e)
         {
             call.createInitialTimestamp();
+            MessageBox.Show("Call Started");
         }
 
         private void btnMakeCall_Click(object sender, EventArgs e)
         {
             call.createInitialTimestamp();
+            MessageBox.Show("Call Started");
         }
 
         private void btnEndCall_Click(object sender, EventArgs e)
         {
             call.createFinalTimestamp();
+            MessageBox.Show("Call ended");
         }
 
         private void btnInsertIntoDB_Click(object sender, EventArgs e)
         {
-            call.InsertCallIntoDB(int.Parse(txtClientInfo.Text));
+            call.CallReport = rtxtCallReport.Text;
+            call.WorkRequest = rtxtWorkRequest.Text;
+            call.FaultReport = rtxtFaultReport.Text;
+            call.ProblemInfo = rtxtProblemInfo.Text;
+            try
+            {
+                call.InsertCallIntoDB((int) numClientID.Value);
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("could not find client id due to error: " + er.Message);
+            }
+            
         }
 
         private void btnFindClientInfo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                call.ClientID = (int) numClientID.Value;
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("could not find client id due to error: " + er.Message);
+            }
+            
             //find clients info based on client ID
             //display the information in the data grid views
         }
@@ -150,6 +194,54 @@ namespace CallCenterProgram.Presentation
             //go to home form
             HomeForm.instance.Show();
             this.Close();
+        }
+
+        private void btnSetStationNumber_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                call.StationNumber = (int)numStationNumber.Value;
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Could not set station number due to error: " + er.Message);
+            }
+            
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximizeToggle_Click(object sender, EventArgs e)
+        {
+            if (Maximized == false)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximizeToggle.Text = "Normal";
+                Maximized = true;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                btnMaximizeToggle.Text = "Maximize";
+                Maximized = false;
+            }
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pnlTitleBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }
