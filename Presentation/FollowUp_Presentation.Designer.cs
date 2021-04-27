@@ -230,6 +230,7 @@
             this.btnSetReminder.TabIndex = 11;
             this.btnSetReminder.Text = "Set Reminder";
             this.btnSetReminder.UseVisualStyleBackColor = false;
+            this.btnSetReminder.Click += new System.EventHandler(this.btnSetReminder_Click);
             // 
             // FollowUp_Presentation
             // 

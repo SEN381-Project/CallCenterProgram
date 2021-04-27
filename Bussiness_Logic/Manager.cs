@@ -11,7 +11,7 @@ namespace CallCenterProgram.Bussiness_Logic
 {
     class Manager : Employee
     {
-
+        
         public Manager()
         {
         }

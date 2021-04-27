@@ -19,6 +19,7 @@ namespace CallCenterProgram.Presentation
             InitializeComponent();
         }
         FollowUpBusiness feedback = new FollowUpBusiness();
+        FollowUp Set = new FollowUp();
         
         public void datagridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -36,8 +37,8 @@ namespace CallCenterProgram.Presentation
 
         private void Menu_Click(object sender, EventArgs e)
         {
-            HomeForm MainMenu = new HomeForm();
-            MainMenu.Show();
+            HomeForm.instance.Show();
+            this.Close();
         }
     
 
@@ -54,6 +55,12 @@ namespace CallCenterProgram.Presentation
 
         private void Insert_Click(object sender, EventArgs e)
         {
+             Set.FeedbackId = Convert.ToInt32(txtfeedbackid.Text);
+             Set.Problem = txtproblem.Text;
+             Set.HelpedOnTime = bool.Parse(txthelpedontime.Text);
+             Set.Comment = txtcomment.Text;
+             Set.FeedbackDate = DateTime.Parse(txtfeedbackD.Text);
+
             feedback.AddFeedback(int.Parse(txtfeedbackid.Text), txtproblem.Text, bool.Parse(txthelpedontime.Text), txtcomment.Text, DateTime.Parse(txtfeedbackD.Text));
         }
 

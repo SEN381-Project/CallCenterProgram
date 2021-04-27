@@ -30,25 +30,37 @@ namespace CallCenterProgram.Presentation
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvServices = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cmbAdd = new System.Windows.Forms.ComboBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.txtExpenses = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnAddService = new System.Windows.Forms.Button();
+            this.btnUpdateState = new System.Windows.Forms.Button();
+            this.cmbUpdate1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtUpdate1ID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnMainMenu = new System.Windows.Forms.Button();
+            this.btnUpdateAll = new System.Windows.Forms.Button();
+            this.txtUpdateExpenses = new System.Windows.Forms.TextBox();
+            this.txtUpdateType = new System.Windows.Forms.TextBox();
+            this.txtUpdateName = new System.Windows.Forms.TextBox();
+            this.cmbUpdateAll = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtUpdateID = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,15 +73,16 @@ namespace CallCenterProgram.Presentation
             this.label1.TabIndex = 0;
             this.label1.Text = "Existing Services:";
             // 
-            // dataGridView1
+            // dgvServices
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 51);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(781, 235);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServices.Location = new System.Drawing.Point(28, 51);
+            this.dgvServices.Name = "dgvServices";
+            this.dgvServices.RowHeadersWidth = 51;
+            this.dgvServices.RowTemplate.Height = 24;
+            this.dgvServices.Size = new System.Drawing.Size(781, 235);
+            this.dgvServices.TabIndex = 1;
+            this.dgvServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label2
             // 
@@ -121,146 +134,273 @@ namespace CallCenterProgram.Presentation
             this.label6.TabIndex = 6;
             this.label6.Text = "Select State Of The Service:";
             // 
-            // comboBox1
+            // cmbAdd
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbAdd.FormattingEnabled = true;
+            this.cmbAdd.Items.AddRange(new object[] {
             "Active",
             "Not-Active"});
-            this.comboBox1.Location = new System.Drawing.Point(302, 504);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(201, 24);
-            this.comboBox1.TabIndex = 7;
+            this.cmbAdd.Location = new System.Drawing.Point(302, 504);
+            this.cmbAdd.Name = "cmbAdd";
+            this.cmbAdd.Size = new System.Drawing.Size(201, 24);
+            this.cmbAdd.TabIndex = 7;
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(302, 368);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(486, 22);
-            this.textBox1.TabIndex = 8;
+            this.txtName.Location = new System.Drawing.Point(302, 368);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(486, 22);
+            this.txtName.TabIndex = 8;
             // 
-            // textBox2
+            // txtType
             // 
-            this.textBox2.Location = new System.Drawing.Point(302, 417);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(486, 22);
-            this.textBox2.TabIndex = 9;
+            this.txtType.Location = new System.Drawing.Point(302, 417);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(486, 22);
+            this.txtType.TabIndex = 9;
             // 
-            // textBox3
+            // txtExpenses
             // 
-            this.textBox3.Location = new System.Drawing.Point(302, 460);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(486, 22);
-            this.textBox3.TabIndex = 10;
+            this.txtExpenses.Location = new System.Drawing.Point(302, 460);
+            this.txtExpenses.Name = "txtExpenses";
+            this.txtExpenses.Size = new System.Drawing.Size(486, 22);
+            this.txtExpenses.TabIndex = 10;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 613);
+            this.label7.Location = new System.Drawing.Point(877, 414);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(737, 25);
             this.label7.TabIndex = 11;
             this.label7.Text = "UPDATE SERVICE SECTION: (ALL FIELDS TO BE FILLED IN!)";
             // 
-            // button1
+            // btnAddService
             // 
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(641, 550);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 48);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "ADD SERVICE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAddService.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddService.Location = new System.Drawing.Point(641, 550);
+            this.btnAddService.Name = "btnAddService";
+            this.btnAddService.Size = new System.Drawing.Size(147, 48);
+            this.btnAddService.TabIndex = 12;
+            this.btnAddService.Text = "ADD SERVICE";
+            this.btnAddService.UseVisualStyleBackColor = true;
+            this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
             // 
-            // button2
+            // btnUpdateState
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(641, 761);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 48);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "UPDATE SERVICE";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUpdateState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateState.Location = new System.Drawing.Point(1493, 562);
+            this.btnUpdateState.Name = "btnUpdateState";
+            this.btnUpdateState.Size = new System.Drawing.Size(147, 48);
+            this.btnUpdateState.TabIndex = 15;
+            this.btnUpdateState.Text = "UPDATE SERVICE";
+            this.btnUpdateState.UseVisualStyleBackColor = true;
+            this.btnUpdateState.Click += new System.EventHandler(this.btnUpdateState_Click);
             // 
-            // comboBox2
+            // cmbUpdate1
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbUpdate1.FormattingEnabled = true;
+            this.cmbUpdate1.Items.AddRange(new object[] {
             "Active",
             "Not-Active"});
-            this.comboBox2.Location = new System.Drawing.Point(302, 715);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(201, 24);
-            this.comboBox2.TabIndex = 14;
+            this.cmbUpdate1.Location = new System.Drawing.Point(1154, 516);
+            this.cmbUpdate1.Name = "cmbUpdate1";
+            this.cmbUpdate1.Size = new System.Drawing.Size(201, 24);
+            this.cmbUpdate1.TabIndex = 14;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(24, 714);
+            this.label8.Location = new System.Drawing.Point(876, 515);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(240, 21);
             this.label8.TabIndex = 13;
             this.label8.Text = "Select State Of The Service:";
             // 
-            // textBox4
+            // txtUpdate1ID
             // 
-            this.textBox4.Location = new System.Drawing.Point(302, 674);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(486, 22);
-            this.textBox4.TabIndex = 17;
+            this.txtUpdate1ID.Location = new System.Drawing.Point(1154, 475);
+            this.txtUpdate1ID.Name = "txtUpdate1ID";
+            this.txtUpdate1ID.Size = new System.Drawing.Size(486, 22);
+            this.txtUpdate1ID.TabIndex = 17;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(26, 675);
+            this.label9.Location = new System.Drawing.Point(876, 476);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 21);
+            this.label9.Size = new System.Drawing.Size(103, 21);
             this.label9.TabIndex = 16;
-            this.label9.Text = "Enter Service ID:";
+            this.label9.Text = "Service ID:";
             // 
-            // button3
+            // btnMainMenu
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(28, 761);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 48);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "EXIT";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainMenu.Location = new System.Drawing.Point(605, 634);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(555, 54);
+            this.btnMainMenu.TabIndex = 18;
+            this.btnMainMenu.Text = "MAIN MENU";
+            this.btnMainMenu.UseVisualStyleBackColor = true;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            // 
+            // btnUpdateAll
+            // 
+            this.btnUpdateAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnUpdateAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateAll.Location = new System.Drawing.Point(1495, 291);
+            this.btnUpdateAll.Name = "btnUpdateAll";
+            this.btnUpdateAll.Size = new System.Drawing.Size(147, 48);
+            this.btnUpdateAll.TabIndex = 28;
+            this.btnUpdateAll.Text = "UPDATE SERVICE";
+            this.btnUpdateAll.UseVisualStyleBackColor = true;
+            this.btnUpdateAll.Click += new System.EventHandler(this.btnUpdateAll_Click);
+            // 
+            // txtUpdateExpenses
+            // 
+            this.txtUpdateExpenses.Location = new System.Drawing.Point(1156, 201);
+            this.txtUpdateExpenses.Name = "txtUpdateExpenses";
+            this.txtUpdateExpenses.Size = new System.Drawing.Size(486, 22);
+            this.txtUpdateExpenses.TabIndex = 27;
+            // 
+            // txtUpdateType
+            // 
+            this.txtUpdateType.Location = new System.Drawing.Point(1156, 158);
+            this.txtUpdateType.Name = "txtUpdateType";
+            this.txtUpdateType.Size = new System.Drawing.Size(486, 22);
+            this.txtUpdateType.TabIndex = 26;
+            // 
+            // txtUpdateName
+            // 
+            this.txtUpdateName.Location = new System.Drawing.Point(1156, 109);
+            this.txtUpdateName.Name = "txtUpdateName";
+            this.txtUpdateName.Size = new System.Drawing.Size(486, 22);
+            this.txtUpdateName.TabIndex = 25;
+            // 
+            // cmbUpdateAll
+            // 
+            this.cmbUpdateAll.FormattingEnabled = true;
+            this.cmbUpdateAll.Items.AddRange(new object[] {
+            "Active",
+            "Not-Active"});
+            this.cmbUpdateAll.Location = new System.Drawing.Point(1156, 245);
+            this.cmbUpdateAll.Name = "cmbUpdateAll";
+            this.cmbUpdateAll.Size = new System.Drawing.Size(201, 24);
+            this.cmbUpdateAll.TabIndex = 24;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(878, 244);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(240, 21);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Select State Of The Service:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(880, 202);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(143, 21);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Work Expenses:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(880, 157);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(222, 21);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Service Equipment Type: ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(880, 110);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(130, 21);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Service Name:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(877, 27);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(737, 25);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "UPDATE SERVICE SECTION: (ALL FIELDS TO BE FILLED IN!)";
+            // 
+            // txtUpdateID
+            // 
+            this.txtUpdateID.Location = new System.Drawing.Point(1156, 70);
+            this.txtUpdateID.Name = "txtUpdateID";
+            this.txtUpdateID.Size = new System.Drawing.Size(486, 22);
+            this.txtUpdateID.TabIndex = 30;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(880, 71);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(103, 21);
+            this.label15.TabIndex = 29;
+            this.label15.Text = "Service ID:";
             // 
             // Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(844, 844);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox4);
+            this.ClientSize = new System.Drawing.Size(1712, 716);
+            this.Controls.Add(this.txtUpdateID);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.btnUpdateAll);
+            this.Controls.Add(this.txtUpdateExpenses);
+            this.Controls.Add(this.txtUpdateType);
+            this.Controls.Add(this.txtUpdateName);
+            this.Controls.Add(this.cmbUpdateAll);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.btnMainMenu);
+            this.Controls.Add(this.txtUpdate1ID);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.btnUpdateState);
+            this.Controls.Add(this.cmbUpdate1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddService);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtExpenses);
+            this.Controls.Add(this.txtType);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.cmbAdd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvServices);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.Name = "Service";
             this.Text = "Service";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Service_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,23 +409,35 @@ namespace CallCenterProgram.Presentation
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvServices;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cmbAdd;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.TextBox txtExpenses;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnAddService;
+        private System.Windows.Forms.Button btnUpdateState;
+        private System.Windows.Forms.ComboBox cmbUpdate1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtUpdate1ID;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnMainMenu;
+        private System.Windows.Forms.Button btnUpdateAll;
+        private System.Windows.Forms.TextBox txtUpdateExpenses;
+        private System.Windows.Forms.TextBox txtUpdateType;
+        private System.Windows.Forms.TextBox txtUpdateName;
+        private System.Windows.Forms.ComboBox cmbUpdateAll;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtUpdateID;
+        private System.Windows.Forms.Label label15;
     }
 }

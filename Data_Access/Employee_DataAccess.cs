@@ -14,7 +14,7 @@ namespace CallCenterProgram.Data_Access
     class Employee_DataAccess
     {
         //Set Connection String
-        string connect = "Data Source=.; Initial Catalog= CallCenterDatabase; Integrated Security= SSPI";
+        string connect = "Data Source =.; Initial Catalog= CallCenterDatabase; Integrated Security= SSPI";
         SqlConnection Conn;
         SqlCommand Command;
         SqlDataReader Reader;
@@ -32,7 +32,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("New Employee inserted!");
             }
             catch (Exception e)
@@ -57,7 +57,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Department inserted!");
             }
             catch (Exception e)
@@ -81,7 +81,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Technician info inserted!");
             }
             catch (Exception e)
@@ -106,7 +106,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Employee details are updated!");
             }
             catch (Exception e)
@@ -131,7 +131,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Department is updated!");
             }
             catch (Exception e)
@@ -156,7 +156,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Technician info Updated!");
             }
             catch (Exception e)
@@ -181,7 +181,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("The Employee is Remove From the system!");
             }
             catch (Exception e)
@@ -206,7 +206,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("The Department is Remove From the system!");
             }
             catch (Exception e)
@@ -298,7 +298,7 @@ namespace CallCenterProgram.Data_Access
 
             try
             {
-                Command.BeginExecuteNonQuery();
+                Command.ExecuteNonQuery();
                 MessageBox.Show("Technician info deleted!");
             }
             catch (Exception e)
@@ -331,16 +331,16 @@ namespace CallCenterProgram.Data_Access
 
                 while (Reader.Read())
                 {
-                    objEmployee.EmployeeId = int.Parse(Reader[1].ToString());
-                    objEmployee.Name = Reader[2].ToString();
-                    objEmployee.Surname = Reader[3].ToString();
-                    objEmployee.Address = Reader[4].ToString();
-                    objEmployee.ContactDetails = Reader[5].ToString();
-                    objEmployee.Jobtitle = Reader[6].ToString();
+                    objEmployee.EmployeeId = int.Parse(Reader[0].ToString());
+                    objEmployee.Name = Reader[1].ToString();
+                    objEmployee.Surname = Reader[2].ToString();
+                    objEmployee.Address = Reader[3].ToString();
+                    objEmployee.ContactDetails = Reader[4].ToString();
+                    objEmployee.Jobtitle = Reader[5].ToString();
                     objEmployee.JobDescription = Reader[6].ToString();
-                    objEmployee.DepartmentId = int.Parse(Reader[1].ToString());
-                    objEmployee.DepartmentName = Reader[2].ToString();
-                    objEmployee.StationNumber = int.Parse(Reader[1].ToString());
+                    objEmployee.DepartmentId = int.Parse(Reader[7].ToString());
+                    objEmployee.DepartmentName = Reader[8].ToString();
+                    objEmployee.StationNumber = int.Parse(Reader[9].ToString());
 
                     EmployeeData.Add(new Manager(objEmployee.EmployeeId, objEmployee.Name, objEmployee.Surname, objEmployee.Address, objEmployee.ContactDetails, objEmployee.Jobtitle, objEmployee.JobDescription, objEmployee.DepartmentId, objEmployee.DepartmentName, objEmployee.StationNumber));
                 }

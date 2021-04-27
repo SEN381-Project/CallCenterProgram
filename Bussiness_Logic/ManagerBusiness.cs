@@ -11,7 +11,11 @@ using CallCenterProgram;
 namespace CallCenterProgram.Bussiness_Logic
 {
     class ManagerBusiness
-    { 
+    {
+        private string authorize;
+
+        public string Authorize { get => authorize; set => authorize = value; }
+
         Employee_DataAccess EmployeeData = new Employee_DataAccess();
         public void FireEmployee(int employeeId, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescription)
         {
@@ -47,11 +51,6 @@ namespace CallCenterProgram.Bussiness_Logic
             return Employees;
         }
 
-        ////public List<Manager> ViewDepartment()
-        ////{
-        ////    List<Manager> Departments = EmployeeData.DisplayDepartment();
-        ////    return Departments;
-        ////}
 
 
         public void AddEmployee(int employeeId, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescription)
@@ -64,6 +63,11 @@ namespace CallCenterProgram.Bussiness_Logic
         {
             EmployeeData.InsertDepartment(departmentId, derptmentName, stationNumber);
 
+        }
+
+        public void MakeAuthorizarion(string authorize)
+        {
+            authorize = "M145628";
         }
     }
 }

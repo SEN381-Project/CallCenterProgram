@@ -119,7 +119,7 @@ namespace CallCenterProgram
 
         private void btnEmployeeForm_Click(object sender, EventArgs e)
         {
-            Employee form = new Employee();
+            Employee_Presentation form = new Employee_Presentation();
             showForm(form);
         }
 

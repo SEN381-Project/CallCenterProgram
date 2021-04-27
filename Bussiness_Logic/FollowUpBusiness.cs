@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using CallCenterProgram.Data_Access;
 using CallCenterProgram.Presentation;
-using CallCenterProgram;
+using CallCenterProgram.Bussiness_Logic;
 
 namespace CallCenterProgram.Bussiness_Logic
 {
     class FollowUpBusiness
     {
         FollowUp_DataAccess FollowUpData = new FollowUp_DataAccess();
+        FollowUp PopUp = new FollowUp();
 
         public void InsertReminder(int reminderId, string reminder, DateTime reminderDate)
         {
@@ -74,5 +75,7 @@ namespace CallCenterProgram.Bussiness_Logic
             return setReminder;
 
         }
+
+      
     }
 }

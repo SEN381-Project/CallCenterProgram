@@ -23,7 +23,7 @@ namespace CallCenterProgram.Presentation
 
         private void Employee_Click(object sender, EventArgs e)
         {
-            Employee employee = new Employee();
+            Employee_Presentation employee = new Employee_Presentation();
             employee.Show();
         }
 
@@ -34,22 +34,31 @@ namespace CallCenterProgram.Presentation
 
         private void MainMenu_Click(object sender, EventArgs e)
         {
-            HomeForm MainMenu = new HomeForm();
-            MainMenu.Show();
+            HomeForm.instance.Show();
+            this.Close();
         }
 
         private void InsertT_Click(object sender, EventArgs e)
         {
+            string abilities = txtability.Text;
+            string qualification = txtq.Text;
+
             technicians.InsertTechnicians(txtability.Text, txtq.Text);
         }
 
         private void UpdateT_Click(object sender, EventArgs e)
         {
+            technicians.Abilities = txtability.Text;
+            technicians.Qualification = txtq.Text;
+
             technicians.InsertTechnicians(txtability.Text, txtq.Text);
         }
 
         private void DeleteT_Click(object sender, EventArgs e)
         {
+            technicians.Abilities = txtability.Text;
+            technicians.Qualification = txtq.Text;
+
             technicians.DeleteTechnicians(txtability.Text, txtq.Text);
         }
 
