@@ -33,9 +33,9 @@ namespace CallCenterProgram.Presentation
             this.btnViewIndividualClients = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnMax = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -82,42 +82,45 @@ namespace CallCenterProgram.Presentation
             this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTitleBar.Name = "pnlTitleBar";
-            this.pnlTitleBar.Size = new System.Drawing.Size(378, 39);
+            this.pnlTitleBar.Size = new System.Drawing.Size(641, 50);
             this.pnlTitleBar.TabIndex = 3;
             this.pnlTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitleBar_MouseMove);
             // 
-            // btnExit
+            // btnMin
             // 
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.Location = new System.Drawing.Point(328, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(50, 39);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Location = new System.Drawing.Point(470, 0);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(62, 50);
+            this.btnMin.TabIndex = 5;
+            this.btnMin.Text = "Minimize";
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // btnMax
             // 
             this.btnMax.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMax.Location = new System.Drawing.Point(280, 0);
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Location = new System.Drawing.Point(532, 0);
             this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(48, 39);
+            this.btnMax.Size = new System.Drawing.Size(59, 50);
             this.btnMax.TabIndex = 4;
             this.btnMax.Text = "Maximize";
             this.btnMax.UseVisualStyleBackColor = true;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
             // 
-            // btnMin
+            // btnExit
             // 
-            this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMin.Location = new System.Drawing.Point(230, 0);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(50, 39);
-            this.btnMin.TabIndex = 5;
-            this.btnMin.Text = "Minimize";
-            this.btnMin.UseVisualStyleBackColor = true;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(591, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(50, 50);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel1
             // 
@@ -125,7 +128,7 @@ namespace CallCenterProgram.Presentation
             this.panel1.Controls.Add(this.btnViewBusinessClients);
             this.panel1.Controls.Add(this.btnViewIndividualClients);
             this.panel1.Controls.Add(this.btnMain);
-            this.panel1.Location = new System.Drawing.Point(0, 45);
+            this.panel1.Location = new System.Drawing.Point(128, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(378, 114);
             this.panel1.TabIndex = 4;
@@ -135,7 +138,7 @@ namespace CallCenterProgram.Presentation
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(378, 199);
+            this.ClientSize = new System.Drawing.Size(641, 224);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTitleBar);
             this.Font = new System.Drawing.Font("Roboto Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
