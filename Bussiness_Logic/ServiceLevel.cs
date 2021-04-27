@@ -29,6 +29,10 @@ namespace CallCenterProgram.Bussiness_Logic
         public double PenaltiesForNonPerformance { get => penaltiesForNonPerformance; set => penaltiesForNonPerformance = value; }
         public int SecurityLevelID { get => securityLevelID; set => securityLevelID = value; }
 
+        public ServiceLevel()
+        {
+        }
+
         public ServiceLevel(int securityLevelID, bool availability, int sericeLevelId, string levelName, string optOutDetails, double penaltiesForLateWork, double penaltiesForNonPerformance)
         {
             this.securityLevelID = securityLevelID;
@@ -40,20 +44,19 @@ namespace CallCenterProgram.Bussiness_Logic
             this.penaltiesForNonPerformance = penaltiesForNonPerformance;
         }
 
-        //public ServiceLevel AddServiceLevel(string levelName, string optOutDetails, double penaltiesForLateWork, double penaltiesForNonPerformance, int state, int securityLevelID)
-        //{
-        //    //dataAccess.InsertServiceLevel(levelName, optOutDetails, penaltiesForLateWork, penaltiesForNonPerformance, state, securityLevelID);
-
-        //    //ServiceLevel serviceLevel = new ServiceLevel();
-        //    //return serviceLevel;
-        //}
-
-        public void ChangeAvailability(int serviceLevelID, int newAvailability)
+        public void AddServiceLevel(string levelName, string optOutDetails, decimal penaltiesForLateWork, decimal penaltiesForNonPerformance, int state, int securityLevelID)
         {
-            dataAccess.UpdateServiceLevel(serviceLevelID, newAvailability);
+            dataAccess.InsertServiceLevel(levelName, optOutDetails, penaltiesForLateWork, penaltiesForNonPerformance, state, securityLevelID);
+        }
 
-            // local update
-            this.Availability = newAvailability == 0 ? false : true;
+        public void UpdateServiceLevel(int serviceLevelID, string levelName, string optOutDetails, decimal penaltiesForLateWork, decimal penaltiesForNonPerformance, int securityLevelID, int state)
+        {
+            dataAccess.UpdateServiceLevel(serviceLevelID, levelName, optOutDetails, penaltiesForLateWork, penaltiesForNonPerformance, securityLevelID, state);
+        }
+
+        public void UpdateServiceLevelAvailability(int serviceLevelID, int state)
+        {
+            dataAccess.UpdateServiceLevel(serviceLevelID, state);
         }
     }
 }
