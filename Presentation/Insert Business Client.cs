@@ -16,7 +16,6 @@ namespace CallCenterProgram.Presentation
     {
 
         bool Maximized = false;
-        bool Validated = false;
 
         //DLL stuff
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -54,61 +53,66 @@ namespace CallCenterProgram.Presentation
         {
             //assign values to variables
 
-            int id = Convert.ToInt32(nudID.Value);
-            string name = txtName.Text;
-            string surname = txtSurname.Text;
-            string email = txtEmail.Text;
-            string cellphone = txtCellphone.Text;
-            if (cellphone == "")
+            try
             {
-                cellphone = "Unknown";
-            }
+                int id = Convert.ToInt32(nudID.Value);
+                string name = txtName.Text;
+                string surname = txtSurname.Text;
+                string email = txtEmail.Text;
+                string cellphone = txtCellphone.Text;
+                if (cellphone == "")
+                {
+                    cellphone = "Unknown";
+                }
 
-            string status = rtbStatus.Text;
-            if (status == "")
-            {
-                status = "Unknown";
-            }
-            string role = txtRole.Text;
-            if (role == "")
-            {
-                role = "Unknown";
-            }
+                string status = rtbStatus.Text;
+                if (status == "")
+                {
+                    status = "Unknown";
+                }
+                string role = txtRole.Text;
+                if (role == "")
+                {
+                    role = "Unknown";
+                }
 
-            int streetnumber = Convert.ToInt32(nudStreetNumber.Value);
-            if (streetnumber == null)
-            {
-                streetnumber = 0;
-            }
+                int streetnumber = Convert.ToInt32(nudStreetNumber.Value);
 
-            string streetname = txtStreetName.Text;
-            if (streetname == "")
-            {
-                streetname = "Unknown";
-            }
+                string streetname = txtStreetName.Text;
+                if (streetname == "")
+                {
+                    streetname = "Unknown";
+                }
 
-            string city = txtCity.Text;
-            if (city == "")
-            {
-                city = "Unknown";
-            }
+                string city = txtCity.Text;
+                if (city == "")
+                {
+                    city = "Unknown";
+                }
 
-            string country;
-            if (lstCountries.SelectedItem == null)
-            {
-                country = "Unknown";
-            }
-            else
-            {
-                country = lstCountries.SelectedItem.ToString();
-            }
+                string country;
+                if (lstCountries.SelectedItem == null)
+                {
+                    country = "Unknown";
+                }
+                else
+                {
+                    country = lstCountries.SelectedItem.ToString();
+                }
 
-            BusinessClient client = new BusinessClient(id, name, surname, status, role, email, cellphone, streetnumber, streetname, city, country);
-            client.SendClientToDataAccess(client);
-
-            Business_Client_Info client_Info = new Business_Client_Info();
-            client_Info.Show();
-            this.Close();
+                BusinessClient client = new BusinessClient(id, name, surname, status, role, email, cellphone, streetnumber, streetname, city, country);
+                client.SendClientToDataAccess(client);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("There was an error with one of your values: " + ex.Message);
+            }
+            finally
+            {
+                Business_Client_Info client_Info = new Business_Client_Info();
+                client_Info.Show();
+                this.Close();
+            }
         }
 
         private void Insert_Business_Client_Load(object sender, EventArgs e)
