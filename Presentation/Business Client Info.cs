@@ -127,5 +127,22 @@ namespace CallCenterProgram.Presentation
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void btnDeleteClient_Click(object sender, EventArgs e)
+        {
+            int ID = (int)dgvBusinessClients.Rows[dgvBusinessClients.CurrentRow.Index].Cells["ClientID"].Value;
+            DialogResult result = MessageBox.Show("Are you sure you want to delete Client " + ID, "Delete Client", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                BusinessClient client = new BusinessClient();
+                client.DeleteBusinessClient(ID);
+                MessageBox.Show("Client " + ID + " was deleted");
+            }
+            else
+            {
+                MessageBox.Show("Client was not deleted");
+            }
+        }
     }
 }

@@ -134,6 +134,7 @@ namespace CallCenterProgram.Presentation
             this.btnDeleteClient.TabIndex = 7;
             this.btnDeleteClient.Text = "Delete Client";
             this.btnDeleteClient.UseVisualStyleBackColor = true;
+            this.btnDeleteClient.Click += new System.EventHandler(this.btnDeleteClient_Click);
             // 
             // panel1
             // 
