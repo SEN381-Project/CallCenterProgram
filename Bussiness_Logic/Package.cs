@@ -45,14 +45,22 @@ namespace CallCenterProgram.Bussiness_Logic
             dataAccess.UpdatePackage(packageId, packageName, serviceIDs, serviceLevelIDs);
         }
 
-        public void ViewPerformance(int contractTypeId)
+        public int PackagesInLast30Days()
         {
-            // no implementation details yet 
-            // no metrics to track 
-
-            // how often a package is bouhght ?
-            // how many issues raised on a specific package ?
-            // which pakgage has best average etc 
+            return dataAccess.GetNumberCurrentTotalPackagesInLast30Days();
+        }
+        public List<Bussiness_Logic.Package> BestPackageOrPackagesOfTheMonth()
+        {
+            int mostSelling = dataAccess.BestPackageOrPackagesOfTheMonthQuantity();
+            return dataAccess.BestPackagesDetails(mostSelling);
+        }
+        public int MostSoldPackageQuantity()
+        {
+            return dataAccess.BestPackageOrPackagesOfTheMonthQuantity();
+        }
+        public List<string> PackagePerfromance(int packageID)
+        {
+            return dataAccess.PackagePerfromance(packageID);
         }
     }
 }
