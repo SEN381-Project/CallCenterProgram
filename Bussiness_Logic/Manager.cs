@@ -17,7 +17,7 @@ namespace CallCenterProgram.Bussiness_Logic
         }
 
 
-        public Manager(int employeeId, string name, string surname, string address, string contactDetails, string jobtitle, string jobDescription, int departmentId, string departmentName, int stationNumber)
+        public Manager(int employeeId, string name, string surname, string address, string contactDetails, string jobtitle, string jobDescription, int departmentId)
         { 
             EmployeeId = employeeId;
             Name = name;
@@ -27,8 +27,8 @@ namespace CallCenterProgram.Bussiness_Logic
             Jobtitle = jobtitle;
             JobDescription = jobDescription;
             DepartmentId = departmentId;
-            DepartmentName = departmentName;
-            StationNumber = stationNumber;
+            //DepartmentName = departmentName;
+            //StationNumber = stationNumber;
         }
     }
     }
