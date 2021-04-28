@@ -131,6 +131,7 @@ namespace CallCenterProgram.Presentation
             this.nudID.Name = "nudID";
             this.nudID.Size = new System.Drawing.Size(117, 23);
             this.nudID.TabIndex = 8;
+            this.nudID.ValueChanged += new System.EventHandler(this.nudID_ValueChanged);
             // 
             // btnInsertClient
             // 
@@ -160,6 +161,7 @@ namespace CallCenterProgram.Presentation
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(117, 23);
             this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label9
             // 
@@ -177,6 +179,7 @@ namespace CallCenterProgram.Presentation
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(117, 23);
             this.txtSurname.TabIndex = 2;
+            this.txtSurname.TextChanged += new System.EventHandler(this.txtSurname_TextChanged);
             // 
             // label8
             // 
@@ -194,6 +197,7 @@ namespace CallCenterProgram.Presentation
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(117, 23);
             this.txtEmail.TabIndex = 3;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label7
             // 
@@ -382,6 +386,7 @@ namespace CallCenterProgram.Presentation
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insert_Business_Client";
             this.Load += new System.EventHandler(this.Insert_Business_Client_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Insert_Business_Client_KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Insert_Business_Client_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

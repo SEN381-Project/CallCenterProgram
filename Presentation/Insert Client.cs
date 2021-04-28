@@ -72,6 +72,11 @@ namespace CallCenterProgram.Presentation
             string cellphone = txtCellphone.Text;
             string status = rtbStatus.Text;
 
+            if (status == "")
+            {
+                status = "Unknown";
+            }
+
             int currentclient = lstCurrentClient.SelectedIndex;
             if (currentclient == 0)
             {

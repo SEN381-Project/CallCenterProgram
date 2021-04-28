@@ -16,6 +16,7 @@ namespace CallCenterProgram.Presentation
     {
 
         bool Maximized = false;
+        bool Validated = false;
 
         //DLL stuff
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -58,14 +59,51 @@ namespace CallCenterProgram.Presentation
             string surname = txtSurname.Text;
             string email = txtEmail.Text;
             string cellphone = txtCellphone.Text;
-            string status = rtbStatus.Text;
-            string role = txtRole.Text;
-            int streetnumber = Convert.ToInt32(nudStreetNumber.Value);
-            string streetname = txtStreetName.Text;
-            string city = txtCity.Text;
-            string country = lstCountries.SelectedItem.ToString();
+            if (cellphone == "")
+            {
+                cellphone = "Unknown";
+            }
 
-            BusinessClient client = new BusinessClient(id, name, surname, email, cellphone, status, role, streetnumber, streetname, city, country);
+            string status = rtbStatus.Text;
+            if (status == "")
+            {
+                status = "Unknown";
+            }
+            string role = txtRole.Text;
+            if (role == "")
+            {
+                role = "Unknown";
+            }
+
+            int streetnumber = Convert.ToInt32(nudStreetNumber.Value);
+            if (streetnumber == null)
+            {
+                streetnumber = 0;
+            }
+
+            string streetname = txtStreetName.Text;
+            if (streetname == "")
+            {
+                streetname = "Unknown";
+            }
+
+            string city = txtCity.Text;
+            if (city == "")
+            {
+                city = "Unknown";
+            }
+
+            string country;
+            if (lstCountries.SelectedItem == null)
+            {
+                country = "Unknown";
+            }
+            else
+            {
+                country = lstCountries.SelectedItem.ToString();
+            }
+
+            BusinessClient client = new BusinessClient(id, name, surname, status, role, email, cellphone, streetnumber, streetname, city, country);
             client.SendClientToDataAccess(client);
 
             Business_Client_Info client_Info = new Business_Client_Info();
@@ -90,6 +128,8 @@ namespace CallCenterProgram.Presentation
             rtbStatus.Clear();
             txtRole.Clear();
             nudID.Focus();
+
+            btnInsertClient.Enabled = false;
         }
 
         private void btnMax_Click(object sender, EventArgs e)
@@ -134,6 +174,43 @@ namespace CallCenterProgram.Presentation
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void nudID_ValueChanged(object sender, EventArgs e)
+        {
+            CheckForm();
+        }
+
+        public void CheckForm()
+        {
+            if (nudID != null && txtName.Text != "" && txtSurname.Text != "" && txtEmail.Text != "")
+            {
+                btnInsertClient.Enabled = true;                
+            }
+            else
+            {
+                btnInsertClient.Enabled = false;
+            }
+        }
+
+        private void Insert_Business_Client_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            CheckForm();
+        }
+
+        private void txtSurname_TextChanged(object sender, EventArgs e)
+        {
+            CheckForm();
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            CheckForm();
         }
     }
 }
