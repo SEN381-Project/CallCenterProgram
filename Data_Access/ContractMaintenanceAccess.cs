@@ -94,9 +94,9 @@ namespace CallCenterProgram.Data_Access
         }
         // Both the manager and call center personeel can use this method (or anyone with clearance to create contracts)
         // most likely to be used by the call senter personeel, as they deal with clients and create these contracts (sell the services)
-        public void InsertContract(int contractTypeID, int clientID)
+        public void InsertContract(int contractTypeID, int clientID, int state)
         {
-            string query = $"INSERT INTO [Contract] VALUES({contractTypeID},{clientID})";
+            string query = $"INSERT INTO [Contract] VALUES({contractTypeID},{clientID},{state})";
 
             SqlConnection conn = new SqlConnection(connect);
             SqlCommand command = new SqlCommand(query, conn);
@@ -190,9 +190,8 @@ namespace CallCenterProgram.Data_Access
         }
         // Only the manager can use this method (or anyone with clearance to update packages data)
         public void UpdatePackage(int contractTypeID, string packageName, string serviceIDs, string serviceLevelIDs)
-        {
-            // testing only change SrviceID to Services and ServiceLevelID to ServiceLevels after testing   
-            string query = $"UPDATE ContractType SET PackageName = '{packageName}', ServiceID = '{serviceIDs}', ServiceLevelID = '{serviceLevelIDs}' WHERE ContractTypeID = {contractTypeID}";
+        { 
+            string query = $"UPDATE ContractType SET PackageName = '{packageName}', Services = '{serviceIDs}', ServiceLevels = '{serviceLevelIDs}' WHERE ContractTypeID = {contractTypeID}";
 
             conn = new SqlConnection(connect);
             command = new SqlCommand(query, conn);
@@ -213,21 +212,17 @@ namespace CallCenterProgram.Data_Access
             }
         }
         // Both the manager and call center personeel can use this method (or anyone with clearance to update contracts data)
-        // usuua;y call center personeel
-        // changing contract maybe from one type to another (maybe change client from one to another ? now sure how that would be useful) 
-        // Check and if clientOD does not make sense -- remove from function.
-        public void UpdateContract(int contractID, int contractTypeID, int clientID)
+        // Only change state nothing else!
+        public void UpdateContract(int contractID, int state)
         {
-            string query = $"UPDATE Contract SET ContractTypeID = {contractTypeID}, ClientID = {clientID} WHERE ContractID = {contractID}";
+            string query = $"UPDATE Contract SET [State] = {state} WHERE ContractID = {contractID}";
 
             conn = new SqlConnection(connect);
-
-            conn.Open();
-
             command = new SqlCommand(query, conn);
 
             try
             {
+                conn.Open();
                 command.ExecuteNonQuery();
                 MessageBox.Show("Contract updated succesfully", "Contract update Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -283,12 +278,10 @@ namespace CallCenterProgram.Data_Access
             {
                 conn.Open();
                 command.ExecuteNonQuery();
-                // MessageBox.Show() overload number 7
                 MessageBox.Show("State updated succesfully", "Service State Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                // MessageBox.Show() overload number 7
                 MessageBox.Show("Failed to change status: " + ex.Message, "Update Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
             finally
@@ -497,6 +490,36 @@ namespace CallCenterProgram.Data_Access
             }
 
             return packages;
+        }
+
+        public List<Bussiness_Logic.Contract> GetAllContracts(int clientID)
+        {
+            List<Bussiness_Logic.Contract> contracts = new List<Bussiness_Logic.Contract>();
+            string query = $"SELECT * FROM [Contract] WHERE ClientID = {clientID}";
+
+            SqlConnection conn = new SqlConnection(connect);
+            SqlCommand command = new SqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Bussiness_Logic.Contract contract = new Bussiness_Logic.Contract(reader.GetBoolean(3), reader.GetInt32(1), reader.GetInt32(2), reader.GetInt32(0));
+                    contracts.Add(contract);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not find contracts for this client " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return contracts;
         }
         #endregion
     }

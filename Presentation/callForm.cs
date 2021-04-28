@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
-using CallCenterProgram;
 using System.Runtime.InteropServices;
 
 namespace CallCenterProgram.Presentation
@@ -181,9 +180,12 @@ namespace CallCenterProgram.Presentation
                 //find clients info based on client ID
                 call.ClientID = (int) numClientID.Value;
                 List<Call> callHistory = call.GetCallHistoryFromDB();
+                List<Bussiness_Logic.Contract> contractList = call.getAllClientAgreements();
 
                 //display the information in the data grid views
                 dgvCallHistory.DataSource = callHistory;
+                dgvAgreements.DataSource = contractList;
+
             }
             catch (Exception er)
             {
@@ -223,13 +225,11 @@ namespace CallCenterProgram.Presentation
             if (Maximized == false)
             {
                 this.WindowState = FormWindowState.Maximized;
-                btnMaximizeToggle.Text = "Normal";
                 Maximized = true;
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                btnMaximizeToggle.Text = "Maximize";
                 Maximized = false;
             }
         }

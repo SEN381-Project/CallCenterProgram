@@ -104,7 +104,7 @@ namespace CallCenterProgram.Presentation
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(659, 706);
+            this.btnAdd.Location = new System.Drawing.Point(662, 755);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(147, 48);
             this.btnAdd.TabIndex = 29;
@@ -124,7 +124,7 @@ namespace CallCenterProgram.Presentation
             // 
             // txtAddOptOut
             // 
-            this.txtAddOptOut.Location = new System.Drawing.Point(316, 493);
+            this.txtAddOptOut.Location = new System.Drawing.Point(319, 542);
             this.txtAddOptOut.Multiline = true;
             this.txtAddOptOut.Name = "txtAddOptOut";
             this.txtAddOptOut.Size = new System.Drawing.Size(486, 38);
@@ -132,14 +132,14 @@ namespace CallCenterProgram.Presentation
             // 
             // txtAddName
             // 
-            this.txtAddName.Location = new System.Drawing.Point(316, 450);
+            this.txtAddName.Location = new System.Drawing.Point(319, 499);
             this.txtAddName.Name = "txtAddName";
             this.txtAddName.Size = new System.Drawing.Size(486, 22);
             this.txtAddName.TabIndex = 26;
             // 
             // txtAddSecurityID
             // 
-            this.txtAddSecurityID.Location = new System.Drawing.Point(316, 401);
+            this.txtAddSecurityID.Location = new System.Drawing.Point(319, 450);
             this.txtAddSecurityID.Name = "txtAddSecurityID";
             this.txtAddSecurityID.Size = new System.Drawing.Size(486, 22);
             this.txtAddSecurityID.TabIndex = 25;
@@ -150,7 +150,7 @@ namespace CallCenterProgram.Presentation
             this.cmbAdd.Items.AddRange(new object[] {
             "Active",
             "Not-Active"});
-            this.cmbAdd.Location = new System.Drawing.Point(361, 659);
+            this.cmbAdd.Location = new System.Drawing.Point(364, 708);
             this.cmbAdd.Name = "cmbAdd";
             this.cmbAdd.Size = new System.Drawing.Size(201, 24);
             this.cmbAdd.TabIndex = 24;
@@ -159,7 +159,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(42, 659);
+            this.label6.Location = new System.Drawing.Point(45, 708);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(291, 21);
             this.label6.TabIndex = 23;
@@ -169,7 +169,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(40, 494);
+            this.label5.Location = new System.Drawing.Point(43, 543);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(191, 21);
             this.label5.TabIndex = 22;
@@ -179,7 +179,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(40, 449);
+            this.label4.Location = new System.Drawing.Point(43, 498);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(230, 21);
             this.label4.TabIndex = 21;
@@ -189,7 +189,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 402);
+            this.label3.Location = new System.Drawing.Point(43, 451);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(210, 21);
             this.label3.TabIndex = 20;
@@ -201,9 +201,9 @@ namespace CallCenterProgram.Presentation
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(37, 355);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(780, 25);
+            this.label2.Size = new System.Drawing.Size(399, 50);
             this.label2.TabIndex = 19;
-            this.label2.Text = "ADD SERVICE LEVEL SECTION: (ALL FIELDS TO BE FILLED IN!)";
+            this.label2.Text = "ADD SERVICE LEVEL SECTION: \r\n(ALL FIELDS TO BE FILLED IN!)";
             // 
             // dgvExistingServiceLevels
             // 
@@ -248,7 +248,7 @@ namespace CallCenterProgram.Presentation
             // 
             // txtAddLateWork
             // 
-            this.txtAddLateWork.Location = new System.Drawing.Point(316, 563);
+            this.txtAddLateWork.Location = new System.Drawing.Point(319, 612);
             this.txtAddLateWork.Name = "txtAddLateWork";
             this.txtAddLateWork.Size = new System.Drawing.Size(486, 22);
             this.txtAddLateWork.TabIndex = 41;
@@ -257,7 +257,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(42, 563);
+            this.label11.Location = new System.Drawing.Point(45, 612);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(257, 21);
             this.label11.TabIndex = 40;
@@ -265,7 +265,7 @@ namespace CallCenterProgram.Presentation
             // 
             // txtAddNonPerformance
             // 
-            this.txtAddNonPerformance.Location = new System.Drawing.Point(361, 611);
+            this.txtAddNonPerformance.Location = new System.Drawing.Point(364, 660);
             this.txtAddNonPerformance.Name = "txtAddNonPerformance";
             this.txtAddNonPerformance.Size = new System.Drawing.Size(441, 22);
             this.txtAddNonPerformance.TabIndex = 43;
@@ -274,7 +274,7 @@ namespace CallCenterProgram.Presentation
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(42, 611);
+            this.label12.Location = new System.Drawing.Point(45, 660);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(315, 21);
             this.label12.TabIndex = 42;

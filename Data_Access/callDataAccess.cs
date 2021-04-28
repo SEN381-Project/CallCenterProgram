@@ -65,7 +65,6 @@ namespace CallCenterProgram.Data_Access
             command = new SqlCommand(query, conn);
 
             List<Call> callHistory = new List<Call>();
-            Call tempCall = new Call();
 
             try
             {
@@ -73,14 +72,16 @@ namespace CallCenterProgram.Data_Access
 
                 while (reader.Read())
                 {
-                    tempCall.ClientID = int.Parse(reader[1].ToString());
-                    tempCall.InitialTimeStamp = (DateTime)reader[2];
-                    tempCall.FinalTimeStamp = (DateTime)reader[3];
-                    tempCall.FaultReport = reader[4].ToString();
-                    tempCall.CallReport = reader[5].ToString();
-                    tempCall.ProblemInfo = reader[6].ToString();
-                    tempCall.WorkRequest = reader[7].ToString();
-                    tempCall.CallDuration = int.Parse(reader[8].ToString());
+                    Call tempCall = new Call();
+
+                    tempCall.ClientID = reader.GetInt32(1);
+                    tempCall.InitialTimeStamp = reader.GetDateTime(2);
+                    tempCall.FinalTimeStamp = reader.GetDateTime(3);
+                    tempCall.FaultReport = reader.GetString(4);
+                    tempCall.CallReport = reader.GetString(5);
+                    tempCall.ProblemInfo = reader.GetString(6);
+                    tempCall.WorkRequest = reader.GetString(7);
+                    tempCall.CallDuration = reader.GetInt32(8);
 
                     callHistory.Add(tempCall);
                 }

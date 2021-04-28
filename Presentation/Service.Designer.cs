@@ -172,9 +172,9 @@ namespace CallCenterProgram.Presentation
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(877, 414);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(737, 25);
+            this.label7.Size = new System.Drawing.Size(520, 50);
             this.label7.TabIndex = 11;
-            this.label7.Text = "UPDATE SERVICE SECTION: (ALL FIELDS TO BE FILLED IN!)";
+            this.label7.Text = "UPDATE SERVICE STATE ONLY SECTION: \r\n(ALL FIELDS TO BE FILLED IN!)";
             // 
             // btnAddService
             // 

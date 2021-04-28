@@ -30,11 +30,8 @@
         {
             this.btnCallForm = new System.Windows.Forms.Button();
             this.btnClientHome = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnMaximizeToggle = new System.Windows.Forms.Button();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlSubContent = new System.Windows.Forms.Panel();
             this.pnlFollowUp = new System.Windows.Forms.Panel();
@@ -56,6 +53,9 @@
             this.pnlClientHome = new System.Windows.Forms.Panel();
             this.pnlCall = new System.Windows.Forms.Panel();
             this.lblPanelTitle = new System.Windows.Forms.Label();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximizeToggle = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.pnlTitleBar.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.pnlSubContent.SuspendLayout();
@@ -100,20 +100,6 @@
             this.btnClientHome.UseVisualStyleBackColor = true;
             this.btnClientHome.Click += new System.EventHandler(this.btnClientHome_Click);
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Red;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(1013, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(71, 56);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // pnlTitleBar
             // 
             this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -139,32 +125,6 @@
             this.lblTitle.Size = new System.Drawing.Size(153, 58);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Home";
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Location = new System.Drawing.Point(863, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(75, 56);
-            this.btnMinimize.TabIndex = 3;
-            this.btnMinimize.Text = "Minimize";
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnMaximizeToggle
-            // 
-            this.btnMaximizeToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.btnMaximizeToggle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMaximizeToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizeToggle.Location = new System.Drawing.Point(938, 0);
-            this.btnMaximizeToggle.Name = "btnMaximizeToggle";
-            this.btnMaximizeToggle.Size = new System.Drawing.Size(75, 56);
-            this.btnMaximizeToggle.TabIndex = 4;
-            this.btnMaximizeToggle.Text = "Maximize";
-            this.btnMaximizeToggle.UseVisualStyleBackColor = false;
-            this.btnMaximizeToggle.Click += new System.EventHandler(this.btnMaximizeToggle_Click);
             // 
             // pnlContent
             // 
@@ -471,6 +431,52 @@
             this.lblPanelTitle.Size = new System.Drawing.Size(208, 39);
             this.lblPanelTitle.TabIndex = 2;
             this.lblPanelTitle.Text = "Departments";
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMinimize.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterminimize;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimize.CausesValidation = false;
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Location = new System.Drawing.Point(863, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(75, 56);
+            this.btnMinimize.TabIndex = 3;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnMaximizeToggle
+            // 
+            this.btnMaximizeToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMaximizeToggle.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcentermaximize;
+            this.btnMaximizeToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMaximizeToggle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximizeToggle.FlatAppearance.BorderSize = 0;
+            this.btnMaximizeToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizeToggle.Location = new System.Drawing.Point(938, 0);
+            this.btnMaximizeToggle.Name = "btnMaximizeToggle";
+            this.btnMaximizeToggle.Size = new System.Drawing.Size(75, 56);
+            this.btnMaximizeToggle.TabIndex = 4;
+            this.btnMaximizeToggle.UseVisualStyleBackColor = false;
+            this.btnMaximizeToggle.Click += new System.EventHandler(this.btnMaximizeToggle_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.SlateGray;
+            this.btnExit.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterexit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(1013, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(71, 56);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // HomeForm
             // 

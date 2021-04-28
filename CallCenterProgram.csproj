@@ -87,7 +87,6 @@
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Bussiness_Logic\ManagerBusiness.cs" />
-    <Compile Include="obj\Debug\.NETFrameworkVersionv4.7.2.AssemblyAttributes.cs" />
     <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Presentation\Business Client Info.cs">
       <SubType>Form</SubType>
@@ -318,6 +317,9 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="callcenterexit.png" />
+    <None Include="callcentermaximize.png" />
+    <None Include="callcenterminimize.png" />
     <Content Include="obj\Debug\CallCenterProgram.csproj.FileListAbsolute.txt" />
     <None Include="Resources\Icons\tegan.png" />
   </ItemGroup>
