@@ -332,17 +332,17 @@ namespace CallCenterProgram.Data_Access
                 while (Reader.Read())
                 {
                     objEmployee.EmployeeId = int.Parse(Reader[0].ToString());
-                    objEmployee.Name = Reader[1].ToString();
-                    objEmployee.Surname = Reader[2].ToString();
-                    objEmployee.Address = Reader[3].ToString();
-                    objEmployee.ContactDetails = Reader[4].ToString();
-                    objEmployee.Jobtitle = Reader[5].ToString();
-                    objEmployee.JobDescription = Reader[6].ToString();
-                    objEmployee.DepartmentId = int.Parse(Reader[7].ToString());
-                    objEmployee.DepartmentName = Reader[8].ToString();
-                    objEmployee.StationNumber = int.Parse(Reader[9].ToString());
+                    objEmployee.Name = Reader[2].ToString();
+                    objEmployee.Surname = Reader[3].ToString();
+                    objEmployee.Address = Reader[4].ToString();
+                    objEmployee.ContactDetails = Reader[5].ToString();
+                    objEmployee.Jobtitle = Reader[6].ToString();
+                    objEmployee.JobDescription = Reader[7].ToString();
+                    objEmployee.DepartmentId = int.Parse(Reader[1].ToString());
+                    //objEmployee.DepartmentName = Reader[8].ToString();
+                    //objEmployee.StationNumber = int.Parse(Reader[9].ToString());
 
-                    EmployeeData.Add(new Manager(objEmployee.EmployeeId, objEmployee.Name, objEmployee.Surname, objEmployee.Address, objEmployee.ContactDetails, objEmployee.Jobtitle, objEmployee.JobDescription, objEmployee.DepartmentId, objEmployee.DepartmentName, objEmployee.StationNumber));
+                    EmployeeData.Add(new Manager(objEmployee.EmployeeId, objEmployee.Name, objEmployee.Surname, objEmployee.Address, objEmployee.ContactDetails, objEmployee.Jobtitle, objEmployee.JobDescription, objEmployee.DepartmentId));
                 }
 
 
