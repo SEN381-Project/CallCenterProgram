@@ -36,6 +36,7 @@ namespace CallCenterProgram.Presentation
 
         private void btnSearchPackage_Click(object sender, EventArgs e)
         {
+            dgvPackageByCity.Rows.Clear();
             int packageID = int.Parse(txtSearchPackage.Text);
             Bussiness_Logic.Package package = new Bussiness_Logic.Package();
             List<string> data = package.PackagePerfromance(packageID);
