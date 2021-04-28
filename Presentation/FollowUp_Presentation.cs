@@ -55,7 +55,7 @@ namespace CallCenterProgram.Presentation
 
                 txtfollowupid.Text = dataGridVFollowUp.Rows[e.RowIndex].Cells["FollowUpId"].FormattedValue.ToString();
                 txtstatus.Text = dataGridVFollowUp.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
-                txtfollupD.Text = dataGridVFollowUp.Rows[e.RowIndex].Cells["FolloUpDate"].FormattedValue.ToString();
+                
             }
         }
    
@@ -82,27 +82,27 @@ namespace CallCenterProgram.Presentation
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
             Set.Status = txtstatus.Text;
-            Set.FollowUpDate = DateTime.Parse(txtfollupD.Text);
+            Set.FollowUpDate = dtpFollowUp.Value; 
 
-            followUp.AddFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
+            followUp.AddFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, dtpFollowUp.Value);
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
             Set.Status = txtstatus.Text;
-            Set.FollowUpDate = DateTime.Parse(txtfollupD.Text);
+            Set.FollowUpDate = dtpFollowUp.Value;
 
-            followUp.UpdateFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
+            followUp.UpdateFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, dtpFollowUp.Value);
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
             Set.Status = txtstatus.Text;
-            Set.FollowUpDate = DateTime.Parse(txtfollupD.Text);
+            Set.FollowUpDate = dtpFollowUp.Value;
 
-            followUp.RemoveFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, DateTime.Parse(txtfollupD.Text));
+            followUp.RemoveFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, dtpFollowUp.Value);
         }
 
         private void FollowUp_Load(object sender, EventArgs e)
@@ -152,5 +152,7 @@ namespace CallCenterProgram.Presentation
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        
     }
 }

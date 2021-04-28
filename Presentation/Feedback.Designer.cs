@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridVFeedback = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFeebback = new System.Windows.Forms.DateTimePicker();
             this.txthelpedontime = new System.Windows.Forms.TextBox();
             this.txtfeedbackid = new System.Windows.Forms.TextBox();
             this.txtproblem = new System.Windows.Forms.TextBox();
             this.txtcomment = new System.Windows.Forms.TextBox();
-            this.txtfeedbackD = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,11 +74,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpFeebback);
             this.groupBox1.Controls.Add(this.txthelpedontime);
             this.groupBox1.Controls.Add(this.txtfeedbackid);
             this.groupBox1.Controls.Add(this.txtproblem);
             this.groupBox1.Controls.Add(this.txtcomment);
-            this.groupBox1.Controls.Add(this.txtfeedbackD);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -92,6 +92,14 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Feedback";
+            // 
+            // dtpFeebback
+            // 
+            this.dtpFeebback.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFeebback.Location = new System.Drawing.Point(21, 304);
+            this.dtpFeebback.Name = "dtpFeebback";
+            this.dtpFeebback.Size = new System.Drawing.Size(198, 21);
+            this.dtpFeebback.TabIndex = 11;
             // 
             // txthelpedontime
             // 
@@ -120,13 +128,6 @@
             this.txtcomment.Name = "txtcomment";
             this.txtcomment.Size = new System.Drawing.Size(206, 30);
             this.txtcomment.TabIndex = 6;
-            // 
-            // txtfeedbackD
-            // 
-            this.txtfeedbackD.Location = new System.Drawing.Point(21, 304);
-            this.txtfeedbackD.Name = "txtfeedbackD";
-            this.txtfeedbackD.Size = new System.Drawing.Size(206, 30);
-            this.txtfeedbackD.TabIndex = 5;
             // 
             // label5
             // 
@@ -197,6 +198,7 @@
             this.FollowUp.TabIndex = 7;
             this.FollowUp.Text = "FollowUp";
             this.FollowUp.UseVisualStyleBackColor = false;
+            this.FollowUp.Click += new System.EventHandler(this.FollowUp_Click_1);
             // 
             // Exit
             // 
@@ -331,7 +333,6 @@
         private System.Windows.Forms.TextBox txtfeedbackid;
         private System.Windows.Forms.TextBox txtproblem;
         private System.Windows.Forms.TextBox txtcomment;
-        private System.Windows.Forms.TextBox txtfeedbackD;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Menufeedback;
@@ -344,5 +345,6 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximizeToggle;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DateTimePicker dtpFeebback;
     }
 }

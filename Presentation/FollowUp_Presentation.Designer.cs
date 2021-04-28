@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtfollupD = new System.Windows.Forms.TextBox();
             this.txtstatus = new System.Windows.Forms.TextBox();
             this.txtfollowupid = new System.Windows.Forms.TextBox();
             this.Delete = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximizeToggle = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.dtpFollowUp = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVFollowUp)).BeginInit();
@@ -57,7 +57,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtfollupD);
+            this.groupBox1.Controls.Add(this.dtpFollowUp);
             this.groupBox1.Controls.Add(this.txtstatus);
             this.groupBox1.Controls.Add(this.txtfollowupid);
             this.groupBox1.Controls.Add(this.Delete);
@@ -74,13 +74,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FollowUp";
-            // 
-            // txtfollupD
-            // 
-            this.txtfollupD.Location = new System.Drawing.Point(8, 198);
-            this.txtfollupD.Name = "txtfollupD";
-            this.txtfollupD.Size = new System.Drawing.Size(192, 30);
-            this.txtfollupD.TabIndex = 8;
             // 
             // txtstatus
             // 
@@ -293,6 +286,13 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // dtpFollowUp
+            // 
+            this.dtpFollowUp.Location = new System.Drawing.Point(0, 205);
+            this.dtpFollowUp.Name = "dtpFollowUp";
+            this.dtpFollowUp.Size = new System.Drawing.Size(273, 30);
+            this.dtpFollowUp.TabIndex = 8;
+            // 
             // FollowUp_Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,7 +333,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtfollupD;
         private System.Windows.Forms.TextBox txtstatus;
         private System.Windows.Forms.TextBox txtfollowupid;
         private System.Windows.Forms.Button MainMenu;
@@ -345,5 +344,6 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximizeToggle;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DateTimePicker dtpFollowUp;
     }
 }

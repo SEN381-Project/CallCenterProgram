@@ -81,39 +81,85 @@ namespace CallCenterProgram.Presentation
             
             authorize.Show();
 
-            if(manager.Authorize == "M145628")
+            try
             {
-                manager.UpdateEmployeeInf(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
+                if (manager.Authorize == "M145628")
+                {
+                    manager.UpdateEmployeeInf(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
+                }
+                else
+                {
+                    throw new Exception();
+                }
+
             }
-            else
+             catch(Exception ex)
             {
-                MessageBox.Show("Invalid Pin!!");
+                MessageBox.Show(ex + "Invalid Pin!!");
             }
-            
 
         }
 
         private void DeleteEm_Click(object sender, EventArgs e)
         {
-            int employeeId = Convert.ToInt32(txtEmployeeId.Text);
-            string name = txtEmployeename.Text;
-            string surname = txtEmployeesurname.Text;
-            string address = txtEmployeeAddress.Text;
-            string contactDetails = txtContactDetails.Text;
-            string jobTitle = txtMjobtitle.Text;
-            string jobDescription = txtMjobDespription.Text;
+            Set.EmployeeId = Convert.ToInt32(txtEmployeeId.Text);
+            Set.Name = txtEmployeename.Text;
+            Set.Surname = txtEmployeesurname.Text;
+            Set.Address = txtEmployeeAddress.Text;
+            Set.ContactDetails = txtContactDetails.Text;
+            Set.Jobtitle = txtMjobtitle.Text;
+            Set.JobDescription = txtMjobDespription.Text;
 
-            manager.FireEmployee(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
+           
 
+            try
+            {
+                authorize.Show();
+
+                if (manager.Authorize == "M145628")
+                {
+                    manager.FireEmployee(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
+
+                }
+                else
+                {
+                    throw new Exception();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + "Invalid Pin!!");
+            }
         }
 
         private void UpdateDp_Click(object sender, EventArgs e)
         {
-            int departmentId = Convert.ToInt32(txtidDepartment.Text);
-            string derptmentName = txtNameDepartment.Text;
-            int stationNumber = Convert.ToInt32(txtSationNo.Text);
+            Set.DepartmentId = Convert.ToInt32(txtidDepartment.Text);
+            Set.DepartmentName = txtNameDepartment.Text;
+            Set.StationNumber = Convert.ToInt32(txtSationNo.Text);
 
-            manager.UpdateDepartment(int.Parse(txtidDepartment.Text), txtNameDepartment.Text, int.Parse(txtSationNo.Text));
+            
+
+            try
+            {
+                authorize.Show();
+
+                if (manager.Authorize == "M145628")
+                {
+                    manager.UpdateDepartment(int.Parse(txtidDepartment.Text), txtNameDepartment.Text, int.Parse(txtSationNo.Text));
+                }
+                else
+                {
+                    throw new Exception();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + "Invalid Pin!!");
+            }
+           
         }
 
         private void DeleteDp_Click(object sender, EventArgs e)
@@ -122,7 +168,27 @@ namespace CallCenterProgram.Presentation
             Set.DepartmentName = txtNameDepartment.Text;
             Set.StationNumber = Convert.ToInt32(txtSationNo.Text);
 
-            manager.RemoveDepartment(int.Parse(txtidDepartment.Text), txtNameDepartment.Text, int.Parse(txtSationNo.Text));
+            
+
+            try
+            {
+                authorize.Show();
+
+                if (manager.Authorize == "M145628")
+                {
+                    manager.RemoveDepartment(int.Parse(txtidDepartment.Text), txtNameDepartment.Text, int.Parse(txtSationNo.Text));
+                }
+                else
+                {
+                    throw new Exception();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + "Invalid Pin!!");
+            }
+            
         }
 
         private void MainMenu_Click(object sender, EventArgs e)
