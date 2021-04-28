@@ -141,13 +141,13 @@ namespace CallCenterProgram.Presentation
             if (Maximized == false)
             {
                 this.WindowState = FormWindowState.Maximized;
-                btnMax.Text = "Normal";
+                //btnMax.Text = "Normal";
                 Maximized = true;
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                btnMax.Text = "Maximize";
+                //btnMax.Text = "Maximize";
                 Maximized = false;
             }
         }

@@ -166,37 +166,40 @@ namespace CallCenterProgram.Presentation
             // 
             // btnMin
             // 
+            this.btnMin.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterminimize;
+            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMin.Location = new System.Drawing.Point(483, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(75, 62);
             this.btnMin.TabIndex = 12;
-            this.btnMin.Text = "Minimize";
             this.btnMin.UseVisualStyleBackColor = true;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // btnMax
             // 
+            this.btnMax.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcentermaximize;
+            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMax.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMax.Location = new System.Drawing.Point(558, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(75, 62);
             this.btnMax.TabIndex = 11;
-            this.btnMax.Text = "Maximize";
             this.btnMax.UseVisualStyleBackColor = true;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
             // 
             // btnExit
             // 
+            this.btnExit.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterexit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Location = new System.Drawing.Point(633, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 62);
             this.btnExit.TabIndex = 10;
-            this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
