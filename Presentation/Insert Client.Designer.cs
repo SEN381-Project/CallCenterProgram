@@ -82,6 +82,7 @@ namespace CallCenterProgram.Presentation
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(116, 23);
             this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtSurname
             // 
@@ -89,6 +90,7 @@ namespace CallCenterProgram.Presentation
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(116, 23);
             this.txtSurname.TabIndex = 2;
+            this.txtSurname.TextChanged += new System.EventHandler(this.txtSurname_TextChanged);
             // 
             // txtEmail
             // 
@@ -96,6 +98,7 @@ namespace CallCenterProgram.Presentation
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(116, 23);
             this.txtEmail.TabIndex = 3;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtCellphone
             // 
@@ -124,6 +127,7 @@ namespace CallCenterProgram.Presentation
             this.nudID.Name = "nudID";
             this.nudID.Size = new System.Drawing.Size(117, 23);
             this.nudID.TabIndex = 8;
+            this.nudID.ValueChanged += new System.EventHandler(this.nudID_ValueChanged);
             // 
             // lstCountries
             // 

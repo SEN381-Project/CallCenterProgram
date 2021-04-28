@@ -59,46 +59,82 @@ namespace CallCenterProgram.Presentation
             lstCurrentClient.ClearSelected();
             rtbStatus.Clear();
             nudID.Focus();
+
+            btnInsertClient.Enabled = false;
         }
 
         private void btnInsertClient_Click(object sender, EventArgs e)
         {
             //assign values to variables
 
-            int id = Convert.ToInt32(nudID.Value);
-            string name = txtName.Text;
-            string surname = txtSurname.Text;
-            string email = txtEmail.Text;
-            string cellphone = txtCellphone.Text;
-            string status = rtbStatus.Text;
-
-            if (status == "")
+            try
             {
-                status = "Unknown";
-            }
+                int id = Convert.ToInt32(nudID.Value);
+                string name = txtName.Text;
+                string surname = txtSurname.Text;
+                string email = txtEmail.Text;
 
-            int currentclient = lstCurrentClient.SelectedIndex;
-            if (currentclient == 0)
+                int currentclient = lstCurrentClient.SelectedIndex;
+                if (currentclient == 0)
+                {
+                    currentclient = 1;
+                }
+                else
+                {
+                    currentclient = 0;
+                }
+
+
+                string cellphone = txtCellphone.Text;
+                if (cellphone == "")
+                {
+                    cellphone = "Unknown";
+                }
+
+                string status = rtbStatus.Text;
+                if (status == "")
+                {
+                    status = "Unknown";
+                }
+
+                int streetnumber = Convert.ToInt32(nudStreetNumber.Value);
+
+                string streetname = txtStreetName.Text;
+                if (streetname == "")
+                {
+                    streetname = "Unknown";
+                }
+
+                string city = txtCity.Text;
+                if (city == "")
+                {
+                    city = "Unknown";
+                }
+
+                string country;
+                if (lstCountries.SelectedItem == null)
+                {
+                    country = "Unknown";
+                }
+                else
+                {
+                    country = lstCountries.SelectedItem.ToString();
+                }
+
+
+                IndividualClient client = new IndividualClient(id, name, surname, email, cellphone, status, currentclient, streetnumber, streetname, city, country);
+                client.SendClientToDataAccess(client);
+            }
+            catch(Exception ex)
             {
-                currentclient = 1;
+                MessageBox.Show("There was an error with one of your values: " + ex.Message);
             }
-            else
+            finally
             {
-                currentclient = 0;
-            }
-
-            int streetnumber = Convert.ToInt32(nudStreetNumber.Value);
-            string streetname = txtStreetName.Text;
-            string city = txtCity.Text;
-            string country = lstCountries.SelectedItem.ToString();
-            
-
-            IndividualClient client = new IndividualClient(id, name, surname, email, cellphone, status, currentclient, streetnumber, streetname, city, country);
-            client.SendClientToDataAccess(client);
-
-            Individual_Client_Info clientform= new Individual_Client_Info();
-            clientform.Show();
-            this.Close();
+                Individual_Client_Info clientform = new Individual_Client_Info();
+                clientform.Show();
+                this.Close();
+            }           
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -148,6 +184,18 @@ namespace CallCenterProgram.Presentation
             }
         }
 
+        public void CheckForm()
+        {
+            if (nudID != null && txtName.Text != "" && txtSurname.Text != "" && txtEmail.Text != "")
+            {
+                btnInsertClient.Enabled = true;
+            }
+            else
+            {
+                btnInsertClient.Enabled = false;
+            }
+        }
+
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -155,6 +203,26 @@ namespace CallCenterProgram.Presentation
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void nudID_ValueChanged(object sender, EventArgs e)
+        {
+            CheckForm();
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            CheckForm();
+        }
+
+        private void txtSurname_TextChanged(object sender, EventArgs e)
+        {
+            CheckForm();
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            CheckForm();
         }
     }
 }
