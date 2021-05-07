@@ -59,6 +59,7 @@ namespace CallCenterProgram.Presentation
             this.label13 = new System.Windows.Forms.Label();
             this.dgvPackages = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSecurityLevels)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiceLevels)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -216,7 +217,7 @@ namespace CallCenterProgram.Presentation
             // btnMainMenu
             // 
             this.btnMainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnMainMenu.Location = new System.Drawing.Point(690, 885);
+            this.btnMainMenu.Location = new System.Drawing.Point(690, 958);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(525, 48);
             this.btnMainMenu.TabIndex = 60;
@@ -343,12 +344,24 @@ namespace CallCenterProgram.Presentation
             this.label14.TabIndex = 73;
             this.label14.Text = "Existing Packages:";
             // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.button1.Location = new System.Drawing.Point(759, 892);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(398, 48);
+            this.button1.TabIndex = 74;
+            this.button1.Text = "PACKAGE PERFORMANCE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Package
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(1773, 946);
+            this.ClientSize = new System.Drawing.Size(1773, 1018);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dgvPackages);
             this.Controls.Add(this.txtUpdateID);
@@ -419,5 +432,6 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dgvPackages;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button1;
     }
 }

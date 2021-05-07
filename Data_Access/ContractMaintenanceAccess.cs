@@ -522,5 +522,157 @@ namespace CallCenterProgram.Data_Access
             return contracts;
         }
         #endregion
+
+        #region Performance Methods
+        public int GetNumberCurrentTotalPackagesInLast30Days()
+        {
+            // use the current date to get a datediff of 30 days dating back to select that data and use it for calculations
+            DateTime now = DateTime.Now;
+            DateTime delay30days = now.AddDays(-30);
+            // SELECT COUNT(ContractID) FROM [Contract] WHERE Date BETWEEN delaye30days AND now
+            string query = $"SELECT COUNT(*) AS 'Total' FROM [Contract] ";
+            int number = 0;
+            SqlConnection conn = new SqlConnection(connect);
+            SqlCommand command = new SqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader dr = command.ExecuteReader();
+                if (dr.Read())
+                {
+                    number = dr.GetInt32(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to calculate contracts " + ex.Message, "Insert Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return number;
+        }
+        public int BestPackageOrPackagesOfTheMonthQuantity()
+        {
+            // use the current date to get a datediff of 30 days dating back to select that data and use it for calculations
+            DateTime now = DateTime.Now;
+            DateTime delay30days = now.AddDays(-30);
+            // ...  WHERE Date BETWEEN delaye30days AND now
+            string query = $"SELECT TOP 1 ContractTypeID, COUNT(ContractTypeID) FROM  [Contract] GROUP BY ContractTypeID ORDER BY COUNT(ContractTypeID) DESC";
+            int quantityOfBestpackage = 0;
+            SqlConnection conn = new SqlConnection(connect);
+            SqlCommand command = new SqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader dr = command.ExecuteReader();
+                if (dr.Read())
+                {
+                    quantityOfBestpackage = dr.GetInt32(1);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to calculate contracts " + ex.Message, "Insert Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return quantityOfBestpackage;
+        }
+
+        public List<Bussiness_Logic.Package> BestPackagesDetails(int bestSellingQuntity)
+        {
+            // use the current date to get a datediff of 30 days dating back to select that data and use it for calculations
+            DateTime now = DateTime.Now;
+            DateTime delay30days = now.AddDays(-30);
+            // ...  WHERE Date BETWEEN delaye30days AND now
+            List<Bussiness_Logic.Package> bestSellers = new List<Bussiness_Logic.Package>();
+            string query = $"SELECT ContractTypeID FROM [Contract] GROUP BY ContractTypeID HAVING COUNT(ContractTypeID) = {bestSellingQuntity}";
+            SqlConnection conn = new SqlConnection(connect);
+            SqlCommand command = new SqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    //dr.GetInt32(0) is the ContractTypeID
+                    bestSellers.Add(GetPackage(dr.GetInt32(0)));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to calculate contracts " + ex.Message, "Insert Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return bestSellers;
+        }
+
+        public Bussiness_Logic.Package GetPackage(int packageID)
+        {
+            string query = $"SELECT * FROM ContractType WHERE ContractTypeID = {packageID}";
+            Bussiness_Logic.Package package = null;
+            SqlConnection conn = new SqlConnection(connect);
+            SqlCommand command = new SqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    package = new Bussiness_Logic.Package(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(0));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not find packages " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return package;
+        }
+
+        // sales by city
+        public List<string> PackagePerfromance(int packageID)
+        {
+            string query = $"SELECT COUNT(ContractTypeID) 'Package Sales', City FROM Client INNER JOIN ClientAddress ON Client.ClientID = ClientAddress.ClientID INNER JOIN[Contract] ON Client.ClientID = [Contract].ClientID WHERE ContractTypeID = {packageID} GROUP BY City";
+            List<string> salesPerCity = new List<string>();
+            SqlConnection conn = new SqlConnection(connect);
+            SqlCommand command = new SqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    salesPerCity.Add(reader.GetInt32(0).ToString() + "," + reader.GetString(1));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not find packages " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return salesPerCity;
+        }
+        #endregion
     }
 }

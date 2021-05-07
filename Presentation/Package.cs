@@ -79,5 +79,12 @@ namespace CallCenterProgram.Presentation
             bsPackages.DataSource = dataAccess.GetAllPackages();
             bsPackages.ResetBindings(true);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Presentation.PackagePerformance performance = new PackagePerformance();
+            this.Hide();
+            performance.Show();
+        }
     }
 }
