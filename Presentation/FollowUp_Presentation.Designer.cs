@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFollowUp = new System.Windows.Forms.DateTimePicker();
             this.txtstatus = new System.Windows.Forms.TextBox();
             this.txtfollowupid = new System.Windows.Forms.TextBox();
             this.Delete = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximizeToggle = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.dtpFollowUp = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVFollowUp)).BeginInit();
@@ -74,6 +74,13 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FollowUp";
+            // 
+            // dtpFollowUp
+            // 
+            this.dtpFollowUp.Location = new System.Drawing.Point(0, 205);
+            this.dtpFollowUp.Name = "dtpFollowUp";
+            this.dtpFollowUp.Size = new System.Drawing.Size(273, 30);
+            this.dtpFollowUp.TabIndex = 8;
             // 
             // txtstatus
             // 
@@ -246,6 +253,8 @@
             // btnMinimize
             // 
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMinimize.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterminimize;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.ForeColor = System.Drawing.Color.Black;
@@ -253,13 +262,14 @@
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(75, 56);
             this.btnMinimize.TabIndex = 3;
-            this.btnMinimize.Text = "Minimize";
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnMaximizeToggle
             // 
             this.btnMaximizeToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMaximizeToggle.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcentermaximize;
+            this.btnMaximizeToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMaximizeToggle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMaximizeToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizeToggle.ForeColor = System.Drawing.Color.Black;
@@ -267,13 +277,13 @@
             this.btnMaximizeToggle.Name = "btnMaximizeToggle";
             this.btnMaximizeToggle.Size = new System.Drawing.Size(75, 56);
             this.btnMaximizeToggle.TabIndex = 4;
-            this.btnMaximizeToggle.Text = "Maximize";
             this.btnMaximizeToggle.UseVisualStyleBackColor = false;
             this.btnMaximizeToggle.Click += new System.EventHandler(this.btnMaximizeToggle_Click);
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterexit;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -282,16 +292,8 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(71, 56);
             this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // dtpFollowUp
-            // 
-            this.dtpFollowUp.Location = new System.Drawing.Point(0, 205);
-            this.dtpFollowUp.Name = "dtpFollowUp";
-            this.dtpFollowUp.Size = new System.Drawing.Size(273, 30);
-            this.dtpFollowUp.TabIndex = 8;
             // 
             // FollowUp_Presentation
             // 

@@ -376,6 +376,8 @@
             // btnMinimize
             // 
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMinimize.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterminimize;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.ForeColor = System.Drawing.Color.Black;
@@ -383,12 +385,13 @@
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(75, 56);
             this.btnMinimize.TabIndex = 3;
-            this.btnMinimize.Text = "Minimize";
             this.btnMinimize.UseVisualStyleBackColor = false;
             // 
             // btnMaximizeToggle
             // 
             this.btnMaximizeToggle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMaximizeToggle.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcentermaximize;
+            this.btnMaximizeToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMaximizeToggle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMaximizeToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizeToggle.ForeColor = System.Drawing.Color.Black;
@@ -396,13 +399,13 @@
             this.btnMaximizeToggle.Name = "btnMaximizeToggle";
             this.btnMaximizeToggle.Size = new System.Drawing.Size(75, 56);
             this.btnMaximizeToggle.TabIndex = 4;
-            this.btnMaximizeToggle.Text = "Maximize";
             this.btnMaximizeToggle.UseVisualStyleBackColor = false;
             this.btnMaximizeToggle.Click += new System.EventHandler(this.btnMaximizeToggle_Click);
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterexit;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -411,7 +414,6 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(71, 56);
             this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             // 
             // Employee_Presentation
