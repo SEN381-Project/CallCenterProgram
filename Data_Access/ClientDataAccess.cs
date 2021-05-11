@@ -181,5 +181,149 @@ namespace CallCenterProgram.Data_Access
             src.DataSource = table;
             return src;
         }
+
+        public void DeleteBusinessClient(int ID)
+        {
+            //Delete from all client tables in correct order to prevent foreign key reference error
+            //Delete from ClientContactInfo table
+            try
+            {
+                query = @"DELETE FROM ClientContactInfo WHERE ClientID = '" + ID + "' ";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Could not delete user with ID: " + ID + " from table ClientContactInfo" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            //Delete from ClientAddress table
+            try
+            {
+                query = @"DELETE FROM ClientAddress WHERE ClientID = '" + ID + "' ";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not delete user with ID: " + ID + " from table ClientAddress" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            //Delete from BusinessClientInfo table
+            try
+            {
+                query = @"DELETE FROM BusinessClientInfo WHERE ClientID = '" + ID + "' ";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not delete user with ID: " + ID + " from table BusinessClientInfo" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            //Delete from Client table
+            try
+            {
+                query = @"DELETE FROM Client WHERE ClientID = '" + ID + "' ";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not delete user with ID: " + ID + " from table Client" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void DeleteIndividualClient(int ID)
+        {
+            //Delete from all client tables in correct order to prevent foreign key reference error
+            //Delete from ClientContactInfo table
+            try
+            {
+                query = @"DELETE FROM ClientContactInfo WHERE ClientID = '" + ID + "' ";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not delete user with ID: " + ID + " from table ClientContactInfo" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            //Delete from ClientAddress table
+            try
+            {
+                query = @"DELETE FROM ClientAddress WHERE ClientID = '" + ID + "' ";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not delete user with ID: " + ID + " from table ClientAddress" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            //Delete from IndividualClientInfo table
+            try
+            {
+                query = @"DELETE FROM IndividualClientInfo WHERE ClientID = '" + ID + "' ";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not delete user with ID: " + ID + " from table IndividualClientInfo" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            //Delete from Client table
+            try
+            {
+                query = @"DELETE FROM Client WHERE ClientID = '" + ID + "' ";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not delete user with ID: " + ID + " from table Client" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

@@ -85,13 +85,13 @@ namespace CallCenterProgram.Presentation
             if (Maximized == false)
             {
                 this.WindowState = FormWindowState.Maximized;
-                btnMax.Text = "Normal";
+                //btnMax.Text = "Normal";
                 Maximized = true;
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                btnMax.Text = "Maximize";
+                //btnMax.Text = "Maximize";
                 Maximized = false;
             }
         }
@@ -121,6 +121,23 @@ namespace CallCenterProgram.Presentation
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void btnDeleteClient_Click(object sender, EventArgs e)
+        {
+            int ID = (int)dgvIndividualClients.Rows[dgvIndividualClients.CurrentRow.Index].Cells["ClientID"].Value;
+            DialogResult result = MessageBox.Show("Are you sure you want to delete Client " + ID, "Delete Client", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                IndividualClient client = new IndividualClient();
+                client.DeleteIndividualClient(ID);
+                MessageBox.Show("Client " + ID + " was deleted");
+            }
+            else
+            {
+                MessageBox.Show("Client was not deleted");
             }
         }
     }

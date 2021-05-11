@@ -82,6 +82,7 @@ namespace CallCenterProgram.Presentation
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(116, 23);
             this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtSurname
             // 
@@ -89,6 +90,7 @@ namespace CallCenterProgram.Presentation
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(116, 23);
             this.txtSurname.TabIndex = 2;
+            this.txtSurname.TextChanged += new System.EventHandler(this.txtSurname_TextChanged);
             // 
             // txtEmail
             // 
@@ -96,6 +98,7 @@ namespace CallCenterProgram.Presentation
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(116, 23);
             this.txtEmail.TabIndex = 3;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtCellphone
             // 
@@ -124,6 +127,7 @@ namespace CallCenterProgram.Presentation
             this.nudID.Name = "nudID";
             this.nudID.Size = new System.Drawing.Size(117, 23);
             this.nudID.TabIndex = 8;
+            this.nudID.ValueChanged += new System.EventHandler(this.nudID_ValueChanged);
             // 
             // lstCountries
             // 
@@ -341,37 +345,40 @@ namespace CallCenterProgram.Presentation
             // 
             // btnMin
             // 
+            this.btnMin.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterminimize;
+            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMin.Location = new System.Drawing.Point(289, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(54, 48);
             this.btnMin.TabIndex = 18;
-            this.btnMin.Text = "Minimize";
             this.btnMin.UseVisualStyleBackColor = true;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // btnMax
             // 
+            this.btnMax.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcentermaximize;
+            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMax.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMax.Location = new System.Drawing.Point(343, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(56, 48);
             this.btnMax.TabIndex = 17;
-            this.btnMax.Text = "Maximize";
             this.btnMax.UseVisualStyleBackColor = true;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
             // 
             // btnExit
             // 
+            this.btnExit.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterexit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Location = new System.Drawing.Point(399, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(56, 48);
             this.btnExit.TabIndex = 16;
-            this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
