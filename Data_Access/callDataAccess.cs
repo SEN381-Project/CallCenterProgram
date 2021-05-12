@@ -88,7 +88,7 @@ namespace CallCenterProgram.Data_Access
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Could not insert call due to error: " + ex.Message);
+                MessageBox.Show("Could not find call due to error: " + ex.Message);
             }
             finally
             {
