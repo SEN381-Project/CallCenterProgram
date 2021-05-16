@@ -76,28 +76,63 @@ namespace CallCenterProgram.Presentation
         private void Insert_Click(object sender, EventArgs e)
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
-            Set.Status = txtstatus.Text;
+            if(rdbPending.Checked)
+            {
+                Set.Status = "Pending";
+            }
+            else if (rdbApproved.Checked)
+            {
+                Set.Status = "Approved";
+            }
+            else if(rdbServiced.Checked)
+            {
+                Set.Status = "Service delivered";
+            }
             Set.FollowUpDate = dtpFollowUp.Value; 
 
-            followUp.AddFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, dtpFollowUp.Value);
+            followUp.AddFollowUp(Set.FollowUpId, Set.Status, Set.FollowUpDate);
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
-            Set.Status = txtstatus.Text;
+            if (rdbPending.Checked)
+            {
+                Set.Status = "Pending";
+            }
+            else if (rdbApproved.Checked)
+            {
+                Set.Status = "Approved";
+            }
+            else if (rdbServiced.Checked)
+            {
+                Set.Status = "Service delivered";
+            }
+            Set.FollowUpDate = dtpFollowUp.Value;
             Set.FollowUpDate = dtpFollowUp.Value;
 
-            followUp.UpdateFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, dtpFollowUp.Value);
+            followUp.UpdateFollowUp(Set.FollowUpId, Set.Status, Set.FollowUpDate);
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
-            Set.Status = txtstatus.Text;
+            if (rdbPending.Checked)
+            {
+                Set.Status = "Pending";
+            }
+            else if (rdbApproved.Checked)
+            {
+                Set.Status = "Approved";
+            }
+            else if (rdbServiced.Checked)
+            {
+                Set.Status = "Service delivered";
+            }
+            Set.FollowUpDate = dtpFollowUp.Value;
             Set.FollowUpDate = dtpFollowUp.Value;
 
-            followUp.RemoveFollowUp(int.Parse(txtfollowupid.Text), txtstatus.Text, dtpFollowUp.Value);
+            followUp.RemoveFollowUp(Set.FollowUpId);
         }
 
         private void FollowUp_Load(object sender, EventArgs e)
@@ -161,5 +196,7 @@ namespace CallCenterProgram.Presentation
         {
             ClearData();
         }
+
+        
     }
 }
