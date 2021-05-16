@@ -52,15 +52,14 @@
             this.txtstationnumber = new System.Windows.Forms.TextBox();
             this.txtdepartmentname = new System.Windows.Forms.TextBox();
             this.txtdepartmentid = new System.Windows.Forms.TextBox();
-            this.MainMenu = new System.Windows.Forms.Button();
-            this.Techician = new System.Windows.Forms.Button();
-            this.Manager = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.InsertDepartment = new System.Windows.Forms.Button();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximizeToggle = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnClearEmp = new System.Windows.Forms.Button();
+            this.btnClearDp = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.pnlTitleBar.SuspendLayout();
@@ -177,6 +176,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnClearEmp);
             this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.txtjobdescription);
@@ -289,50 +289,9 @@
             this.txtdepartmentid.Size = new System.Drawing.Size(161, 30);
             this.txtdepartmentid.TabIndex = 29;
             // 
-            // MainMenu
-            // 
-            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainMenu.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.MainMenu.Location = new System.Drawing.Point(4, 479);
-            this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(141, 41);
-            this.MainMenu.TabIndex = 24;
-            this.MainMenu.Text = "MainMenu";
-            this.MainMenu.UseVisualStyleBackColor = false;
-            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
-            // 
-            // Techician
-            // 
-            this.Techician.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.Techician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Techician.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Techician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.Techician.Location = new System.Drawing.Point(220, 479);
-            this.Techician.Name = "Techician";
-            this.Techician.Size = new System.Drawing.Size(131, 41);
-            this.Techician.TabIndex = 25;
-            this.Techician.Text = "Technician";
-            this.Techician.UseVisualStyleBackColor = false;
-            this.Techician.Click += new System.EventHandler(this.Techician_Click);
-            // 
-            // Manager
-            // 
-            this.Manager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.Manager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Manager.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.Manager.Location = new System.Drawing.Point(392, 479);
-            this.Manager.Name = "Manager";
-            this.Manager.Size = new System.Drawing.Size(122, 41);
-            this.Manager.TabIndex = 26;
-            this.Manager.Text = "Manager";
-            this.Manager.UseVisualStyleBackColor = false;
-            this.Manager.Click += new System.EventHandler(this.Manager_Click);
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnClearDp);
             this.groupBox2.Controls.Add(this.InsertDepartment);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
@@ -416,6 +375,30 @@
             this.btnExit.TabIndex = 2;
             this.btnExit.UseVisualStyleBackColor = false;
             // 
+            // btnClearEmp
+            // 
+            this.btnClearEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btnClearEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearEmp.Location = new System.Drawing.Point(129, 286);
+            this.btnClearEmp.Name = "btnClearEmp";
+            this.btnClearEmp.Size = new System.Drawing.Size(113, 46);
+            this.btnClearEmp.TabIndex = 34;
+            this.btnClearEmp.Text = "Clear";
+            this.btnClearEmp.UseVisualStyleBackColor = false;
+            this.btnClearEmp.Click += new System.EventHandler(this.btnClearEmp_Click);
+            // 
+            // btnClearDp
+            // 
+            this.btnClearDp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btnClearDp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDp.Location = new System.Drawing.Point(103, 286);
+            this.btnClearDp.Name = "btnClearDp";
+            this.btnClearDp.Size = new System.Drawing.Size(105, 46);
+            this.btnClearDp.TabIndex = 33;
+            this.btnClearDp.Text = "Clear";
+            this.btnClearDp.UseVisualStyleBackColor = false;
+            this.btnClearDp.Click += new System.EventHandler(this.btnClearDp_Click);
+            // 
             // Employee_Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,9 +407,6 @@
             this.ClientSize = new System.Drawing.Size(837, 561);
             this.Controls.Add(this.pnlTitleBar);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.Manager);
-            this.Controls.Add(this.Techician);
-            this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Exit);
@@ -458,9 +438,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button Insert;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button MainMenu;
-        private System.Windows.Forms.Button Techician;
-        private System.Windows.Forms.Button Manager;
         private System.Windows.Forms.TextBox txtstationnumber;
         private System.Windows.Forms.TextBox txtdepartmentname;
         private System.Windows.Forms.TextBox txtdepartmentid;
@@ -479,5 +456,7 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximizeToggle;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnClearEmp;
+        private System.Windows.Forms.Button btnClearDp;
     }
 }

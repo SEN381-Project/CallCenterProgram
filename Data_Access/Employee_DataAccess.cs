@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using CallCenterProgram;
 using CallCenterProgram.Bussiness_Logic;
-
+using System.Data;
 
 namespace CallCenterProgram.Data_Access
 {
@@ -99,7 +99,7 @@ namespace CallCenterProgram.Data_Access
         //Updating Employee details
         public void UpdateEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescriptiont)
         {
-            string query = @"UPDATE INTO Employee VALUES('" + employeeID + "','" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescriptiont + "')";
+            string query = @"UPDATE  Employee SET Name = 'name', Surname = 'surname', Address = 'address', ContactDetails = 'contactDetails', JobTitle ='jobTitle',JobDescription =' jobDescriptiont' WHERE EmployeeID ='employeeID'";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -124,7 +124,7 @@ namespace CallCenterProgram.Data_Access
         //Updating Department details
         public void UpdateDepartment(int departmentId, string derptmentName, int stationNumber)
         {
-            string query = @"UPDATE INTO Department VALUES('" + departmentId + "','" + derptmentName + "', '" + stationNumber + "')";
+            string query = @"UPDATE Department SET DerptmentName = 'derptmentName', StationNumber = 'stationNumber' WHERE  DepartmentId = 'departmentId";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -149,7 +149,7 @@ namespace CallCenterProgram.Data_Access
         //update technian info
         public void UpdateTechnicians(string abilities, string qualification)
         {
-            string query = @"UPDATE INTO Employee VALUES('" + abilities + "','" + qualification + "')";
+            string query = @"UPDATE Employee SET Abilities = 'abilities', Qualification ='qualification' WHERE EmployeeID ='employeeID' ";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -172,9 +172,9 @@ namespace CallCenterProgram.Data_Access
         }
 
         //Deleting Employee details
-        public void DeleteEmployee(int employeeID, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescription)
+        public void DeleteEmployee(int employeeID)
         {
-            string query = @"DELETE INTO Employee VALUES('" + employeeID + "','" + name + "','" + surname + "', '" + address + "','" + contactDetails + "','" + jobTitle + "','" + jobDescription + "')";
+            string query = @"DELETE FROM Employee WHRE EmployeeID ='employeeID'";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -197,9 +197,9 @@ namespace CallCenterProgram.Data_Access
         }
 
         //Deleting Derpartment details
-        public void DeleteDepartment(int departmentId, string derptmentName, int stationNumber)
+        public void DeleteDepartment(int departmentId)
         {
-            string query = @"DELETE INTO Department VALUES('" + departmentId + "','" + derptmentName + "', '" + stationNumber + "')";
+            string query = @"DELETE FROM  Department DepartmentId  = 'departmentId'";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -289,74 +289,21 @@ namespace CallCenterProgram.Data_Access
             return info;
         }
         //delete technician info
-        public void DeleteTechnicians(string abilities, string qualification)
+       
+        public BindingSource DisplayEmployee()
         {
-            string query = @"DELETE INTO Employee VALUES('" + abilities + "','" + qualification + "')";
-            Conn = new SqlConnection(connect);
-            Conn.Open();
-            Command = new SqlCommand(query, Conn);
-
-            try
-            {
-                Command.ExecuteNonQuery();
-                MessageBox.Show("Technician info deleted!");
-            }
-            catch (Exception e)
-            {
-
-                MessageBox.Show("There is an error,Technician info is not deleted!" + e.Message);
-            }
-
-            finally
-            {
-                Conn.Close();
-            }
-        }
-
-        public List<Manager> DisplayEmployee()
-        {
-            string query = @"SELECT * FROM Employee";
-
-            Conn = new SqlConnection(connect);
-
-            Conn.Open();
-
-            Command = new SqlCommand(query, Conn);
-            List<Manager> EmployeeData = new List<Manager>();
+            BindingSource src = new BindingSource();
+            string query = @"SELECT Employee.EmployeeId, EmployeeName, Employee.JobDescription, Employee.Surname, Employee.ContactDetails ,Employee.Jobtitle, Employee.DepartmentId, Department.DepartmentName, Department.StationNumber
+                             FROM Employee 
+                             INNER JOIN Department ON Employee.DepartmentId = Department.DepartmentId";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Conn);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            src.DataSource = table;
+            return src;
 
 
-            try
-            {
-                Reader = Command.ExecuteReader();
-
-                while (Reader.Read())
-                {
-                    objEmployee.EmployeeId = int.Parse(Reader[0].ToString());
-                    objEmployee.Name = Reader[2].ToString();
-                    objEmployee.Surname = Reader[3].ToString();
-                    objEmployee.Address = Reader[4].ToString();
-                    objEmployee.ContactDetails = Reader[5].ToString();
-                    objEmployee.Jobtitle = Reader[6].ToString();
-                    objEmployee.JobDescription = Reader[7].ToString();
-                    objEmployee.DepartmentId = int.Parse(Reader[1].ToString());
-                    //objEmployee.DepartmentName = Reader[8].ToString();
-                    //objEmployee.StationNumber = int.Parse(Reader[9].ToString());
-
-                    EmployeeData.Add(new Manager(objEmployee.EmployeeId, objEmployee.Name, objEmployee.Surname, objEmployee.Address, objEmployee.ContactDetails, objEmployee.Jobtitle, objEmployee.JobDescription, objEmployee.DepartmentId));
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Details could not be found: " + ex.Message);
-            }
-            finally
-            {
-                Conn.Close();
-            }
-
-            return EmployeeData;
+           
         }
     }
 }

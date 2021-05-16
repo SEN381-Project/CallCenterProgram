@@ -35,11 +35,8 @@
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlSubContent = new System.Windows.Forms.Panel();
             this.pnlFollowUp = new System.Windows.Forms.Panel();
-            this.btnTechnician = new System.Windows.Forms.Button();
-            this.btnFeedback = new System.Windows.Forms.Button();
-            this.btnManager = new System.Windows.Forms.Button();
-            this.btnEmployeeForm = new System.Windows.Forms.Button();
-            this.btnFollowUp = new System.Windows.Forms.Button();
+            this.btnClientSatisfation = new System.Windows.Forms.Button();
+            this.btnEmployeeInf = new System.Windows.Forms.Button();
             this.pnlIncident = new System.Windows.Forms.Panel();
             this.btnServiceRequest = new System.Windows.Forms.Button();
             this.btnJob = new System.Windows.Forms.Button();
@@ -122,7 +119,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.lblTitle.Location = new System.Drawing.Point(474, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(153, 58);
+            this.lblTitle.Size = new System.Drawing.Size(153, 55);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Home";
             // 
@@ -153,100 +150,46 @@
             // 
             // pnlFollowUp
             // 
-            this.pnlFollowUp.Controls.Add(this.btnTechnician);
-            this.pnlFollowUp.Controls.Add(this.btnFeedback);
-            this.pnlFollowUp.Controls.Add(this.btnManager);
-            this.pnlFollowUp.Controls.Add(this.btnEmployeeForm);
-            this.pnlFollowUp.Controls.Add(this.btnFollowUp);
+            this.pnlFollowUp.Controls.Add(this.btnClientSatisfation);
+            this.pnlFollowUp.Controls.Add(this.btnEmployeeInf);
             this.pnlFollowUp.Location = new System.Drawing.Point(664, 0);
             this.pnlFollowUp.Name = "pnlFollowUp";
-            this.pnlFollowUp.Size = new System.Drawing.Size(166, 418);
+            this.pnlFollowUp.Size = new System.Drawing.Size(179, 418);
             this.pnlFollowUp.TabIndex = 17;
             // 
-            // btnTechnician
+            // btnClientSatisfation
             // 
-            this.btnTechnician.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTechnician.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnTechnician.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTechnician.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnTechnician.Location = new System.Drawing.Point(0, 240);
-            this.btnTechnician.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTechnician.Name = "btnTechnician";
-            this.btnTechnician.Size = new System.Drawing.Size(166, 60);
-            this.btnTechnician.TabIndex = 12;
-            this.btnTechnician.Text = "Technician";
-            this.btnTechnician.UseVisualStyleBackColor = true;
-            this.btnTechnician.Click += new System.EventHandler(this.btnTechnician_Click);
+            this.btnClientSatisfation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientSatisfation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnClientSatisfation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnClientSatisfation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientSatisfation.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientSatisfation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnClientSatisfation.Location = new System.Drawing.Point(0, 71);
+            this.btnClientSatisfation.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClientSatisfation.Name = "btnClientSatisfation";
+            this.btnClientSatisfation.Size = new System.Drawing.Size(179, 68);
+            this.btnClientSatisfation.TabIndex = 13;
+            this.btnClientSatisfation.Text = "Client Satisfaction";
+            this.btnClientSatisfation.UseVisualStyleBackColor = true;
+            this.btnClientSatisfation.Click += new System.EventHandler(this.btnClientSatisfation_Click);
             // 
-            // btnFeedback
+            // btnEmployeeInf
             // 
-            this.btnFeedback.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFeedback.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnFeedback.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFeedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnFeedback.Location = new System.Drawing.Point(0, 180);
-            this.btnFeedback.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(166, 60);
-            this.btnFeedback.TabIndex = 11;
-            this.btnFeedback.Text = "Feedback";
-            this.btnFeedback.UseVisualStyleBackColor = true;
-            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
-            // 
-            // btnManager
-            // 
-            this.btnManager.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManager.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnManager.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnManager.Location = new System.Drawing.Point(0, 120);
-            this.btnManager.Margin = new System.Windows.Forms.Padding(2);
-            this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(166, 60);
-            this.btnManager.TabIndex = 10;
-            this.btnManager.Text = "Manager";
-            this.btnManager.UseVisualStyleBackColor = true;
-            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
-            // 
-            // btnEmployeeForm
-            // 
-            this.btnEmployeeForm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmployeeForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnEmployeeForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnEmployeeForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployeeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployeeForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnEmployeeForm.Location = new System.Drawing.Point(0, 60);
-            this.btnEmployeeForm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEmployeeForm.Name = "btnEmployeeForm";
-            this.btnEmployeeForm.Size = new System.Drawing.Size(166, 60);
-            this.btnEmployeeForm.TabIndex = 9;
-            this.btnEmployeeForm.Text = "Employee";
-            this.btnEmployeeForm.UseVisualStyleBackColor = true;
-            this.btnEmployeeForm.Click += new System.EventHandler(this.btnEmployeeForm_Click);
-            // 
-            // btnFollowUp
-            // 
-            this.btnFollowUp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFollowUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
-            this.btnFollowUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
-            this.btnFollowUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFollowUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFollowUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnFollowUp.Location = new System.Drawing.Point(0, 0);
-            this.btnFollowUp.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFollowUp.Name = "btnFollowUp";
-            this.btnFollowUp.Size = new System.Drawing.Size(166, 60);
-            this.btnFollowUp.TabIndex = 5;
-            this.btnFollowUp.Text = " Follow Up";
-            this.btnFollowUp.UseVisualStyleBackColor = true;
-            this.btnFollowUp.Click += new System.EventHandler(this.btnFollowUp_Click);
+            this.btnEmployeeInf.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployeeInf.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(58)))));
+            this.btnEmployeeInf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(132)))), ((int)(((byte)(253)))));
+            this.btnEmployeeInf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeInf.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeInf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnEmployeeInf.Location = new System.Drawing.Point(0, 0);
+            this.btnEmployeeInf.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmployeeInf.Name = "btnEmployeeInf";
+            this.btnEmployeeInf.Size = new System.Drawing.Size(179, 71);
+            this.btnEmployeeInf.TabIndex = 9;
+            this.btnEmployeeInf.Text = "Employee Information";
+            this.btnEmployeeInf.UseVisualStyleBackColor = true;
+            this.btnEmployeeInf.Click += new System.EventHandler(this.btnEmployeeInf_Click);
             // 
             // pnlIncident
             // 
@@ -428,7 +371,7 @@
             this.lblPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.lblPanelTitle.Location = new System.Drawing.Point(371, 20);
             this.lblPanelTitle.Name = "lblPanelTitle";
-            this.lblPanelTitle.Size = new System.Drawing.Size(208, 39);
+            this.lblPanelTitle.Size = new System.Drawing.Size(204, 38);
             this.lblPanelTitle.TabIndex = 2;
             this.lblPanelTitle.Text = "Departments";
             // 
@@ -489,7 +432,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomeForm";
             this.Text = "Home";
-            this.Load += new System.EventHandler(this.HomeForm_Load);
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
             this.pnlContent.ResumeLayout(false);
@@ -516,15 +458,11 @@
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Label lblPanelTitle;
         private System.Windows.Forms.Button btnPackage;
-        private System.Windows.Forms.Button btnFollowUp;
         private System.Windows.Forms.Button btnIncident;
         private System.Windows.Forms.Button btnContract;
         private System.Windows.Forms.Button btnServiceRequest;
         private System.Windows.Forms.Button btnJob;
-        private System.Windows.Forms.Button btnTechnician;
-        private System.Windows.Forms.Button btnFeedback;
-        private System.Windows.Forms.Button btnManager;
-        private System.Windows.Forms.Button btnEmployeeForm;
+        private System.Windows.Forms.Button btnEmployeeInf;
         private System.Windows.Forms.Button btnService;
         private System.Windows.Forms.Button btnSecurityLevel;
         private System.Windows.Forms.Panel pnlSubContent;
@@ -534,6 +472,7 @@
         private System.Windows.Forms.Panel pnlClientHome;
         private System.Windows.Forms.Panel pnlCall;
         private System.Windows.Forms.Button btnServiceLevel;
+        private System.Windows.Forms.Button btnClientSatisfation;
     }
 }
 

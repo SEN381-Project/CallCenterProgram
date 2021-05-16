@@ -40,15 +40,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridVFollowUp = new System.Windows.Forms.DataGridView();
-            this.MainMenu = new System.Windows.Forms.Button();
             this.Exits = new System.Windows.Forms.Button();
-            this.Feedback = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnSetReminder = new System.Windows.Forms.Button();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximizeToggle = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnCLear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVFollowUp)).BeginInit();
@@ -57,6 +55,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCLear);
             this.groupBox1.Controls.Add(this.dtpFollowUp);
             this.groupBox1.Controls.Add(this.txtstatus);
             this.groupBox1.Controls.Add(this.txtfollowupid);
@@ -70,7 +69,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(223)))));
             this.groupBox1.Location = new System.Drawing.Point(609, 99);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(273, 358);
+            this.groupBox1.Size = new System.Drawing.Size(273, 393);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FollowUp";
@@ -100,9 +99,9 @@
             // 
             this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete.Location = new System.Drawing.Point(8, 312);
+            this.Delete.Location = new System.Drawing.Point(8, 313);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(100, 40);
+            this.Delete.Size = new System.Drawing.Size(100, 34);
             this.Delete.TabIndex = 5;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
@@ -112,9 +111,9 @@
             // 
             this.Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Update.Location = new System.Drawing.Point(8, 275);
+            this.Update.Location = new System.Drawing.Point(8, 276);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(100, 37);
+            this.Update.Size = new System.Drawing.Size(100, 31);
             this.Update.TabIndex = 4;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = false;
@@ -126,7 +125,7 @@
             this.Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Insert.Location = new System.Drawing.Point(7, 241);
             this.Insert.Name = "Insert";
-            this.Insert.Size = new System.Drawing.Size(100, 38);
+            this.Insert.Size = new System.Drawing.Size(100, 29);
             this.Insert.TabIndex = 3;
             this.Insert.Text = "Insert";
             this.Insert.UseVisualStyleBackColor = false;
@@ -164,55 +163,29 @@
             this.panel1.Controls.Add(this.dataGridVFollowUp);
             this.panel1.Location = new System.Drawing.Point(12, 99);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(598, 358);
+            this.panel1.Size = new System.Drawing.Size(598, 393);
             this.panel1.TabIndex = 2;
             // 
             // dataGridVFollowUp
             // 
             this.dataGridVFollowUp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridVFollowUp.Location = new System.Drawing.Point(0, 0);
+            this.dataGridVFollowUp.Location = new System.Drawing.Point(3, 3);
             this.dataGridVFollowUp.Name = "dataGridVFollowUp";
-            this.dataGridVFollowUp.Size = new System.Drawing.Size(598, 355);
+            this.dataGridVFollowUp.Size = new System.Drawing.Size(598, 393);
             this.dataGridVFollowUp.TabIndex = 0;
-            // 
-            // MainMenu
-            // 
-            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainMenu.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenu.Location = new System.Drawing.Point(15, 460);
-            this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(135, 46);
-            this.MainMenu.TabIndex = 3;
-            this.MainMenu.Text = "MainMenu";
-            this.MainMenu.UseVisualStyleBackColor = false;
-            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
             // 
             // Exits
             // 
             this.Exits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Exits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exits.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exits.Location = new System.Drawing.Point(746, 460);
+            this.Exits.Location = new System.Drawing.Point(746, 488);
             this.Exits.Name = "Exits";
             this.Exits.Size = new System.Drawing.Size(136, 46);
             this.Exits.TabIndex = 4;
             this.Exits.Text = "Exits";
             this.Exits.UseVisualStyleBackColor = false;
             this.Exits.Click += new System.EventHandler(this.Exits_Click);
-            // 
-            // Feedback
-            // 
-            this.Feedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.Feedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Feedback.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Feedback.Location = new System.Drawing.Point(165, 460);
-            this.Feedback.Name = "Feedback";
-            this.Feedback.Size = new System.Drawing.Size(140, 46);
-            this.Feedback.TabIndex = 5;
-            this.Feedback.Text = "Feedback";
-            this.Feedback.UseVisualStyleBackColor = false;
-            this.Feedback.Click += new System.EventHandler(this.Feedback_Click);
             // 
             // label6
             // 
@@ -223,19 +196,6 @@
             this.label6.Size = new System.Drawing.Size(231, 38);
             this.label6.TabIndex = 10;
             this.label6.Text = "FollowUp Form";
-            // 
-            // btnSetReminder
-            // 
-            this.btnSetReminder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.btnSetReminder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetReminder.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetReminder.Location = new System.Drawing.Point(311, 460);
-            this.btnSetReminder.Name = "btnSetReminder";
-            this.btnSetReminder.Size = new System.Drawing.Size(155, 46);
-            this.btnSetReminder.TabIndex = 11;
-            this.btnSetReminder.Text = "Set Reminder";
-            this.btnSetReminder.UseVisualStyleBackColor = false;
-            this.btnSetReminder.Click += new System.EventHandler(this.btnSetReminder_Click);
             // 
             // pnlTitleBar
             // 
@@ -295,6 +255,18 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnCLear
+            // 
+            this.btnCLear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btnCLear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLear.Location = new System.Drawing.Point(8, 353);
+            this.btnCLear.Name = "btnCLear";
+            this.btnCLear.Size = new System.Drawing.Size(100, 34);
+            this.btnCLear.TabIndex = 9;
+            this.btnCLear.Text = "Clear";
+            this.btnCLear.UseVisualStyleBackColor = false;
+            this.btnCLear.Click += new System.EventHandler(this.btnCLear_Click);
+            // 
             // FollowUp_Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,11 +274,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(892, 546);
             this.Controls.Add(this.pnlTitleBar);
-            this.Controls.Add(this.btnSetReminder);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.Feedback);
             this.Controls.Add(this.Exits);
-            this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
@@ -337,15 +306,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtstatus;
         private System.Windows.Forms.TextBox txtfollowupid;
-        private System.Windows.Forms.Button MainMenu;
         private System.Windows.Forms.Button Exits;
-        private System.Windows.Forms.Button Feedback;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnSetReminder;
         private System.Windows.Forms.Panel pnlTitleBar;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximizeToggle;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DateTimePicker dtpFollowUp;
+        private System.Windows.Forms.Button btnCLear;
     }
 }

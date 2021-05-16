@@ -110,34 +110,17 @@ namespace CallCenterProgram
             showForm(form);
         }
 
-        //follow up
-        private void btnFollowUp_Click(object sender, EventArgs e)
+        //Client_Satisfaction
+        private void btnClientSatisfation_Click(object sender, EventArgs e)
         {
-            FollowUp_Presentation form = new FollowUp_Presentation();
+            Client_Satisfaction form = new Client_Satisfaction();
             showForm(form);
         }
 
-        private void btnEmployeeForm_Click(object sender, EventArgs e)
+        //Employee_Information
+        private void btnEmployeeInf_Click(object sender, EventArgs e)
         {
-            Employee_Presentation form = new Employee_Presentation();
-            showForm(form);
-        }
-
-        private void btnManager_Click(object sender, EventArgs e)
-        {
-            Manager_Presentation form = new Manager_Presentation();
-            showForm(form);
-        }
-
-        private void btnFeedback_Click(object sender, EventArgs e)
-        {
-            Feedback form = new Feedback();
-            showForm(form);
-        }
-
-        private void btnTechnician_Click(object sender, EventArgs e)
-        {
-            Technician form = new Technician();
+            Employee_Information form = new Employee_Information();
             showForm(form);
         }
 
@@ -181,9 +164,6 @@ namespace CallCenterProgram
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void HomeForm_Load(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }

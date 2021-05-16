@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CallCenterProgram.Data_Access;
 using CallCenterProgram.Presentation;
 using CallCenterProgram;
-
+using System.Windows.Forms;
 
 namespace CallCenterProgram.Bussiness_Logic
 {
@@ -19,7 +19,7 @@ namespace CallCenterProgram.Bussiness_Logic
         Employee_DataAccess EmployeeData = new Employee_DataAccess();
         public void FireEmployee(int employeeId, string name, string surname, string address, string contactDetails, string jobTitle, string jobDescription)
         {
-            EmployeeData.DeleteEmployee(employeeId, name, surname, address, contactDetails, jobTitle, jobDescription);
+            EmployeeData.DeleteEmployee(employeeId);
 
         }
 
@@ -29,9 +29,9 @@ namespace CallCenterProgram.Bussiness_Logic
         }
 
 
-        public void RemoveDepartment(int departmentId, string derptmentName, int stationNumber)
+        public void RemoveDepartment(int departmentId)
         {
-            EmployeeData.DeleteDepartment(departmentId, derptmentName, stationNumber);
+            EmployeeData.DeleteDepartment(departmentId);
 
         }
 
@@ -45,10 +45,11 @@ namespace CallCenterProgram.Bussiness_Logic
             return base.ToString();
         }
 
-        public List<Manager> ViewEmployee()
+        public BindingSource ViewEmployee()
         {
-            List<Manager> Employees = EmployeeData.DisplayEmployee();
-            return Employees;
+            BindingSource src = new BindingSource();
+            src.DataSource = EmployeeData.DisplayEmployee();
+            return src;
         }
 
 

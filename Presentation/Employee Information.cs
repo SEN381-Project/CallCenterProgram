@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CallCenterProgram.Bussiness_Logic;
 using System.Runtime.InteropServices;
+using CallCenterProgram.Presentation;
 
-
-namespace CallCenterProgram.Presentation
+namespace CallCenterProgram
 {
-    public partial class Technician : Form
+    public partial class Employee_Information : Form
     {
+
         bool Maximized = false;
 
         //DLL stuff
@@ -25,12 +25,13 @@ namespace CallCenterProgram.Presentation
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public Technician()
+        public Employee_Information()
         {
             InitializeComponent();
             Maximized = false;
             CreateMyBorderlessWindow();
         }
+
         public void CreateMyBorderlessWindow()
         {
             this.FormBorderStyle = FormBorderStyle.None;
@@ -39,45 +40,6 @@ namespace CallCenterProgram.Presentation
             this.StartPosition = FormStartPosition.CenterScreen;
             // Remove the control box so the form will only display client area.
             this.ControlBox = false;
-        }
-
-        Technicians technicians = new Technicians();
-
-        private void showForm(Form form)
-        {
-            form.Show();
-            this.Hide();
-        }
-
-        private void Exit_Click(object sender, EventArgs e)
-        {
-            Employee_Information form = new Employee_Information();
-            showForm(form);
-        }
-
-        
-
-        private void InsertT_Click(object sender, EventArgs e)
-        {
-            string abilities = txtability.Text;
-            string qualification = txtq.Text;
-
-            technicians.InsertTechnicians(txtability.Text, txtq.Text);
-        }
-
-        private void UpdateT_Click(object sender, EventArgs e)
-        {
-            technicians.Abilities = txtability.Text;
-            technicians.Qualification = txtq.Text;
-
-            technicians.InsertTechnicians(txtability.Text, txtq.Text);
-        }
-
-       
-
-        private void Technician_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnMaximizeToggle_Click(object sender, EventArgs e)
@@ -101,11 +63,6 @@ namespace CallCenterProgram.Presentation
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void pnlTitleBar_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -115,16 +72,34 @@ namespace CallCenterProgram.Presentation
             }
         }
 
-        public void ClearData()
+        private void showForm(Form form)
         {
-            txtability.Clear();
-            txtq.Clear();
-
+            form.Show();
+            this.Hide();
         }
 
-        private void btnClearD_Click(object sender, EventArgs e)
+        private void btnEmployeeHP_Click(object sender, EventArgs e)
         {
-            ClearData();
+            Employee_Presentation form = new Employee_Presentation();
+            showForm(form);
+        }
+
+        private void btnManagerHP_Click(object sender, EventArgs e)
+        {
+            Manager_Presentation form = new Manager_Presentation();
+            showForm(form);
+        }
+
+        private void btnTechnicianHP_Click(object sender, EventArgs e)
+        {
+            Technician form = new Technician();
+            showForm(form);
+        }
+
+        private void btnHomePageHP_Click(object sender, EventArgs e)
+        {
+            HomeForm form = new HomeForm();
+            showForm(form);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using CallCenterProgram.Data_Access;
 using CallCenterProgram.Presentation;
 
@@ -12,6 +13,7 @@ namespace CallCenterProgram.Bussiness_Logic
     {
         FollowUp_DataAccess FollowUpData = new FollowUp_DataAccess();
         FollowUp PopUp = new FollowUp();
+        BindingSource src = new BindingSource();
 
         public void InsertReminder(int reminderId, string reminder, DateTime reminderDate)
         {
@@ -24,10 +26,10 @@ namespace CallCenterProgram.Bussiness_Logic
             FollowUpData.UpdateSetReminder(reminderId, reminder, reminderDate);
         }
 
-        public void RemoveReminder(int reminderId, string reminder, DateTime reminderDate)
+        public void RemoveReminder(int reminderId)
         {
 
-            FollowUpData.DeleteSetReminder(reminderId, reminder, reminderDate);
+            FollowUpData.DeleteSetReminder(reminderId);
         }
 
 
@@ -44,9 +46,9 @@ namespace CallCenterProgram.Bussiness_Logic
 
         }
 
-        public void RemoveFollowUp(int followUpId, string status, DateTime followUpDate)
+        public void RemoveFollowUp(int followUpId)
         {
-            FollowUpData.DeleteFollowUp(followUpId, status, followUpDate);
+            FollowUpData.DeleteFollowUp(followUpId);
 
         }
 
@@ -56,23 +58,25 @@ namespace CallCenterProgram.Bussiness_Logic
 
         }
 
-        public List<FollowUp> ViewFollowUps()
+        public BindingSource ViewFollowUps()
         {
-            List<FollowUp> followUps = FollowUpData.DisplayFollowUps();
-            return followUps;
+            src.DataSource = FollowUpData.DisplayFollowUps();
+            return src;
+            
         }
 
-        public List<FollowUp> ViewFeedback()
+        
+        public BindingSource ViewFeedback()
         {
-            List<FollowUp> followUps = FollowUpData.DisplayFeedbacks();
-            return followUps;
+            src.DataSource = FollowUpData.DisplayFeedbacks();
+            return src;
         }
-
-        public List<FollowUp> ViewSetReminder()
+        public BindingSource ViewSetReminder()
         {
-            List<FollowUp> setReminder = FollowUpData.DisplayReminder();
-            return setReminder;
-
+           
+            src.DataSource = FollowUpData.DisplayReminder();
+            return src;
+          
         }
 
       

@@ -49,24 +49,29 @@ namespace CallCenterProgram.Presentation
         
         private void SetReminder_Load(object sender, EventArgs e)
         {
-            dataGridVReminder.DataSource = setReminder.ViewSetReminder();
+            BindingSource source = new BindingSource();
+            source.DataSource = setReminder.ViewSetReminder();
+            dataGridVReminder.DataSource = source;
+          
             if (Set.ReminderDate == DateTime.Now)
             {
                 MessageBox.Show("Reminder For: " +Set.Reminder);
             }
         }
 
-        private void btnExitReminder_Click(object sender, EventArgs e)
+        private void showForm(Form form)
         {
-            Application.Exit();
+            form.Show();
+            this.Hide();
         }
 
-        private void btnFollowUpReminder_Click(object sender, EventArgs e)
+        private void btnExitReminder_Click(object sender, EventArgs e)
         {
-            FollowUp_Presentation FollowUpForm = new FollowUp_Presentation();
-            FollowUpForm.Show();
-            this.Close();
+            Client_Satisfaction form = new Client_Satisfaction();
+            showForm(form);
         }
+
+       
 
         private void btnAddReminder_Click(object sender, EventArgs e)
         {
@@ -74,7 +79,7 @@ namespace CallCenterProgram.Presentation
             Set.Reminder = txtReminder.Text;
             Set.ReminderDate = dtpReminder.Value;
 
-            setReminder.InsertReminder(int.Parse(txtReminderId.Text), txtReminder.Text, dtpReminder.Value);
+            setReminder.InsertReminder(Set.ReminderId, Set.Reminder, Set.ReminderDate);
         }
 
         private void btbUpdateR_Click(object sender, EventArgs e)
@@ -83,7 +88,7 @@ namespace CallCenterProgram.Presentation
             Set.Reminder = txtReminder.Text;
             Set.ReminderDate = dtpReminder.Value;
 
-            setReminder.UpdateReminder(int.Parse(txtReminderId.Text), txtReminder.Text, dtpReminder.Value);
+            setReminder.UpdateReminder(Set.ReminderId, Set.Reminder, Set.ReminderDate);
         }
 
         private void btnDeleteR_Click(object sender, EventArgs e)
@@ -92,7 +97,7 @@ namespace CallCenterProgram.Presentation
             Set.Reminder = txtReminder.Text;
             Set.ReminderDate = dtpReminder.Value;
 
-            setReminder.RemoveReminder(int.Parse(txtReminderId.Text), txtReminder.Text, dtpReminder.Value);
+            setReminder.RemoveReminder(Set.ReminderId, Set.Reminder, Set.ReminderDate);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -133,6 +138,17 @@ namespace CallCenterProgram.Presentation
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+        public void ClearData()
+        {
+            txtReminderId.Clear();
+            txtReminder.Clear();
+            
+        }
+
+        private void btnClearData_Click(object sender, EventArgs e)
+        {
+            ClearData();
         }
     }
 }

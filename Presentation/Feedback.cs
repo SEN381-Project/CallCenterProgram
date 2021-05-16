@@ -52,44 +52,48 @@ namespace CallCenterProgram.Presentation
 
                 txtfeedbackid.Text = dataGridVFeedback.Rows[e.RowIndex].Cells["FeedbackId"].FormattedValue.ToString();
                 txtproblem.Text = dataGridVFeedback.Rows[e.RowIndex].Cells["Problem"].FormattedValue.ToString();
-                txthelpedontime.Text = dataGridVFeedback.Rows[e.RowIndex].Cells["HelpedOnTime"].FormattedValue.ToString();
-                
+                if (dataGridVFeedback.CurrentRow.Cells["FeedbackDate"].Value.ToString().Length > 0)
+                    dtpFeebback.Value = Convert.ToDateTime(dataGridVFeedback.CurrentRow.Cells["FeedbackDate"].Value.ToString());
             }
         }
 
-        private void Menu_Click(object sender, EventArgs e)
+        private void showForm(Form form)
         {
-            HomeForm.instance.Show();
-            this.Close();
-        }
-    
-
-        private void FollowUp_Click(object sender, EventArgs e)
-        {
-            FollowUp_Presentation FollowUp= new FollowUp_Presentation();
-            FollowUp.Show();
-            this.Close();
+            form.Show();
+            this.Hide();
         }
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Client_Satisfaction form = new Client_Satisfaction();
+            showForm(form);
         }
 
         private void Insert_Click(object sender, EventArgs e)
         {
              Set.FeedbackId = Convert.ToInt32(txtfeedbackid.Text);
              Set.Problem = txtproblem.Text;
-             Set.HelpedOnTime = bool.Parse(txthelpedontime.Text);
+            
+            if (checkBox1.CheckState == CheckState.Checked )
+            {
+                Set.HelpedOnTime = true;
+            }
+            else
+            {
+                Set.HelpedOnTime = false;
+            }
              Set.Comment = txtcomment.Text;
              Set.FeedbackDate = dtpFeebback.Value;
 
-            feedback.AddFeedback(int.Parse(txtfeedbackid.Text), txtproblem.Text, bool.Parse(txthelpedontime.Text), txtcomment.Text, dtpFeebback.Value);
+            feedback.AddFeedback(Set.FeedbackId, Set.Problem, Set.HelpedOnTime, Set.Comment, Set.FeedbackDate);
         }
 
         private void Feedback_Load(object sender, EventArgs e)
         {
-            dataGridVFeedback.DataSource = feedback.ViewFeedback();
+            BindingSource source = new BindingSource();
+            source.DataSource = feedback.ViewFeedback();
+            dataGridVFeedback.DataSource = source;
+             
         }
 
         private void btnMaximizeToggle_Click(object sender, EventArgs e)
@@ -127,11 +131,18 @@ namespace CallCenterProgram.Presentation
             }
         }
 
-        private void FollowUp_Click_1(object sender, EventArgs e)
+        public void ClearData()
         {
-            FollowUp_Presentation FollowUpForm = new FollowUp_Presentation();
-            FollowUpForm.Show();
-            this.Close();
+            txtfeedbackid.Clear();
+            txtproblem.Clear(); 
+            //txthelpedontime.Clear(); 
+            txtcomment.Clear();
+            
+
+        }
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearData();
         }
     }
 }

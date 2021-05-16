@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentation\Employee Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Employee Information.Designer.cs">
+      <DependentUpon>Employee Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Client Satisfaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Client Satisfaction.Designer.cs">
+      <DependentUpon>Client Satisfaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,11 +229,18 @@
     <Compile Include="Presentation\SetReminder.Designer.cs">
       <DependentUpon>SetReminder.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presentation\Employee Information.resx">
+      <DependentUpon>Employee Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Client Satisfaction.resx">
+      <DependentUpon>Client Satisfaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeForm.resx">
+    <EmbeddedResource Include="..\..\..\Desktop\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
+      <Link>HomeForm.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.callForm.resources" />
     <EmbeddedResource Include="obj\Debug\CallCenterProgram.Presentation.Contract.resources" />

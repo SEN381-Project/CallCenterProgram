@@ -33,7 +33,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnExitReminder = new System.Windows.Forms.Button();
-            this.btnFollowUpReminder = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridVReminder = new System.Windows.Forms.DataGridView();
             this.btnDeleteR = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpReminder = new System.Windows.Forms.DateTimePicker();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.btnClearData = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximizeToggle = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -103,21 +103,9 @@
             this.btnExitReminder.UseVisualStyleBackColor = true;
             this.btnExitReminder.Click += new System.EventHandler(this.btnExitReminder_Click);
             // 
-            // btnFollowUpReminder
-            // 
-            this.btnFollowUpReminder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFollowUpReminder.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFollowUpReminder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnFollowUpReminder.Location = new System.Drawing.Point(481, 452);
-            this.btnFollowUpReminder.Name = "btnFollowUpReminder";
-            this.btnFollowUpReminder.Size = new System.Drawing.Size(151, 34);
-            this.btnFollowUpReminder.TabIndex = 19;
-            this.btnFollowUpReminder.Text = "FollowUp";
-            this.btnFollowUpReminder.UseVisualStyleBackColor = true;
-            this.btnFollowUpReminder.Click += new System.EventHandler(this.btnFollowUpReminder_Click);
-            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnClearData);
             this.panel1.Controls.Add(this.dataGridVReminder);
             this.panel1.Controls.Add(this.btnDeleteR);
             this.panel1.Controls.Add(this.btbUpdateR);
@@ -140,9 +128,9 @@
             this.btnDeleteR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteR.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnDeleteR.Location = new System.Drawing.Point(499, 213);
+            this.btnDeleteR.Location = new System.Drawing.Point(387, 213);
             this.btnDeleteR.Name = "btnDeleteR";
-            this.btnDeleteR.Size = new System.Drawing.Size(266, 34);
+            this.btnDeleteR.Size = new System.Drawing.Size(189, 34);
             this.btnDeleteR.TabIndex = 4;
             this.btnDeleteR.Text = "Delete Reminder";
             this.btnDeleteR.UseVisualStyleBackColor = true;
@@ -153,9 +141,9 @@
             this.btbUpdateR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btbUpdateR.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btbUpdateR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btbUpdateR.Location = new System.Drawing.Point(266, 213);
+            this.btbUpdateR.Location = new System.Drawing.Point(217, 213);
             this.btbUpdateR.Name = "btbUpdateR";
-            this.btbUpdateR.Size = new System.Drawing.Size(236, 34);
+            this.btbUpdateR.Size = new System.Drawing.Size(173, 34);
             this.btbUpdateR.TabIndex = 3;
             this.btbUpdateR.Text = "Update Reminder";
             this.btbUpdateR.UseVisualStyleBackColor = true;
@@ -168,7 +156,7 @@
             this.btnAddReminder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.btnAddReminder.Location = new System.Drawing.Point(3, 213);
             this.btnAddReminder.Name = "btnAddReminder";
-            this.btnAddReminder.Size = new System.Drawing.Size(266, 34);
+            this.btnAddReminder.Size = new System.Drawing.Size(217, 34);
             this.btnAddReminder.TabIndex = 1;
             this.btnAddReminder.Text = "Add Reminder";
             this.btnAddReminder.UseVisualStyleBackColor = true;
@@ -232,6 +220,19 @@
             this.pnlTitleBar.Size = new System.Drawing.Size(800, 56);
             this.pnlTitleBar.TabIndex = 25;
             // 
+            // btnClearData
+            // 
+            this.btnClearData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearData.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
+            this.btnClearData.Location = new System.Drawing.Point(575, 213);
+            this.btnClearData.Name = "btnClearData";
+            this.btnClearData.Size = new System.Drawing.Size(192, 34);
+            this.btnClearData.TabIndex = 26;
+            this.btnClearData.Text = "ClearData";
+            this.btnClearData.UseVisualStyleBackColor = true;
+            this.btnClearData.Click += new System.EventHandler(this.btnClearData_Click);
+            // 
             // btnMinimize
             // 
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
@@ -290,7 +291,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnExitReminder);
-            this.Controls.Add(this.btnFollowUpReminder);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.label2);
@@ -317,7 +317,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnExitReminder;
-        private System.Windows.Forms.Button btnFollowUpReminder;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridVReminder;
         private System.Windows.Forms.Button btnDeleteR;
@@ -332,5 +331,6 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximizeToggle;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnClearData;
     }
 }

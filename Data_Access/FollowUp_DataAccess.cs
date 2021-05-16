@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using CallCenterProgram.Bussiness_Logic;
+using System.Data;
 
 namespace CallCenterProgram.Data_Access
 {
@@ -97,7 +98,7 @@ namespace CallCenterProgram.Data_Access
         #region Update Data
         public void UpdateFollowUp(int followUpId, string status, DateTime followUpDate)
         {
-            string query = @"UPDATE INTO FollowUp VALUES('" + followUpId + "','" + status + "', '" + followUpDate + "')";
+            string query = @"UPDATE FollowUp SET  Status = 'status ', FollowUpDate = 'followUpDate ' WHERE  FollowId = 'followUpId '";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -121,7 +122,7 @@ namespace CallCenterProgram.Data_Access
 
         public void UpdateSetReminder(int reminderId, string reminder, DateTime reminderDate)
         {
-            string query = @"UPDATE INTO Reminder VALUES('" + reminderId + "','" + reminder + "','" + reminderDate + "')";
+            string query = @"UPDATE  Reminder SET Reminder ='reminder', ReminderDate = 'reminderDate' WHERE Reminder ='reminderId' ";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -146,9 +147,9 @@ namespace CallCenterProgram.Data_Access
         #endregion
 
         #region Delete Data
-        public void DeleteFollowUp(int followUpId, string status, DateTime followUpDate)
+        public void DeleteFollowUp(int followUpId)
         {
-            string query = @"DELETE INTO FollowUp VALUES('" + followUpId + "','" + status + "', '" + followUpDate + "')";
+            string query = @"DELETE FROM FollowUp  FollowUpId ='followUpId'";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -170,9 +171,9 @@ namespace CallCenterProgram.Data_Access
             }
         }
 
-        public void DeleteSetReminder(int reminderId, string reminder, DateTime reminderDate)
+        public void DeleteSetReminder(int reminderId)
         {
-            string query = @"DELETE INTO Reminder VALUES('" + reminderId + "','" + reminder + "','" + reminderDate + "')";
+            string query = @"DELETE FROM Reminder WHERE ReminderId = 'reminderId'";
             Conn = new SqlConnection(connect);
             Conn.Open();
             Command = new SqlCommand(query, Conn);
@@ -197,117 +198,46 @@ namespace CallCenterProgram.Data_Access
         #endregion
 
         #region DisplayData
-        public List<FollowUp> DisplayFollowUps()
+        public BindingSource DisplayFollowUps()
         {
-            string query = @"SELECT FollowUpID, ClientID, Status, FollowUpDate FROM FollowUp "; 
 
-            Conn = new SqlConnection(connect);
-
-            Conn.Open();
-
-            Command = new SqlCommand(query, Conn);
-            List<FollowUp> FollowUpData = new List<FollowUp>();
-
-            try
-            {
-                Reader = Command.ExecuteReader();
-
-                while(Reader.Read())
-                {
-                    objFollowUp.FollowUpId = int.Parse(Reader[0].ToString());
-                    objFollowUp.Status = Reader[2].ToString();
-                    objFollowUp.FollowUpDate = DateTime.Parse(Reader[3].ToString());
-
-
-                    FollowUpData.Add(new FollowUp(objFollowUp.FollowUpId, objFollowUp.Status, objFollowUp.FollowUpDate));
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Details could not be found: " + ex.Message);
-            }
-            finally
-            {
-                Conn.Close();
-            }
-
-            return FollowUpData;
+            BindingSource src = new BindingSource();
+            string query = @"SELECT FollowUp.FollowUpID, FollowUp.Status, FollowUp.FollowUpDate, FollowUp.ClientID, FollowUp.JobRef  , Client.ClientName, Client.ClientSurname,Job. jobStatus,Job.incidentRef
+                             FROM FollowUp INNER JOIN Client ON FollowUp.ClientID = Client.ClientID
+                             INNER JOIN Job ON FollowUp.jobID = Job.jobID ";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Conn);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            src.DataSource = table;
+            return src;
+           
         }
 
-        public List<FollowUp> DisplayFeedbacks()
+        public BindingSource DisplayFeedbacks()
         {
-            string query = @"SELECT FeedbackID, ClientID, HelpedOnTime, Problem, Comment, FeedbackDate FROM Feedback";
 
-            Conn = new SqlConnection(connect);
-
-            Conn.Open();
-
-            Command = new SqlCommand(query, Conn);
-            List<FollowUp> FeedbackData = new List<FollowUp>();
-
-            try
-            {
-                Reader = Command.ExecuteReader();
-
-                while(Reader.Read())
-                {
-                    objFollowUp.FeedbackId = int.Parse(Reader[0].ToString());
-                    objFollowUp.HelpedOnTime = bool.Parse(Reader[2].ToString());
-                    objFollowUp.Problem = Reader[3].ToString();
-                    objFollowUp.Comment = Reader[4].ToString();
-                    objFollowUp.FeedbackDate = DateTime.Parse(Reader[5].ToString());
-
-
-                    FeedbackData.Add(new FollowUp(objFollowUp.FeedbackId, objFollowUp.Problem, objFollowUp.HelpedOnTime, objFollowUp.Comment, objFollowUp.FeedbackDate));
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Details could not be found: " + ex.Message);
-            }
-            finally
-            {
-                Conn.Close();
-            }
-
-            return FeedbackData;
+            BindingSource src = new BindingSource();
+            string query = @"SELECT Feedback.FeedbackID, Feedback.HelpedOnTime, Feedback.Problem, Feedback.Comment, Feedback.FeedbackDate ,Feedback.ClientID, Client.ClientName, Client.ClientSurname
+                             FROM Feedback 
+                             INNER JOIN Client ON Feedback.ClientID = Client.ClientID ";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Conn);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            src.DataSource = table;
+            return src;
+            
         }
 
-        public List<FollowUp> DisplayReminder()
+        public BindingSource DisplayReminder()
         {
-            string query = @"SELECT ReminderId, Reminder, ReminderDate FROM  Reminder"; 
-
-            Conn = new SqlConnection(connect);
-
-            Conn.Open();
-
-            Command = new SqlCommand(query, Conn);
-            List<FollowUp> ReminderData = new List<FollowUp>();
-
-            try
-            {
-                Reader = Command.ExecuteReader();
-
-                while(Reader.Read())
-                {
-                    objFollowUp.ReminderId = int.Parse(Reader[0].ToString());
-                    objFollowUp.Reminder = Reader[1].ToString();
-                    objFollowUp.ReminderDate = DateTime.Parse(Reader[2].ToString());
-
-
-                    ReminderData.Add(new FollowUp(objFollowUp.FeedbackId, objFollowUp.Problem, objFollowUp.HelpedOnTime, objFollowUp.Comment, objFollowUp.FeedbackDate));
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Details could not be found: " + ex.Message);
-            }
-            finally
-            {
-                Conn.Close();
-            }
-
-            return ReminderData;
+            BindingSource src = new BindingSource();
+            string query = @"SELECT ReminderId, Reminder, ReminderDate FROM  Reminder";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Conn);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            src.DataSource = table;
+            return src;
+            
         }
 
         #endregion

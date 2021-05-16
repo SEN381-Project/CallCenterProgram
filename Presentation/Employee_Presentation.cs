@@ -39,29 +39,16 @@ namespace CallCenterProgram.Presentation
             employee.AddEmployee(int.Parse(txtiD.Text), txtName.Text, txtSurname.Text, txtAddress.Text, txtContact.Text, txtjob.Text, txtjobdescription.Text);
         }
 
-        private void MainMenu_Click(object sender, EventArgs e)
+        private void showForm(Form form)
         {
-            HomeForm.instance.Show();
-            this.Close();
-        }
-
-
-        private void Techician_Click(object sender, EventArgs e)
-        {
-            Technician technician = new Technician();
-            technician.Show();
-        }
-
-        private void Manager_Click(object sender, EventArgs e)
-        {
-            Manager_Presentation Manager = new Manager_Presentation();
-            Manager.Show();
-
+            form.Show();
+            this.Hide();
         }
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Employee_Information form = new Employee_Information();
+            showForm(form);
         }
 
         private void InsertDepartment_Click(object sender, EventArgs e)
@@ -91,6 +78,33 @@ namespace CallCenterProgram.Presentation
                 btnMaximizeToggle.Text = "Maximize";
                 Maximized = false;
             }
+        }
+        public void ClearEmployeeData()
+        {
+            txtiD.Clear(); 
+            txtName.Clear(); 
+            txtSurname.Clear(); 
+            txtAddress.Clear();
+            txtContact.Clear();
+            txtjob.Clear();
+            txtjobdescription.Clear();
+
+        }
+        private void btnClearEmp_Click(object sender, EventArgs e)
+        {
+            ClearEmployeeData();
+        }
+
+        public void ClearDepartmentData()
+        {
+            txtdepartmentid.Clear();
+            txtdepartmentname.Clear();
+            txtstationnumber.Clear();
+        }
+
+        private void btnClearDp_Click(object sender, EventArgs e)
+        {
+            ClearDepartmentData();
         }
     }
 }

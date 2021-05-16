@@ -66,6 +66,7 @@ namespace CallCenterProgram.Presentation
             }
         }
 
+        
 
         private void UpdateEm_Click(object sender, EventArgs e)
         {
@@ -81,22 +82,23 @@ namespace CallCenterProgram.Presentation
             
             authorize.Show();
 
-            try
-            {
-                if (manager.Authorize == "M145628")
+                if (manager.Authorize == "" || manager.Authorize != "M145628")
+                {
+                    MessageBox.Show("Please provide a correct pin ");
+                    return;
+                }
+                else if (manager.Authorize == "M145628")
                 {
                     manager.UpdateEmployeeInf(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
                 }
                 else
                 {
-                    throw new Exception();
-                }
+                MessageBox.Show("Invalid Pin");
+                return;
 
             }
-             catch(Exception ex)
-            {
-                MessageBox.Show(ex + "Invalid Pin!!");
-            }
+
+         
 
         }
 
@@ -112,25 +114,23 @@ namespace CallCenterProgram.Presentation
 
            
 
-            try
-            {
-                authorize.Show();
-
-                if (manager.Authorize == "M145628")
+           authorize.Show();
+                if (manager.Authorize == "" || manager.Authorize != "M145628")
+                {
+                    MessageBox.Show("Please provide a correct pin ");
+                    return;
+                }
+                else if(manager.Authorize == "M145628")
                 {
                     manager.FireEmployee(int.Parse(txtEmployeeId.Text), txtEmployeename.Text, txtEmployeesurname.Text, txtEmployeeAddress.Text, txtContactDetails.Text, txtMjobtitle.Text, txtMjobDespription.Text);
 
                 }
                 else
                 {
-                    throw new Exception();
-                }
+                MessageBox.Show("Invalid Pin!!");
+                 }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex + "Invalid Pin!!");
-            }
+            
         }
 
         private void UpdateDp_Click(object sender, EventArgs e)
@@ -141,24 +141,23 @@ namespace CallCenterProgram.Presentation
 
             
 
-            try
-            {
                 authorize.Show();
-
-                if (manager.Authorize == "M145628")
+                if (manager.Authorize == "" )
+                {
+                    MessageBox.Show("Please provide a pin ");
+                    return;
+                }
+                else if (manager.Authorize == "M145628")
                 {
                     manager.UpdateDepartment(int.Parse(txtidDepartment.Text), txtNameDepartment.Text, int.Parse(txtSationNo.Text));
                 }
                 else
                 {
-                    throw new Exception();
-                }
+                MessageBox.Show("Invalid Pin!!");
+                return;
+            }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex + "Invalid Pin!!");
-            }
+           
            
         }
 
@@ -168,50 +167,47 @@ namespace CallCenterProgram.Presentation
             Set.DepartmentName = txtNameDepartment.Text;
             Set.StationNumber = Convert.ToInt32(txtSationNo.Text);
 
-            
-
-            try
-            {
+            //loading authorization form 
                 authorize.Show();
 
-                if (manager.Authorize == "M145628")
+                 if(manager.Authorize == "" )
+                 {
+                MessageBox.Show("Please provide a  pin ");
+                return;
+                  }
+                else if (manager.Authorize == "M145628")
                 {
                     manager.RemoveDepartment(int.Parse(txtidDepartment.Text), txtNameDepartment.Text, int.Parse(txtSationNo.Text));
                 }
                 else
                 {
-                    throw new Exception();
+                    MessageBox.Show( "Invalid Pin!!");
+                return;
                 }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex + "Invalid Pin!!");
-            }
+            
             
         }
 
-        private void MainMenu_Click(object sender, EventArgs e)
+      
+        private void showForm(Form form)
         {
-            HomeForm.instance.Show();
-            this.Close();
-        }
-
-        private void Employee_Click(object sender, EventArgs e)
-        {
-            Employee_Presentation EmployeeForm = new Employee_Presentation();
-            EmployeeForm.Show();
-            this.Close();
+            form.Show();
+            this.Hide();
         }
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Employee_Information form = new Employee_Information();
+            showForm(form);
         }
 
         private void Manager_Load(object sender, EventArgs e)
         {
-            dataGridVEmployee.DataSource = manager.ViewEmployee();
+            BindingSource source = new BindingSource();
+            source.DataSource = manager.ViewEmployee();
+            dataGridVEmployee.DataSource = source;
+            
 
         }
 
@@ -248,6 +244,34 @@ namespace CallCenterProgram.Presentation
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        public void ClearEmployeeData()
+        {
+            txtEmployeeId.Clear();
+            txtEmployeename.Clear();
+            txtEmployeesurname.Clear();
+            txtEmployeeAddress.Clear();
+            txtContactDetails.Clear();
+            txtMjobtitle.Clear();
+            txtMjobDespription.Clear();
+
+        }
+        private void btnClearEM_Click(object sender, EventArgs e)
+        {
+            ClearEmployeeData();
+        }
+
+        public void ClearDepartmentData()
+        {
+            txtidDepartment.Clear();
+            txtNameDepartment.Clear(); 
+            txtSationNo.Clear();
+        }
+
+        private void btnClearDP_Click(object sender, EventArgs e)
+        {
+            ClearDepartmentData();
         }
     }
 }

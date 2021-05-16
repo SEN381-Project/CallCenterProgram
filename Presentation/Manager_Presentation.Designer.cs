@@ -79,13 +79,13 @@
             this.label20 = new System.Windows.Forms.Label();
             this.txtNameDepartment = new System.Windows.Forms.TextBox();
             this.txtidDepartment = new System.Windows.Forms.TextBox();
-            this.MainMenu = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
-            this.Employee = new System.Windows.Forms.Button();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximizeToggle = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnClearEM = new System.Windows.Forms.Button();
+            this.btnClearDP = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVEmployee)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -97,11 +97,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.label1.Location = new System.Drawing.Point(456, 70);
+            this.label1.Location = new System.Drawing.Point(441, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 38);
+            this.label1.Size = new System.Drawing.Size(164, 44);
             this.label1.TabIndex = 10;
             this.label1.Text = "Manager";
             // 
@@ -293,6 +293,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnClearEM);
             this.groupBox3.Controls.Add(this.DeleteEm);
             this.groupBox3.Controls.Add(this.txtEmployeeAddress);
             this.groupBox3.Controls.Add(this.label4);
@@ -324,7 +325,7 @@
             // 
             this.DeleteEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.DeleteEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteEm.Location = new System.Drawing.Point(119, 226);
+            this.DeleteEm.Location = new System.Drawing.Point(96, 226);
             this.DeleteEm.Name = "DeleteEm";
             this.DeleteEm.Size = new System.Drawing.Size(86, 32);
             this.DeleteEm.TabIndex = 34;
@@ -478,6 +479,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnClearDP);
             this.groupBox4.Controls.Add(this.DeleteDp);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.button4);
@@ -501,9 +503,9 @@
             // 
             this.DeleteDp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.DeleteDp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteDp.Location = new System.Drawing.Point(135, 227);
+            this.DeleteDp.Location = new System.Drawing.Point(108, 226);
             this.DeleteDp.Name = "DeleteDp";
-            this.DeleteDp.Size = new System.Drawing.Size(92, 32);
+            this.DeleteDp.Size = new System.Drawing.Size(99, 32);
             this.DeleteDp.TabIndex = 35;
             this.DeleteDp.Text = "Delete";
             this.DeleteDp.UseVisualStyleBackColor = false;
@@ -589,20 +591,6 @@
             this.txtidDepartment.Size = new System.Drawing.Size(161, 30);
             this.txtidDepartment.TabIndex = 29;
             // 
-            // MainMenu
-            // 
-            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainMenu.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.MainMenu.Location = new System.Drawing.Point(29, 622);
-            this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(113, 38);
-            this.MainMenu.TabIndex = 29;
-            this.MainMenu.Text = "MainMenu";
-            this.MainMenu.UseVisualStyleBackColor = false;
-            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
-            // 
             // Exit
             // 
             this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
@@ -616,20 +604,6 @@
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // Employee
-            // 
-            this.Employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.Employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Employee.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Employee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.Employee.Location = new System.Drawing.Point(185, 622);
-            this.Employee.Name = "Employee";
-            this.Employee.Size = new System.Drawing.Size(141, 38);
-            this.Employee.TabIndex = 31;
-            this.Employee.Text = "Employee";
-            this.Employee.UseVisualStyleBackColor = false;
-            this.Employee.Click += new System.EventHandler(this.Employee_Click);
             // 
             // pnlTitleBar
             // 
@@ -689,6 +663,30 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnClearEM
+            // 
+            this.btnClearEM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btnClearEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearEM.Location = new System.Drawing.Point(179, 226);
+            this.btnClearEM.Name = "btnClearEM";
+            this.btnClearEM.Size = new System.Drawing.Size(86, 32);
+            this.btnClearEM.TabIndex = 35;
+            this.btnClearEM.Text = "Clear";
+            this.btnClearEM.UseVisualStyleBackColor = false;
+            this.btnClearEM.Click += new System.EventHandler(this.btnClearEM_Click);
+            // 
+            // btnClearDP
+            // 
+            this.btnClearDP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btnClearDP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDP.Location = new System.Drawing.Point(204, 226);
+            this.btnClearDP.Name = "btnClearDP";
+            this.btnClearDP.Size = new System.Drawing.Size(86, 32);
+            this.btnClearDP.TabIndex = 36;
+            this.btnClearDP.Text = "Clear";
+            this.btnClearDP.UseVisualStyleBackColor = false;
+            this.btnClearDP.Click += new System.EventHandler(this.btnClearDP_Click);
+            // 
             // Manager_Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,9 +694,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1062, 693);
             this.Controls.Add(this.pnlTitleBar);
-            this.Controls.Add(this.Employee);
             this.Controls.Add(this.Exit);
-            this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel1);
@@ -775,13 +771,13 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtNameDepartment;
         private System.Windows.Forms.TextBox txtidDepartment;
-        private System.Windows.Forms.Button MainMenu;
         private System.Windows.Forms.DataGridView dataGridVEmployee;
         private System.Windows.Forms.Button Exit;
-        private System.Windows.Forms.Button Employee;
         private System.Windows.Forms.Panel pnlTitleBar;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximizeToggle;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnClearEM;
+        private System.Windows.Forms.Button btnClearDP;
     }
 }

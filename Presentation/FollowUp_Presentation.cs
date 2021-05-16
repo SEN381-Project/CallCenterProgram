@@ -55,27 +55,22 @@ namespace CallCenterProgram.Presentation
 
                 txtfollowupid.Text = dataGridVFollowUp.Rows[e.RowIndex].Cells["FollowUpId"].FormattedValue.ToString();
                 txtstatus.Text = dataGridVFollowUp.Rows[e.RowIndex].Cells["Status"].FormattedValue.ToString();
-                
+                if (dataGridVFollowUp.CurrentRow.Cells["FollowUpDate"].Value.ToString().Length > 0)
+                    dtpFollowUp.Value = Convert.ToDateTime(dataGridVFollowUp.CurrentRow.Cells["FollowUpDate"].Value.ToString());
+
             }
         }
-   
-        private void MainMenu_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            HomeForm.instance.Show();
 
-        }
-
-        private void Feedback_Click(object sender, EventArgs e)
+        private void showForm(Form form)
         {
-            Feedback Feedback = new Feedback();
-            Feedback.Show();
-            this.Close();
+            form.Show();
+            this.Hide();
         }
 
         private void Exits_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Client_Satisfaction form = new Client_Satisfaction();
+            showForm(form);
         }
 
         private void Insert_Click(object sender, EventArgs e)
@@ -107,8 +102,10 @@ namespace CallCenterProgram.Presentation
 
         private void FollowUp_Load(object sender, EventArgs e)
         {
-            dataGridVFollowUp.DataSource = followUp.ViewFollowUps();
-
+             
+            BindingSource source = new BindingSource();
+            source.DataSource = followUp.ViewFollowUps();
+            dataGridVFollowUp.DataSource= source;
         }
 
         private void btnSetReminder_Click(object sender, EventArgs e)
@@ -153,6 +150,16 @@ namespace CallCenterProgram.Presentation
             }
         }
 
+        public void ClearData()
+        {
+            txtfollowupid.Clear();
+            txtstatus.Clear();
+        }
+
         
+        private void btnCLear_Click(object sender, EventArgs e)
+        {
+            ClearData();
+        }
     }
 }
