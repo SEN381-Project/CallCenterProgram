@@ -76,15 +76,15 @@ namespace CallCenterProgram.Presentation
         private void Insert_Click(object sender, EventArgs e)
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
-            if(rdbPending.Checked)
+            if(rdbPending.Checked == true)
             {
                 Set.Status = "Pending";
             }
-            else if (rdbApproved.Checked)
+            else if (rdbApproved.Checked == true)
             {
                 Set.Status = "Approved";
             }
-            else if(rdbServiced.Checked)
+            else if(rdbServiced.Checked == true)
             {
                 Set.Status = "Service delivered";
             }
@@ -96,15 +96,15 @@ namespace CallCenterProgram.Presentation
         private void Update_Click(object sender, EventArgs e)
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
-            if (rdbPending.Checked)
+            if (rdbPending.Checked == true)
             {
                 Set.Status = "Pending";
             }
-            else if (rdbApproved.Checked)
+            else if (rdbApproved.Checked == true)
             {
                 Set.Status = "Approved";
             }
-            else if (rdbServiced.Checked)
+            else if (rdbServiced.Checked == true)
             {
                 Set.Status = "Service delivered";
             }
@@ -117,15 +117,15 @@ namespace CallCenterProgram.Presentation
         private void Delete_Click(object sender, EventArgs e)
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
-            if (rdbPending.Checked)
+            if (rdbPending.Checked == true)
             {
                 Set.Status = "Pending";
             }
-            else if (rdbApproved.Checked)
+            else if (rdbApproved.Checked == true)
             {
                 Set.Status = "Approved";
             }
-            else if (rdbServiced.Checked)
+            else if (rdbServiced.Checked == true)
             {
                 Set.Status = "Service delivered";
             }
