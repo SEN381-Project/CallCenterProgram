@@ -78,7 +78,7 @@ namespace CallCenterProgram.Presentation
             {
                 Set.HelpedOnTime = true;
             }
-            else
+            else 
             {
                 Set.HelpedOnTime = false;
             }

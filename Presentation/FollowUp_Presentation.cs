@@ -104,7 +104,7 @@ namespace CallCenterProgram.Presentation
             {
                 Set.Status = "Approved";
             }
-            else if (rdbServiced.Checked  == true)
+            else if (rdbServiced.Checked == true)
             {
                 Set.Status = "Service delivered";
             }
@@ -117,11 +117,11 @@ namespace CallCenterProgram.Presentation
         private void Delete_Click(object sender, EventArgs e)
         {
             Set.FollowUpId = Convert.ToInt32(txtfollowupid.Text);
-            if (rdbPending.Checked  == true)
+            if (rdbPending.Checked == true)
             {
                 Set.Status = "Pending";
             }
-            else if (rdbApproved.Checked  == true)
+            else if (rdbApproved.Checked == true)
             {
                 Set.Status = "Approved";
             }
