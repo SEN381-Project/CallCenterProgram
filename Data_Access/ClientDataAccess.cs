@@ -84,6 +84,140 @@ namespace CallCenterProgram.Data_Access
             }
         }
 
+        public void UpdateBusinessClient(BusinessClient client)
+        {
+            try //this part updates the ID, name and surname in the Client table
+            {
+                query = @"UPDATE Client SET ClientName = '"+client.Name+"', ClientSurname = '"+client.Surname+"' WHERE ClientID = '"+client.ClientID+"'";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not update the Client table: {0}", e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            try //this part updates the client status and role in the business client info table
+            {
+                query = @"UPDATE BusinessClientInfo SET ClientStatus = '"+client.ClientStatus+"', ClientRole = '"+client.ClientRole+"' WHERE ClientID = '"+client.ClientID+"'";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not update the BusinessClientInfo table: {0}", e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            try //this part updates the client address in the client address table
+            {
+                query = @"UPDATE ClientAddress SET StreetNumber = '"+client.Streetnumber+"', StreetName = '"+client.Streetname+"', City = '"+client.City+"', Country = '"+client.Country+"' WHERE ClientID = '" + client.ClientID + "'";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not update the ClientAddress table: {0}", e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            try //this part inserts the client contact info into the ClientContactInfo table
+            {
+                query = @"UPDATE ClientContactInfo SET Email = '"+client.Email+"', PhoneNumber = '"+client.Cellphone+"' WHERE ClientID = '" + client.ClientID + "'";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not update the ClientContactInfo table: {0}", e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void UpdateIndividualClient(IndividualClient client)
+        {
+            try //this part updates the ID, name and surname in the Client table
+            {
+                query = @"UPDATE Client SET ClientName = '" + client.Name + "', ClientSurname = '" + client.Surname + "' WHERE ClientID = '" + client.ClientID + "'";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not update the Client table: {0}", e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            try //this part updates the client status and role in the business client info table
+            {
+                query = @"UPDATE IndividualClientInfo SET ClientStatus = '" + client.ClientStatus + "', IsCurrentClient = '"+client.IsCurrentClient+"' WHERE ClientID = '" + client.ClientID + "'";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not update the IndividualClientInfo table: {0}", e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            try //this part updates the client address in the client address table
+            {
+                query = @"UPDATE ClientAddress SET StreetNumber = '" + client.Streetnumber + "', StreetName = '" + client.Streetname + "', City = '" + client.City + "', Country = '" + client.Country + "' WHERE ClientID = '" + client.ClientID + "'";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not update the ClientAddress table: {0}", e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            try //this part inserts the client contact info into the ClientContactInfo table
+            {
+                query = @"UPDATE ClientContactInfo SET Email = '" + client.Email + "', PhoneNumber = '" + client.Cellphone + "' WHERE ClientID = '" + client.ClientID + "'";
+                cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not update the ClientContactInfo table: {0}", e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public void InsertIndividualClient(IndividualClient client)
         {
             try //this part inserts the ID, name and surname into the Client table

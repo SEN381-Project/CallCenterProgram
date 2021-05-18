@@ -50,6 +50,9 @@ namespace CallCenterProgram.Presentation
         {
             BackColor = Color.FromArgb(26, 26, 26);
             ForeColor = Color.FromArgb(102, 112, 233);
+            panel3.Enabled = false;
+            panel3.Visible = false;
+            txtID.Enabled = false;
         }
 
         private void btnViewBusinessClients_Click(object sender, EventArgs e)
@@ -138,6 +141,117 @@ namespace CallCenterProgram.Presentation
             else
             {
                 MessageBox.Show("Client was not deleted");
+            }
+        }
+
+        private void btnUpdateConfirm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(txtID.Text);
+                string name = txtName.Text;
+                string surname = txtSurname.Text;
+                string email = txtEmail.Text;
+
+                int currentclient;
+                if(lstBool.SelectedItem == null)
+                {
+                    currentclient = 0;
+                }
+                else if(lstBool.SelectedItem.ToString() == "True")
+                {
+                    currentclient = 1;
+                }
+                else
+                {
+                    currentclient = 0;
+                }
+
+
+                string cellphone = txtCellphone.Text;
+                if (cellphone == "")
+                {
+                    cellphone = "Unknown";
+                }
+
+                string status = rtbStatus.Text;
+                if (status == "")
+                {
+                    status = "Unknown";
+                }
+
+                int streetnumber = Convert.ToInt32(nudStreetNumber.Value);
+
+                string streetname = txtStreetName.Text;
+                if (streetname == "")
+                {
+                    streetname = "Unknown";
+                }
+
+                string city = txtCity.Text;
+                if (city == "")
+                {
+                    city = "Unknown";
+                }
+
+                string country;
+                if (lstCountries.SelectedItem == null)
+                {
+                    country = "Unknown";
+                }
+                else
+                {
+                    country = lstCountries.SelectedItem.ToString();
+                }
+
+
+                IndividualClient client = new IndividualClient(id, name, surname, email, cellphone, status, currentclient, streetnumber, streetname, city, country);
+                client.UpdateIndividualClient(client);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not update " + ex.Message);
+            }
+            finally
+            {
+                panel3.Enabled = false;
+                panel3.Visible = false;
+            }
+        }
+
+        private void btnUpdateClient_Click(object sender, EventArgs e)
+        {
+            panel3.Enabled = true;
+            panel3.Visible = true;
+        }
+
+        private void dgvIndividualClients_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txtID.Text = dgvIndividualClients.CurrentRow.Cells[0].Value.ToString();
+                txtName.Text = dgvIndividualClients.CurrentRow.Cells[1].Value.ToString();
+                txtSurname.Text = dgvIndividualClients.CurrentRow.Cells[2].Value.ToString();
+                rtbStatus.Text = dgvIndividualClients.CurrentRow.Cells[3].Value.ToString();
+                int currentclient = Convert.ToInt32(dgvIndividualClients.CurrentRow.Cells[4].Value);
+                if(currentclient == 1)
+                {
+                    lstBool.Text = "True";
+                }
+                else
+                {
+                    lstBool.Text = "False";
+                }
+                nudStreetNumber.Value = Convert.ToInt32(dgvIndividualClients.CurrentRow.Cells[5].Value);
+                txtStreetName.Text = dgvIndividualClients.CurrentRow.Cells[6].Value.ToString();
+                txtCity.Text = dgvIndividualClients.CurrentRow.Cells[7].Value.ToString();
+                lstCountries.Text = dgvIndividualClients.CurrentRow.Cells[8].Value.ToString();
+                txtEmail.Text = dgvIndividualClients.CurrentRow.Cells[9].Value.ToString();
+                txtCellphone.Text = dgvIndividualClients.CurrentRow.Cells[10].Value.ToString();
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show("Click inside the DGV " + es.Message);
             }
         }
     }
