@@ -35,11 +35,9 @@
             this.dgvIncident = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCreateJob = new System.Windows.Forms.Button();
-            this.btnEscalateJob = new System.Windows.Forms.Button();
             this.btnReassignJob = new System.Windows.Forms.Button();
             this.txtCreateJob = new System.Windows.Forms.TextBox();
             this.txtReAssaignJob = new System.Windows.Forms.TextBox();
-            this.txtEscalateJob = new System.Windows.Forms.TextBox();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.Incidents = new System.Windows.Forms.Label();
@@ -106,6 +104,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.label1.Location = new System.Drawing.Point(14, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 26);
@@ -124,23 +123,11 @@
             this.btnCreateJob.UseVisualStyleBackColor = true;
             this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
             // 
-            // btnEscalateJob
-            // 
-            this.btnEscalateJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscalateJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnEscalateJob.Location = new System.Drawing.Point(579, 405);
-            this.btnEscalateJob.Name = "btnEscalateJob";
-            this.btnEscalateJob.Size = new System.Drawing.Size(200, 23);
-            this.btnEscalateJob.TabIndex = 8;
-            this.btnEscalateJob.Text = "Escalate Job";
-            this.btnEscalateJob.UseVisualStyleBackColor = true;
-            this.btnEscalateJob.Click += new System.EventHandler(this.btnEscalateJob_Click);
-            // 
             // btnReassignJob
             // 
             this.btnReassignJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReassignJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
-            this.btnReassignJob.Location = new System.Drawing.Point(307, 405);
+            this.btnReassignJob.Location = new System.Drawing.Point(579, 405);
             this.btnReassignJob.Name = "btnReassignJob";
             this.btnReassignJob.Size = new System.Drawing.Size(200, 23);
             this.btnReassignJob.TabIndex = 9;
@@ -157,17 +144,10 @@
             // 
             // txtReAssaignJob
             // 
-            this.txtReAssaignJob.Location = new System.Drawing.Point(307, 379);
+            this.txtReAssaignJob.Location = new System.Drawing.Point(579, 379);
             this.txtReAssaignJob.Name = "txtReAssaignJob";
             this.txtReAssaignJob.Size = new System.Drawing.Size(200, 20);
             this.txtReAssaignJob.TabIndex = 19;
-            // 
-            // txtEscalateJob
-            // 
-            this.txtEscalateJob.Location = new System.Drawing.Point(579, 379);
-            this.txtEscalateJob.Name = "txtEscalateJob";
-            this.txtEscalateJob.Size = new System.Drawing.Size(200, 20);
-            this.txtEscalateJob.TabIndex = 20;
             // 
             // pnlTitleBar
             // 
@@ -259,11 +239,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlTitleBar);
-            this.Controls.Add(this.txtEscalateJob);
             this.Controls.Add(this.txtReAssaignJob);
             this.Controls.Add(this.txtCreateJob);
             this.Controls.Add(this.btnReassignJob);
-            this.Controls.Add(this.btnEscalateJob);
             this.Controls.Add(this.btnCreateJob);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -287,11 +265,9 @@
         private System.Windows.Forms.DataGridView dgvIncident;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCreateJob;
-        private System.Windows.Forms.Button btnEscalateJob;
         private System.Windows.Forms.Button btnReassignJob;
         private System.Windows.Forms.TextBox txtCreateJob;
         private System.Windows.Forms.TextBox txtReAssaignJob;
-        private System.Windows.Forms.TextBox txtEscalateJob;
         private System.Windows.Forms.Panel pnlTitleBar;
         private System.Windows.Forms.Label Incidents;
         private System.Windows.Forms.Button btnMinimize;
