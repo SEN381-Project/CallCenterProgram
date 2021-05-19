@@ -146,6 +146,10 @@ namespace CallCenterProgram.Presentation
             {
                 MessageBox.Show("Client was not deleted");
             }
+
+            BusinessClient client1 = new BusinessClient();
+            source.DataSource = client1.GetCustomTable();
+            dgvBusinessClients.DataSource = source;
         }
 
         private void btnUpdateConfirm_Click(object sender, EventArgs e)
@@ -199,6 +203,9 @@ namespace CallCenterProgram.Presentation
 
                 BusinessClient client = new BusinessClient(id, name, surname, status, role, email, cellphone, streetnumber, streetname, city, country);
                 client.UpdateBusinessClient(client);
+
+                source.DataSource = client.GetCustomTable();
+                dgvBusinessClients.DataSource = source;
             }
             catch(Exception ex)
             {
