@@ -43,6 +43,7 @@ namespace CallCenterProgram.Presentation
             this.btnMax = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.lstBool = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -66,7 +67,6 @@ namespace CallCenterProgram.Presentation
             this.btnUpdateConfirm = new System.Windows.Forms.Button();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIndividualClients)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -264,6 +264,17 @@ namespace CallCenterProgram.Presentation
             this.panel3.Size = new System.Drawing.Size(484, 222);
             this.panel3.TabIndex = 10;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(348, 196);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 23);
+            this.btnCancel.TabIndex = 25;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // lstBool
             // 
             this.lstBool.AllowDrop = true;
@@ -312,6 +323,11 @@ namespace CallCenterProgram.Presentation
             // nudStreetNumber
             // 
             this.nudStreetNumber.Location = new System.Drawing.Point(95, 115);
+            this.nudStreetNumber.Maximum = new decimal(new int[] {
+            986039,
+            0,
+            0,
+            0});
             this.nudStreetNumber.Name = "nudStreetNumber";
             this.nudStreetNumber.Size = new System.Drawing.Size(118, 23);
             this.nudStreetNumber.TabIndex = 19;
@@ -469,17 +485,6 @@ namespace CallCenterProgram.Presentation
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 23);
             this.txtName.TabIndex = 0;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(348, 196);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 23);
-            this.btnCancel.TabIndex = 25;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Individual_Client_Info
             // 

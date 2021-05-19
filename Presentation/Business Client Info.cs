@@ -243,6 +243,10 @@ namespace CallCenterProgram.Presentation
         {
             panel3.Enabled = true;
             panel3.Visible = true;
+
+            BusinessClient client = new BusinessClient();
+            source.DataSource = client.GetCustomTable();
+            dgvBusinessClients.DataSource = source;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

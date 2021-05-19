@@ -223,6 +223,10 @@ namespace CallCenterProgram.Presentation
         {
             panel3.Enabled = true;
             panel3.Visible = true;
+
+            IndividualClient client = new IndividualClient();
+            source.DataSource = client.GetCustomTable();
+            dgvIndividualClients.DataSource = source;
         }
 
         private void dgvIndividualClients_SelectionChanged(object sender, EventArgs e)
