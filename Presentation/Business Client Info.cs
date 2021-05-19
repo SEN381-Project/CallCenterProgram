@@ -244,5 +244,11 @@ namespace CallCenterProgram.Presentation
             panel3.Enabled = true;
             panel3.Visible = true;
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            panel3.Enabled = false;
+            panel3.Visible = false;
+        }
     }
 }

@@ -254,5 +254,11 @@ namespace CallCenterProgram.Presentation
                 MessageBox.Show("Click inside the DGV " + es.Message);
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            panel3.Enabled = false;
+            panel3.Visible = false;
+        }
     }
 }

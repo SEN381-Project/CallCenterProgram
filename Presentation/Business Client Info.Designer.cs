@@ -43,6 +43,8 @@ namespace CallCenterProgram.Presentation
             this.btnMax = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.nudStreetNumber = new System.Windows.Forms.NumericUpDown();
@@ -64,8 +66,7 @@ namespace CallCenterProgram.Presentation
             this.txtRole = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusinessClients)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -146,7 +147,7 @@ namespace CallCenterProgram.Presentation
             this.btnUpdateClient.Name = "btnUpdateClient";
             this.btnUpdateClient.Size = new System.Drawing.Size(166, 23);
             this.btnUpdateClient.TabIndex = 6;
-            this.btnUpdateClient.Text = "Update Client";
+            this.btnUpdateClient.Text = "Show Update Panel";
             this.btnUpdateClient.UseVisualStyleBackColor = true;
             this.btnUpdateClient.Click += new System.EventHandler(this.btnUpdateClient_Click);
             // 
@@ -231,6 +232,7 @@ namespace CallCenterProgram.Presentation
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel3.Controls.Add(this.btnCancel);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.txtID);
             this.panel3.Controls.Add(this.label10);
@@ -258,6 +260,22 @@ namespace CallCenterProgram.Presentation
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(484, 222);
             this.panel3.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(18, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(17, 13);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(60, 24);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(29, 21);
+            this.txtID.TabIndex = 22;
             // 
             // label10
             // 
@@ -442,21 +460,16 @@ namespace CallCenterProgram.Presentation
             this.txtName.Size = new System.Drawing.Size(100, 21);
             this.txtName.TabIndex = 0;
             // 
-            // txtID
+            // btnCancel
             // 
-            this.txtID.Location = new System.Drawing.Point(60, 24);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(29, 21);
-            this.txtID.TabIndex = 22;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 27);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(17, 13);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "ID";
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(348, 196);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 23);
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Business_Client_Info
             // 
@@ -524,5 +537,6 @@ namespace CallCenterProgram.Presentation
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
