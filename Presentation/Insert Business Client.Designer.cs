@@ -131,6 +131,7 @@ namespace CallCenterProgram.Presentation
             this.nudID.Name = "nudID";
             this.nudID.Size = new System.Drawing.Size(117, 23);
             this.nudID.TabIndex = 8;
+            this.nudID.ValueChanged += new System.EventHandler(this.nudID_ValueChanged);
             // 
             // btnInsertClient
             // 
@@ -160,6 +161,7 @@ namespace CallCenterProgram.Presentation
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(117, 23);
             this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label9
             // 
@@ -177,6 +179,7 @@ namespace CallCenterProgram.Presentation
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(117, 23);
             this.txtSurname.TabIndex = 2;
+            this.txtSurname.TextChanged += new System.EventHandler(this.txtSurname_TextChanged);
             // 
             // label8
             // 
@@ -194,6 +197,7 @@ namespace CallCenterProgram.Presentation
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(117, 23);
             this.txtEmail.TabIndex = 3;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label7
             // 
@@ -252,9 +256,9 @@ namespace CallCenterProgram.Presentation
             this.label4.Font = new System.Drawing.Font("Roboto Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(85, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 15);
+            this.label4.Size = new System.Drawing.Size(49, 15);
             this.label4.TabIndex = 16;
-            this.label4.Text = "Email";
+            this.label4.Text = "Email *";
             // 
             // lstCountries
             // 
@@ -281,13 +285,18 @@ namespace CallCenterProgram.Presentation
             this.label3.Font = new System.Drawing.Font("Roboto Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(85, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 15);
+            this.label3.Size = new System.Drawing.Size(68, 15);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Surname";
+            this.label3.Text = "Surname *";
             // 
             // nudStreetNumber
             // 
             this.nudStreetNumber.Location = new System.Drawing.Point(202, 180);
+            this.nudStreetNumber.Maximum = new decimal(new int[] {
+            986039,
+            0,
+            0,
+            0});
             this.nudStreetNumber.Name = "nudStreetNumber";
             this.nudStreetNumber.Size = new System.Drawing.Size(118, 23);
             this.nudStreetNumber.TabIndex = 10;
@@ -298,9 +307,9 @@ namespace CallCenterProgram.Presentation
             this.label2.Font = new System.Drawing.Font("Roboto Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(85, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 15);
+            this.label2.Size = new System.Drawing.Size(50, 15);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Name";
+            this.label2.Text = "Name *";
             // 
             // label1
             // 
@@ -308,9 +317,9 @@ namespace CallCenterProgram.Presentation
             this.label1.Font = new System.Drawing.Font("Roboto Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(85, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 15);
+            this.label1.Size = new System.Drawing.Size(28, 15);
             this.label1.TabIndex = 13;
-            this.label1.Text = "ID";
+            this.label1.Text = "ID *";
             // 
             // rtbStatus
             // 
@@ -334,37 +343,40 @@ namespace CallCenterProgram.Presentation
             // 
             // btnMin
             // 
+            this.btnMin.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterminimize;
+            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMin.Location = new System.Drawing.Point(269, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(54, 48);
             this.btnMin.TabIndex = 21;
-            this.btnMin.Text = "Minimize";
             this.btnMin.UseVisualStyleBackColor = true;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // btnMax
             // 
+            this.btnMax.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcentermaximize;
+            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMax.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMax.Location = new System.Drawing.Point(323, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(56, 48);
             this.btnMax.TabIndex = 20;
-            this.btnMax.Text = "Maximize";
             this.btnMax.UseVisualStyleBackColor = true;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
             // 
             // btnExit
             // 
+            this.btnExit.BackgroundImage = global::CallCenterProgram.Properties.Resources.callcenterexit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Location = new System.Drawing.Point(379, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(56, 48);
             this.btnExit.TabIndex = 19;
-            this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -382,6 +394,7 @@ namespace CallCenterProgram.Presentation
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insert_Business_Client";
             this.Load += new System.EventHandler(this.Insert_Business_Client_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Insert_Business_Client_KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Insert_Business_Client_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

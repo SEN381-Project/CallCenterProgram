@@ -96,7 +96,7 @@
             this.btnClientHome.Name = "btnClientHome";
             this.btnClientHome.Size = new System.Drawing.Size(166, 60);
             this.btnClientHome.TabIndex = 1;
-            this.btnClientHome.Text = "ClientHome";
+            this.btnClientHome.Text = "Client Home";
             this.btnClientHome.UseVisualStyleBackColor = true;
             this.btnClientHome.Click += new System.EventHandler(this.btnClientHome_Click);
             // 
@@ -118,7 +118,7 @@
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.lblTitle.Location = new System.Drawing.Point(474, 0);
             this.lblTitle.Name = "lblTitle";
@@ -424,7 +424,7 @@
             // lblPanelTitle
             // 
             this.lblPanelTitle.AutoSize = true;
-            this.lblPanelTitle.Font = new System.Drawing.Font("Roboto", 24.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPanelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(112)))), ((int)(((byte)(233)))));
             this.lblPanelTitle.Location = new System.Drawing.Point(371, 20);
             this.lblPanelTitle.Name = "lblPanelTitle";

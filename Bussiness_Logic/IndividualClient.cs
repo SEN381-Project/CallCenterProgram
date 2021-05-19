@@ -80,6 +80,18 @@ namespace CallCenterProgram.Bussiness_Logic
             return src;
         }
 
+        public void DeleteIndividualClient(int ID)
+        {
+            ClientDataAccess dataAccess = new ClientDataAccess();
+            dataAccess.DeleteIndividualClient(ID);
+        }
+
+        public void UpdateIndividualClient(IndividualClient client)
+        {
+            ClientDataAccess dataAccess = new ClientDataAccess();
+            dataAccess.UpdateIndividualClient(client);
+        }
+
         public void getServiceAgreement()
         {
 
