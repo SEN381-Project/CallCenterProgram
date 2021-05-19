@@ -87,6 +87,12 @@ namespace CallCenterProgram.Bussiness_Logic
             dataAccess.DeleteBusinessClient(ID);
         }
 
+        public void UpdateBusinessClient(BusinessClient client)
+        {
+            ClientDataAccess dataAccess = new ClientDataAccess();
+            dataAccess.UpdateBusinessClient(client);
+        }
+
         public void getDetailsForInsert()
         {
             

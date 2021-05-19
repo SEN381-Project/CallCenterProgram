@@ -151,6 +151,11 @@ namespace CallCenterProgram.Presentation
             // nudStreetNumber
             // 
             this.nudStreetNumber.Location = new System.Drawing.Point(200, 165);
+            this.nudStreetNumber.Maximum = new decimal(new int[] {
+            986039,
+            0,
+            0,
+            0});
             this.nudStreetNumber.Name = "nudStreetNumber";
             this.nudStreetNumber.Size = new System.Drawing.Size(117, 23);
             this.nudStreetNumber.TabIndex = 10;
